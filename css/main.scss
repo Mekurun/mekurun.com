@@ -1,5 +1,23 @@
 ---
 ---
-.content img {
-  width: 100%;
+body {
+  margin: 0;
+}
+.post-content {
+  overflow: hidden;
+}
+#slides {
+  display: flex;
+  margin: auto;
+  p {
+    margin: 0;
+  }
+  img {
+    border: solid 4px #888;
+    box-sizing: border-box;
+    max-height: 60vh;
+    max-width: 100%;
+    margin: calc((40vh - 8px)/2) auto;
+    display: block;
+  }
 }
