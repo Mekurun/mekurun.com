@@ -16,10 +16,10 @@ layout: default
 <script>
 function next() {
   var slide = document.getElementById("slidesCover");
-  slide.scrollLeft += window.parent.screen.width;
+  slide.scrollLeft += window.innerWidth;
 }
 function back() {
   var slide = document.getElementById("slidesCover");
-  slide.scrollLeft -= window.parent.screen.width;
+  slide.scrollLeft -= window.innerWidth;
 }
 </script>
