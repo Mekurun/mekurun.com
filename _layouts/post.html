@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<section class="post-content" id="slidesCover">
+{{ content }}
+  <div class="slide-buttons">
+    <input type="button" value=">" onclick="next()"/>
+    <input type="button" value="<" onclick="back()"/>
+  </div>
+<div style="width:calc( {{page.img.size}} * 100vw) " id='slides'>
+  {% for img in page.img %}
+    <img src="/img/{{ img }}" alt="">
+  {% endfor %}
+</div>
+</section>
+<script>
+function next() {
+  var slide = document.getElementById("slidesCover");
+  slide.scrollLeft += window.parent.screen.width;
+}
+function back() {
+  var slide = document.getElementById("slidesCover");
+  slide.scrollLeft -= window.parent.screen.width;
+}
+</script>
