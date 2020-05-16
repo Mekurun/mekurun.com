@@ -9,7 +9,7 @@ layout: default
   </div>
 <div style="width:calc( {{page.img.size}} * 100vw) " id='slides'>
   {% for img in page.img %}
-    <img src="/img/{{ img }}" alt="">
+    <img src="/img/{{ img }}" alt="" style="max-width:{{100| divided_by: page.img.size }}%">
   {% endfor %}
 </div>
 </section>
