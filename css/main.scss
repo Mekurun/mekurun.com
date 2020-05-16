@@ -17,6 +17,9 @@ body {
     max-height: 60vh;
     margin: calc((40vh - 8px)/2) auto;
     position: absolute;
+    left: 0;
+    right: 0;
+    max-width: 100%;
   }
 }
 
