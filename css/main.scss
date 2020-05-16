@@ -7,7 +7,6 @@ body {
   overflow: hidden;
 }
 #slides {
-  display: flex;
   margin: auto;
   p {
     margin: 0;
@@ -17,7 +16,7 @@ body {
     box-sizing: border-box;
     max-height: 60vh;
     margin: calc((40vh - 8px)/2) auto;
-    display: block;
+    position: absolute;
   }
 }
 

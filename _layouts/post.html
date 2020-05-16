@@ -3,23 +3,36 @@ layout: default
 ---
 <section class="post-content" id="slidesCover">
 {{ content }}
-  <div class="slide-buttons">
-    <input class="button-back" type="button" value="<" onclick="back()"/>
-    <input class="button-next" type="button" value=">" onclick="next()"/>
-  </div>
-<div style="width:calc( {{page.img.size}} * 100vw) " id='slides'>
+<div class="slide-buttons">
+  <input class="button-back" type="button" value="<" onclick="back()"/>
+  <input class="button-next" type="button" value=">" onclick="next()"/>
+</div>
+<div id='slides'>
   {% for img in page.img %}
-    <img src="/img/{{ img }}" alt="" style="max-width:{{100| divided_by: page.img.size }}%">
+    <img src="/img{{ img }}" alt="" id="img-{{forloop.index}}" style="display:none;">
   {% endfor %}
 </div>
 </section>
 <script>
+function set() {
+  document.getElementById("img-1").style.display ="block";
+}
+
+window.onload = set;
+window.onload
+var now = 1;
 function next() {
-  var slide = document.getElementById("slidesCover");
-  slide.scrollLeft += window.innerWidth;
+  if(document.getElementById("img-"+(now+1)) != null){
+    document.getElementById("img-"+now).style.display ="none";
+    document.getElementById("img-"+(now+1)).style.display="block";
+    now += 1;
+  }
 }
 function back() {
-  var slide = document.getElementById("slidesCover");
-  slide.scrollLeft -= window.innerWidth;
+  if(now > 1){
+    document.getElementById("img-"+now).style.display ="none";
+    document.getElementById("img-"+(now-1)).style.display="block";
+    now -= 1;
+  }
 }
 </script>
