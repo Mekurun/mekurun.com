@@ -21,3 +21,20 @@ body {
     display: block;
   }
 }
+
+.slide-buttons {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  input {
+    -webkit-appearance: none;
+    border: none;
+    border-radius: 4px;
+    width: 120px;
+    background-color: #1886c4;
+    padding: 12px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 2em;
+  }
+}

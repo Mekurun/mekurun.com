@@ -4,8 +4,8 @@ layout: default
 <section class="post-content" id="slidesCover">
 {{ content }}
   <div class="slide-buttons">
-    <input type="button" value=">" onclick="next()"/>
-    <input type="button" value="<" onclick="back()"/>
+    <input class="button-back" type="button" value="<" onclick="back()"/>
+    <input class="button-next" type="button" value=">" onclick="next()"/>
   </div>
 <div style="width:calc( {{page.img.size}} * 100vw) " id='slides'>
   {% for img in page.img %}
