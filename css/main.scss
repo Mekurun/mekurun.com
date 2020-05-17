@@ -27,7 +27,17 @@ body {
     max-width: 100%;
   }
 }
-
+.progress-bar {
+  height: 16px;
+  background-color: #ddd;
+  border-radius: 12px;
+  margin-top: 8px;
+}
+#progress-container {
+  background-color: $main-color;
+  height: 100%;
+  border-radius: 8px;
+}
 .slide-buttons {
   display: flex;
   position: absolute;

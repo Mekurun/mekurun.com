@@ -8,6 +8,10 @@ layout: default
     <img src="/img{{ img }}" alt="" id="img-{{forloop.index}}" style="display:none;">
   {% endfor %}
 </div>
+<div class="progress-bar">
+  <div id="progress-container">
+  </div>
+</div>
 <div class="slide-buttons">
   <input class="button-back" type="button" value="もどる" onclick="back()"/>
   <input class="button-next" type="button" value="すすむ" onclick="next()"/>
