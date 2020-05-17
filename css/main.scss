@@ -25,18 +25,27 @@ body {
 }
 
 .slide-buttons {
+  display: flex;
   position: absolute;
-  right: 24px;
+  right: 0;
+  left: 0;
   bottom: 24px;
   input {
     -webkit-appearance: none;
-    border: none;
+    border: solid 4px $main-color;
     border-radius: 4px;
-    width: 120px;
+    width: calc(50% - 3px);
     background-color: $main-color;
     padding: 12px;
     color: #fff;
     font-weight: bold;
-    font-size: 2em;
+    font-size: 1.6em;
+    display: block;
+    outline: none;
+    &:first-child {
+      margin-right: 6px;
+      background-color: #fff;
+      color: $main-color;
+    }
   }
 }
