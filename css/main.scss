@@ -1,5 +1,6 @@
 ---
 ---
+$main-color: #1886c4;
 body {
   margin: 0;
 }
@@ -32,7 +33,7 @@ body {
     border: none;
     border-radius: 4px;
     width: 120px;
-    background-color: #1886c4;
+    background-color: $main-color;
     padding: 12px;
     color: #fff;
     font-weight: bold;
