@@ -7,6 +7,12 @@ body {
 .post-content {
   overflow: hidden;
 }
+#slidesCover {
+  max-width: 800px;
+  margin: auto;
+  position: relative;
+  height: 100vh;
+}
 #slides {
   margin: auto;
   p {
@@ -16,8 +22,6 @@ body {
     border: solid 4px #888;
     box-sizing: border-box;
     max-height: 60vh;
-    margin: calc((40vh - 8px)/2) auto;
-    position: absolute;
     left: 0;
     right: 0;
     max-width: 100%;
