@@ -12,6 +12,7 @@ layout: default
   <div id="progress-container">
   </div>
 </div>
+<span id="progress-number">1/10</span>
 <div class="slide-buttons">
   <input class="button-back" type="button" value="もどる" onclick="back()"/>
   <input class="button-next" type="button" value="すすむ" onclick="next()"/>
@@ -22,6 +23,7 @@ var now = 1;
 function set() {
   document.getElementById("img-1").style.display ="block";
   document.getElementById("progress-container").style.width = (now / {{ page.img.size }}) * 100 + "%";
+  document.getElementById("progress-number").innerHTML = now +" / "+ {{ page.img.size }};
 }
 
 window.onload = set;
@@ -31,6 +33,7 @@ function next() {
     document.getElementById("img-"+(now+1)).style.display="block";
     now += 1;
     document.getElementById("progress-container").style.width = (now / {{ page.img.size }}) * 100 + "%";
+    document.getElementById("progress-number").innerHTML = now +" / "+ {{ page.img.size }};
   }
 }
 function back() {
@@ -39,6 +42,7 @@ function back() {
     document.getElementById("img-"+(now-1)).style.display="block";
     now -= 1;
     document.getElementById("progress-container").style.width = (now / {{ page.img.size }}) * 100 + "%";
+    document.getElementById("progress-number").innerHTML = now +" / "+ {{ page.img.size }};  
   }
 }
 </script>
