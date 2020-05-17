@@ -18,18 +18,19 @@ layout: default
 </div>
 </section>
 <script>
+var now = 1;
 function set() {
   document.getElementById("img-1").style.display ="block";
+  document.getElementById("progress-container").style.width = (now / {{ page.img.size }}) * 100 + "%";
 }
 
 window.onload = set;
-window.onload
-var now = 1;
 function next() {
   if(document.getElementById("img-"+(now+1)) != null){
     document.getElementById("img-"+now).style.display ="none";
     document.getElementById("img-"+(now+1)).style.display="block";
     now += 1;
+    document.getElementById("progress-container").style.width = (now / {{ page.img.size }}) * 100 + "%";
   }
 }
 function back() {
@@ -37,6 +38,7 @@ function back() {
     document.getElementById("img-"+now).style.display ="none";
     document.getElementById("img-"+(now-1)).style.display="block";
     now -= 1;
+    document.getElementById("progress-container").style.width = (now / {{ page.img.size }}) * 100 + "%";
   }
 }
 </script>
