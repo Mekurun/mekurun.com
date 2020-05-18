@@ -42,7 +42,7 @@ function back() {
     document.getElementById("img-"+(now-1)).style.display="block";
     now -= 1;
     document.getElementById("progress-container").style.width = (now / {{ page.img.size }}) * 100 + "%";
-    document.getElementById("progress-number").innerHTML = now +" / "+ {{ page.img.size }};  
+    document.getElementById("progress-number").innerHTML = now +" / "+ {{ page.img.size }};
   }
 }
 </script>
