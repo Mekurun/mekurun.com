@@ -14,7 +14,7 @@ layout: default
     {% if firstword == '' %}
     <img src="/assets/course/{{ page.categories }}/{{ page.course-name }}{{ slide }}" alt="" id="page-{{forloop.index}}" style="display:none;">
     {% elsif firstword == 'https:' %}
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/{{slide | split: '/' | last}}?rel=0&fs=1&modestbranding=1&enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:none;" id="page-{{forloop.index}}"></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/{{slide | split: '/' | last}}?rel=0&fs=0&modestbranding=1&enablejsapi=1&disablekb=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:none;" id="page-{{forloop.index}}"></iframe>
     {% endif %}
   {% endfor %}
 </div>
