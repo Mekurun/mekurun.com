@@ -48,6 +48,16 @@ h2 {
   height: 100%;
   border-radius: 8px;
 }
+.button {
+  -webkit-appearance: none;
+  border: solid 4px $main-color;
+  border-radius: 4px;
+  padding: 12px;
+  font-weight: bold;
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+}
 .slide-buttons {
   display: flex;
   position: absolute;
@@ -55,15 +65,9 @@ h2 {
   left: 0;
   bottom: 24px;
   input {
-    -webkit-appearance: none;
-    border: solid 4px $main-color;
-    border-radius: 4px;
     width: calc(50% - 3px);
-    padding: 12px;
-    font-weight: bold;
     font-size: 1.6em;
     display: block;
-    outline: none;
     &:disabled {
       opacity: 0.4;
     }
