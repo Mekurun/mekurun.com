@@ -59,6 +59,10 @@ h2 {
   outline: none;
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.7;
+  }
 }
 .slide-buttons {
   display: flex;
@@ -72,6 +76,7 @@ h2 {
     display: block;
     &:disabled {
       opacity: 0.4;
+      cursor: default;
     }
   }
   .button-back {
