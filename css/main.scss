@@ -53,6 +53,10 @@ h2 {
   height: 100%;
   border-radius: 8px;
 }
+#progress-number {
+  font-weight: 600;
+  color: $darkgray;
+}
 .button {
   -webkit-appearance: none;
   border: solid 4px $main-color;
