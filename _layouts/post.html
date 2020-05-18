@@ -4,6 +4,7 @@ layout: default
 <section class="post-content" id="slidesCover">
 {{ content }}
 <a href="/" class="label">{{page.category}} / {{page.difficulty}}</a>
+<h2>{{page.title}}</h2>
 <div id='slides'>
   {% for slide in page.slides %}
     {% assign firstword = slide | split: "/" | first %}
