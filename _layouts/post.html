@@ -14,7 +14,7 @@ layout: default
 </div>
 <span id="progress-number">1/10</span>
 <div class="slide-buttons">
-  <input class="button-back" type="button" value="もどる" onclick="back()" id="buttonBack"/>
+  <input class="button-back" type="button" value="もどる" onclick="back()" id="buttonBack" disabled/>
   <input class="button-next" type="button" value="すすむ" onclick="next()" id="buttonNext"/>
 </div>
 </section>
@@ -36,7 +36,10 @@ function next() {
     document.getElementById("progress-container").style.width = (now / {{ page.img.size }}) * 100 + "%";
     document.getElementById("progress-number").innerHTML = now +" / "+ {{ page.img.size }};
     document.getElementById("buttonNext").disabled = true;
-    document.getElementById("buttonNext").disabled = false;
+    if(now != {{ page.img.size }}){
+      document.getElementById("buttonNext").disabled = false;
+    }
+    document.getElementById("buttonBack").disabled = false;
   }
 }
 function back() {
@@ -48,7 +51,10 @@ function back() {
     document.getElementById("progress-container").style.width = (now / {{ page.img.size }}) * 100 + "%";
     document.getElementById("progress-number").innerHTML = now +" / "+ {{ page.img.size }};
     document.getElementById("buttonBack").disabled = true;
-    document.getElementById("buttonBack").disabled = false;
+    if(now != 1){
+      document.getElementById("buttonBack").disabled = false;
+    }
+    document.getElementById("buttonNext").disabled = false;
   }
 }
 

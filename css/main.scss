@@ -51,17 +51,22 @@ body {
     border: solid 4px $main-color;
     border-radius: 4px;
     width: calc(50% - 3px);
-    background-color: $main-color;
     padding: 12px;
-    color: #fff;
     font-weight: bold;
     font-size: 1.6em;
     display: block;
     outline: none;
-    &:first-child {
-      margin-right: 6px;
-      background-color: #fff;
-      color: $main-color;
+    &:disabled {
+      opacity: 0.4;
     }
+  }
+  .button-back {
+    margin-right: 6px;
+    background-color: #fff;
+    color: $main-color;
+  }
+  .button-next {
+    background-color: $main-color;
+    color: #fff;
   }
 }
