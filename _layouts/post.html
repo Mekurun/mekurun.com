@@ -4,8 +4,13 @@ layout: default
 <section class="post-content" id="slidesCover">
 {{ content }}
 <div id='slides'>
-  {% for img in page.img %}
-    <img src="/img{{ img }}" alt="" id="img-{{forloop.index}}" style="display:none;">
+  {% for slide in page.slides %}
+    {% assign firstword = slide | split: "/" | first %}
+    {% if firstword == '' %}
+    <img src="/img{{ slide }}" alt="" id="page-{{forloop.index}}" style="display:none;">
+    {% elsif firstword == 'https:' %}
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/{{slide | split: '/' | last}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:none;" id="page-{{forloop.index}}"></iframe>
+    {% endif %}
   {% endfor %}
 </div>
 <div class="progress-bar">
@@ -21,22 +26,22 @@ layout: default
 <script>
 var now = 1;
 function set() {
-  document.getElementById("img-1").style.display ="block";
-  document.getElementById("progress-container").style.width = (now / {{ page.img.size }}) * 100 + "%";
-  document.getElementById("progress-number").innerHTML = now +" / "+ {{ page.img.size }};
+  document.getElementById("page-1").style.display ="block";
+  document.getElementById("progress-container").style.width = (now / {{ page.slides.size }}) * 100 + "%";
+  document.getElementById("progress-number").innerHTML = now +" / "+ {{ page.slides.size }};
 }
 
 window.onload = set;
 function next() {
   document.activeElement.blur();
-  if(document.getElementById("img-"+(now+1)) != null){
-    document.getElementById("img-"+now).style.display ="none";
-    document.getElementById("img-"+(now+1)).style.display="block";
+  if(document.getElementById("page-"+(now+1)) != null){
+    document.getElementById("page-"+now).style.display ="none";
+    document.getElementById("page-"+(now+1)).style.display="block";
     now += 1;
-    document.getElementById("progress-container").style.width = (now / {{ page.img.size }}) * 100 + "%";
-    document.getElementById("progress-number").innerHTML = now +" / "+ {{ page.img.size }};
+    document.getElementById("progress-container").style.width = (now / {{ page.slides.size }}) * 100 + "%";
+    document.getElementById("progress-number").innerHTML = now +" / "+ {{ page.slides.size }};
     document.getElementById("buttonNext").disabled = true;
-    if(now != {{ page.img.size }}){
+    if(now != {{ page.slides.size }}){
       document.getElementById("buttonNext").disabled = false;
     }
     document.getElementById("buttonBack").disabled = false;
@@ -45,11 +50,11 @@ function next() {
 function back() {
   document.activeElement.blur();
   if(now > 1){
-    document.getElementById("img-"+now).style.display ="none";
-    document.getElementById("img-"+(now-1)).style.display="block";
+    document.getElementById("page-"+now).style.display ="none";
+    document.getElementById("page-"+(now-1)).style.display="block";
     now -= 1;
-    document.getElementById("progress-container").style.width = (now / {{ page.img.size }}) * 100 + "%";
-    document.getElementById("progress-number").innerHTML = now +" / "+ {{ page.img.size }};
+    document.getElementById("progress-container").style.width = (now / {{ page.slides.size }}) * 100 + "%";
+    document.getElementById("progress-number").innerHTML = now +" / "+ {{ page.slides.size }};
     document.getElementById("buttonBack").disabled = true;
     if(now != 1){
       document.getElementById("buttonBack").disabled = false;
