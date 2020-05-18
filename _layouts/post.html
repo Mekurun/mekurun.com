@@ -14,8 +14,8 @@ layout: default
 </div>
 <span id="progress-number">1/10</span>
 <div class="slide-buttons">
-  <input class="button-back" type="button" value="もどる" onclick="back()"/>
-  <input class="button-next" type="button" value="すすむ" onclick="next()"/>
+  <input class="button-back" type="button" value="もどる" onclick="back()" id="buttonBack"/>
+  <input class="button-next" type="button" value="すすむ" onclick="next()" id="buttonNext"/>
 </div>
 </section>
 <script>
@@ -28,27 +28,33 @@ function set() {
 
 window.onload = set;
 function next() {
+  document.activeElement.blur();
   if(document.getElementById("img-"+(now+1)) != null){
     document.getElementById("img-"+now).style.display ="none";
     document.getElementById("img-"+(now+1)).style.display="block";
     now += 1;
     document.getElementById("progress-container").style.width = (now / {{ page.img.size }}) * 100 + "%";
     document.getElementById("progress-number").innerHTML = now +" / "+ {{ page.img.size }};
+    document.getElementById("buttonNext").disabled = true;
+    document.getElementById("buttonNext").disabled = false;
   }
 }
 function back() {
+  document.activeElement.blur();
   if(now > 1){
     document.getElementById("img-"+now).style.display ="none";
     document.getElementById("img-"+(now-1)).style.display="block";
     now -= 1;
     document.getElementById("progress-container").style.width = (now / {{ page.img.size }}) * 100 + "%";
     document.getElementById("progress-number").innerHTML = now +" / "+ {{ page.img.size }};
+    document.getElementById("buttonBack").disabled = true;
+    document.getElementById("buttonBack").disabled = false;
   }
 }
 
 // 矢印キーでのページ切り替え
 window.document.onkeydown = function(event){
-    if (event.key === 'ArrowRight') {
+    if (event.key === 'ArrowRight' || event.key === ' ') {
         next()
       }
     else if (event.key === 'ArrowLeft') {
