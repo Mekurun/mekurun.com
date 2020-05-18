@@ -1,11 +1,14 @@
 ---
 ---
 $main-color: #1886c4;
+$text-color: #222;
+$darkgray: #555;
 body {
   margin: 0;
+  color: $text-color;
 }
 h2 {
-  color: #444;
+  color: $text-color;
   font-weight: 600;
 }
 .page-course {
@@ -100,6 +103,6 @@ h2 {
   margin: 4px;
   border-radius: 4px;
   text-decoration: none;
-  color: #444;
+  color: $darkgray;
   display: inline-block;
 }
