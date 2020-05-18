@@ -8,8 +8,10 @@ h2 {
   color: #444;
   font-weight: 600;
 }
-.post-content {
-  overflow: hidden;
+.page-course {
+  h2 {
+    display: inline-block;
+  }
 }
 #slidesCover {
   max-width: 800px;
@@ -81,6 +83,11 @@ h2 {
     background-color: $main-color;
     color: #fff;
   }
+}
+.button-export {
+  display: inline-block;
+  float: right;
+  color: $main-color;
 }
 .label {
   background-color: #eee;

@@ -1,10 +1,13 @@
 ---
 layout: default
 ---
-<section class="post-content" id="slidesCover">
+<section class="page-course" id="slidesCover">
 {{ content }}
 <a href="/" class="label">{{page.category}} / {{page.difficulty}}</a>
-<h2>{{page.title}}</h2>
+<div>
+  <h2>{{page.title}}</h2>
+  <a href="/" class="button button-export">PDFで見る</a>
+</div>
 <div id='slides'>
   {% for slide in page.slides %}
     {% assign firstword = slide | split: "/" | first %}
