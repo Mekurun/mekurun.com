@@ -45,4 +45,14 @@ function back() {
     document.getElementById("progress-number").innerHTML = now +" / "+ {{ page.img.size }};
   }
 }
+
+// ページ送り戻りの実装
+window.document.onkeydown = function(event){
+    if (event.key === 'ArrowRight') {
+        next()
+      }
+    else if (event.key === 'ArrowLeft') {
+        back()
+         }
+      }
 </script>
