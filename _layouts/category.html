@@ -4,10 +4,11 @@ layout: default
 {% include header.html %}
 <h1>{{ page.title }}</h1>
 {{content}}
-<ul class="course-list">
-{% for course in site.posts %}
-{% if course.categories[0] == page.categoryname %}
-<li><a href="{{course.url}}"><img src="/assets/course/{{ course.categories }}/{{ course.course-name }}{{ course.slides[0] }}" alt="{{ course.title }}">{{course.title}}</a></li>
-{% endif %}
-{% endfor %}
-</ul>
+<h2>はじめに</h2>
+{% include course-list.html difficulty="はじめに" %}
+<h2>かんたん</h2>
+{% include course-list.html difficulty="かんたん" %}
+<h2>ふつう</h2>
+{% include course-list.html difficulty="ふつう" %}
+<h2>むずかしい</h2>
+{% include course-list.html difficulty="むずかしい" %}
