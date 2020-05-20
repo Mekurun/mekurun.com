@@ -102,6 +102,10 @@ header {
     height: 450px;
     width: 100%;
   }
+  iframe {
+    z-index: 1;
+    position: relative;
+  }
   @media screen and (max-width:800px) {
     .slide {
       width: calc(100vw - 48px);
