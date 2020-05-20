@@ -9,6 +9,7 @@ layout: default
   <a href="/" class="button button-export">PDFで見る</a>
 </div>
 <div id='slides'>
+  <div class="slide"></div>
   {% for slide in page.slides %}
     {% assign firstword = slide | split: "/" | first %}
     {% if firstword == '' %}

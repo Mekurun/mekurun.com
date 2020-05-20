@@ -85,17 +85,18 @@ header {
   p {
     margin: 0;
   }
-  img, iframe {
+  .slide {
     border: solid 4px #888;
     box-sizing: border-box;
-    max-height: 60vh;
     left: 0;
     right: 0;
-    max-width: 100%;
-  }
-  iframe {
+    height: 450px;
     width: 100%;
-    height: 454px;
+    position: absolute;
+  }
+  img, iframe {
+    height: 450px;
+    width: 100%;
   }
 }
 .progress-bar {
