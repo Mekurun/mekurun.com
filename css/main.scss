@@ -16,6 +16,32 @@ h2 {
   color: $text-color;
   font-weight: 600;
 }
+header {
+  background-color: #fff;
+  height: 60px;
+  margin: 6px 10vw;
+  position: relative;
+  border-radius: 30px;
+  box-shadow: 0 0 6px #799baf77;
+  ul {
+    list-style: none;
+    line-height: 60px;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    position: absolute;
+    right: 40px;
+    li {
+      margin-right: 4px;
+      display: inline-block;
+    }
+    a {
+      font-weight: 500;
+      text-decoration: none;
+      color: $darkgray;
+    }
+  }
+}
 .course-list {
   display: flex;
   flex-wrap: wrap;
