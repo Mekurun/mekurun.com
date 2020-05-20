@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 ---
 <ul>
 {% for lesson in site.posts %}
