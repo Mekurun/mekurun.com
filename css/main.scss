@@ -79,9 +79,13 @@ header {
   margin: auto;
   position: relative;
   height: 100vh;
+  @media screen and (max-width:800px) {
+    padding: 24px;
+  }
 }
 #slides {
   margin: auto;
+  clear: both;
   p {
     margin: 0;
   }
@@ -97,6 +101,16 @@ header {
   img, iframe {
     height: 450px;
     width: 100%;
+  }
+  @media screen and (max-width:800px) {
+    .slide {
+      width: calc(100vw - 48px);
+      left: 24px;
+      height: calc((100vw - 48px) / 16 * 9);
+    }
+    img, iframe {
+      height: calc((100vw - 48px) / 16 * 9);
+    }
   }
 }
 .progress-bar {
