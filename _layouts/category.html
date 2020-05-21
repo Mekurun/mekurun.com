@@ -1,13 +1,19 @@
 ---
-layout: page
+layout: default
 ---
 {{content}}
-<p>{% t page.description %}</p>
-<h2 id="introduction">{% t difficulty.introduction %}</h2>
-{% include course-list.html difficulty="introduction" %}
-<h2 id="easy">{% t difficulty.easy %}</h2>
-{% include course-list.html difficulty="easy" %}
-<h2 id="normal">{% t difficulty.normal %}</h2>
-{% include course-list.html difficulty="normal" %}
-<h2 id="hard">{% t difficulty.hard %}</h2>
-{% include course-list.html difficulty="hard" %}
+{% include header.html %}
+<div class="top">
+  <h1>{% t page.title %}</h1>
+  <p>{% t page.description %}</p>
+</div>
+<div class="main">
+  <h2 id="introduction">{% t difficulty.introduction %}</h2>
+  {% include course-list.html difficulty="introduction" %}
+  <h2 id="easy">{% t difficulty.easy %}</h2>
+  {% include course-list.html difficulty="easy" %}
+  <h2 id="normal">{% t difficulty.normal %}</h2>
+  {% include course-list.html difficulty="normal" %}
+  <h2 id="hard">{% t difficulty.hard %}</h2>
+  {% include course-list.html difficulty="hard" %}
+</div>

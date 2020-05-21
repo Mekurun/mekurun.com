@@ -1,7 +1,7 @@
 ---
 layout: category
 permalink: /scratch
-title: Scratch
+title: category.scratch.title
 categoryname: Scratch
 description: category.scratch.description
 ---
