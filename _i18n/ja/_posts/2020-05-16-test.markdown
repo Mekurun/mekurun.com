@@ -6,6 +6,7 @@ categories: Scratch
 difficulty: hard
 course-name: shooting-game
 slides:
+-  /minecraft.jpg
 -  /img.001.jpeg
 -  /img.002.jpeg
 -  https://youtu.be/t8kpeE_sNB0
