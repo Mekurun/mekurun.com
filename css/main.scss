@@ -23,6 +23,8 @@ header {
   position: relative;
   border-radius: 30px;
   box-shadow: 0 0 6px #799baf77;
+  float: left;
+  width: 80vw;
   ul {
     list-style: none;
     line-height: 60px;
@@ -40,6 +42,14 @@ header {
       text-decoration: none;
       color: $darkgray;
     }
+  }
+}
+.top {
+  padding: 24px 10vw;
+  background-color: $main-color;
+  height: 70vh;
+  h1 {
+    clear: both;
   }
 }
 .course-list {
