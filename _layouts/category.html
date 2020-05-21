@@ -2,11 +2,11 @@
 layout: page
 ---
 {{content}}
-<h2>{% t difficulty.introduction %}</h2>
+<h2 id="introduction">{% t difficulty.introduction %}</h2>
 {% include course-list.html difficulty="introduction" %}
-<h2>{% t difficulty.easy %}</h2>
+<h2 id="easy">{% t difficulty.easy %}</h2>
 {% include course-list.html difficulty="easy" %}
-<h2>{% t difficulty.normal %}</h2>
+<h2 id="normal">{% t difficulty.normal %}</h2>
 {% include course-list.html difficulty="normal" %}
-<h2>{% t difficulty.hard %}</h2>
+<h2 id="hard">{% t difficulty.hard %}</h2>
 {% include course-list.html difficulty="hard" %}
