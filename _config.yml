@@ -6,6 +6,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 plugins:
   - jekyll-feed
   - jekyll-multiple-languages-plugin
+  - jekyll-minifier
 
 languages: ["ja", "en", "kana"]
 
