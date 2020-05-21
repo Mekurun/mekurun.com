@@ -3,3 +3,8 @@ difficulty:
   easy: Easy
   normal: Normal
   hard: Hard
+
+category:
+  scratch:
+    title: Scratch
+    description: Scratch is a block-based visual programming language and website targeted primarily at children.

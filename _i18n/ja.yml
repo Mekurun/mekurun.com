@@ -3,3 +3,8 @@ difficulty:
   easy: かんたん
   normal: ふつう
   hard: むずかしい
+
+category:
+  scratch:
+    title: Scratch
+    description: Scratchはブロックベースのビジュアルプログラミング言語です。

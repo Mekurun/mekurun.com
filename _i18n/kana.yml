@@ -3,3 +3,8 @@ difficulty:
   easy: かんたん
   normal: ふつう
   hard: むずかしい
+
+category:
+  scratch:
+    title: スクラッチ
+    description: スクラッチは、ブロックをくみたてると プログラムができる プログラミングげんごです。
