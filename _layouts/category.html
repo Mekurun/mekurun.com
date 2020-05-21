@@ -2,11 +2,11 @@
 layout: page
 ---
 {{content}}
-<h2>はじめに</h2>
-{% include course-list.html difficulty="はじめに" %}
-<h2>かんたん</h2>
-{% include course-list.html difficulty="かんたん" %}
-<h2>ふつう</h2>
-{% include course-list.html difficulty="ふつう" %}
-<h2>むずかしい</h2>
-{% include course-list.html difficulty="むずかしい" %}
+<h2>{% t difficulty.introduction %}</h2>
+{% include course-list.html difficulty="introduction" %}
+<h2>{% t difficulty.easy %}</h2>
+{% include course-list.html difficulty="easy" %}
+<h2>{% t difficulty.normal %}</h2>
+{% include course-list.html difficulty="normal" %}
+<h2>{% t difficulty.hard %}</h2>
+{% include course-list.html difficulty="hard" %}
