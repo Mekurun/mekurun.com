@@ -1,18 +1,12 @@
 ---
-layout: default
+layout: page
 ---
-{% include header.html %}
-<div class="top">
-  <h1>{{ page.title }}</h1>
-</div>
 {{content}}
-<div class="main">
-  <h2>はじめに</h2>
-  {% include course-list.html difficulty="はじめに" %}
-  <h2>かんたん</h2>
-  {% include course-list.html difficulty="かんたん" %}
-  <h2>ふつう</h2>
-  {% include course-list.html difficulty="ふつう" %}
-  <h2>むずかしい</h2>
-  {% include course-list.html difficulty="むずかしい" %}
-</div>
+<h2>はじめに</h2>
+{% include course-list.html difficulty="はじめに" %}
+<h2>かんたん</h2>
+{% include course-list.html difficulty="かんたん" %}
+<h2>ふつう</h2>
+{% include course-list.html difficulty="ふつう" %}
+<h2>むずかしい</h2>
+{% include course-list.html difficulty="むずかしい" %}
