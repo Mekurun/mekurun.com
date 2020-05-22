@@ -79,6 +79,17 @@ header {
 .main {
   margin: auto 10vw;
 }
+.list-category-one {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 0 #e9f1f7;
+  color: $text-color;
+  display: block;
+  margin: 12px;
+  padding: 12px;
+  text-decoration: none;
+  width: calc(50% - 24px);
+}
 .page-course {
   h2 {
     display: inline-block;

@@ -9,7 +9,7 @@ layout: page
 
 <div class="list-category">
   <a href="/scratch" class="list-category-one">
-    {% t category.scratch.title %}
-    {% t category.scratch.description %}
+    <h3>{% t category.scratch.title %}</h3>
+    <p>{% t category.scratch.description %}</p>
   </a>
 </div>
