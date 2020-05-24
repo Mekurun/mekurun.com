@@ -8,3 +8,7 @@ category:
   scratch:
     title: Scratch
     description: Scratch is a block-based visual programming language and website targeted primarily at children.
+
+top:
+  recent: Recent Courses
+  allmenu: All Categories

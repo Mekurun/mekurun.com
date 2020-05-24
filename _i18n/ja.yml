@@ -8,3 +8,7 @@ category:
   scratch:
     title: Scratch
     description: Scratchはブロックベースのビジュアルプログラミング言語です。
+
+top:
+  recent: 最近追加されたコース
+  allmenu: 全てのメニュー
