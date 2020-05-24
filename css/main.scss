@@ -82,6 +82,9 @@ footer {
     }
   }
 }
+.top-course-list li {
+  width: calc(25% - 24px);
+}
 .main {
   margin: auto 10vw;
 }
