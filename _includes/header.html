@@ -4,4 +4,13 @@
     <li><a href="/">メニューを見る</a></li>
     <li><a href="/">使い方を見る</a></li>
   </ul>
+  <div class="">
+    {% if site.lang == "ja" %}
+      {% capture link1 %}{{ site.baseurl_root }}/kana{{ page.url}}{% endcapture %}
+      <a href="{{ link1 }}" >ひらがな</a>
+    {% elsif site.lang == "kana" %}
+      {% capture link2 %}{{ site.baseurl_root }}{{ page.url  }}{% endcapture %}
+      <a href="{{ link2 }}" >漢字</a>
+    {% endif %}
+  </div>
 </header>
