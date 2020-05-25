@@ -25,6 +25,8 @@ header {
   box-shadow: 0 0 6px #799baf77;
   float: left;
   width: 80vw;
+  color: $darkgray;
+  font-weight: 500;
   ul {
     list-style: none;
     line-height: 60px;
@@ -32,15 +34,15 @@ header {
     padding: 0;
     display: inline-block;
     position: absolute;
-    right: 40px;
+    right: 160px;
     li {
       margin-right: 4px;
       display: inline-block;
     }
     a {
-      font-weight: 500;
+      font-weight: inherit;
       text-decoration: none;
-      color: $darkgray;
+      color: inherit;
     }
   }
 }
@@ -50,6 +52,57 @@ footer {
   text-align: center;
   padding: 36px;
 }
+/*ひらがなスイッチ*/
+.kana-switch-cover {
+  position: absolute;
+  right: 40px;
+  top: 5px;
+  bottom: 5px;
+  font-size: .8em;
+}
+$switchHeight: 30px;
+.kana-switch {
+  border-radius: $switchHeight / 2 + 8px;
+  border: solid 2px #fff;
+  display: block;
+  height: $switchHeight + 4px;
+  padding: 5px;
+  margin: auto;
+  width: $switchHeight * 1.9;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: '';
+    background-color: #fff;
+    border-radius: ($switchHeight - 10px) / 2;
+    display: block;
+    width: $switchHeight - 10px;
+    height: $switchHeight - 10px;
+  }
+}
+.kana-switch-off {
+  background-color: #c2c2c2;
+  &::before {
+    left: 5px;
+    animation: turnoff .2s ease;
+  }
+}
+.kana-switch-on {
+  background-color: #2c9e3e;
+  &::before {
+    right: 5px;
+    animation: turnon .2s ease;
+  }
+}
+@keyframes turnon {
+  0% {right: $switchHeight * 0.52;}
+  100% {right: 5px;}
+}
+@keyframes turnoff {
+  0% {left: $switchHeight * 0.52;}
+  100% {left: 5px;}
+}
+
 .top {
   padding: 24px 10vw;
   background-color: $main-color;
