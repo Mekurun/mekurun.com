@@ -8,11 +8,11 @@ category:
   scratch:
     title: Scratch
     caption: MITメディアラボの研究チームが開発しているScratchでプログラミングをはじめてみよう！
-    discription: MITメディアラボの研究チームが開発しているビジュアルプログラミング言語「Scratch」を使って、プログラミングをはじめてみよう！Scratchは誰でも無料で使うことができます。
+    description: MITメディアラボの研究チームが開発しているビジュアルプログラミング言語「Scratch」を使って、プログラミングをはじめてみよう！Scratchは誰でも無料で使うことができます。
   minecraft:
     title: Minecraft
     caption: マイクロソフトが開発しているMakeCodeでマイクラの世界をプログラミングしてみよう！
-    discription: マイクロソフトが開発しているビジュアルプログラミング言語「MakeCode」を使って、マイクラの世界をプログラミングしてみよう！Minecraft Windows10 Edition、Education Editionに対応しています。
+    description: マイクロソフトが開発しているビジュアルプログラミング言語「MakeCode」を使って、マイクラの世界をプログラミングしてみよう！Minecraft Windows10 Edition、Education Editionに対応しています。
 
 top:
   recent: 最近追加されたコース
