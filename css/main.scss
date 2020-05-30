@@ -4,6 +4,7 @@ $main-color: #1886c4;
 $text-color: #222;
 $darkgray: #555;
 $bg-gray: #f5fdff;
+$header-height: 60px;
 body {
   margin: 0;
   color: $text-color;
@@ -18,17 +19,17 @@ h2 {
 }
 header {
   background-color: #fff;
-  height: 60px;
+  height: $header-height;
   margin: 6px 10vw;
   position: absolute;
-  border-radius: 30px;
+  border-radius: $header-height / 2;
   box-shadow: 0 0 6px #799baf77;
   width: 80vw;
   color: $darkgray;
   font-weight: 500;
   ul {
     list-style: none;
-    line-height: 60px;
+    line-height: $header-height;
     margin: 0;
     padding: 0;
     display: inline-block;
@@ -103,7 +104,7 @@ $switchHeight: 30px;
 }
 
 .top {
-  padding: 84px 10vw 24px;
+  padding: $header-height + 24px 10vw 24px;
   background-color: $main-color;
   height: 30vh;
   display: flex;
