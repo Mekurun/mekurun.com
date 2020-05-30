@@ -103,12 +103,17 @@ $switchHeight: 30px;
 }
 
 .top {
-  padding: 24px 10vw;
+  padding: 84px 10vw 24px;
   background-color: $main-color;
-  height: 70vh;
+  height: 30vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #fff;
+}
+.category-top {
+  height: 70vh;
+  color: $text-color;
 }
 .course-list {
   display: flex;
