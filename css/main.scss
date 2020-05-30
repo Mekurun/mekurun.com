@@ -20,10 +20,9 @@ header {
   background-color: #fff;
   height: 60px;
   margin: 6px 10vw;
-  position: relative;
+  position: absolute;
   border-radius: 30px;
   box-shadow: 0 0 6px #799baf77;
-  float: left;
   width: 80vw;
   color: $darkgray;
   font-weight: 500;
@@ -107,9 +106,9 @@ $switchHeight: 30px;
   padding: 24px 10vw;
   background-color: $main-color;
   height: 70vh;
-  h1 {
-    clear: both;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .course-list {
   display: flex;
