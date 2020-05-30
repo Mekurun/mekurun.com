@@ -10,7 +10,7 @@ layout: page
 
 <h2>{% t top.allmenu %}</h2>
 <div class="list-category">
-  <a href="/scratch" class="list-category-one">
+  <a href="{{ site.baseurl }}/scratch" class="list-category-one">
     <h3>{% t category.scratch.title %}</h3>
     <p>{% t category.scratch.caption %}</p>
   </a>
