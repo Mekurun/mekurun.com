@@ -1,5 +1,6 @@
 ---
 layout: page
+title: top.title
 ---
 <h2>{% t top.recent %}</h2>
 <ul class="top-course-list course-list">
