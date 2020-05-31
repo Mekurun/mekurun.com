@@ -1,3 +1,4 @@
+title: めくるん
 difficulty:
   introduction: はじめに
   easy: かんたん
@@ -32,3 +33,12 @@ contact:
   mailTitle: 件名
   mailContent: お問い合わせ内容
   send: 送信
+
+termOfUse:
+  title: 利用規約
+
+privacy:
+  title: プライバシーポリシー
+
+faq:
+  title: よくある質問

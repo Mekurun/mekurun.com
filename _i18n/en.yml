@@ -1,3 +1,4 @@
+title: mekurun
 difficulty:
   introduction: Introduction
   easy: Easy
@@ -33,3 +34,12 @@ contact:
   mailTitle: subject
   mailContent: Inquiry
   send: Send
+
+termOfUse:
+  title: Term of Use
+
+privacy:
+  title: Privacy Policy
+
+faq:
+  title: FAQ Page
