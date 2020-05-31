@@ -4,7 +4,7 @@ title: contact.title
 permalink: contact
 ---
 
-<form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true">
+<form name="contact" method="POST" data-netlify="true">
   <p>
     <label>{% t contact.name %}: <input type="text" name="name" required /></label>   
   </p>
@@ -17,6 +17,7 @@ permalink: contact
   <p>
     <label>{% t contact.mailContent %}: <textarea name="message" required></textarea></label>
   </p>
+  <div data-netlify-recaptcha="true"></div>
   <p>
     <button type="submit">{% t contact.send %}</button>
   </p>
