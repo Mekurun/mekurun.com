@@ -58,6 +58,11 @@ footer {
     }
   }
 }
+@mixin card($color: #e9f1f7) {
+  border-radius: 10px;
+  border: solid 2px $color;
+  box-shadow: 0 6px 0 $color;
+}
 .footer-list {
   padding: 0;
   list-style: none;
@@ -139,10 +144,8 @@ $switchHeight: 30px;
     list-style: none;
     width: calc(33% - 24px);
     background-color: #fff;
-    border-radius: 10px;
-    border: solid 2px #e9f1f7;
-    box-shadow: 0 6px 0 #e9f1f7;
     margin: 12px;
+    @include card();
     a {
       text-decoration: none;
       color: $text-color;
@@ -164,8 +167,7 @@ $switchHeight: 30px;
 }
 .list-category-one {
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 6px 0 #e9f1f7;
+  @include card();
   color: $text-color;
   display: block;
   margin: 12px;
