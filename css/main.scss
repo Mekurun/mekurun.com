@@ -49,8 +49,23 @@ header {
 footer {
   color: #fff;
   background-color: $darkgray;
-  text-align: center;
   padding: 36px;
+  display: flex;
+  a {
+    color: #fff;
+    &:hover {
+      opacity: .7;
+    }
+  }
+}
+.footer-list {
+  padding: 0;
+  list-style: none;
+  width: 20%;
+  line-height: 1.8em;
+}
+.footer-logoblock {
+  width: 40%;
 }
 /*ひらがなスイッチ*/
 .kana-switch-cover {
