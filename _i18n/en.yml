@@ -34,3 +34,6 @@ contact:
   mailTitle: subject
   mailContent: Inquiry
   send: Send
+
+termOfUse:
+  title: Term of Use
