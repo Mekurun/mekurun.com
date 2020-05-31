@@ -5,8 +5,8 @@ date:   2020-05-16 11:14:26 +0900
 categories: Scratch
 difficulty: hard
 course-name: shooting-game
+thumbnail: /minecraft.jpg
 slides:
--  /minecraft.jpg
 -  /img.001.jpeg
 -  /img.002.jpeg
 -  https://youtu.be/t8kpeE_sNB0
