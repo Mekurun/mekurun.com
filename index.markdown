@@ -5,7 +5,7 @@ title: top.title
 <h2 id="newcourse">{% t top.recent %}</h2>
 <ul class="top-course-list course-list">
 {% for course in site.posts limit:4 %}
-<li><a href="{{course.url}}"><span>{{ course.categories }}</span><img src="/assets/course/{{ course.categories }}/{{ course.course-name }}{{ course.slides[0] }}" alt="{{ course.title }}">{{ course.title }} <span> {% t difficulty.{{ course.difficulty }} %} </span></a></li>
+<li><a href="{{course.url}}"><span>{{ course.categories }}</span><img src="/assets/course/{{ course.categories }}/{{ course.course-name }}{{ course.thumbnail }}" alt="{{ course.title }}">{{ course.title }} <span> {% t difficulty.{{ course.difficulty }} %} </span></a></li>
 {% endfor %}
 </ul>
 

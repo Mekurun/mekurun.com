@@ -165,6 +165,15 @@ $switchHeight: 30px;
 }
 .main {
   margin: auto 10vw;
+  h2 {
+    &:before {
+      content: '\f02d';
+      font-family: 'Font Awesome 5 Free';
+      color: $main-color;
+      opacity: .8;
+      margin-right: 8px;
+    }
+  }
 }
 .list-category-one {
   background: #fff;
