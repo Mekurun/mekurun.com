@@ -1,7 +1,7 @@
 ---
 ---
 $main-color: #1886c4;
-$text-color: #222;
+$text-color: #222222;
 $darkgray: #555;
 $bg-gray: #f5fdff;
 $header-height: 60px;
@@ -23,7 +23,7 @@ header {
   margin: 6px 10vw;
   position: absolute;
   border-radius: $header-height / 2;
-  box-shadow: 0 0 6px #799baf77;
+  box-shadow: 0 0 6px #2223;
   width: 80vw;
   color: $darkgray;
   font-weight: 500;
