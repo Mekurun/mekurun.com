@@ -315,6 +315,9 @@ form {
     border: solid 2px $lightgray;
     background-color: $bg-gray;
     border-radius: 5px;
+    }
+  .required{
+    color: red;
   }
   button {
     display: block;
