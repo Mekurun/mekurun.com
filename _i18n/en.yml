@@ -25,3 +25,11 @@ usage:
 
 about:
   title: About
+
+contact:
+  title: Contact
+  name: Name
+  email: E-mail
+  mailTitle: subject
+  mailContent: Inquiry
+  send: Send

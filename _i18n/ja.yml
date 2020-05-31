@@ -24,3 +24,11 @@ usage:
 
 about:
   title: このサービスについて
+
+contact:
+  title: お問い合わせ
+  name: お名前
+  email: メールアドレス
+  mailTitle: 件名
+  mailContent: お問い合わせ内容
+  send: 送信

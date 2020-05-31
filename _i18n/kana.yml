@@ -24,3 +24,11 @@ usage:
 
 about:
   title: このサービスについて
+
+contact:
+  title: おといあわせ
+  name: おなまえ
+  email: メールアドレス
+  mailTitle: けんめい
+  mailContent: ないよう
+  send: そうしん
