@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<section class="page-course" id="slidesCover">
+<section class="slide-page page-course" id="slidesCover">
 {{ content }}
 <a href="/{{page.categories}}#{{page.difficulty}}" class="label">{{page.categories}} / {% t difficulty.{{page.difficulty}} %}</a>
 <div>
@@ -31,7 +31,7 @@ layout: default
   <input class="button button-next" type="button" value="すすむ" onclick="next()" id="buttonNext"/>
 </div>
 </section>
-<section>
+<section class="slide-page">
   {% assign subcourses = site.posts | where_exp:"c",
   "c.parent == page.course-name" %}
   {% if subcourses.size > 0 %}

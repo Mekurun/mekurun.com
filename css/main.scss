@@ -186,19 +186,25 @@ $switchHeight: 30px;
   text-decoration: none;
   width: calc(50% - 24px);
 }
-.page-course {
-  h2 {
-    display: inline-block;
-  }
-}
-#slidesCover {
+.slide-page {
   max-width: 800px;
   margin: auto;
-  position: relative;
-  height: 100vh;
   @media screen and (max-width:800px) {
     padding: 24px;
   }
+  h2 {
+    margin-top: 2em;
+  }
+}
+.page-course {
+  h2 {
+    display: inline-block;
+    margin-top: 1em;
+  }
+}
+#slidesCover {
+  position: relative;
+  height: 100vh;
 }
 #slides {
   margin: auto;
