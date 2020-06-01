@@ -4,9 +4,16 @@ title: top.title
 ---
 <h2 id="newcourse">{% t top.recent %}</h2>
 <ul class="top-course-list course-list">
-{% for course in site.posts limit:4 %}
-<li><a href="{{course.url}}"><span>{{ course.categories }}</span><img src="/assets/course/{{ course.categories }}/{{ course.course-name }}{{ course.thumbnail }}" alt="{{ course.title }}">{{ course.title }} <span> {% t difficulty.{{ course.difficulty }} %} </span></a></li>
-{% endfor %}
+  {% for course in site.posts limit:4 %}
+  <li>
+    <a href="{{course.url}}">
+      <span class="top-course-list-category">{{ course.categories }}</span>
+      <img src="/assets/course/{{ course.categories }}/{{ course.course-name }}{{ course.thumbnail }}" alt="{{ course.title }}">
+      {{ course.title }}
+      <span class="top-course-list-difficulty"> {% t difficulty.{{ course.difficulty }} %} </span>
+    </a>
+  </li>
+  {% endfor %}
 </ul>
 
 <h2 id="allmenu">{% t top.allmenu %}</h2>

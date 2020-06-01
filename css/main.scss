@@ -164,6 +164,26 @@ $switchHeight: 30px;
 .top-course-list li {
   width: calc(25% - 24px);
 }
+.top-course-list-category {
+  background-color: $lightgray;
+  display: block;
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding: 4px 0;
+  font-weight: 500;
+}
+.top-course-list-difficulty {
+  display: block;
+  width: 100%;
+  &:before {
+    content: "\f005";
+    font-family: 'Font Awesome 5 Free Solid';
+    color: $main-color;
+    opacity: .8;
+  }
+}
 .main {
   margin: auto 10vw;
   h2 {
