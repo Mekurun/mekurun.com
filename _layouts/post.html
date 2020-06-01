@@ -19,11 +19,13 @@ layout: default
     {% endif %}
   {% endfor %}
 </div>
-<div class="progress-bar">
-  <div id="progress-container">
+<div class="progress-cover">
+  <div class="progress-bar">
+    <div id="progress-container">
+    </div>
   </div>
+  <span id="progress-number"></span>
 </div>
-<span id="progress-number">1/10</span>
 <div class="slide-buttons">
   <input class="button button-back" type="button" value="もどる" onclick="back()" id="buttonBack" disabled/>
   <input class="button button-next" type="button" value="すすむ" onclick="next()" id="buttonNext"/>
@@ -35,6 +37,7 @@ function set() {
   document.getElementById("page-1").style.display ="block";
   document.getElementById("progress-container").style.width = (now / {{ page.slides.size }}) * 100 + "%";
   document.getElementById("progress-number").innerHTML = now +" / "+ {{ page.slides.size }};
+  document.getElementById("progress-number").style.width = 'calc(' + (String({{ page.slides.size }}).length * 2 + 1) + 'em + 4px)';
 }
 
 window.onload = set;

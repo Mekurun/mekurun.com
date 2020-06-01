@@ -256,12 +256,15 @@ $switchHeight: 30px;
     }
   }
 }
+.progress-cover {
+  display: flex;
+}
 .progress-bar {
   height: 16px;
   background-color: #ddd;
   border-radius: 12px;
   margin-top: 8px;
-  width: 80%;
+  width: 100%;
   display: inline-block;
 }
 #progress-container {
@@ -272,6 +275,7 @@ $switchHeight: 30px;
 #progress-number {
   font-weight: 600;
   color: $darkgray;
+  text-align: right;
 }
 .button {
   -webkit-appearance: none;
