@@ -4,8 +4,12 @@ layout: default
 <section class="slide-page page-course" id="slidesCover">
 {{ content }}
 <a href="/{{page.categories}}#{{page.difficulty}}" class="label">{{page.categories}} / {% t difficulty.{{page.difficulty}} %}</a>
-<div>
+<div class="slides-top">
+  <div class="slides-top-info">
+  {% assign parents = site.posts | where:"course-name", page.parent %}
+  <a class="link-to-parent" href="/{{page.categories}}/{{page.parent}}">{{ parents[0].title }}</a>
   <h2>{{page.title}}</h2>
+  </div>
   <a href="/" class="button button-export">PDFで見る</a>
 </div>
 <div id='slides'>
