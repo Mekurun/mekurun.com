@@ -2,8 +2,18 @@
 <html lang="ja" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>{% if page.course-name %}{{page.title}}{% else %}{% t {{page.title}} %}{% endif %}{% if page.url != '/' %} | {% t title %}{% endif %}</title>
+    {% capture title %}{% if page.course-name %}{{page.title}}{% else %}{% t {{page.title}} %}{% endif %}{% if page.url != '/' %} | {% t title %}{% endif %}{% endcapture %}
+    <title>{{ title }}</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    {% if page.course-name %}
+      <meta property="og:title" content="{{ page.categories }}: {{ title }}">
+    {% else %}
+      <meta property="og:title" content="{{ title }}">
+    {% endif %}
+    <meta property="og:site_name" content="メクルン">
+    <meta property="og:url" content="{{ site.url }}">
+    <meta property="og:description" content="{{ page.description }}">
+    <meta property="og:type" content="website">
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     <script src="https://kit.fontawesome.com/734fe914a1.js" crossorigin="anonymous"></script>
   </head>
