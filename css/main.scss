@@ -293,10 +293,7 @@ $switchHeight: 30px;
 }
 .slide-buttons {
   display: flex;
-  position: absolute;
-  right: 0;
-  left: 0;
-  bottom: 24px;
+  margin-top: 24px;
   input {
     width: calc(50% - 3px);
     font-size: 1.6em;
