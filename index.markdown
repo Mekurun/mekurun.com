@@ -4,7 +4,9 @@ title: top.title
 ---
 <h2 id="newcourse">{% t top.recent %}</h2>
 <ul class="top-course-list course-list">
-  {% for course in site.posts limit:4 %}
+{% assign courses = site.posts limit:4 | where_exp:"c",
+"c.parent == nil" %}
+{% for course in courses %}
   <li>
     <a href="{{course.url}}">
       <span class="top-course-list-category">{{ course.categories }}</span>
@@ -13,7 +15,7 @@ title: top.title
       <span class="top-course-list-difficulty"> {% t difficulty.{{ course.difficulty }} %} </span>
     </a>
   </li>
-  {% endfor %}
+{% endfor %}
 </ul>
 
 <h2 id="allmenu">{% t top.allmenu %}</h2>

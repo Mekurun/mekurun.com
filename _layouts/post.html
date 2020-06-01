@@ -1,19 +1,25 @@
 ---
 layout: default
 ---
-<section class="page-course" id="slidesCover">
+<section class="slide-page page-course" id="slidesCover">
 {{ content }}
 <a href="/{{page.categories}}#{{page.difficulty}}" class="label">{{page.categories}} / {% t difficulty.{{page.difficulty}} %}</a>
-<div>
+<div class="slides-top">
+  <div class="slides-top-info">
+  {% assign parents = site.posts | where:"course-name", page.parent %}
+  <a class="link-to-parent" href="/{{page.categories}}/{{page.parent}}">{{ parents[0].title }}</a>
   <h2>{{page.title}}</h2>
+  </div>
   <a href="/" class="button button-export">PDFで見る</a>
 </div>
 <div id='slides'>
   <div class="slide"></div>
   {% for slide in page.slides %}
     {% assign firstword = slide | split: "/" | first %}
+
     {% if firstword == '' %}
-    <img src="/assets/course/{{ page.categories }}/{{ page.course-name }}{{ slide }}" loading="lazy" alt="" id="page-{{forloop.index}}" style="display:none;">
+    {% capture src %}{% if page.parent %}{{site.url}}/assets/course/{{ page.categories }}/{{ page.parent }}/{{ page.course-name }}{{ slide }}{% else %}{{site.url}}/assets/course/{{ page.categories }}/{{ page.course-name }}{{ slide }}{% endif %}{% endcapture %}
+    <img src="{{ src }}" loading="lazy" alt="" id="page-{{forloop.index}}" style="display:none;">
     {% elsif firstword == 'https:' %}
     <iframe width="560" height="315" loading="lazy" src="https://www.youtube.com/embed/{{slide | split: '/' | last}}?rel=0&fs=0&modestbranding=1&enablejsapi=1&disablekb=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:none;" id="page-{{forloop.index}}"></iframe>
     {% endif %}
@@ -30,6 +36,18 @@ layout: default
   <input class="button button-back" type="button" value="もどる" onclick="back()" id="buttonBack" disabled/>
   <input class="button button-next" type="button" value="すすむ" onclick="next()" id="buttonNext"/>
 </div>
+</section>
+<section class="slide-page">
+  {% assign subcourses = site.posts | where_exp:"c",
+  "c.parent == page.course-name" %}
+  {% if subcourses.size > 0 %}
+  <h2>拡張コース</h2>
+  <ul class="course-list">
+  {% for course in subcourses %}
+  <li><a href="{{course.url}}"><img src="/assets/course/{{ course.categories }}/{{ course.parent }}/{{ course.course-name }}{{ course.thumbnail }}" alt="{{ course.title }}">{{course.title}}</a></li>
+  {% endfor %}
+  {% endif %}
+  </ul>
 </section>
 <script>
 var now = 1;
