@@ -49,12 +49,14 @@ header {
   }
 }
 footer {
-  color: #fff;
-  background-color: $darkgray;
+  color: $darkgray;
+  font-weight: bold;
+  background-color: $lightgray;
   padding: 36px;
   display: flex;
+  margin-top: 60px;
   a {
-    color: #fff;
+    color: $darkgray;
     &:hover {
       opacity: .7;
     }
