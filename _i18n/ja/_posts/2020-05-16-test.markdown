@@ -5,6 +5,7 @@ date:   2020-05-16 11:14:26 +0900
 categories: Scratch
 difficulty: hard
 course-name: shooting-game
+description: 敵に弾を当てて消すゲームを作るコースです。
 thumbnail: /minecraft.jpg
 slides:
 -  /img.001.jpeg
