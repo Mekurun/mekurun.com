@@ -49,12 +49,14 @@ header {
   }
 }
 footer {
-  color: #fff;
-  background-color: $darkgray;
+  color: $darkgray;
+  font-weight: bold;
+  background-color: $lightgray;
   padding: 36px;
   display: flex;
+  margin-top: 60px;
   a {
-    color: #fff;
+    color: $darkgray;
     &:hover {
       opacity: .7;
     }
@@ -164,6 +166,26 @@ $switchHeight: 30px;
 .top-course-list li {
   width: calc(25% - 24px);
 }
+.top-course-list-category {
+  background-color: $lightgray;
+  display: block;
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding: 4px 0;
+  font-weight: 500;
+}
+.top-course-list-difficulty {
+  display: block;
+  width: 100%;
+  &:before {
+    content: "\f005";
+    font-family: 'Font Awesome 5 Free Solid';
+    color: $main-color;
+    opacity: .8;
+  }
+}
 .main {
   margin: auto 10vw;
   h2 {
@@ -232,7 +254,6 @@ $switchHeight: 30px;
     right: 0;
     height: 450px;
     width: 100%;
-    position: absolute;
   }
   img, iframe {
     height: 450px;
@@ -253,12 +274,15 @@ $switchHeight: 30px;
     }
   }
 }
+.progress-cover {
+  display: flex;
+}
 .progress-bar {
   height: 16px;
   background-color: #ddd;
   border-radius: 12px;
   margin-top: 8px;
-  width: 80%;
+  width: 100%;
   display: inline-block;
 }
 #progress-container {
@@ -269,6 +293,7 @@ $switchHeight: 30px;
 #progress-number {
   font-weight: 600;
   color: $darkgray;
+  text-align: right;
 }
 .button {
   -webkit-appearance: none;
@@ -287,10 +312,7 @@ $switchHeight: 30px;
 }
 .slide-buttons {
   display: flex;
-  position: absolute;
-  right: 0;
-  left: 0;
-  bottom: 24px;
+  margin-top: 24px;
   input {
     width: calc(50% - 3px);
     font-size: 1.6em;

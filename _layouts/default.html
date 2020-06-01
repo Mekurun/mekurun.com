@@ -2,7 +2,7 @@
 <html lang="ja" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>{% t {{page.title}} %} | {% t title %} </title>
+    <title>{% if page.course-name %}{{page.title}}{% else %}{% t {{page.title}} %}{% endif %}{% if page.url != '/' %} | {% t title %}{% endif %}</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     <script src="https://kit.fontawesome.com/734fe914a1.js" crossorigin="anonymous"></script>

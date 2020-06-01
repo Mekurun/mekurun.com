@@ -5,6 +5,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # Build settings
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
   - jekyll-multiple-languages-plugin
   - jekyll-minifier
 
