@@ -41,7 +41,7 @@ layout: default
   {% assign subcourses = site.posts | where_exp:"c",
   "c.parent == page.course-name" %}
   {% if subcourses.size > 0 %}
-  <h2>拡張コース</h2>
+  <h2>{% t course.subcourses %}</h2>
   <ul class="course-list">
   {% for course in subcourses %}
   <li><a href="{{course.url}}"><img src="/assets/course/{{ course.categories }}/{{ course.parent }}/{{ course.course-name }}{{ course.thumbnail }}" alt="{{ course.title }}">{{course.title}}</a></li>
