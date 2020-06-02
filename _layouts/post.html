@@ -102,12 +102,4 @@ window.document.onkeydown = function(event){
          }
       }
 
-let lastTouchEndTime = 0;
-document.addEventListener('touchend', (event) => {
-  const now = new Date().getTime();
-  if((now - lastTouchEndTime) < 350) {
-    event.preventDefault();
-  }
-  lastTouchEndTime = now;
-});
 </script>
