@@ -213,6 +213,10 @@ footer {
   border-radius: 10px;
   border: solid 2px $color;
   box-shadow: 0 6px 0 $color;
+  @media screen and (max-width:700px) {
+    width: 100%;
+    margin: 0 0 16px 0;
+  }
 }
 .top {
   padding: $header-height * 1.3 + 24px 10vw 24px;
@@ -252,6 +256,7 @@ footer {
 }
 .top-course-list li {
   width: calc(25% - 24px);
+  @include card();
 }
 .top-course-list-category {
   background-color: $lightgray;
