@@ -47,35 +47,11 @@ header {
       color: inherit;
     }
   }
-}
-footer {
-  color: $darkgray;
-  font-weight: bold;
-  background-color: $lightgray;
-  padding: 36px;
-  display: flex;
-  margin-top: 60px;
   a {
-    color: $darkgray;
-    &:hover {
-      opacity: .7;
-    }
   }
 }
-@mixin card($color: $lightgray) {
-  border-radius: 10px;
-  border: solid 2px $color;
-  box-shadow: 0 6px 0 $color;
 }
-.footer-list {
-  padding: 0;
-  list-style: none;
-  width: 20%;
-  line-height: 1.8em;
-}
-.footer-logoblock {
-  width: 40%;
-}
+
 /*ひらがなスイッチ*/
 .kana-switch-cover {
   position: absolute;
@@ -125,6 +101,34 @@ $switchHeight: 30px;
 @keyframes turnoff {
   0% {left: $switchHeight * 0.52;}
   100% {left: 5px;}
+}
+footer {
+  color: $darkgray;
+  font-weight: bold;
+  background-color: $lightgray;
+  padding: 36px;
+  display: flex;
+  margin-top: 60px;
+  a {
+    color: $darkgray;
+    &:hover {
+      opacity: .7;
+    }
+  }
+}
+@mixin card($color: $lightgray) {
+  border-radius: 10px;
+  border: solid 2px $color;
+  box-shadow: 0 6px 0 $color;
+}
+.footer-list {
+  padding: 0;
+  list-style: none;
+  width: 20%;
+  line-height: 1.8em;
+}
+.footer-logoblock {
+  width: 40%;
 }
 
 .top {
