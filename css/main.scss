@@ -18,6 +18,10 @@ body {
 h2 {
   color: $text-color;
   font-weight: 600;
+  margin-top: 2em;
+}
+h3 {
+  margin-top: 1.75em;
 }
 /*ヘッダー*/
 header {
@@ -283,14 +287,12 @@ footer {
 }
 .main {
   margin: auto 10vw;
-  h2 {
-    &:before {
-      content: '\f02d';
-      font-family: 'Font Awesome 5 Free';
-      color: $main-color;
-      opacity: .8;
-      margin-right: 8px;
-    }
+  h2:before {
+    content: '\f02d';
+    font-family: 'Font Awesome 5 Free';
+    color: $main-color;
+    opacity: .8;
+    margin-right: 8px;
   }
 }
 .list-category-one {
