@@ -44,7 +44,7 @@ layout: default
   <h2>{% t course.subcourses %}</h2>
   <ul class="course-list">
   {% for course in subcourses %}
-  <li><a href="{{course.url}}"><img src="/assets/course/{{ course.categories }}/{{ course.parent }}/{{ course.course-name }}{{ course.thumbnail }}" alt="{{ course.title }}">{{course.title}}</a></li>
+  <li><a href="{{course.url}}"><img src="/assets/course/{{ course.categories }}/{{ course.parent }}/{{ course.course-name }}{{ course.thumbnail }}" alt="{{ course.title }}" loading="lazy">{{course.title}}</a></li>
   {% endfor %}
   {% endif %}
   </ul>

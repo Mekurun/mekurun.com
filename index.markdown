@@ -10,7 +10,7 @@ title: top.title
   <li>
     <a href="{{course.url}}">
       <span class="top-course-list-category">{{ course.categories }}</span>
-      <img src="/assets/course/{{ course.categories }}/{{ course.course-name }}{{ course.thumbnail }}" alt="{{ course.title }}">
+      <img src="/assets/course/{{ course.categories }}/{{ course.course-name }}{{ course.thumbnail }}" alt="{{ course.title }}" loading="lazy">
       {{ course.title }}
       <span class="top-course-list-difficulty"> {% t difficulty.{{ course.difficulty }} %} </span>
     </a>
