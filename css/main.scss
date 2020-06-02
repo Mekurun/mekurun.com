@@ -19,6 +19,7 @@ h2 {
   color: $text-color;
   font-weight: 600;
 }
+/*ヘッダー*/
 header {
   background-color: #fff;
   height: $header-height;
@@ -29,27 +30,28 @@ header {
   width: 80vw;
   color: $darkgray;
   font-weight: 500;
-  ul {
-    list-style: none;
-    line-height: $header-height;
-    margin: 0;
-    padding: 0;
+}
+.header-nav-ul {
+  list-style: none;
+  line-height: $header-height;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  position: absolute;
+  right: 160px;
+  li {
+    margin-right: 4px;
     display: inline-block;
-    position: absolute;
-    right: 160px;
-    li {
-      margin-right: 4px;
-      display: inline-block;
-    }
-    a {
-      font-weight: inherit;
-      text-decoration: none;
-      color: inherit;
-    }
   }
   a {
+    font-weight: inherit;
+    text-decoration: none;
+    color: inherit;
   }
 }
+.header-nav-content {
+  display: inline;
+  background-color: #fff;
 }
 
 /*ひらがなスイッチ*/
@@ -61,6 +63,9 @@ header {
   font-size: .8em;
 }
 $switchHeight: 30px;
+.nav-cover {
+  display: inline;
+}
 .kana-switch {
   border-radius: $switchHeight / 2 + 8px;
   border: solid 2px #fff;
@@ -101,6 +106,83 @@ $switchHeight: 30px;
 @keyframes turnoff {
   0% {left: $switchHeight * 0.52;}
   100% {left: 5px;}
+}
+#nav-checkbox, .nav-switch {
+  display: none;
+}
+@keyframes hamburgerWidth {
+  0% {width: 0;}
+  100% {width: 60%;}
+}
+@media screen and (max-width:700px){
+  header {
+    width: 100%;
+    margin: 0;
+    position: fixed;
+    border-radius: 0;
+    z-index: 1;
+  }
+  .header-nav-content {
+    display: block;
+    z-index: 1;
+    position: fixed;
+    padding: 10px 20px;
+    width: 60%;
+    height: calc(100% - #{$header-height});
+    top: $header-height;
+    right: 0;
+    transition: all .2s;
+  }
+  .nav-cover {
+    display: none;
+  }
+  .header-nav-bg {
+    background-color: #3338;
+    z-index: -1;
+    position: absolute;
+    top: $header-height;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+  }
+  .header-nav-ul {
+    position: static;
+    display: block;
+    li {
+      display: list-item;
+      line-height: 2em;
+    }
+    a {
+      display: inline-block;
+      width: 100%;
+    }
+  }
+  .kana-switch-cover {
+    position: static;
+    font-size: 1em;
+    margin-top: 1em;
+  }
+  .kana-switch {
+    margin: 0;
+  }
+  .nav-switch {
+    display: inline-block;
+    margin-right: 20px;
+    line-height: $header-height;
+    float: right;
+    .fa-times {
+      display: none;
+    }
+  }
+  #nav-checkbox:checked ~ .nav-cover {
+    display: block;
+  }
+  #nav-checkbox:checked ~ .nav-switch .fa-bars {
+    display: none;
+  }
+  #nav-checkbox:checked ~ .nav-switch .fa-times {
+    display: inline;
+  }
 }
 footer {
   color: $darkgray;

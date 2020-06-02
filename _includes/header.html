@@ -1,17 +1,23 @@
 <header>
   <a href="{{ site.baseurl }}/">top</a>
-  <ul>
-    <li><a href="{{ site.baseurl }}/#allmenu">メニューを見る</a></li>
-    <li><a href="{{ site.baseurl }}/usage">使い方を見る</a></li>
-  </ul>
-  <div class="kana-switch-cover">
-    ひらがなモード
-    {% if site.lang == "ja" %}
-      {% capture link1 %}{{ site.baseurl_root }}/kana{{ page.url}}{% endcapture %}
-      <a href="{{ link1 }}" title="ひらがなモードにする" class="kana-switch kana-switch-off"></a>
-    {% elsif site.lang == "kana" %}
-      {% capture link2 %}{{ site.baseurl_root }}{{ page.url  }}{% endcapture %}
-      <a href="{{ link2 }}" title="ひらがなモードをやめる" class="kana-switch kana-switch-on"></a>
-    {% endif %}
-  </div>
+  <input type="checkbox" id="nav-checkbox" >
+  <label for="nav-checkbox" class="nav-switch"><i class="fas fa-bars"></i><i class="fas fa-times"></i></label>
+  <div class="nav-cover">
+    <label for="nav-checkbox" class="header-nav-bg"></label>
+    <div class="header-nav-content">
+    <ul class="header-nav-ul">
+      <li><a href="{{ site.baseurl }}/#allmenu">メニューを見る</a></li>
+      <li><a href="{{ site.baseurl }}/usage">使い方を見る</a></li>
+    </ul>
+    <div class="kana-switch-cover">
+      ひらがなモード
+      {% if site.lang == "ja" %}
+        {% capture link1 %}{{ site.baseurl_root }}/kana{{ page.url}}{% endcapture %}
+        <a href="{{ link1 }}" title="ひらがなモードにする" class="kana-switch kana-switch-off"></a>
+      {% elsif site.lang == "kana" %}
+        {% capture link2 %}{{ site.baseurl_root }}{{ page.url  }}{% endcapture %}
+        <a href="{{ link2 }}" title="ひらがなモードをやめる" class="kana-switch kana-switch-on"></a>
+      {% endif %}
+    </div>
+  </div></div>
 </header>
