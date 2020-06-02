@@ -226,6 +226,9 @@ footer {
   justify-content: center;
   align-items: center;
   color: #fff;
+  @media screen and (max-width:700px) {
+    padding-top: $header-height * 1 + 24px;
+  }
 }
 .category-top {
   height: 40vh;
