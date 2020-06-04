@@ -1,5 +1,6 @@
 title: メクルン
 course:
+  export: PDFで見る
   subcourses: やってみよう
 difficulty:
   introduction: はじめに
@@ -22,8 +23,11 @@ top:
   recent: 最近追加されたコース
   allmenu: 全てのメニュー
 
+header:
+  toTop: コースを見る
+
 usage:
-  title: 使い方
+  title: 使い方ガイド
 
 about:
   title: このサービスについて
@@ -43,4 +47,4 @@ privacy:
   title: プライバシーポリシー
 
 faq:
-  title: よくある質問
+  title: よくあるご質問

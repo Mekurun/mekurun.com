@@ -1,5 +1,6 @@
 title: メクルン
 course:
+  export: PDFでみる
   subcourses: やってみよう
 difficulty:
   introduction: はじめに
@@ -22,6 +23,9 @@ top:
   recent: あたらしいコース
   allmenu: すべてのメニュー
 
+header:
+  toTop: コースをみる
+
 usage:
   title: つかいかた
 
@@ -35,3 +39,9 @@ contact:
   mailTitle: けんめい
   mailContent: ないよう
   send: そうしん
+
+termOfUse:
+  title: つかうときのルール
+
+faq:
+  title: よくあるごしつもん

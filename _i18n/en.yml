@@ -23,6 +23,9 @@ top:
   recent: Recent Courses
   allmenu: All Categories
 
+header:
+  toTop: Learn
+
 usage:
   title: How to use
 
