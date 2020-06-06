@@ -1,7 +1,6 @@
 ---
 layout: course
 title:  "シューティングゲームを作ろう！"
-date:   2020-05-16 11:14:26 +0900
 category: scratch
 difficulty: hard
 course-name: shooting-game
