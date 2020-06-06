@@ -25,7 +25,7 @@
     {% endif %}
     <meta property="og:site_name" content="{{ site.title }}">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-    {% capture description %}{% if page.description %}{% if page.layout == 'category' %}{% t page.description %}{% else %}{{ page.description }}{% endif %}{% else %}{{ site.description }}{% endif %}{% endcapture %}
+    {% capture description %}{% if page.description %}{% if page.layout == 'category' %}{% t page.description %}{% else %}{{ page.description }}{% endif %}{% else %}{% t description %}{% endif %}{% endcapture %}
     <meta name="description" content="{{ description }}">
     <meta property="og:description" content="{{ description }}">
     <link rel="stylesheet" type="text/css" href="/css/main.css">
