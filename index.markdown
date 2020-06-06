@@ -34,3 +34,6 @@ title: title
 
 <h2 id="projects">{% t top.projects %}</h2>
 {% include articles.html category = 'projects' limit = 4 %} [{% t top.more %}](/projects)
+
+<h2 id="projects">{% t top.news %}</h2>
+{% include articles.html category = 'news' limit = 4 %} [{% t top.more %}](/news)
