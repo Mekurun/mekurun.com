@@ -20,4 +20,9 @@ permalink: faq
     margin-top: 6px;
     padding-left: calc(1em + 8px);
   }
+  .main {
+    max-width: 800px;
+    margin: auto auto;
+    padding: 0 24px;
+  }
 </stye>
