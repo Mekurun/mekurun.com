@@ -2,7 +2,7 @@
 layout: course
 title:  "シューティングゲームにスコアをつけよう！"
 date:   2020-05-16 11:14:26 +0900
-categories: scratch
+category: scratch
 difficulty: hard
 parent: shooting-game
 course-name: score

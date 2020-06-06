@@ -19,6 +19,8 @@ defaults:
       permalink: /:categories/:title/
 
 collections:
+  courses:
+    output: true  
   categories:
     output: true
 # Exclude from processing.
