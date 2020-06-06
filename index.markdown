@@ -20,9 +20,11 @@ title: top.title
 
 <h2 id="allmenu">{% t top.allmenu %}</h2>
 <div class="list-category">
-  <a href="{{ site.baseurl }}/scratch" class="list-category-one">
-    <h3>{% t category.scratch.title %}</h3>
-    <p>{% t category.scratch.caption %}</p>
+  {% for category in site.categories %}
+  <a href="{{ site.baseurl }}{{category.permalink}}" class="list-category-one">
+    <h3>{% t category.title %}</h3>
+    <p>{% t category.{{category.categoryname}}.caption %}</p>
     <p class="list-category-link">一覧を見る</p>
   </a>
+  {% endfor %}
 </div>
