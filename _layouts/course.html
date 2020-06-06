@@ -6,7 +6,7 @@ layout: default
 <a href="/{{page.categories}}#{{page.difficulty}}" class="label">{% t category.{{page.categories}}.title %} / {% t difficulty.{{page.difficulty}} %}</a>
 <div class="slides-top">
   <div class="slides-top-info">
-  {% assign parents = site.posts | where:"course-name", page.parent %}
+  {% assign parents = site.courses | where:"course-name", page.parent %}
   <a class="link-to-parent" href="/{{page.categories}}/{{page.parent}}">{{ parents[0].title }}</a>
   <h2>{{page.title}}</h2>
   </div>
