@@ -12,6 +12,7 @@
     {% assign title = title | replace: "
       ", ""%}
     <title>{{ title }}</title>
+
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
     {% if page.course-name %}
     <meta property="og:title" content="{% t category.{{page.categories}}.title %}: {{ title }}">
@@ -20,7 +21,9 @@
     {% endif %}
     <meta property="og:site_name" content="メクルン">
     <meta property="og:url" content="{{ site.url }}">
-    <meta property="og:description" content="{{ page.description }}">
+    {% capture description %}{% if page.description %}{% if page.layout == 'category' %}{% t page.description %}{% else %}{{ page.description }}{% endif %}{% else %}{{ site.description }}{% endif %}{% endcapture %}
+    <meta name="description" content="{{ description }}">
+    <meta property="og:description" content="{{ description }}">
     <meta property="og:type" content="website">
     <link rel="stylesheet" type="text/css" href="/css/main.css">
   </head>
