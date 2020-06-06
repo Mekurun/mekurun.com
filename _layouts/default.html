@@ -8,7 +8,7 @@
       {% else %}
       {% t {{page.title}} %}
       {% endif %}
-       | {{ site.copy }}{% endcapture %}
+       | {% t copy %}{% endcapture %}
     {% assign title = title | replace: "
       ", ""%}
     <title>{{ title }}</title>
