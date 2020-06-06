@@ -277,10 +277,6 @@ footer {
     }
   }
 }
-.top-course-list li {
-  width: calc(25% - 24px);
-  @include card();
-}
 .top-course-list-category {
   background-color: $lightgray;
   display: block;
@@ -518,9 +514,4 @@ form {
       opacity: 0.7;
     }
   }
-}
-
-/*記事*/
-.article-list li {
-  width: calc(25% - 24px);
 }
