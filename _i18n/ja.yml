@@ -1,4 +1,6 @@
-title: Mekurun
+title: メクルン
+copy: スライドで学べるビジュアルプログラミング学習サービス メクルン[Mekurun]
+description: メクルン (Mekurun) はスライドで学べるビジュアルプログラミング学習サービスです。ScratchやMakeCodeといったブロックでプログラミングができるビジュアルプログラミング言語を中心に子ども向けのプログラミング入門コンテンツを提供しています。
 course:
   export: PDFで見る
   subcourses: やってみよう
