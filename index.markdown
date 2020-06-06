@@ -23,5 +23,6 @@ title: top.title
   <a href="{{ site.baseurl }}/scratch" class="list-category-one">
     <h3>{% t category.scratch.title %}</h3>
     <p>{% t category.scratch.caption %}</p>
+    <p class="list-category-link">一覧を見る</p>
   </a>
 </div>

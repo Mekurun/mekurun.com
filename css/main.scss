@@ -305,6 +305,15 @@ footer {
   text-decoration: none;
   width: calc(50% - 24px);
 }
+.list-category-link {
+  text-align: right;
+  color: $main-color;
+  margin-bottom: 0;
+  font-weight: 600;
+  &:hover {
+    opacity: 0.7;
+  }
+}
 .slide-page {
   max-width: 800px;
   margin: auto;
