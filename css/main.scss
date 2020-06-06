@@ -6,6 +6,7 @@ $darkgray: #707070;
 $lightgray: #d9e6f0;
 $bg-gray: #f5f9fc;
 $header-height: 60px;
+$main-dark: #2d6bac;
 body {
   margin: 0;
   color: $text-color;
@@ -181,14 +182,14 @@ $switchHeight: 30px;
   }
 }
 footer {
-  color: $darkgray;
+  color: #5a5a5a;
   font-weight: bold;
   background-color: $lightgray;
   padding: 36px;
   display: flex;
   margin-top: 60px;
   a {
-    color: $darkgray;
+    color: #5a5a5a;
     margin: 4px 0;
     display: inline-block;
     &:hover {
@@ -322,7 +323,7 @@ footer {
 }
 .list-category-link {
   text-align: right;
-  color: $main-color;
+  color: $main-dark;
   margin-bottom: 0;
   font-weight: 600;
   &:hover {
