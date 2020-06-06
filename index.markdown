@@ -31,3 +31,13 @@ title: top.title
   </a>
   {% endfor %}
 </div>
+
+<h2 id="projects">{% t top.projects %}</h2>
+<ul>
+  {% assign posts = site.posts | where_exp:"p", "p.category == 'projects'" %}
+  {% for post in posts %}
+  <li><a href="{{ post.url }}">
+    {{ post.title }}
+  </a></li>
+  {% endfor %}
+</ul>

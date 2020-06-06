@@ -8,7 +8,7 @@ difficulty:
   hard: Hard
 
 category:
-  official: Official Website 
+  official: Official Website
   scratch:
     title: Scratch
     caption:
@@ -23,6 +23,7 @@ top:
   title: mekurun
   recent: Recent Courses
   allmenu: All Categories
+  projects: Projects
 
 header:
   toTop: Learn
