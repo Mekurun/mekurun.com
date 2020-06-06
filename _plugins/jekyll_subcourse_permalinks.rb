@@ -6,7 +6,8 @@ module Jekyll
     def generate(site)
       site.collections.each do |item|
         item.each_with_index do |category, i|
-          if category.to_s == 'courses'
+          case category.to_s
+          when 'courses'
             item[i + 1].docs.each do |page|
               @parent = page.data['parent']
               @category = page.data['category']
@@ -15,6 +16,11 @@ module Jekyll
               else
                 page.data['permalink'] = "/#{@category}/#{@parent}/:title/"
               end
+            end
+          when 'categories'
+            item[i + 1].docs.each do |page|
+              @name = page.data['categoryname']
+              page.data['permalink'] = "/#{@name}/"
             end
           end
         end
