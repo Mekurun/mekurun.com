@@ -189,6 +189,8 @@ footer {
   margin-top: 60px;
   a {
     color: $darkgray;
+    margin: 4px 0;
+    display: inline-block;
     &:hover {
       opacity: .7;
     }
