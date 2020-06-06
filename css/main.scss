@@ -516,3 +516,8 @@ form {
     }
   }
 }
+
+/*記事*/
+.article-list li {
+  width: calc(25% - 24px);
+}

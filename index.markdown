@@ -33,12 +33,12 @@ title: top.title
 </div>
 
 <h2 id="projects">{% t top.projects %}</h2>
-<ul>
+[すべて見る](/projects)
+<ul class="article-list course-list">
   {% assign posts = site.posts | where_exp:"p", "p.category == 'projects'" | limit:4 %}
   {% for post in posts %}
-  <li><a href="{{ post.url }}">
+  <li class="article-list-one"><a href="{{ post.url }}">
     {{ post.title }}
   </a></li>
   {% endfor %}
 </ul>
-<a href="/projects">もっと見る</a>
