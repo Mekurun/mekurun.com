@@ -237,6 +237,19 @@ footer {
 .category-top {
   height: 40vh;
   color: $text-color;
+  @media screen and (max-width:800px) {
+    height: 50vh;
+  }
+}
+.category-officialSite {
+  background-color: #fff;
+  padding: 14px;
+  border-radius: 5px;
+  color: $main-color;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
 }
 .course-list {
   display: flex;

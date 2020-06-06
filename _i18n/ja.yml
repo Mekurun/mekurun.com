@@ -9,6 +9,7 @@ difficulty:
   hard: むずかしい
 
 category:
+  official: 公式サイト
   scratch:
     title: Scratch
     caption: MITメディアラボの研究チームが開発しているScratchでプログラミングをはじめてみよう！
