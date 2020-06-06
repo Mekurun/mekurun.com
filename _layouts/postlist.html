@@ -1,0 +1,10 @@
+---
+layout: page
+---
+{{ content }}
+{% assign posts = site.posts | where_exp:"p", "p.category == page.permalink" %}
+{% for post in posts %}
+<li><a href="{{ post.url }}">
+  {{ post.title }}
+</a></li>
+{% endfor %}

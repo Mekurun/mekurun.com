@@ -7,6 +7,11 @@ module Jekyll
       site.collections.each do |item|
         item.each_with_index do |category, i|
           case category.to_s
+          when 'posts'
+            item[i + 1].docs.each do |page|
+              @category = page.data['category']
+              page.data['permalink'] = "/#{@category}/:title/"
+            end
           when 'courses'
             item[i + 1].docs.each do |page|
               @parent = page.data['parent']

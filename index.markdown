@@ -34,10 +34,11 @@ title: top.title
 
 <h2 id="projects">{% t top.projects %}</h2>
 <ul>
-  {% assign posts = site.posts | where_exp:"p", "p.category == 'projects'" %}
+  {% assign posts = site.posts | where_exp:"p", "p.category == 'projects'" | limit:4 %}
   {% for post in posts %}
   <li><a href="{{ post.url }}">
     {{ post.title }}
   </a></li>
   {% endfor %}
 </ul>
+<a href="/projects">もっと見る</a>
