@@ -34,11 +34,4 @@ title: title
 
 <h2 id="projects">{% t top.projects %}</h2>
 [すべて見る](/projects)
-<ul class="article-list course-list">
-  {% assign posts = site.posts | where_exp:"p", "p.category == 'projects'" | limit:4 %}
-  {% for post in posts %}
-  <li class="article-list-one"><a href="{{ post.url }}">
-    {{ post.title }}
-  </a></li>
-  {% endfor %}
-</ul>
+{% include articles.html category = 'projects' limit = 4 %}

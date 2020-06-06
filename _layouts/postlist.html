@@ -2,11 +2,4 @@
 layout: page
 ---
 {{ content }}
-{% assign posts = site.posts | where_exp:"p", "p.category == page.permalink" %}
-<ul class="article-list course-list">
-{% for post in posts %}
-<li class="article-list-one"><a href="{{ post.url }}">
-  {{ post.title }}
-</a></li>
-{% endfor %}
-</ul>
+{% include articles.html category = page.permalink %}
