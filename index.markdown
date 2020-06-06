@@ -33,5 +33,4 @@ title: title
 
 
 <h2 id="projects">{% t top.projects %}</h2>
-[すべて見る](/projects)
-{% include articles.html category = 'projects' limit = 4 %}
+{% include articles.html category = 'projects' limit = 4 %} [{% t top.more %}](/projects)
