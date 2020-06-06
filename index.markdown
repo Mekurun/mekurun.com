@@ -1,6 +1,6 @@
 ---
 layout: page
-title: top.title
+title: title
 ---
 <h2 id="allmenu">{% t top.allmenu %}</h2>
 <div class="list-category">

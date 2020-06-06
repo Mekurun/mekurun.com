@@ -1,4 +1,4 @@
-title: メクルン
+title: Mekurun
 course:
   export: PDFで見る
   subcourses: やってみよう
@@ -20,7 +20,6 @@ category:
     description: マイクロソフトが開発しているビジュアルプログラミング言語「MakeCode」を使って、マイクラの世界をプログラミングしてみよう！Minecraft Windows10 Edition、Education Editionに対応しています。
 
 top:
-  title: メクルン
   recent: 最近追加されたコース
   allmenu: 全てのメニュー
   projects: みんなの作品
