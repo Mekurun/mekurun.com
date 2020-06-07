@@ -531,3 +531,18 @@ form {
   margin: auto;
   padding: 12px 24px;
 }
+.post-list-heading {
+  position: relative;
+}
+.post-list-more {
+  display: inline-block;
+  margin-left: 12px;
+  a {
+    font-size: 16px;
+    color: $main-dark;
+    text-decoration: none;
+    &:hover {
+      opacity: .7;
+    }
+  }
+}

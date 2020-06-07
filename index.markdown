@@ -31,12 +31,11 @@ title: title
 {% endfor %}
 </ul>
 
+<h2 id="projects" class="post-list-heading">{% t top.projects %}<p class="post-list-more"><a href="/projects">{% t top.more %}</a></p></h2>
+{% include articles.html category = 'projects' limit = 4 %}
 
-<h2 id="projects">{% t top.projects %}</h2>
-{% include articles.html category = 'projects' limit = 4 %} [{% t top.more %}](/projects)
+<h2 id="tips" class="post-list-heading">{% t top.tips %}<p class="post-list-more"><a href="/tips">{% t top.more %}</a></p></h2>
+{% include articles.html category = 'tips' limit = 4 %}
 
-<h2 id="projects">{% t top.tips %}</h2>
-{% include articles.html category = 'tips' limit = 4 %} [{% t top.more %}](/tips)
-
-<h2 id="projects">{% t top.news %}</h2>
-{% include articles.html category = 'news' limit = 4 %} [{% t top.more %}](/news)
+<h2 id="news" class="post-list-heading">{% t top.news %}<p class="post-list-more"><a href="/news">{% t top.more %}</a></p></h2>
+{% include articles.html category = 'news' limit = 4 %}
