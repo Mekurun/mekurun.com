@@ -2,7 +2,9 @@
 <ul class="article-list course-list">
 {% for post in posts %}
 <li class="article-list-one"><a href="{{ post.url }}">
-  <img src="/assets/article/{{post.category}}/{{post.thumbnail}}" alt="">
+  {% if post.thumbnail %}
+  <img src="/assets/article/{{ post.category }}/{{ post.thumbnail }}" alt="{{ post.title }}" loading="lazy">
+  {% endif %}
   {{ post.title }}
 </a></li>
 {% endfor %}

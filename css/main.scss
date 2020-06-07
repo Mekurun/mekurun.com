@@ -237,6 +237,10 @@ footer {
     padding-top: $header-height * 1 + 24px;
   }
 }
+.post-top {
+  height: $header-height;
+  padding: $header-height * 1.3 10vw 24px;
+}
 .category-top {
   height: 40vh;
   color: $text-color;
@@ -276,10 +280,6 @@ footer {
       border-radius: 5px;
     }
   }
-}
-.top-course-list li {
-  width: calc(25% - 24px);
-  @include card();
 }
 .top-course-list-category {
   background-color: $lightgray;
@@ -520,7 +520,29 @@ form {
   }
 }
 
-/*記事*/
-.article-list li {
-  width: calc(25% - 24px);
+/* 記事 */
+.post-thumbnail {
+  width: 90%;
+  margin: auto;
+  display: block;
+}
+.post-main {
+  max-width: 900px;
+  margin: auto;
+  padding: 12px 24px;
+}
+.post-list-heading {
+  position: relative;
+}
+.post-list-more {
+  display: inline-block;
+  margin-left: 12px;
+  a {
+    font-size: 16px;
+    color: $main-dark;
+    text-decoration: none;
+    &:hover {
+      opacity: .7;
+    }
+  }
 }
