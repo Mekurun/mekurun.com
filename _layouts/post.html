@@ -2,10 +2,12 @@
 layout: default
 ---
 {% include header.html %}
-<div class="top">
+<div class="top post-top"></div>
+<div class="post-main">
+  {% if page.thumbnail %}
+  <img src="/assets/article/{{ page.category }}/{{ page.thumbnail }}" alt="{{ page.title }}" class="post-thumbnail">
+  {% endif %}
   <h1>{{ page.title }}</h1>
-</div>
-<div class="main">
   {{content}}
 </div>
 {% include footer.html %}
