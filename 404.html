@@ -12,9 +12,32 @@ title: 404
   }
   h1 {
     margin: 30px 0;
-    font-size: 4em;
+    font-size: 8em;
     line-height: 1;
     letter-spacing: -1px;
+    color: #2384ba;
+  }
+  h3 {
+    margin-top: 10px;
+  }
+  strong {
+    font-size: 2em;
+  }
+  .button {
+    display: block;
+    margin-top: 30px;
+    border-radius: 10px;
+  }
+  .block {
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 2px #d9e6f0;
+    box-shadow: 0 6px 0 #d9e6f0;
+    @media screen and (max-width:700px) {
+      width: 100%;
+      margin: 0 0 16px 0;
+    }
   }
 </style>
 
@@ -22,8 +45,14 @@ title: 404
   <h1>404</h1>
 
   <p><strong>ページが見つかりません<br>Page not found</strong></p>
-  <h3>404エラーってなに？</h3>
-  <p>Webページにアクセスしたときに、Webサイトがおいてある『サーバー』から返される返事のことを、HTTPステータスコードといいます。そのなかのひとつ、404は、「そんなページはありませんよ」という意味です。</p>
-  <p>The requested page could not be found.</p>
-  <!-- i18n対応しない代わりに、日本語と英語両方の説明を書く -->
+  <div class="block">
+    <h3>404エラーってなに？</h3>
+    <p>Webページにアクセスしたときに、Webサイトがおいてある『サーバー』から返される返事のことを、HTTPステータスコードといいます。そのなかのひとつ、404は、「そんなページはありませんよ」という意味です。</p>
+    <p>The requested page could not be found.</p>
+    <!-- i18n対応しない代わりに、日本語と英語両方の説明を書く -->
+  </div>
+  <a href="/" class="button" style="color: #2384ba">
+    トップに戻る / Go Back
+  </a>
 </div>
+{% include footer.html %}
