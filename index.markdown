@@ -21,8 +21,8 @@ title: title
   {% if course_lang == site.lang %}
   <li>
     <a href="{{course.url}}">
-      <span class="top-course-list-category">{{ course.categories }}</span>
-      <img src="/assets/course/{{ course.categories }}/{{ course.course-name }}{{ course.thumbnail }}" alt="{{ course.title }}" loading="lazy">
+      <span class="top-course-list-category">{% t category.{{ course.category }}.title %}</span>
+      <img src="/assets/course/{{ course.category }}/{{ course.course-name }}{{ course.thumbnail }}" alt="{{ course.title }}" loading="lazy">
       {{ course.title }}
       <span class="top-course-list-difficulty"> {% t difficulty.{{ course.difficulty }} %} </span>
     </a>

@@ -1,8 +1,8 @@
 <ul class="course-list">
 {% for course in site.courses %}
 {% assign course_lang = course.path | slice: 9, 2 %}
-{% if course.categories[0] == page.categoryname and course.difficulty == include.difficulty and course.parent == nil and course_lang == site.lang %}
-<li><a href="{{course.url}}"><img src="/assets/course/{{ course.categories }}/{{ course.course-name }}{{ course.thumbnail }}" alt="{{ course.title }}" loading="lazy">{{course.title}}</a></li>
+{% if course.category == page.categoryname and course.difficulty == include.difficulty and course.parent == nil and course_lang == site.lang %}
+<li><a href="{{course.url}}"><img src="/assets/course/{{ course.category }}/{{ course.course-name }}{{ course.thumbnail }}" alt="{{ course.title }}" loading="lazy">{{course.title}}</a></li>
 {% endif %}
 {% endfor %}
 </ul>
