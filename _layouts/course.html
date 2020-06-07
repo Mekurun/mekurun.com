@@ -59,7 +59,7 @@ function set() {
   document.getElementById("progress-container").style.width = (now / {{ page.slides.size }}) * 100 + "%";
   document.getElementById("progress-number").innerHTML = now +" / "+ {{ page.slides.size }};
   document.getElementById("progress-number").style.width = 'calc(' + (String({{ page.slides.size }}).length * 2 + 1) + 'em + 4px)';
-  const slide = document.getElementsByClassName("slide")[0];
+  var slide = document.getElementsByClassName("slide")[0];
   slide.style.position = 'absolute';
 }
 
