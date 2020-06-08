@@ -11,7 +11,7 @@ layout: default
   <h2>{{page.title}}</h2>
   </div>
   {% capture pdfpath %}{% if page.parent %}{{site.url}}/assets/course/{{ page.category }}/{{ page.parent }}{% else %}{{site.url}}/assets/course/{{ page.category }}{% endif %}/{{ page.course-name }}/slide.pdf{% endcapture %}
-  <a href="{{ pdfpath }}" class="button button-export">{% t course.export %}</a>
+  <span class="button button-export" onclick="var ok=confirm('利用規約で定められた範囲での使用をお願いします'); if(ok) location.href='{{ pdfpath }}'; return false; ">{% t course.export %}</span>
 </div>
 <div id='slides'>
   <div class="slide"></div>
