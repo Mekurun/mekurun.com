@@ -63,7 +63,7 @@ function set() {
   slide.style.position = 'absolute';
 }
 
-window.onload = set;
+window.onload = set();
 function next() {
   document.activeElement.blur();
   if(document.getElementById("page-"+(now+1)) != null){
