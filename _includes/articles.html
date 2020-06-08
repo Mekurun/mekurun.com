@@ -3,9 +3,12 @@
 {% for post in posts %}
 <li class="article-list-one"><a href="{{ post.url }}">
   {% if post.thumbnail %}
-  <img src="/assets/article/{{ post.category }}/{{ post.thumbnail }}" alt="{{ post.title }}" loading="lazy">
+  <img data-src="{{ site.url }}/assets/article/{{ post.category }}{{ post.thumbnail }}" alt="{{ post.title }}" loading="lazy">
   {% endif %}
-  {{ post.title }}
+  {% if include.category == 'news' %}
+    <p class="article-list-date">{{ post.date | date: "%Y/%m/%d" }}</p>
+  {% endif %}
+  <h4 class="article-list-title">{{ post.title }}</h4>
 </a></li>
 {% endfor %}
 </ul>
