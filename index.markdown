@@ -22,7 +22,7 @@ title: title
   <li>
     <a href="{{course.url}}">
       <span class="top-course-list-category">{% t category.{{ course.category }}.title %}</span>
-      <img data-src="{{ site.url }}/assets/course/{{ course.category }}/{{ course.course-name }}{{ course.thumbnail }}" alt="{{ course.title }}" loading="lazy">
+      <img data-src="{{ site.url }}/assets/course/{{ course.category }}/{{ course.course-name }}{{ course.thumbnail }}" data-width="300" alt="{{ course.title }}" loading="lazy">
       {{ course.title }}
       <span class="top-course-list-difficulty"> {% t difficulty.{{ course.difficulty }} %} </span>
     </a>
