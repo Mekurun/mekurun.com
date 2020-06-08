@@ -10,7 +10,8 @@ layout: default
   <a class="link-to-parent" href="/{{page.category}}/{{page.parent}}">{{ parents[0].title }}</a>
   <h2>{{page.title}}</h2>
   </div>
-  <a href="/" class="button button-export">{% t course.export %}</a>
+  {% capture pdfpath %}{% if page.parent %}{{site.url}}/assets/course/{{ page.category }}/{{ page.parent }}{% else %}{{site.url}}/assets/course/{{ page.category }}{% endif %}/{{ page.course-name }}/slide.pdf{% endcapture %}
+  <a href="{{ pdfpath }}" class="button button-export">{% t course.export %}</a>
 </div>
 <div id='slides'>
   <div class="slide"></div>
