@@ -308,6 +308,16 @@ footer {
     opacity: .8;
   }
 }
+.article-list-title {
+  margin: 8px 0;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+.article-list-date {
+  margin: 4px 0;
+  font-weight: 600;
+  color: $darkgray;
+}
 .main {
   margin: auto 10vw;
   h2:before {
