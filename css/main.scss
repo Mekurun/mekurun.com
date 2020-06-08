@@ -216,7 +216,6 @@ footer {
     width: 100%;
   }
 }
-
 @mixin card($color: $lightgray) {
   border-radius: 10px;
   border: solid 2px $color;
@@ -224,6 +223,10 @@ footer {
   @media screen and (max-width:700px) {
     width: 100%;
     margin: 0 0 16px 0;
+  }
+  &:hover {
+    box-shadow: none;
+    transform: translateY(6px);
   }
 }
 .top {
@@ -258,6 +261,9 @@ footer {
   text-decoration: none;
   display: inline-block;
   width: 100%;
+  &:hover {
+    opacity: .9;
+  }
 }
 .course-list {
   display: flex;
