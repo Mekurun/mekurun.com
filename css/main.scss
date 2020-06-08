@@ -303,7 +303,8 @@ footer {
   width: 100%;
   &:before {
     content: "\f005";
-    font-family: 'Font Awesome 5 Free Solid';
+    font-weight: 900;
+    font-family: 'Font Awesome 5 Free';
     color: $main-color;
     opacity: .8;
   }
