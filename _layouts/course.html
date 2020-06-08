@@ -19,7 +19,7 @@ layout: default
 
     {% if firstword == '' %}
     {% capture src %}{% if page.parent %}{{site.url}}/assets/course/{{ page.category }}/{{ page.parent }}/{{ page.course-name }}{{ slide }}{% else %}{{site.url}}/assets/course/{{ page.category }}/{{ page.course-name }}{{ slide }}{% endif %}{% endcapture %}
-    <img src="{{ src }}" loading="lazy" alt="" id="page-{{forloop.index}}" style="display:none;">
+    <img data-src="{{ src }}" loading="lazy" alt="" id="page-{{forloop.index}}" style="display:none;">
     {% elsif firstword == 'https:' %}
     <iframe width="560" height="315" loading="lazy" src="https://www.youtube.com/embed/{{slide | split: '/' | last}}?rel=0&fs=0&modestbranding=1&enablejsapi=1&disablekb=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:none;" id="page-{{forloop.index}}"></iframe>
     {% endif %}
@@ -46,7 +46,7 @@ layout: default
   {% for course in subcourses %}
   {% assign course_lang = course.path | slice: 9, 2 %}
   {% if course_lang == site.lang %}
-    <li><a href="{{course.url}}"><img src="/assets/course/{{ course.category }}/{{ course.parent }}/{{ course.course-name }}{{ course.thumbnail }}" alt="{{ course.title }}" loading="lazy">{{course.title}}</a></li>
+    <li><a href="{{course.url}}"><img data-src="{{ site.url }}/assets/course/{{ course.category }}/{{ course.parent }}/{{ course.course-name }}{{ course.thumbnail }}" alt="{{ course.title }}" loading="lazy">{{course.title}}</a></li>
   {% endif %}
   {% endfor %}
   {% endif %}
