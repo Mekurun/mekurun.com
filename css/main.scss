@@ -224,6 +224,8 @@ footer {
     width: 100%;
     margin: 0 0 16px 0;
   }
+}
+@mixin card-hover($color: $lightgray) {
   &:hover {
     box-shadow: none;
     transform: translateY(6px);
@@ -274,7 +276,8 @@ footer {
     width: calc(33% - 24px);
     background-color: #fff;
     margin: 12px;
-    @include card();
+    @include card;
+    @include card-hover;
     a {
       text-decoration: none;
       color: $text-color;
@@ -331,7 +334,8 @@ footer {
 }
 .list-category-one {
   background: #fff;
-  @include card();
+  @include card;
+  @include card-hover;
   color: $text-color;
   display: block;
   margin: 12px;
