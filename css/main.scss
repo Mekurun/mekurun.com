@@ -331,6 +331,9 @@ footer {
     opacity: .8;
     margin-right: 8px;
   }
+  @media screen and (max-width:800px) {
+    margin: auto 20px;
+  }
 }
 .list-category-one {
   background: #fff;
@@ -502,6 +505,10 @@ form {
   background-color: #fff;
   padding: 30px 60px;
   @include card;
+  @media screen and (max-width:800px) {
+    margin: 24px 0;
+    padding: 20px 12px;
+  }
   input {
     font-size: 1em;
   }
