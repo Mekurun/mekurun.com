@@ -10,7 +10,8 @@ layout: default
   <a class="link-to-parent" href="/{{page.category}}/{{page.parent}}">{{ parents[0].title }}</a>
   <h2>{{page.title}}</h2>
   </div>
-  <a href="/" class="button button-export">{% t course.export %}</a>
+  {% capture pdfpath %}{% if page.parent %}{{site.url}}/assets/course/{{ page.category }}/{{ page.parent }}{% else %}{{site.url}}/assets/course/{{ page.category }}{% endif %}/{{ page.course-name }}/slide.pdf{% endcapture %}
+  <span class="button button-export" onclick="var ok=confirm('ご利用規定で定められた範囲でのご利用をお願いします。\n\nご利用規定は以下のページでご確認いただけます。 \nhttps://mekurun.com/term-of-use'); if(ok) location.href='{{ pdfpath }}'; return false; ">{% t course.export %}</span>
 </div>
 <div id='slides'>
   <div class="slide"></div>
@@ -19,7 +20,7 @@ layout: default
 
     {% if firstword == '' %}
     {% capture src %}{% if page.parent %}{{site.url}}/assets/course/{{ page.category }}/{{ page.parent }}/{{ page.course-name }}{{ slide }}{% else %}{{site.url}}/assets/course/{{ page.category }}/{{ page.course-name }}{{ slide }}{% endif %}{% endcapture %}
-    <img data-src="{{ src }}" data-width="1000" loading="lazy" alt="" id="page-{{forloop.index}}" style="display:none;">
+    <img data-src="{{ src }}" data-width="800" loading="lazy" alt="" id="page-{{forloop.index}}" style="display:none;">
     {% elsif firstword == 'https:' %}
     <iframe width="560" height="315" loading="lazy" src="https://www.youtube.com/embed/{{slide | split: '/' | last}}?rel=0&fs=0&modestbranding=1&enablejsapi=1&disablekb=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:none;" id="page-{{forloop.index}}"></iframe>
     {% endif %}
