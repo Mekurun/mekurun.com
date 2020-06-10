@@ -33,7 +33,6 @@
     {% capture description %}{% if page.description %}{% if page.layout == 'category' %}{% t page.description %}{% else %}{{ page.description }}{% endif %}{% else %}{% t description %}{% endif %}{% endcapture %}
     <meta name="description" content="{{ description }}">
     <meta property="og:description" content="{{ description }}">
-    <script async type="text/javascript" src="/js/usecloudinary.js"></script>
     {% if jekyll.environment == "production" %}
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -53,5 +52,6 @@
     {{content}}
   </body>
   <!-- 遅延読み込み -->
+  <script type="text/javascript" src="/js/usecloudinary.js"></script>
   <script async src="https://kit.fontawesome.com/734fe914a1.js" crossorigin="anonymous"></script>
 </html>
