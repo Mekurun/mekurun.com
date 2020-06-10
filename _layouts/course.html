@@ -10,7 +10,8 @@ layout: default
   <a class="link-to-parent" href="/{{page.category}}/{{page.parent}}">{{ parents[0].title }}</a>
   <h2>{{page.title}}</h2>
   </div>
-  <a href="/" class="button button-export">{% t course.export %}</a>
+  {% capture pdfpath %}{% if page.parent %}{{site.url}}/assets/course/{{ page.category }}/{{ page.parent }}{% else %}{{site.url}}/assets/course/{{ page.category }}{% endif %}/{{ page.course-name }}/slide.pdf{% endcapture %}
+  <span class="button button-export" onclick="var ok=confirm('ご利用規定で定められた範囲でのご利用をお願いします。\n\nご利用規定は以下のページでご確認いただけます。 \nhttps://mekurun.com/term-of-use'); if(ok) location.href='{{ pdfpath }}'; return false; ">{% t course.export %}</span>
 </div>
 <div id='slides'>
   <div class="slide"></div>
