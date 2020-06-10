@@ -20,7 +20,7 @@ layout: default
 
     {% if firstword == '' %}
     {% capture src %}{% if page.parent %}{{site.url}}/assets/course/{{ page.category }}/{{ page.parent }}/{{ page.course-name }}{{ slide }}{% else %}{{site.url}}/assets/course/{{ page.category }}/{{ page.course-name }}{{ slide }}{% endif %}{% endcapture %}
-    <img data-src="{{ src }}" data-width="1000" loading="lazy" alt="" id="page-{{forloop.index}}" style="display:none;">
+    <img data-src="{{ src }}" data-width="800" loading="lazy" alt="" id="page-{{forloop.index}}" style="display:none;">
     {% elsif firstword == 'https:' %}
     <iframe width="560" height="315" loading="lazy" src="https://www.youtube.com/embed/{{slide | split: '/' | last}}?rel=0&fs=0&modestbranding=1&enablejsapi=1&disablekb=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:none;" id="page-{{forloop.index}}"></iframe>
     {% endif %}
