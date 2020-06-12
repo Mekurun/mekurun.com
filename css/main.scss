@@ -58,6 +58,13 @@ header {
   display: inline;
   background-color: #fff;
 }
+.header-nav-logo {
+  height: $header-height;
+  padding: $header-height * 0.25 $header-height * 0.5;
+  @media screen and (max-width:700px) {
+    padding-left: 20px;
+  }
+}
 
 /*ひらがなスイッチ*/
 .kana-switch-cover {
@@ -206,6 +213,9 @@ footer {
 }
 .footer-logoblock {
   width: 40%;
+}
+.footer-logo {
+  height: 60px;
 }
 @media screen and (max-width:700px) {
   footer {
