@@ -61,6 +61,9 @@ header {
 .header-nav-logo {
   height: $header-height;
   padding: $header-height * 0.25 $header-height * 0.5;
+  @media screen and (max-width:700px) {
+    padding-left: 20px;
+  }
 }
 
 /*ひらがなスイッチ*/
