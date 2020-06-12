@@ -1,0 +1,7 @@
+{% capture logosrc %}
+{% if jekyll.environment == "production" %}
+https://res.cloudinary.com/nztm/image/fetch/c_fit,q_auto,f_auto/{{ site.url }}
+{% endif %}
+/assets/images/logo_yoko.svg
+{% endcapture %}
+<a href="{{ site.baseurl }}/"><img src="{{ logosrc | split: ' ' }}" alt="{% t title %}" class="{{ include.class }}"></a>

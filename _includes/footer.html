@@ -1,11 +1,13 @@
 <footer>
   <ul class="footer-list footer-logoblock">
+
+    <li>{% include logo_yoko.html class="footer-logo" %}</li>
     <li>&copy; 2020 {% t title %}</li>
     <li><a href="https://github.com/nztm/mekurun/"><i class="fab fa-github"></i> nztm/mekurun</a></li>
   </ul>
   <ul class="footer-list">
-    <li><a href="{{ site.baseurl }}/#newcourse">{% t top.allmenu %}</a></li>
-    <li><a href="{{ site.baseurl }}/#allmenu">{% t top.recent %}</a></li>
+    <li><a href="{{ site.baseurl }}/#allmenu">{% t top.allmenu %}</a></li>
+    <li><a href="{{ site.baseurl }}/#newcourse">{% t top.recent %}</a></li>
     <li><a href="{{ site.baseurl }}/projects">{% t top.projects %}</a></li>
     <li><a href="{{ site.baseurl }}/tips">{% t top.tips %}</a></li>
     <li><a href="{{ site.baseurl }}/news">{% t top.news %}</a></li>
