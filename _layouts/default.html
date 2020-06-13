@@ -48,7 +48,9 @@
     </script>
     {% else  %}
     {% endif %}
-
+    <link rel="preload" href="/css/main.css" as="style">
+    <link rel="preload" href="/js/usecloudinary.js" as="script">
+    <link rel="preload" href="https://kit.fontawesome.com/734fe914a1.js" as="script" crossorigin>
     <link rel="stylesheet" type="text/css" href="/css/main.css">
   </head>
   <body>
@@ -56,5 +58,5 @@
   </body>
   <!-- 遅延読み込み -->
   <script type="text/javascript" src="/js/usecloudinary.js"></script>
-  <script async src="https://kit.fontawesome.com/734fe914a1.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/734fe914a1.js" crossorigin="anonymous"></script>
 </html>
