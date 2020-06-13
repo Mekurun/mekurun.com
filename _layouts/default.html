@@ -33,6 +33,9 @@
     {% capture description %}{% if page.description %}{% if page.layout == 'category' %}{% t page.description %}{% else %}{{ page.description }}{% endif %}{% else %}{% t description %}{% endif %}{% endcapture %}
     <meta name="description" content="{{ description }}">
     <meta property="og:description" content="{{ description }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="note:card" content="summary_large_image">
+
     {% if jekyll.environment == "production" %}
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -45,7 +48,9 @@
     </script>
     {% else  %}
     {% endif %}
-
+    <link rel="preload" href="/css/main.css" as="style">
+    <link rel="preload" href="/js/usecloudinary.js" as="script">
+    <link rel="preload" href="https://kit.fontawesome.com/734fe914a1.js" as="script" crossorigin>
     <link rel="stylesheet" type="text/css" href="/css/main.css">
   </head>
   <body>
@@ -53,5 +58,5 @@
   </body>
   <!-- 遅延読み込み -->
   <script type="text/javascript" src="/js/usecloudinary.js"></script>
-  <script async src="https://kit.fontawesome.com/734fe914a1.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/734fe914a1.js" crossorigin="anonymous"></script>
 </html>
