@@ -1,7 +1,7 @@
 <ul class="course-list">
 {% for course in site.courses %}
 {% assign course_lang = course.path | slice: 9, 2 %}
-{% if course.category == page.categoryname and course.difficulty == include.difficulty and course.parent == nil and course_lang == site.lang %}
+{% if course.category == page.categoryname and course.difficulty == include.difficulty and course.parent == nil and (course_lang == site.lang or (course_lang == 'ja' and site.lang == 'kana')) %}
 <li><a href="{{course.url}}"><img data-src="{{ site.url }}/assets/course/{{ course.category }}/{{ course.course-name }}{{ course.thumbnail }}" data-width="300" alt="{{ course.title }}" loading="lazy">{{course.title}}</a></li>
 {% endif %}
 {% endfor %}
