@@ -18,12 +18,12 @@ title: title
 {% assign courses = site.courses | limit:4 | where_exp:"c", "c.parent == nil" %}
 {% for course in courses %}
   {% assign course_lang = course.path | slice: 9, 2 %}
-  {% if course_lang == site.lang %}
+  {% if (course_lang == site.lang or (course_lang == 'ja' and site.lang == 'kana')) %}
   <li>
     <a href="{{course.url}}">
       <span class="top-course-list-category">{% t category.{{ course.category }}.title %}</span>
       <img data-src="{{ site.url }}/assets/course/{{ course.category }}/{{ course.course-name }}{{ course.thumbnail }}" data-width="300" alt="{{ course.title }}" loading="auto">
-      {{ course.title }}
+      {% if site.lang == 'kana' and course.title-kana %}{{course.title-kana}}{% else %}{{course.title}}{% endif %}
       <span class="top-course-list-difficulty"> {% t difficulty.{{ course.difficulty }} %} </span>
     </a>
   </li>
