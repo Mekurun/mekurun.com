@@ -237,8 +237,7 @@ footer {
 }
 @mixin card-hover($color: $lightgray) {
   &:hover {
-    box-shadow: none;
-    transform: translateY(6px);
+    opacity: .8;
   }
 }
 .top {
