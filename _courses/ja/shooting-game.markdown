@@ -1,6 +1,7 @@
 ---
 layout: course
 title:  "シューティングゲームを作ろう！"
+title-kana: "シューティングゲームをつくろう！"
 category: scratch
 difficulty: hard
 course-name: shooting-game
