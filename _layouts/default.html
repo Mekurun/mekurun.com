@@ -1,5 +1,9 @@
 <!DOCTYPE html>
+{% if site.lang == "en" %}
+<html lang="en" dir="ltr">
+{% else  %}
 <html lang="ja" dir="ltr">
+{% endif %}
   <head>
     <meta charset="utf-8">
     {% if jekyll.environment == "development" %}
