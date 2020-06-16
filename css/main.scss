@@ -1,12 +1,13 @@
 ---
 ---
-$main-color: #34a2df;
+$main-yellow: #ffda42;
 $text-color: #333333;
+$sub-green: #6ec350;
 $darkgray: #707070;
 $lightgray: #d9e6f0;
 $bg-gray: #f5f9fc;
+$green-dark: #31ad31;
 $header-height: 60px;
-$main-dark: #2d6bac;
 body {
   margin: 0;
   color: $text-color;
@@ -105,7 +106,7 @@ $switchHeight: 30px;
   }
 }
 .kana-switch-on {
-  background-color: $main-color;
+  background-color: $green-dark;
   &::before {
     right: 5px;
     animation: turnon .2s ease;
@@ -242,12 +243,12 @@ footer {
 }
 .top {
   padding: $header-height * 1.3 + 24px 10vw 24px;
-  background-color: $main-color;
+  background-color: $main-yellow;
   height: 30vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: #444;
   @media screen and (max-width:700px) {
     padding-top: $header-height * 1 + 24px;
   }
@@ -267,7 +268,7 @@ footer {
   background-color: #fff;
   padding: 14px;
   border-radius: 5px;
-  color: $main-color;
+  color: $green-dark;
   font-weight: 600;
   text-decoration: none;
   display: inline-block;
@@ -317,7 +318,7 @@ footer {
     content: "\f005";
     font-weight: 900;
     font-family: 'Font Awesome 5 Free';
-    color: $main-color;
+    color: $sub-green;
     opacity: .8;
   }
 }
@@ -336,8 +337,7 @@ footer {
   h2:before {
     content: '\f02d';
     font-family: 'Font Awesome 5 Free';
-    color: $main-color;
-    opacity: .8;
+    color: $sub-green;
     margin-right: 8px;
   }
   @media screen and (max-width:800px) {
@@ -357,7 +357,7 @@ footer {
 }
 .list-category-link {
   text-align: right;
-  color: $main-dark;
+  color: $green-dark;
   margin-bottom: 0;
   font-weight: 600;
   &:hover {
@@ -442,7 +442,7 @@ footer {
   display: inline-block;
 }
 #progress-container {
-  background-color: $main-color;
+  background-color: $sub-green;
   height: 100%;
   border-radius: 8px;
 }
@@ -453,7 +453,7 @@ footer {
 }
 .button {
   -webkit-appearance: none;
-  border: solid 4px $main-color;
+  border: solid 4px $green-dark;
   border-radius: 4px;
   padding: 12px;
   font-weight: bold;
@@ -481,17 +481,17 @@ footer {
   .button-back {
     margin-right: 6px;
     background-color: #fff;
-    color: $main-color;
+    color: $green-dark;
   }
   .button-next {
-    background-color: $main-color;
+    background-color: $green-dark;
     color: #fff;
   }
 }
 .button-export {
   display: inline-block;
   float: right;
-  color: $main-color;
+  color: $green-dark;
   width: 160px;
   height: 60px;
   margin: auto;
@@ -540,7 +540,7 @@ form {
     height: 40px;
     width: 80%;
     margin: auto;
-    background-color: $main-color;
+    background-color: $sub-green;
     border: none;
     cursor: pointer;
     outline: none;
@@ -577,7 +577,7 @@ form {
   margin-left: 12px;
   a {
     font-size: 16px;
-    color: $main-dark;
+    color: $green-dark;
     text-decoration: none;
     &:hover {
       opacity: .7;
