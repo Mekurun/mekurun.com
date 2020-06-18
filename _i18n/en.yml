@@ -25,15 +25,13 @@ category:
 top:
   recent: Recent Courses
   allmenu: All Collections
+  viewAll: Learn
   projects: Projects
   more: See more
   news: News
   tips: Tips
   courses: courses
   posts: posts
-
-header:
-  toTop: Learn
 
 usage:
   title: How to use

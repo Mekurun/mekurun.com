@@ -18,7 +18,7 @@ title: title
     <a href="{{ site.baseurl }}{{category.permalink}}" class="list-category-one">
       <h3>{% t category.title %}</h3>
       <p>{% t category.{{category.categoryname}}.caption %}</p>
-      <p class="list-category-link">一覧を見る</p>
+      <p class="list-category-link">{% t top.viewAll %}</p>
     </a>
     {% endfor %}
   </div>

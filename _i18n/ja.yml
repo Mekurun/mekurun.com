@@ -25,6 +25,7 @@ category:
 top:
   recent: 最近追加されたコース
   allmenu: すべてのコレクション
+  viewAll: コースを見る
   projects: みんなの作品
   more: もっと見る
   news: お知らせ
@@ -32,9 +33,6 @@ top:
   copy: あなたのアイデアをえがこう
   courses: コース
   posts: 記事
-
-header:
-  toTop: コースを見る
 
 usage:
   title: 使い方ガイド

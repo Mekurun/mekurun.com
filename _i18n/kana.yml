@@ -24,13 +24,12 @@ category:
 top:
   recent: あたらしいコース
   allmenu: すべてのコレクション
+  viewAll: コースをみる
   projects: みんなのさくひん
   more: もっとみる
   news: おしらせ
   tips: まめちしき
-
-header:
-  toTop: コースをみる
+  posts: きじ
 
 usage:
   title: つかいかた
