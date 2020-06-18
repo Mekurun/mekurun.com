@@ -7,7 +7,7 @@ title: title
   <div class="top-text">
     <h1 class="top-copy">{% t top.copy %}</h1>
     <p>{% t copy %}</p>
-    <p class="top-course-count">{{ site.courses.size }} {% t top.courses %}</p>
+    <p class="top-course-count">{{ site.courses.size }} {% t top.courses %}<span style="opacity: 0.6;"> ・ </span>{{ site.posts.size }} {% t top.posts %}</p>
   </div>
   <img  data-src="{{ site.url }}/assets/images/mainvisual.png" data-width="300" alt="メクルン" class="top-mainvisual">
 </div>
