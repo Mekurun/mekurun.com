@@ -264,7 +264,7 @@ footer {
 }
 @media screen and (max-width:975px) {
   .top {
-    display: block;
+    flex-wrap: wrap;
   }
   .top-text {
     text-align: center;
