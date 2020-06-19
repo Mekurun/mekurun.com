@@ -1,9 +1,12 @@
+console.log(self.__precacheManifest)
+// console.log(workbox.routing)
+
 // set names for both precache & runtime cache
 workbox.core.setCacheNameDetails({
-  prefix: "mekurun",
-  suffix: "v1",
-  precache: "precache",
-  runtime: "runtime-cache",
+  prefix: 'mekurun',
+  suffix: 'v1',
+  precache: 'precache',
+  runtime: 'runtime-cache',
 })
 
 // let Service Worker take control of pages ASAP
@@ -18,12 +21,12 @@ workbox.routing.registerRoute(/\.html$/, workbox.strategies.networkFirst())
 
 // use `cacheFirst` strategy for images
 workbox.routing.registerRoute(
-  /assets\/(img|icons)/,
+  /assets\/(images|article|course)/,
   workbox.strategies.cacheFirst()
 )
 
-// third party files
-workbox.routing.registerRoute(
-  /^https?:\/\/cdn.staticfile.org/,
-  workbox.strategies.staleWhileRevalidate()
-)
+// // third party files
+// workbox.routing.registerRoute(
+//   /^https?:\/\/cdn.staticfile.org/,
+//   workbox.strategies.staleWhileRevalidate()
+// )
