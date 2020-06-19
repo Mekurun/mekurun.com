@@ -20,4 +20,4 @@ function setsrc() {
   }
 }
 
-window.onload = setsrc;
+window.addEventListener('load', setsrc)
