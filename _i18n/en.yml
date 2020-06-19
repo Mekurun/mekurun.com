@@ -35,6 +35,7 @@ top:
   caption: The learning visual-programming platform
   courses: courses
   posts: posts
+  all: All
 
 usage:
   title: How to use

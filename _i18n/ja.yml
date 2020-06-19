@@ -35,6 +35,7 @@ top:
   caption: スライドで学べるビジュアルプログラミング学習サービス
   courses: コース
   posts: 記事
+  all: 全
 
 usage:
   title: 使い方ガイド
