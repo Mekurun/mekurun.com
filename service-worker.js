@@ -1,6 +1,3 @@
-console.log(self.__precacheManifest)
-// console.log(workbox.routing)
-
 // set names for both precache & runtime cache
 workbox.core.setCacheNameDetails({
   prefix: 'mekurun',
