@@ -3,6 +3,7 @@ description: メクルン (Mekurun) はスライドで学べるビジュアル�
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mekurun.com" # the base hostname & protocol for your site, e.g. http://example.com
 # Build settings
+markdown: MekurunCustomConverter
 plugins:
   - jekyll-feed
   - jekyll-sitemap
