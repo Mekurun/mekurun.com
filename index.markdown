@@ -9,7 +9,7 @@ title: title
     <p>{% t top.caption %}</p>
     <p class="top-course-count">{% t top.all %} {{ site.courses.size }} {% t top.courses %}<span style="opacity: 0.6;"> ・ </span>{{ site.posts.size }} {% t top.posts %}</p>
   </div>
-  <img  data-src="/assets/images/mainvisual.png" data-width="300" alt="メクルン" class="top-mainvisual">
+  <img data-src="/assets/images/mainvisual.svg" data-width="300" alt="メクルン" class="top-mainvisual">
 </div>
 <div class="main">
   <h2 id="allmenu">{% t top.allmenu %}</h2>
