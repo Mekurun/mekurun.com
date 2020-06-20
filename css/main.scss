@@ -590,6 +590,9 @@ form {
   max-width: 900px;
   margin: auto;
   padding: 12px 24px;
+  img {
+    max-width: 100%;
+  }
 }
 .post-list-heading {
   position: relative;
