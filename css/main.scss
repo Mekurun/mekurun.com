@@ -386,6 +386,23 @@ footer {
     opacity: 0.7;
   }
 }
+.list-category-thumbnail {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 5px;
+}
+.list-category-img {
+  width: 40%;
+}
+.list-category-heading {
+  display: inline;
+  margin: 0 0 0 20px;
+  height: 100%;
+  font-size: 2em;
+  width: 60%;
+  text-align: center;
+}
 .slide-page {
   max-width: 800px;
   margin: auto;
