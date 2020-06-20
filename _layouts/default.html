@@ -34,6 +34,8 @@
     <meta property="og:title" content="{{ title }}">
     <meta property="og:site_name" content="{{ site.title }}">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    {% capture ogpimgsrc %}{% if page.ogp %}{{site.url}}{{page.ogp}}{% else %}{{site.url}}/assets/images/ogp/main.png{% endif %}{% endcapture %}
+    <meta property="og:image" content="{{ ogpimgsrc }}" />
     {% capture description %}{% if page.description %}{% if page.layout == 'category' %}{% t page.description %}{% else %}{{ page.description }}{% endif %}{% else %}{% t description %}{% endif %}{% endcapture %}
     <meta name="description" content="{{ description }}">
     <meta property="og:description" content="{{ description }}">
