@@ -22,15 +22,18 @@ category:
     description: マイクロソフトがつくっているビジュアルプログラミングげんご「メイクコード」をつかって、マイクラのせかいをプログラミングしてみよう！Minecraft Windows10 Edition、Education Editionでのみできます。
 
 top:
+  title: トップページ
   recent: あたらしいコース
   allmenu: すべてのコレクション
+  viewAll: コースをみる
   projects: みんなのさくひん
   more: もっとみる
   news: おしらせ
   tips: まめちしき
-
-header:
-  toTop: コースをみる
+  copy: あなたのアイデアをえがこう
+  caption: スライドで学べるビジュアルプログラミング学習サービス
+  posts: きじ
+  all: ぜん
 
 usage:
   title: つかいかた

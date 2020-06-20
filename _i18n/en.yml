@@ -23,15 +23,19 @@ category:
     description:
 
 top:
+  title: Home
   recent: Recent Courses
   allmenu: All Collections
+  viewAll: Learn
   projects: Projects
   more: See more
   news: News
   tips: Tips
-
-header:
-  toTop: Learn
+  copy: Draw your own ideas!
+  caption: The learning visual-programming platform
+  courses: courses
+  posts: posts
+  all: All
 
 usage:
   title: How to use
@@ -43,7 +47,7 @@ contact:
   title: Contact
   name: Name
   email: E-mail
-  mailTitle: subject
+  mailTitle: Subject
   mailContent: Inquiry
   send: Send
 

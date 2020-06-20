@@ -3,6 +3,7 @@ description: メクルン (Mekurun) はスライドで学べるビジュアル�
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mekurun.com" # the base hostname & protocol for your site, e.g. http://example.com
 # Build settings
+markdown: MekurunCustomConverter
 plugins:
   - jekyll-feed
   - jekyll-sitemap
@@ -23,6 +24,20 @@ collections:
     output: true
   categories:
     output: true
+
+pwa:
+  sw_src_filepath: service-worker.js # Optional
+  sw_dest_filename: service-worker.js # Optional
+  dest_js_directory: js # Required
+  precache_recent_posts_num: 5 # Optional
+  precache_glob_directory: / # Optional
+  precache_glob_patterns: # Optional
+    - "**/*.{js,css,eot,svg,jpg,jpeg,png,ttf,woff}"
+    - index.html
+  precache_glob_ignores: # Optional
+    - sw-register.js
+    - "fonts/**/*"
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

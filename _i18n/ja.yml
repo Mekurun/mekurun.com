@@ -23,15 +23,19 @@ category:
     description: マイクロソフトが開発しているビジュアルプログラミング言語「MakeCode」を使って、マイクラの世界をプログラミングしてみよう！Minecraft Windows10 Edition、Education Editionに対応しています。
 
 top:
+  title: トップページ
   recent: 最近追加されたコース
   allmenu: すべてのコレクション
+  viewAll: コースを見る
   projects: みんなの作品
   more: もっと見る
   news: お知らせ
   tips: 豆知識
-
-header:
-  toTop: コースを見る
+  copy: あなたのアイデアをえがこう
+  caption: スライドで学べるビジュアルプログラミング学習サービス
+  courses: コース
+  posts: 記事
+  all: 全
 
 usage:
   title: 使い方ガイド

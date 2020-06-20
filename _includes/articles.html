@@ -3,7 +3,7 @@
 {% for post in posts %}
 <li class="article-list-one"><a href="{{ post.url }}">
   {% if post.thumbnail %}
-  <img data-src="{{ site.url }}/assets/article/{{ post.category }}{{ post.thumbnail }}" data-width="300" alt="{{ post.title }}" loading="auto">
+  <img data-src="/assets/article/{{ post.category }}{{ post.thumbnail }}" data-width="300" alt="{{ post.title }}" loading="auto">
   {% endif %}
   {% if include.category == 'news' %}
     <p class="article-list-date">{{ post.date | date: "%Y/%m/%d" }}</p>
