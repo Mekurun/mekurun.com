@@ -4,7 +4,10 @@ layout: default
 {{content}}
 {% include header.html %}
 <div class="top category-top" style="background-color: #{{ page.color }}">
-  <div>
+  <div style="width:300px">
+    <img data-src="/assets/images/{{page.categoryname}}.svg" alt="{% t page.title %}" class="category-top-img" data-width="300">
+  </div>
+  <div style="max-width:500px;padding:20px;">
     <h1>{% t page.title %}</h1>
     <p>{% t page.description %}</p>
     <a href="{{ page.website }}" class="category-officialSite" target="_blank"  rel="noopener">{% t page.title %} {% t category.official %} <i class="fas fa-external-link-alt"></i></a>
