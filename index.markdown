@@ -9,7 +9,7 @@ title: title
     <p>{% t top.caption %}</p>
     <p class="top-course-count">{% t top.all %} {{ site.courses.size }} {% t top.courses %}<span style="opacity: 0.6;"> ・ </span>{{ site.posts.size }} {% t top.posts %}</p>
   </div>
-  <img  data-src="{{ site.url }}/assets/images/mainvisual.png" data-width="300" alt="メクルン" class="top-mainvisual">
+  <img  data-src="/assets/images/mainvisual.png" data-width="300" alt="メクルン" class="top-mainvisual">
 </div>
 <div class="main">
   <h2 id="allmenu">{% t top.allmenu %}</h2>
@@ -32,7 +32,7 @@ title: title
     <li>
       <a href="{{course.url}}">
         <span class="top-course-list-category">{% t category.{{ course.category }}.title %}</span>
-        <img data-src="{{ site.url }}/assets/course/{{ course.category }}/{{ course.course-name }}{{ course.thumbnail }}" data-width="300" alt="{{ course.title }}" loading="auto">
+        <img data-src="/assets/course/{{ course.category }}/{{ course.course-name }}{{ course.thumbnail }}" data-width="300" alt="{{ course.title }}" loading="auto">
         {% if site.lang == 'kana' and course.title-kana %}{{course.title-kana}}{% else %}{{course.title}}{% endif %}
         <span class="top-course-list-difficulty"> {% t difficulty.{{ course.difficulty }} %} </span>
       </a>
