@@ -16,7 +16,10 @@ title: title
   <div class="list-category">
     {% for category in site.categories %}
     <a href="{{ site.baseurl }}{{category.permalink}}" class="list-category-one">
-      <h3>{% t category.title %}</h3>
+      <div class="list-category-thumbnail" style="background: #{{ category.color }};">
+        <img data-src="/assets/images/{{category.categoryname}}.svg" alt="{% t category.title %}" class="list-category-img">
+        <h3 class="list-category-heading">{% t category.title %}</h3>
+      </div>
       <p>{% t category.{{category.categoryname}}.caption %}</p>
       <p class="list-category-link">{% t top.viewAll %}</p>
     </a>
