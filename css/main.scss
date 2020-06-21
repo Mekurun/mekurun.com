@@ -74,7 +74,7 @@ header {
   bottom: 5px;
   font-size: .8em;
 }
-$switchHeight: 30px;
+$switchHeight: 28px;
 .nav-cover {
   display: inline;
 }
@@ -86,7 +86,10 @@ $switchHeight: 30px;
   padding: 5px;
   margin: auto;
   width: $switchHeight * 1.9;
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   &::before {
     position: absolute;
     content: '';
