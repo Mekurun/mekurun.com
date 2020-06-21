@@ -320,6 +320,9 @@ footer {
       font-weight: 500;
       display: block;
       padding: 12px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
     }
     img {
       width: 100%;
@@ -340,6 +343,7 @@ footer {
 .top-course-list-difficulty {
   display: block;
   width: 100%;
+  margin-top: auto;
   &:before {
     content: "\f005";
     font-weight: 900;
