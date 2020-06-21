@@ -74,7 +74,7 @@ header {
   bottom: 5px;
   font-size: .8em;
 }
-$switchHeight: 30px;
+$switchHeight: 28px;
 .nav-cover {
   display: inline;
 }
@@ -86,7 +86,10 @@ $switchHeight: 30px;
   padding: 5px;
   margin: auto;
   width: $switchHeight * 1.9;
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   &::before {
     position: absolute;
     content: '';
@@ -168,6 +171,7 @@ $switchHeight: 30px;
   }
   .kana-switch {
     margin: 0;
+    position: relative;
   }
   .nav-switch {
     display: inline-block;
@@ -262,7 +266,7 @@ footer {
 .top-course-count {
   font-weight: 600;
 }
-@media screen and (max-width:975px) {
+@media screen and (max-width: 890px) {
   .top {
     flex-wrap: wrap;
   }
@@ -320,12 +324,18 @@ footer {
       font-weight: 500;
       display: block;
       padding: 12px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
     }
     img {
       width: 100%;
       border-radius: 5px;
     }
   }
+}
+.course-list-title {
+  margin: 0.6em 0 0.4em 0;
 }
 .top-course-list-category {
   background-color: $lightgray;
@@ -340,6 +350,7 @@ footer {
 .top-course-list-difficulty {
   display: block;
   width: 100%;
+  margin-top: auto;
   &:before {
     content: "\f005";
     font-weight: 900;
