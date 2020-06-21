@@ -1,5 +1,15 @@
+{% capture logosrc %}
+{% if jekyll.environment == "production" %}
+https://res.cloudinary.com/nztm/image/fetch/c_fit,q_auto,f_auto/{{ site.url }}
+{% endif %}
+{% if site.lang == "ja" or site.lang == "kana" %}
+/assets/images/logo_yoko.svg
+{% else %}
+/assets/images/logo_yoko_english.svg
+{% endif %}
+{% endcapture %}
 <header>
-  {% include logo_yoko.html class="header-nav-logo" %}
+  <a href="{{ site.baseurl }}/"><img src="{{ logosrc | split: ' ' }}" alt="{% t title %}" class="header-nav-logo"></a>
   <input type="checkbox" id="nav-checkbox" >
   <label for="nav-checkbox" class="nav-switch"><i class="fas fa-bars"></i><i class="fas fa-times"></i></label>
   <div class="nav-cover">

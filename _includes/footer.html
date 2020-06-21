@@ -1,7 +1,7 @@
 <footer>
   <ul class="footer-list footer-logoblock">
 
-    <li>{% include logo_yoko.html class="footer-logo" %}</li>
+    <li><a href="{{ site.baseurl }}/"><img src="{{ logosrc | split: ' ' }}" alt="{% t title %}" class="footer-logo"></a></li>
     <li>&copy; 2020 {% t title %} All Rights reserved.</li>
     <li><a href="https://github.com/Mekurun"><i class="fab fa-github"></i> Mekurun</a></li>
   </ul>
