@@ -5,7 +5,7 @@ function setsrc() {
   for (var i = 0; i < images.length; i++) {
     if(images[i].dataset.src){
       if('{{ site.url }}' != 'https://mekurun.com') {
-        images[i].src = images[i].dataset.src;
+        images[i].src = images[i].dataset.src.replace('{{site.url}}', '');
       }else{
         var display = images[i].style.display;
         if(display == "none") images[i].style.display = "block";
