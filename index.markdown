@@ -36,7 +36,7 @@ title: title
       <a href="{{course.url}}">
         <span class="top-course-list-category">{% t category.{{ course.category }}.title %}</span>
         <img data-src="{{ site.url }}/assets/course/{{ course.category }}/{{ course.course-name }}{{ course.thumbnail }}" data-width="300" alt="{{ course.title }}" loading="auto">
-        {% if site.lang == 'kana' and course.title-kana %}{{course.title-kana}}{% else %}{{course.title}}{% endif %}
+        <p class="course-list-title">{% if site.lang == 'kana' and course.title-kana %}{{course.title-kana}}{% else %}{{course.title}}{% endif %}</p>
         <span class="top-course-list-difficulty"> {% t difficulty.{{ course.difficulty }} %} </span>
       </a>
     </li>
