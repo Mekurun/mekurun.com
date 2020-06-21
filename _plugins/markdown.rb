@@ -1,6 +1,6 @@
 class Kramdown::Converter::Html
   def convert_img(el, _indent)
-    "<img data-srcpath='#{el.attr["src"]}' alt='#{el.attr["alt"]}' />"
+    "<img data-src='#{el.attr["src"]}' alt='#{el.attr["alt"]}' />"
   end
 end
 
