@@ -1,6 +1,6 @@
 class Kramdown::Converter::Html
   def convert_img(el, _indent)
-    "<img data-src='#{el.attr["src"]}' alt='#{el.attr["alt"]}' />"
+    "<img src='#{el.attr["src"]}' alt='#{el.attr["alt"]}' />" # TODO: cloudinary対応にする
   end
 end
 
@@ -15,7 +15,6 @@ class Jekyll::Converters::Markdown::MekurunCustomConverter
   end
 
   def convert(content)
-    Kramdown::Document.new(content, {
-    }).to_html
+    Kramdown::Document.new(content).to_html
   end
 end
