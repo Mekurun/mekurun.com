@@ -632,6 +632,17 @@ form {
   margin: 12px 0;
   border-radius: 4px;
 }
+.post-date {
+  font-weight: 600;
+  color: $darkgray;
+  &::before {
+    content: '\f073';
+    font-family: 'Font Awesome 5 Free';
+    color: $main-color;
+    opacity: 0.8;
+    margin-right: 5px;
+  }
+}
 .post-list-heading {
   position: relative;
 }
