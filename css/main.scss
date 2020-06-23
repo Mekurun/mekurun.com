@@ -683,7 +683,7 @@ form {
       text-decoration: none;
       color: $darkgray;
       &:hover {
-        text-decoration: underline;
+        opacity: 0.7;
       }
     }
   }
