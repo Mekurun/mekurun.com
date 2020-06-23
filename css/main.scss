@@ -626,6 +626,26 @@ form {
     max-width: 100%;
   }
 }
+.post-content {
+  background: #fff;
+  padding: 12px;
+  margin: 12px 0;
+  border-radius: 4px;
+}
+.post-date {
+  font-weight: 600;
+  color: $darkgray;
+  margin: 6px 0;
+  display: inline-block;
+  margin-right: 12px;
+  &::before {
+    content: '\f073';
+    font-family: 'Font Awesome 5 Free';
+    color: $main-color;
+    opacity: 0.8;
+    margin-right: 5px;
+  }
+}
 .post-list-heading {
   position: relative;
 }
@@ -638,6 +658,36 @@ form {
     text-decoration: none;
     &:hover {
       opacity: .7;
+    }
+  }
+}
+.author {
+  font-weight: 600;
+  color: $darkgray;
+  margin: 6px 0;
+  display: inline-block;
+  &::before {
+    content: '\f007';
+    font-family: 'Font Awesome 5 Free';
+    color: $main-color;
+    font-weight: 900;
+    opacity: 0.8;
+    margin-right: 5px;
+  }
+}
+.breadcrumbs {
+  list-style: none;
+  padding: 0;
+  color: $darkgray;
+  li {
+    display: inline-block;
+    font-weight: 600;
+    a{
+      text-decoration: none;
+      color: $darkgray;
+      &:hover {
+        opacity: 0.7;
+      }
     }
   }
 }

@@ -20,6 +20,7 @@
 | `date: ` | 記事を書いた日付。`yyyy-MM-dd HH:mm:ss +0900`と設定 |
 | `category: ` | カテゴリー。`news`,`projects`,`tips`のいずれか |
 |`thumbnail: `   | サムネイル画像。 `/assets/article/<記事のカテゴリ>/` 以降のパスを書く |
+|`author:`   |  記事を書いた人。 |
 
 2. 記事の内容はmarkdown形式で書きます。画像はルートディレクトリからの指定でお願いします。
 
@@ -32,6 +33,7 @@ title:  "リリースのお知らせ"
 date:   2020-06-28 11:14:26 +0900
 category: news
 thumbnail: /release.png
+author: yuki384
 ---
 この度、スライドで学べる子ども向けプログラミング学習サービス「メクルン」をリリースしました！
 
