@@ -626,6 +626,23 @@ form {
     max-width: 100%;
   }
 }
+.post-content {
+  background: #fff;
+  padding: 12px;
+  margin: 12px 0;
+  border-radius: 4px;
+}
+.post-date {
+  font-weight: 600;
+  color: $darkgray;
+  &::before {
+    content: '\f073';
+    font-family: 'Font Awesome 5 Free';
+    color: $main-color;
+    opacity: 0.8;
+    margin-right: 5px;
+  }
+}
 .post-list-heading {
   position: relative;
 }
@@ -647,4 +664,20 @@ form {
   background-color: $lightgray;
   margin-bottom: 12px;
   text-align: center;
+}
+.breadcrumbs {
+  list-style: none;
+  padding: 0;
+  color: $darkgray;
+  li {
+    display: inline-block;
+    font-weight: 600;
+    a{
+      text-decoration: none;
+      color: $darkgray;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
