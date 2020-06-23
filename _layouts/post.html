@@ -10,13 +10,15 @@ layout: default
       <li><i class="fas fa-angle-right"></i> <a href="/{{page.category}}">{% t top.{{page.category}} %}</a></li>
     </ol>
   </nav>
-  <h1>{{ page.title }}</h1>
-  <p>{{ page.date | date: "%Y年%m月%d日" }}</p>
-  {% if page.thumbnail %}
-  <img data-src="{{ site.url }}/assets/article/{{ page.category }}{{ page.thumbnail }}"
-  data-width="810" alt="{{ page.title }}" class="post-thumbnail">
-  {% endif %}
-  {{content}}
+  <div class="post-content">
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.date | date: "%Y年%m月%d日" }}</p>
+    {% if page.thumbnail %}
+    <img data-src="{{ site.url }}/assets/article/{{ page.category }}{{ page.thumbnail }}"
+    data-width="810" alt="{{ page.title }}" class="post-thumbnail">
+    {% endif %}
+    {{content}}
+  </div>
   {% if page.author %}
   <div class="author">
     {% t post.author %}: {{ page.author }}
