@@ -648,3 +648,19 @@ form {
   margin-bottom: 12px;
   text-align: center;
 }
+.breadcrumbs {
+  list-style: none;
+  padding: 0;
+  color: $darkgray;
+  li {
+    display: inline-block;
+    font-weight: 600;
+    a{
+      text-decoration: none;
+      color: $darkgray;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

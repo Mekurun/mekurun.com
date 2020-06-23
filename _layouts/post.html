@@ -4,12 +4,18 @@ layout: default
 {% include header.html %}
 <div class="top post-top"></div>
 <div class="post-main">
+  <nav>
+    <ol class="breadcrumbs">
+      <li><a href="/">{% t top.title %}</a></li>
+      <li><i class="fas fa-angle-right"></i> <a href="/{{page.category}}">{% t top.{{page.category}} %}</a></li>
+    </ol>
+  </nav>
+  <h1>{{ page.title }}</h1>
+  <p>{{ page.date | date: "%Y年%m月%d日" }}</p>
   {% if page.thumbnail %}
   <img data-src="{{ site.url }}/assets/article/{{ page.category }}{{ page.thumbnail }}"
   data-width="810" alt="{{ page.title }}" class="post-thumbnail">
   {% endif %}
-  <h1>{{ page.title }}</h1>
-  <p>{{ page.date | date: "%Y年%m月%d日" }}</p>
   {{content}}
   {% if page.author %}
   <div class="author">
