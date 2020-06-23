@@ -636,6 +636,8 @@ form {
   font-weight: 600;
   color: $darkgray;
   margin: 6px 0;
+  display: inline-block;
+  margin-right: 12px;
   &::before {
     content: '\f073';
     font-family: 'Font Awesome 5 Free';
@@ -663,6 +665,7 @@ form {
   font-weight: 600;
   color: $darkgray;
   margin: 6px 0;
+  display: inline-block;
   &::before {
     content: '\f007';
     font-family: 'Font Awesome 5 Free';
