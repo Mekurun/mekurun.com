@@ -11,7 +11,11 @@ layout: default
   <h1>{{ page.title }}</h1>
   <p>{{ page.date | date: "%Y年%m月%d日" }}</p>
   {{content}}
-  
+  {% if page.author %}
+  <div class="author">
+    {% t post.author %}: {{ page.author }}
+  </div>
+  {% endif %}
   <a href="/{{page.category}}" class="button" style="display: block;color: #34a2df;">記事一覧に戻る</a>
 </div>
 {% include footer.html %}
