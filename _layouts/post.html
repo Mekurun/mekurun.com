@@ -13,17 +13,15 @@ layout: default
   <div class="post-content">
     <h1>{{ page.title }}</h1>
     <p class="post-date">{{ page.date | date: "%Y年%m月%d日" }}</p>
+    {% if page.author %}
+    <p class="author">{{ page.author }}</p>
+    {% endif %}
     {% if page.thumbnail %}
     <img data-src="{{ site.url }}/assets/article/{{ page.category }}{{ page.thumbnail }}"
     data-width="810" alt="{{ page.title }}" class="post-thumbnail">
     {% endif %}
     {{content}}
   </div>
-  {% if page.author %}
-  <div class="author">
-    {% t post.author %}: {{ page.author }}
-  </div>
-  {% endif %}
   <a href="/{{page.category}}" class="button" style="display: block;color: #34a2df;">記事一覧に戻る</a>
 </div>
 {% include footer.html %}

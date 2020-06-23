@@ -635,6 +635,7 @@ form {
 .post-date {
   font-weight: 600;
   color: $darkgray;
+  margin: 6px 0;
   &::before {
     content: '\f073';
     font-family: 'Font Awesome 5 Free';
@@ -659,11 +660,17 @@ form {
   }
 }
 .author {
-  padding: 20px;
-  border-radius: 4px;
-  background-color: $lightgray;
-  margin-bottom: 12px;
-  text-align: center;
+  font-weight: 600;
+  color: $darkgray;
+  margin: 6px 0;
+  &::before {
+    content: '\f007';
+    font-family: 'Font Awesome 5 Free';
+    color: $main-color;
+    font-weight: 900;
+    opacity: 0.8;
+    margin-right: 5px;
+  }
 }
 .breadcrumbs {
   list-style: none;
