@@ -25,6 +25,15 @@
     {% assign title = title | replace: "
       ", ""%}
     <title>{{ title }}</title>
+
+    <link rel="preload" href="/css/main.css" as="style">
+    <link rel="preload" href="https://kit.fontawesome.com/734fe914a1.js" as="script" crossorigin>
+    <link rel="preload" href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" as="style">
+    <link rel="preload" href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css" as="style">
+    <link rel="preload" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" as="style">
+    <link rel="preload" href="https://kit-free.fontawesome.com/releases/latest/webfonts/free-fa-solid-900.woff2" as="font" crossorigin>
+    <link rel="preload" href="https://kit-free.fontawesome.com/releases/latest/webfonts/free-fa-brands-400.woff2" as="font" crossorigin>
+
     {% if page.url == "/" %}
       <meta property="og:type" content="website">
     {% else %}
@@ -62,13 +71,6 @@
     </script>
     {% else  %}
     {% endif %}
-    <link rel="preload" href="/css/main.css" as="style">
-    <link rel="preload" href="https://kit.fontawesome.com/734fe914a1.js" as="script" crossorigin>
-    <link rel="preload" href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" as="style">
-    <link rel="preload" href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css" as="style">
-    <link rel="preload" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" as="style">
-    <link rel="preload" href="https://kit-free.fontawesome.com/releases/latest/webfonts/free-fa-solid-900.woff2" as="font" crossorigin>
-    <link rel="preload" href="https://kit-free.fontawesome.com/releases/latest/webfonts/free-fa-brands-400.woff2" as="font" crossorigin>
 
     <link rel="stylesheet" type="text/css" href="/css/main.css">
 
