@@ -55,7 +55,10 @@ Slackであれば、GitHubのアプリをインストールして連携するだ
 
 ① Payload URLに先程、Discordで取得したウェブフックURLの後ろに/githubを付け加えたものを入力してください
 
-例: https://discordapp.com/api/webhooks/****************/github
+
+例:
+`https://discordapp.com/api/webhooks/****************/github`
+
 
 ② Content type を application/json に設定してください
 
@@ -73,4 +76,3 @@ Push された時のみ通知する場合は Just the push event. を、全部�
 ![Discord webhook message](/assets/article/tips/discord-github/0007.png)
 
 今回の記事は以上になります、最後までお読み頂きありがとうございました。
-
