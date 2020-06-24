@@ -1,6 +1,6 @@
 class Kramdown::Converter::Html
   def convert_img(el, _indent)
-    "<img data-src='#{Jekyll.sites.first.config["url"]}#{el.attr["src"]}' alt='#{el.attr["alt"]}' />"
+    "<img data-src='#{Jekyll.sites.first.config["url"]}#{el.attr["src"]}' alt='#{el.attr["alt"]}' loading='auto' />"
   end
 end
 
