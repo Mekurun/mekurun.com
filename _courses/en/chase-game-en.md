@@ -6,6 +6,7 @@ difficulty: easy
 course-name: chase-game-en
 description: Let’s make game of run away from ‘it’ !
 thumbnail: /01.jpg
+lang: en
 slides:
 -  /01.jpg
 -  /02.jpg
