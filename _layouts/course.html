@@ -35,8 +35,8 @@ layout: default
   <span id="progress-number"></span>
 </div>
 <div class="slide-buttons">
-  <input class="button button-back" type="button" value="もどる" onclick="back()" id="buttonBack" disabled/>
-  <input class="button button-next" type="button" value="すすむ" onclick="next()" id="buttonNext"/>
+  <input class="button button-back" type="button" value="{% t course.prev %}" onclick="back()" id="buttonBack" disabled/>
+  <input class="button button-next" type="button" value="{% t course.next %}" onclick="next()" id="buttonNext"/>
 </div>
 </section>
 <section class="slide-page">
