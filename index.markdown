@@ -33,7 +33,7 @@ title: title
     {% assign course_lang = course.path | slice: 9, 2 %}
     {% if (course_lang == site.lang or (course_lang == 'ja' and site.lang == 'kana')) %}
     <li>
-      <a href="{{course.url}}">
+      <a href="{{ site.baseurl }}{{course.url}}">
         <span class="top-course-list-category">{% t category.{{ course.category }}.title %}</span>
         <img data-src="{{ site.url }}/assets/course/{{ course.category }}/{{ course.course-name }}{{ course.thumbnail }}" data-width="300" alt="{{ course.title }}" loading="auto">
         <p class="course-list-title">{% if site.lang == 'kana' and course.title-kana %}{{course.title-kana}}{% else %}{{course.title}}{% endif %}</p>
