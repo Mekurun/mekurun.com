@@ -8,7 +8,7 @@ layout: default
 <div class="slides-top">
   <div class="slides-top-info">
   {% assign parents = site.courses | where:"course-name", page.parent %}
-  <a class="link-to-parent" href="/{{page.category}}/{{page.parent}}">{{ parents[0].title }}</a>
+  <a class="link-to-parent" href="{{ site.baseurl }}/{{page.category}}/{{page.parent}}">{{ parents[0].title }}</a>
   <h2>{{page.title}}</h2>
   </div>
   {% capture pdfpath %}{% if page.parent %}{{site.url}}/assets/course/{{ page.category }}/{{ page.parent }}{% else %}{{site.url}}/assets/course/{{ page.category }}{% endif %}/{{ page.course-name }}/slide.pdf{% endcapture %}
