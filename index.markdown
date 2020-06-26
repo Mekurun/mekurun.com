@@ -7,7 +7,7 @@ title: title
   <div class="top-text">
     <h1 class="top-copy">{% t top.copy %}</h1>
     <p>{% t top.caption %}</p>
-    <p class="top-course-count">{% t top.all %} {{ site.courses.size }} {% t top.courses %}<span style="opacity: 0.6;"> ・ </span>{{ site.posts.size }} {% t top.posts %}</p>
+    <p class="top-course-count">{% t top.all %} {% assign coursesWithLang = site.courses | where_exp:"item", "item.path contains site.lang" %}{{ coursesWithLang.size }} {% t top.courses %}<span style="opacity: 0.6;"> ・ </span>{{ site.posts.size }} {% t top.posts %}</p>
   </div>
   <img  data-src="{{ site.url }}/assets/images/mainvisual.svg" data-width="300" alt="メクルン" class="top-mainvisual">
 </div>
@@ -33,7 +33,7 @@ title: title
     {% assign course_lang = course.path | slice: 9, 2 %}
     {% if (course_lang == site.lang or (course_lang == 'ja' and site.lang == 'kana')) %}
     <li>
-      <a href="{{course.url}}">
+      <a href="{{ site.baseurl }}{{course.url}}">
         <span class="top-course-list-category">{% t category.{{ course.category }}.title %}</span>
         <img data-src="{{ site.url }}/assets/course/{{ course.category }}/{{ course.course-name }}{{ course.thumbnail }}" data-width="300" alt="{{ course.title }}" loading="auto">
         <p class="course-list-title">{% if site.lang == 'kana' and course.title-kana %}{{course.title-kana}}{% else %}{{course.title}}{% endif %}</p>
