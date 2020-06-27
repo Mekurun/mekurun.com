@@ -392,13 +392,13 @@ footer {
   @include card;
   @include card-hover;
   color: $text-color;
-  display: block;
+  display: flex;
   margin: 12px;
   padding: 12px;
   text-decoration: none;
-  width: calc(50% - 24px);
+  width: 50%;
   @media screen and (max-width:880px) {
-    width: calc(100% - 24px);
+    width: 100%;
   }
 }
 .list-category-link {
@@ -417,22 +417,35 @@ footer {
   border-radius: 5px;
 }
 .list-category-img {
-  height: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 120px;
+  width: 120px;
+  padding: 12px;
+  border-radius: 4px;
   img {
     max-width: 100%;
     max-height: 100%;
   }
-  @media screen and (max-width:880px) {
-    height: auto;
-    width: 120px;
+}
+.list-category-text {
+  margin: 0 0 0 20px;
+}
+
+@media screen and (max-width:500px) {
+  .list-category-one {
+    flex-wrap: wrap;
+  }
+  .list-category-img {
+    width: 100%;
+  }
+  .list-category-text {
+    margin: 20px 0 0 0;
   }
 }
 .list-category-heading {
   display: inline;
-  margin: 0 0 0 20px;
   height: 100%;
   font-size: 2em;
   width: 60%;
