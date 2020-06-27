@@ -17,13 +17,13 @@ category:
   official: Official Website
   scratch:
     title: Scratch
-    caption:
-    description:
+    caption: Let's start a programming with Scratch by the Lifelong Kindergarten Group at the MIT Media Lab!
+    description: Scratch is a project of the Lifelong Kindergarten Group at the MIT Media Lab. It is provided free of charge.
 
   minecraft:
     title: Minecraft
-    caption:
-    description:
+    caption: Let's programming a Minecraft world with MakeCode develop by microsoft!
+    description: MakeCode is a project of the microsoft. It support Minecraft Windows 10 Edition, Education Edition.
 
 top:
   title: Home
