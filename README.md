@@ -1,4 +1,8 @@
-# Mekurun
+# メクルン Mekurun
+メクルン (Mekurun) はスライドで学べるビジュアルプログラミング学習サービスです。ScratchやMakeCodeといったブロックでプログラミングができるビジュアルプログラミング言語を中心に子ども向けのプログラミング入門コンテンツを提供しています。
+
+[▶ 記事の書き方](/docs/template-article.md)  
+[▶ コースの書き方](/docs/template-course.md)
 
 ## 環境構築
 ```bash
