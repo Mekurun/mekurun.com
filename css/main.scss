@@ -406,6 +406,7 @@ footer {
   color: $main-dark;
   margin-bottom: 0;
   font-weight: 600;
+  margin-top: auto;
   &:hover {
     opacity: 0.7;
   }
@@ -431,6 +432,9 @@ footer {
 }
 .list-category-text {
   margin: 0 0 0 20px;
+  color: #888;
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (max-width:500px) {
@@ -446,10 +450,9 @@ footer {
 }
 .list-category-heading {
   display: inline;
-  height: 100%;
-  font-size: 2em;
-  width: 60%;
-  text-align: center;
+  font-size: 1.6em;
+  color: #555;
+  margin: 12px 0;
 }
 .slide-page {
   max-width: 800px;

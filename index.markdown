@@ -21,7 +21,7 @@ title: title
       </div>
       <div class="list-category-text">
         <h3 class="list-category-heading">{% t category.title %}</h3>
-        <p>{% t category.{{category.categoryname}}.caption %}</p>
+        <p style="margin-top:6px;">{% t category.{{category.categoryname}}.caption %}</p>
         <p class="list-category-link">{% t top.viewAll %}</p>
       </div>
     </a>
