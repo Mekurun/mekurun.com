@@ -24,6 +24,9 @@ collections:
     output: true
   categories:
     output: true
+    order:
+      - scratch.md
+      - minecraft.md
 
 pwa:
   sw_src_filepath: service-worker.js # Optional

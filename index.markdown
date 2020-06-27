@@ -16,12 +16,14 @@ title: title
   <div class="list-category">
     {% for category in site.categories %}
     <a href="{{ site.baseurl }}{{category.permalink}}" class="list-category-one">
-      <div class="list-category-thumbnail" style="background: #{{ category.color }};">
-        <img data-src="{{ site.url }}/assets/images/{{category.categoryname}}.svg" alt="{% t category.title %}" class="list-category-img">
-        <h3 class="list-category-heading">{% t category.title %}</h3>
+      <div class="list-category-img" style="background: #{{ category.color }};">
+        <img data-src="{{ site.url }}/assets/images/{{category.categoryname}}.svg" alt="{% t category.title %}">
       </div>
-      <p>{% t category.{{category.categoryname}}.caption %}</p>
-      <p class="list-category-link">{% t top.viewAll %}</p>
+      <div class="list-category-text">
+        <h3 class="list-category-heading">{% t category.title %}</h3>
+        <p style="margin-top:6px;">{% t category.{{category.categoryname}}.caption %}</p>
+        <p class="list-category-link">{% t top.viewAll %}</p>
+      </div>
     </a>
     {% endfor %}
   </div>
