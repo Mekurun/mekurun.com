@@ -58,8 +58,10 @@ title: title
     }
   </style>
 
+<!--
   <h2 id="projects" class="post-list-heading">{% t top.projects %}<p class="post-list-more"><a href="/projects">{% t top.more %}</a></p></h2>
   {% include articles.html category = 'projects' limit = 4 %}
+-->
 
   <h2 id="tips" class="post-list-heading">{% t top.tips %}<p class="post-list-more"><a href="/tips">{% t top.more %}</a></p></h2>
   {% include articles.html category = 'tips' limit = 4 %}
