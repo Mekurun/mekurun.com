@@ -39,12 +39,24 @@ title: title
         <span class="top-course-list-category">{% t category.{{ course.category }}.title %}</span>
         <img data-src="{{ site.url }}/assets/course/{{ course.category }}/{{ course.course-name }}{{ course.thumbnail }}" data-width="300" alt="{{ course.title }}" loading="auto">
         <p class="course-list-title">{% if site.lang == 'kana' and course.title-kana %}{{course.title-kana}}{% else %}{{course.title}}{% endif %}</p>
-        <span class="top-course-list-difficulty"> {% t difficulty.{{ course.difficulty }} %} </span>
+        <span class="top-course-list-difficulty {{ course.difficulty }}"> {% t difficulty.{{ course.difficulty }} %} </span>
       </a>
     </li>
     {% endif %}
   {% endfor %}
   </ul>
+
+  <style media="screen">
+    .normal::before {
+      color: #ffb801;
+    }
+    .easy::before {
+      color: #8bca31;
+    }
+    .hard::before {
+      color: #ff81ae;
+    }
+  </style>
 
   <h2 id="projects" class="post-list-heading">{% t top.projects %}<p class="post-list-more"><a href="/projects">{% t top.more %}</a></p></h2>
   {% include articles.html category = 'projects' limit = 4 %}
