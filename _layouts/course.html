@@ -106,7 +106,7 @@ function switchPage(flipPageCounts, buttonName) {
   }
   const url = new URL(location);
   url.searchParams.set("page", now);
-  location.href = url.toString();
+  window.history.pushState(null,null,url.toString());
 }
 function next() {
   switchPage(1, "buttonNext");
