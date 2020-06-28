@@ -5,7 +5,7 @@ layout: default
 {% include header.html %}
 <div class="top category-top" style="background-color: #{{ page.color }}">
   <div style="width:300px">
-    <img data-src="{{site.url}}/assets/images/{{page.categoryname}}.svg" alt="{% t page.title %}" class="category-top-img" data-width="300">
+    <img data-src="{{ site.url }}/assets/images/{{ page.categoryname }}.svg" alt="{% t page.title %}" class="category-top-img" data-width="300">
   </div>
   <div style="max-width:500px;padding:20px;">
     <h1>{% t page.title %}</h1>
@@ -24,3 +24,20 @@ layout: default
   {% include course-list.html difficulty="hard" %}
 </div>
 {% include footer.html %}
+
+<style media="screen">
+  #normal::before {
+    color: #ffb801;
+  }
+  #easy::before {
+    color: #8bca31;
+  }
+  #hard::before {
+    color: #ff81ae;
+  }
+
+  .main h2::before {
+    content: "\f005";
+    font-weight: 900;
+  }
+</style>
