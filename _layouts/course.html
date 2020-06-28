@@ -56,48 +56,45 @@ layout: default
 </section>
 <script>
 var now = 1;
+let progressbarNum = document.getElementById("progress-number");
+let progressbarContainer = document.getElementById("progress-container");
+let allPageCount = {{ page.slides.size }};
 function set() {
   document.getElementById("page-1").style.display ="block";
-  document.getElementById("progress-container").style.width = (now / {{ page.slides.size }}) * 100 + "%";
-  document.getElementById("progress-number").innerHTML = now +" / "+ {{ page.slides.size }};
-  document.getElementById("progress-number").style.width = 'calc(' + (String({{ page.slides.size }}).length * 2 + 1) + 'em + 4px)';
+  progressbarContainer.style.width = (now / allPageCount) * 100 + "%";
+  progressbarNum.innerHTML = now +" / "+ allPageCount;
+  progressbarNum.style.width = 'calc(' + (String(allPageCount).length * 2 + 1) + 'em + 4px)';
   var slide = document.getElementsByClassName("slide")[0];
   slide.style.position = 'absolute';
 }
 
 window.onload = set();
-function next() {
+function switchPage(flipPageCounts, buttonName) {
   document.activeElement.blur();
-  if(document.getElementById("page-"+(now+1)) != null){
+  let nextPageCount = now+flipPageCounts;
+  let nextPage = document.getElementById("page-"+nextPageCount);
+  let thisButton = document.getElementById(buttonName);
+  let otherButtonName = buttonName == "buttonNext" ? "Back" : "Next";
+  let otherButton = document.getElementById("button"+otherButtonName);
+  if(nextPage != null){
     document.getElementById("page-"+now).style.display ="none";
-    document.getElementById("page-"+(now+1)).style.display="block";
-    now += 1;
-    document.getElementById("progress-container").style.width = (now / {{ page.slides.size }}) * 100 + "%";
-    document.getElementById("progress-number").innerHTML = now +" / "+ {{ page.slides.size }};
-    document.getElementById("buttonNext").disabled = true;
-    if(now != {{ page.slides.size }}){
-      document.getElementById("buttonNext").disabled = false;
-    }
-    document.getElementById("buttonBack").disabled = false;
+    nextPage.style.display="block";
+    now += flipPageCounts;
+    nextPageCount += flipPageCounts;
+    progressbarContainer.style.width = (now / allPageCount) * 100 + "%";
+    progressbarNum.innerHTML = now +" / "+ allPageCount;
+    thisButton.disabled = nextPageCount > allPageCount || nextPageCount < 1;
+    otherButton.disabled = false;
   }
+}
+function next() {
+  switchPage(1, "buttonNext");
 }
 function back() {
-  document.activeElement.blur();
-  if(now > 1){
-    document.getElementById("page-"+now).style.display ="none";
-    document.getElementById("page-"+(now-1)).style.display="block";
-    now -= 1;
-    document.getElementById("progress-container").style.width = (now / {{ page.slides.size }}) * 100 + "%";
-    document.getElementById("progress-number").innerHTML = now +" / "+ {{ page.slides.size }};
-    document.getElementById("buttonBack").disabled = true;
-    if(now != 1){
-      document.getElementById("buttonBack").disabled = false;
-    }
-    document.getElementById("buttonNext").disabled = false;
-  }
+  switchPage(-1, "buttonBack");
 }
 
-// 矢印キーでのページ切り替え
+// 矢印キーでのページ切り替え Switch pages by ←, →
 window.document.onkeydown = function(event){
     if (event.key === 'ArrowRight' || event.key === ' ') {
         next()
