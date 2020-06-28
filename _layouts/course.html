@@ -21,7 +21,7 @@ layout: default
 
     {% if firstword == '' %}
     {% capture src %}{% if page.parent %}{{site.url}}/assets/course/{{ page.category }}/{{ page.parent }}/{{ page.course-name }}{{ slide }}{% else %}{{site.url}}/assets/course/{{ page.category }}/{{ page.course-name }}{{ slide }}{% endif %}{% endcapture %}
-    <img data-src="{{ src }}" data-width="800" loading="auto" alt="" id="page-{{forloop.index}}" style="display:none;">
+    <img data-src="{{ src }}" src="{{ src }}" data-width="800" loading="auto" alt="" id="page-{{forloop.index}}" style="display:none;">
     {% elsif firstword == 'https:' %}
     <iframe width="560" height="315" loading="auto" src="https://www.youtube.com/embed/{{slide | split: '/' | last}}?rel=0&fs=0&modestbranding=1&enablejsapi=1&disablekb=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:none;" id="page-{{forloop.index}}"></iframe>
     {% endif %}
@@ -59,8 +59,29 @@ var now = 1;
 let progressbarNum = document.getElementById("progress-number");
 let progressbarContainer = document.getElementById("progress-container");
 let allPageCount = {{ page.slides.size }};
+
+function getQueries() {
+  let query= window.location.search.slice(1);
+  let queries = {};
+  query.split('&').forEach(function(query) {
+    let queryArr = query.split('=');
+    queries[queryArr[0]] = queryArr[1];
+  });
+
+  return queries;
+}
+
 function set() {
-  document.getElementById("page-1").style.display ="block";
+  let queries = getQueries();
+  if(queries["page"] != null){
+    now = parseInt(queries["page"]);
+  }
+  if (now > allPageCount || now < 1) {
+    location.href = location.href.replace(/\?.*$/,"");
+  }
+  document.getElementById("buttonBack").disabled = now == 1;
+  document.getElementById("buttonNext").disabled = now == allPageCount;
+  document.getElementById("page-"+now).style.display ="block";
   progressbarContainer.style.width = (now / allPageCount) * 100 + "%";
   progressbarNum.innerHTML = now +" / "+ allPageCount;
   progressbarNum.style.width = 'calc(' + (String(allPageCount).length * 2 + 1) + 'em + 4px)';
@@ -86,6 +107,9 @@ function switchPage(flipPageCounts, buttonName) {
     thisButton.disabled = nextPageCount > allPageCount || nextPageCount < 1;
     otherButton.disabled = false;
   }
+  const url = new URL(location);
+  url.searchParams.set("page", now);
+  window.history.pushState(null,null,url.toString());
 }
 function next() {
   switchPage(1, "buttonNext");
