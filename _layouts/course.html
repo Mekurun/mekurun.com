@@ -76,6 +76,9 @@ function set() {
   if(queries["page"] != null){
     now = parseInt(queries["page"]);
   }
+  if (now > allPageCount || now < 1) {
+    location.href = location.href.replace(/\?.*$/,"");
+  }
   document.getElementById("buttonBack").disabled = now == 1;
   document.getElementById("buttonNext").disabled = now == allPageCount;
   document.getElementById("page-"+now).style.display ="block";
