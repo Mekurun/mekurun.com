@@ -5,7 +5,7 @@ category: scratch
 difficulty: easy
 course-name: chase-game-en
 description: Let’s make game of run away from ‘it’ !
-thumbnail: /01.jpg
+thumbnail: /thumbnail.png
 lang: en
 slides:
 -  /01.jpg
