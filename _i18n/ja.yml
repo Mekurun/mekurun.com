@@ -5,6 +5,8 @@ description: メクルン (Mekurun) はスライドで学べるビジュアル�
 course:
   export: PDFで見る
   subcourses: やってみよう
+  next: すすむ
+  prev: もどる
 difficulty:
   introduction: はじめに
   easy: かんたん
@@ -41,7 +43,7 @@ usage:
   title: 使い方ガイド
 
 about:
-  title: このサービスについて
+  title: メクルンとは
 
 contact:
   title: お問い合わせ

@@ -7,7 +7,7 @@ title: title
   <div class="top-text">
     <h1 class="top-copy">{% t top.copy %}</h1>
     <p>{% t top.caption %}</p>
-    <p class="top-course-count">{% t top.all %} {{ site.courses.size }} {% t top.courses %}<span style="opacity: 0.6;"> ・ </span>{{ site.posts.size }} {% t top.posts %}</p>
+    <p class="top-course-count">{% t top.all %} {% assign coursesWithLang = site.courses | where_exp:"item", "item.path contains site.lang" %}{{ coursesWithLang.size }} {% t top.courses %}<span style="opacity: 0.6;"> ・ </span>{{ site.posts.size }} {% t top.posts %}</p>
   </div>
   <img  data-src="{{ site.url }}/assets/images/mainvisual.svg" data-width="300" alt="メクルン" class="top-mainvisual">
 </div>
@@ -16,12 +16,14 @@ title: title
   <div class="list-category">
     {% for category in site.categories %}
     <a href="{{ site.baseurl }}{{category.permalink}}" class="list-category-one">
-      <div class="list-category-thumbnail" style="background: #{{ category.color }};">
-        <img data-src="{{ site.url }}/assets/images/{{category.categoryname}}.svg" alt="{% t category.title %}" class="list-category-img">
-        <h3 class="list-category-heading">{% t category.title %}</h3>
+      <div class="list-category-img" style="background: #{{ category.color }};">
+        <img data-src="{{ site.url }}/assets/images/{{category.categoryname}}.svg" alt="{% t category.title %}">
       </div>
-      <p>{% t category.{{category.categoryname}}.caption %}</p>
-      <p class="list-category-link">{% t top.viewAll %}</p>
+      <div class="list-category-text">
+        <h3 class="list-category-heading">{% t category.title %}</h3>
+        <p style="margin-top:6px;">{% t category.{{category.categoryname}}.caption %}</p>
+        <p class="list-category-link">{% t top.viewAll %}</p>
+      </div>
     </a>
     {% endfor %}
   </div>
@@ -33,19 +35,33 @@ title: title
     {% assign course_lang = course.path | slice: 9, 2 %}
     {% if (course_lang == site.lang or (course_lang == 'ja' and site.lang == 'kana')) %}
     <li>
-      <a href="{{course.url}}">
+      <a href="{{ site.baseurl }}{{course.url}}">
         <span class="top-course-list-category">{% t category.{{ course.category }}.title %}</span>
         <img data-src="{{ site.url }}/assets/course/{{ course.category }}/{{ course.course-name }}{{ course.thumbnail }}" data-width="300" alt="{{ course.title }}" loading="auto">
         <p class="course-list-title">{% if site.lang == 'kana' and course.title-kana %}{{course.title-kana}}{% else %}{{course.title}}{% endif %}</p>
-        <span class="top-course-list-difficulty"> {% t difficulty.{{ course.difficulty }} %} </span>
+        <span class="top-course-list-difficulty {{ course.difficulty }}"> {% t difficulty.{{ course.difficulty }} %} </span>
       </a>
     </li>
     {% endif %}
   {% endfor %}
   </ul>
 
+  <style media="screen">
+    .normal::before {
+      color: #ffb801;
+    }
+    .easy::before {
+      color: #8bca31;
+    }
+    .hard::before {
+      color: #ff81ae;
+    }
+  </style>
+
+<!--
   <h2 id="projects" class="post-list-heading">{% t top.projects %}<p class="post-list-more"><a href="/projects">{% t top.more %}</a></p></h2>
   {% include articles.html category = 'projects' limit = 4 %}
+-->
 
   <h2 id="tips" class="post-list-heading">{% t top.tips %}<p class="post-list-more"><a href="/tips">{% t top.more %}</a></p></h2>
   {% include articles.html category = 'tips' limit = 4 %}
