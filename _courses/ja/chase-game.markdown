@@ -6,7 +6,7 @@ category: scratch
 difficulty: easy
 course-name: chase-game
 description: おにからにげるゲームをつくろう！
-thumbnail: /0001.jpg
+thumbnail: /thumbnail.png
 slides:
 -  /0001.jpg
 -  /0002.jpg
