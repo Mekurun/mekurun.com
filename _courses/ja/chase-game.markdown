@@ -1,7 +1,7 @@
 ---
 layout: course
 title:  "おいかけっこゲーム"
-title-kana: "おいかけっこーム"
+# title-kana: ""
 category: scratch
 difficulty: easy
 course-name: chase-game
