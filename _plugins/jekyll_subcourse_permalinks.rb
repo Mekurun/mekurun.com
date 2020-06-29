@@ -16,6 +16,10 @@ module Jekyll
             item[i + 1].docs.each do |page|
               @parent = page.data['parent']
               @category = page.data['category']
+              @thumbnail = page.data['thumbnail']
+              unless @thumbnail.nil?
+                page.data['ogp'] = "/assets/course/#{@category}/#{page.data['course-name']}#{@thumbnail}"
+              end
               if @parent.nil?
                 page.data['permalink'] = "/#{@category}/:title/"
               else
