@@ -1,4 +1,4 @@
-const path = require("path")
+const path = require("path");
 
 module.exports = {
   mode: "development",
@@ -12,24 +12,19 @@ module.exports = {
     rules: [
       {
         test: /.js$/,
-        exclude: [
-          path.resolve(__dirname, "node_modules"),
-        ],
+        exclude: [path.resolve(__dirname, "node_modules")],
         use: [
           {
             loader: "babel-loader",
             options: {
-              presets: [
-                "@babel/preset-env"
-              ]
-            }
-          }
-        ]
+              presets: ["@babel/preset-env"],
+            },
+          },
+        ],
       },
     ],
   },
   resolve: {
     extensions: [".js"],
   },
-}
-
+};
