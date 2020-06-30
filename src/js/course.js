@@ -162,13 +162,15 @@ class SlideController {
   }
 
   /**
-   * 無効な page クエリならそのクエリを削除。
+   * 無効な page クエリならそのクエリを削除して現在のページを1にリセット。
    */
   resetPageIfInvalid() {
+    console.log(this.currentPage, this.isValidPage(this.currentPage));
     if (!this.isValidPage(this.currentPage)) {
       const url = new URL(location);
       url.searchParams.delete("page");
       history.replaceState(null, null, url.toString());
+      this.currentPage = 1;
     }
   }
 
