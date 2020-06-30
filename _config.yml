@@ -12,11 +12,6 @@ plugins:
 
 languages: ["ja", "en", "kana"]
 
-assets:
-  external:
-    uglifier:
-      harmony: true
-
 defaults:
   - scope:
       path: ""
