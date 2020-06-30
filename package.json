@@ -9,11 +9,9 @@
     "babel-loader": "^8.1.0",
     "eslint": "^7.3.1",
     "eslint-plugin-prettier": "^3.1.4",
+    "eslint-config-prettier": "^6.11.0",
     "prettier": "^2.0.5",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12"
-  },
-  "dependencies": {
-    "eslint-config-prettier": "^6.11.0"
   }
 }
