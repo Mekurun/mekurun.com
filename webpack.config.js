@@ -2,7 +2,6 @@ const path = require("path");
 
 module.exports = {
   mode: "development",
-  watch: true,
   entry: path.join(__dirname, "src/js/main.js"),
   output: {
     path: path.resolve(__dirname, "assets/js"),
