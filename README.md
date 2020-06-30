@@ -15,8 +15,6 @@
 # 依存関係をインストールする
 $ bundle install
 $ yarn # or npm install
-# 開発環境を立ち上げる
-$ jekyll serve
-# Webpack サーバーを立ち上げる
-$ yarn dev # npm run dev
+# 開発環境を立ち上げる（Webpack と Jekyll を同時に立ち上げます）
+$ yarn dev
 ```
