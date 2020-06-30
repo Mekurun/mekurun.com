@@ -8,7 +8,7 @@ class SlideController {
    * @param {{ progressBarNum: HTMLDivElement, progressBar: HTMLDivElement, lastPage: number, currentPage?: number, backButton: HTMLButtonElement, nextButton: HTMLButtonElement, slide: HTMLDivElement }} options
    */
   constructor(options) {
-    console.log(options);
+    // console.log(options);
 
     /**
      * 現在のページ。
