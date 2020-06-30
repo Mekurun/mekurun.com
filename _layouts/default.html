@@ -27,8 +27,8 @@
     <title>{{ title }}</title>
 
     <link rel="preload" href="/css/main.css" as="style">
+    <link rel="preload" href="/assets/fontawesome/css/all.min.css" as="style">
     <link rel="preload" href="/assets/js/main.js" as="script">
-    <link rel="preload" href="https://kit.fontawesome.com/734fe914a1.js" as="script" crossorigin>
 
     {% if page.url == "/" %}
       <meta property="og:type" content="website">
@@ -69,6 +69,7 @@
     {% endif %}
 
     <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
 
     <!-- Faviconの設定 -->
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/favicon/apple-touch-icon-57x57.png">
@@ -98,5 +99,4 @@
   <!-- 遅延読み込み -->
   <script type="text/javascript" src="/js/usecloudinary.js"></script>
   <script src="/assets/js/main.js" async></script>
-  <script src="https://kit.fontawesome.com/734fe914a1.js" crossorigin="anonymous"></script>
 </html>
