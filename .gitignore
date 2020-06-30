@@ -14,3 +14,6 @@ _site
 # Dependencies
 vendor
 node_modules
+
+# Webpack
+assets/js
