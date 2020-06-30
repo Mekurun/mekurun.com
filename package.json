@@ -1,6 +1,8 @@
 {
   "scripts": {
-    "dev": "webpack --watch"
+    "dev": "webpack --watch",
+    "build:development": "yarn && npx webpack --mode development && jekyll build --config _config.yml,_config_development.yml",
+    "build:production": "yarn && npx webpack --mode production && JEKYLL_ENV=production jekyll build"
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",
