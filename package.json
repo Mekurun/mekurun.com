@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "dev": "npx webpack --mode development & jekyll serve",
+    "build:development": "yarn && npx webpack --mode development && jekyll build --config _config.yml,_config_development.yml",
+    "build:production": "yarn && npx webpack --mode production && JEKYLL_ENV=production jekyll build"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/plugin-transform-spread": "^7.10.1",
+    "@babel/polyfill": "^7.10.1",
+    "@babel/preset-env": "^7.10.3",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "eslint": "^7.3.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.0.5",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  }
+}
