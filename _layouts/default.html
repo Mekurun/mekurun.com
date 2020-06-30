@@ -27,6 +27,7 @@
     <title>{{ title }}</title>
 
     <link rel="preload" href="/css/main.css" as="style">
+    <link rel="preload" href="/assets/js/main.js" as="script">
     <link rel="preload" href="https://kit.fontawesome.com/734fe914a1.js" as="script" crossorigin>
 
     {% if page.url == "/" %}
@@ -96,5 +97,6 @@
   </body>
   <!-- 遅延読み込み -->
   <script type="text/javascript" src="/js/usecloudinary.js"></script>
+  <script src="/assets/js/main.js" async></script>
   <script src="https://kit.fontawesome.com/734fe914a1.js" crossorigin="anonymous"></script>
 </html>

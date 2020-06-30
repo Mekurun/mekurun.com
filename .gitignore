@@ -1,8 +1,19 @@
+# OS
+.DS_Store
+
+# Editor
+.vscode
+.atom
+
+# Jekyll
 _site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
+
+# Dependencies
 vendor
-.vscode
-.atom
-.DS_Store
+node_modules
+
+# Webpack
+assets/js
