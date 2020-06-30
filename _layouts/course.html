@@ -56,15 +56,15 @@ layout: default
 </section>
 <script>
 var now = 1;
-let progressbarNum = document.getElementById("progress-number");
-let progressbarContainer = document.getElementById("progress-container");
-let allPageCount = {{ page.slides.size }};
+var progressbarNum = document.getElementById("progress-number");
+var progressbarContainer = document.getElementById("progress-container");
+var allPageCount = {{ page.slides.size }};
 
 function getQueries() {
-  let query= window.location.search.slice(1);
-  let queries = {};
+  var query= window.location.search.slice(1);
+  var queries = {};
   query.split('&').forEach(function(query) {
-    let queryArr = query.split('=');
+    var queryArr = query.split('=');
     queries[queryArr[0]] = queryArr[1];
   });
 
@@ -72,7 +72,7 @@ function getQueries() {
 }
 
 function set() {
-  let queries = getQueries();
+  var queries = getQueries();
   if(queries["page"] != null){
     now = parseInt(queries["page"]);
   }
@@ -92,11 +92,11 @@ function set() {
 window.onload = set();
 function switchPage(flipPageCounts, buttonName) {
   document.activeElement.blur();
-  let nextPageCount = now+flipPageCounts;
-  let nextPage = document.getElementById("page-"+nextPageCount);
-  let thisButton = document.getElementById(buttonName);
-  let otherButtonName = buttonName == "buttonNext" ? "Back" : "Next";
-  let otherButton = document.getElementById("button"+otherButtonName);
+  var nextPageCount = now+flipPageCounts;
+  var nextPage = document.getElementById("page-"+nextPageCount);
+  var thisButton = document.getElementById(buttonName);
+  var otherButtonName = buttonName == "buttonNext" ? "Back" : "Next";
+  var otherButton = document.getElementById("button"+otherButtonName);
   if(nextPage != null){
     document.getElementById("page-"+now).style.display ="none";
     nextPage.style.display="block";
