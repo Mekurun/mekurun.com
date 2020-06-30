@@ -165,7 +165,6 @@ class SlideController {
    * 無効な page クエリならそのクエリを削除して現在のページを1にリセット。
    */
   resetPageIfInvalid() {
-    console.log(this.currentPage, this.isValidPage(this.currentPage));
     if (!this.isValidPage(this.currentPage)) {
       const url = new URL(location);
       url.searchParams.delete("page");
@@ -180,7 +179,7 @@ class SlideController {
    * @param {number} page ページ。
    */
   isValidPage(page) {
-    return page >= 1 && page <= this.lastPage;
+    return typeof page === "number" && page >= 1 && page <= this.lastPage;
   }
 }
 
