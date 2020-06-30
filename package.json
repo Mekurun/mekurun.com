@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "dev": "webpack --watch"
+  },
   "devDependencies": {
     "@babel/core": "^7.10.3",
     "@babel/polyfill": "^7.10.1",
