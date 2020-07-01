@@ -35,8 +35,8 @@ layout: default
   <span id="progress-number"></span>
 </div>
 <div class="slide-buttons">
-  <input class="button button-back" type="button" value="{% t course.prev %}" id="buttonBack" disabled/>
-  <input class="button button-next" type="button" value="{% t course.next %}" id="buttonNext"/>
+  <input class="button button-back" type="button" value="{% t course.prev %}" onclick="back()" id="buttonBack" disabled/>
+  <input class="button button-next" type="button" value="{% t course.next %}" onclick="next()" id="buttonNext"/>
 </div>
 </section>
 <section class="slide-page">
@@ -54,9 +54,78 @@ layout: default
   {% endif %}
   </ul>
 </section>
-
 <script>
-window.addEventListener('load', () => bootCourseSlideController({
-  lastPage: {{ page.slides.size }}
-}))
+var now = 1;
+var progressbarNum = document.getElementById("progress-number");
+var progressbarContainer = document.getElementById("progress-container");
+var allPageCount = {{ page.slides.size }};
+
+function getQueries() {
+  var query= window.location.search.slice(1);
+  var queries = {};
+  query.split('&').forEach(function(query) {
+    var queryArr = query.split('=');
+    queries[queryArr[0]] = queryArr[1];
+  });
+
+  return queries;
+}
+
+function set() {
+  var queries = getQueries();
+  if(queries["page"] != null){
+    now = parseInt(queries["page"]);
+  }
+  if (now > allPageCount || now < 1) {
+    location.href = location.href.replace(/\?.*$/,"");
+  }
+  document.getElementById("buttonBack").disabled = now == 1;
+  document.getElementById("buttonNext").disabled = now == allPageCount;
+  document.getElementById("page-"+now).style.display ="block";
+  progressbarContainer.style.width = (now / allPageCount) * 100 + "%";
+  progressbarNum.innerHTML = now +" / "+ allPageCount;
+  progressbarNum.style.width = 'calc(' + (String(allPageCount).length * 2 + 1) + 'em + 4px)';
+  var slide = document.getElementsByClassName("slide")[0];
+  slide.style.position = 'absolute';
+}
+
+window.onload = set();
+function switchPage(flipPageCounts, buttonName) {
+  document.activeElement.blur();
+  var nextPageCount = now+flipPageCounts;
+  var nextPage = document.getElementById("page-"+nextPageCount);
+  var thisButton = document.getElementById(buttonName);
+  var otherButtonName = buttonName == "buttonNext" ? "Back" : "Next";
+  var otherButton = document.getElementById("button"+otherButtonName);
+  if(nextPage != null){
+    document.getElementById("page-"+now).style.display ="none";
+    nextPage.style.display="block";
+    now += flipPageCounts;
+    nextPageCount += flipPageCounts;
+    progressbarContainer.style.width = (now / allPageCount) * 100 + "%";
+    progressbarNum.innerHTML = now +" / "+ allPageCount;
+    thisButton.disabled = nextPageCount > allPageCount || nextPageCount < 1;
+    otherButton.disabled = false;
+  }
+  var url = new URL(location);
+  url.searchParams.set("page", now);
+  window.history.pushState(null,null,url.toString());
+}
+function next() {
+  switchPage(1, "buttonNext");
+}
+function back() {
+  switchPage(-1, "buttonBack");
+}
+
+// 矢印キーでのページ切り替え Switch pages by ←, →
+window.document.onkeydown = function(event){
+    if (event.key === 'ArrowRight' || event.key === ' ') {
+        next()
+      }
+    else if (event.key === 'ArrowLeft') {
+        back()
+         }
+      }
+
 </script>
