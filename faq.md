@@ -2,6 +2,7 @@
 layout: page
 title: faq.title
 permalink: faq
+description: faq.description
 ---
 
 {% translate_file faq.md %}

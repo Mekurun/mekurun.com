@@ -50,12 +50,15 @@ tips:
 
 usage:
   title: 使い方ガイド
+  description:
 
 about:
   title: メクルンとは
+  description:
 
 contact:
   title: お問い合わせ
+  description:
   name: お名前
   email: メールアドレス
   mailTitle: 件名
@@ -64,9 +67,12 @@ contact:
 
 termOfUse:
   title: ご利用について
+  description:
 
 privacy:
   title: プライバシーポリシー
+  description:
 
 faq:
   title: よくあるご質問
+  description:

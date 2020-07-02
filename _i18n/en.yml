@@ -51,12 +51,15 @@ tips:
 
 usage:
   title: How to use
+  description:
 
 about:
   title: About
+  description:
 
 contact:
   title: Contact
+  description:
   name: Name
   email: E-mail
   mailTitle: Subject
@@ -65,9 +68,12 @@ contact:
 
 termOfUse:
   title: Term of Use
+  description:
 
 privacy:
   title: Privacy Policy
+  description:
 
 faq:
   title: FAQ Page
+  description:
