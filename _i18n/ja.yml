@@ -29,15 +29,21 @@ top:
   recent: 最近追加されたコース
   allmenu: すべてのコレクション
   viewAll: コースを見る
-  projects: みんなの作品
   more: もっと見る
   news: お知らせ
-  tips: 豆知識
   copy: あなたのアイデアをえがこう
   caption: スライドで学べるビジュアルプログラミング学習サービス
   courses: コース
   posts: 記事
   all: 全
+
+projects:
+  title: みんなの作品
+  description:
+
+tips:
+  title: 豆知識
+  description:
 
 usage:
   title: 使い方ガイド

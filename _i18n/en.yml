@@ -30,15 +30,21 @@ top:
   recent: Recent Courses
   allmenu: All Collections
   viewAll: Learn
-  projects: Projects
   more: See more
   news: News
-  tips: Tips
   copy: Draw your own ideas!
   caption: The learning visual-programming platform
   courses: courses
   posts: posts
   all: All
+
+projects:
+  title: Projects
+  description:
+
+tips:
+  title: Tips
+  description:
 
 usage:
   title: How to use
