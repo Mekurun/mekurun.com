@@ -30,12 +30,15 @@ top:
   allmenu: すべてのコレクション
   viewAll: コースを見る
   more: もっと見る
-  news: お知らせ
   copy: あなたのアイデアをえがこう
   caption: スライドで学べるビジュアルプログラミング学習サービス
   courses: コース
   posts: 記事
   all: 全
+
+news:
+  title: お知らせ
+  description:
 
 projects:
   title: みんなの作品

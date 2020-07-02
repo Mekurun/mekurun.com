@@ -31,12 +31,15 @@ top:
   allmenu: All Collections
   viewAll: Learn
   more: See more
-  news: News
   copy: Draw your own ideas!
   caption: The learning visual-programming platform
   courses: courses
   posts: posts
   all: All
+
+news:
+  title: News
+  description:
 
 projects:
   title: Projects

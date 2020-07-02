@@ -1,7 +1,8 @@
 ---
 layout: page
-title: top.news
+title: news.title
 permalink: news
+description: news.description
 ---
 {% translate_file news.md %}
 {% include articles.html category = 'news' %}
