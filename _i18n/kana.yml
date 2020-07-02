@@ -26,14 +26,18 @@ top:
   recent: あたらしいコース
   allmenu: すべてのコレクション
   viewAll: コースをみる
-  projects: みんなのさくひん
   more: もっとみる
-  news: おしらせ
-  tips: まめちしき
   copy: あなたのアイデアをえがこう
   caption: スライドで学べるビジュアルプログラミング学習サービス
   posts: きじ
   all: ぜん
+
+news:
+  title: おしらせ
+tips:
+  title: まめちしき
+projects:
+  title: みんなのさくひん
 
 usage:
   title: つかいかた

@@ -2,6 +2,7 @@
 layout: page
 title: contact.title
 permalink: contact
+description: contact.description
 ---
 
 <form name="contact" method="POST" data-netlify="true">
@@ -22,4 +23,3 @@ permalink: contact
     <button type="submit">{% t contact.send %}</button>
   </p>
 </form>
-

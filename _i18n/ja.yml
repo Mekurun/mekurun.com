@@ -29,24 +29,36 @@ top:
   recent: 最近追加されたコース
   allmenu: すべてのコレクション
   viewAll: コースを見る
-  projects: みんなの作品
   more: もっと見る
-  news: お知らせ
-  tips: 豆知識
   copy: あなたのアイデアをえがこう
   caption: スライドで学べるビジュアルプログラミング学習サービス
   courses: コース
   posts: 記事
   all: 全
 
+news:
+  title: お知らせ
+  description:
+
+projects:
+  title: みんなの作品
+  description:
+
+tips:
+  title: 豆知識
+  description:
+
 usage:
   title: 使い方ガイド
+  description:
 
 about:
   title: メクルンとは
+  description:
 
 contact:
   title: お問い合わせ
+  description:
   name: お名前
   email: メールアドレス
   mailTitle: 件名
@@ -55,9 +67,12 @@ contact:
 
 termOfUse:
   title: ご利用について
+  description:
 
 privacy:
   title: プライバシーポリシー
+  description:
 
 faq:
   title: よくあるご質問
+  description:

@@ -30,24 +30,36 @@ top:
   recent: Recent Courses
   allmenu: All Collections
   viewAll: Learn
-  projects: Projects
   more: See more
-  news: News
-  tips: Tips
   copy: Draw your own ideas!
   caption: The learning visual-programming platform
   courses: courses
   posts: posts
   all: All
 
+news:
+  title: News
+  description:
+
+projects:
+  title: Projects
+  description:
+
+tips:
+  title: Tips
+  description:
+
 usage:
   title: How to use
+  description:
 
 about:
   title: About
+  description:
 
 contact:
   title: Contact
+  description:
   name: Name
   email: E-mail
   mailTitle: Subject
@@ -56,9 +68,12 @@ contact:
 
 termOfUse:
   title: Term of Use
+  description:
 
 privacy:
   title: Privacy Policy
+  description:
 
 faq:
   title: FAQ Page
+  description:
