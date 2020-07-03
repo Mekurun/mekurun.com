@@ -17,11 +17,10 @@
         {% else %}
           <meta name="robots" content="noindex"><!--リリース時変更-->
         {% endif %}
+      {% else %}
+        <meta name="robots" content="noindex"><!--リリース時変更-->
       {% endif %}
-    {% else %}
-      <meta name="robots" content="noindex"><!--リリース時変更-->
     {% endif %}
-
     {% capture title %}
       {% if page.course-name or page.layout == 'post' %}
       {{page.title}}
