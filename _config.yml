@@ -43,8 +43,7 @@ pwa:
 
 
 jekyll-minifier:
-  uglifier_args:
-    harmony: true
+  compress_javascript: false
 
 exclude:
   - src
