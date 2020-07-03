@@ -9,7 +9,17 @@
     {% if jekyll.environment == "development" %}
       <meta name="robots" content="noindex">
     {% elsif jekyll.environment == "production" %}
-      <meta name="robots" content="noindex">
+      {% if site.lang == "kana" %}
+        <meta name="robots" content="noindex">
+      {% elsif page.lang %}
+        {% if page.lang == "en" and site.lang != "en" %}
+          <meta name="robots" content="noindex">
+        {% else %}
+          <meta name="robots" content="noindex"><!--リリース時変更-->
+        {% endif %}
+      {% endif %}
+    {% else %}
+      <meta name="robots" content="noindex"><!--リリース時変更-->
     {% endif %}
 
     {% capture title %}
