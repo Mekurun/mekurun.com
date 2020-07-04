@@ -16,7 +16,8 @@ description: termOfUse.description
     position: absolute;
     left: 0.8em;
     color: #5f9f6a;
-    content: '\f111';
+    content: '\f00c';
+    font-weight: 600;
     font-family: 'Font Awesome 5 Free';
   }
   .termOfUse-list-no li::before {
