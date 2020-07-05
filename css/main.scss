@@ -197,7 +197,6 @@ footer {
   font-weight: bold;
   background-color: $lightgray;
   padding: 36px;
-  display: flex;
   margin-top: 60px;
   a {
     color: #5a5a5a;
@@ -208,6 +207,9 @@ footer {
       opacity: .7;
     }
   }
+}
+.footer-flex {
+  display: flex;
 }
 .footer-list {
   padding: 0;
@@ -222,7 +224,7 @@ footer {
   height: 60px;
 }
 @media screen and (max-width:700px) {
-  footer {
+  .footer-flex {
     display: block;
     text-align: center;
   }
