@@ -37,8 +37,8 @@
 
     <link rel="preload" href="/css/main.css" as="style">
     {% if jekyll.environment == "production" %}
-    <link rel="dns-prefetch" href="https://res.cloudinary.com/">
-    <link rel="dns-prefetch" href="https://www.google-analytics.com/">
+    <link rel="preconnect dns-prefetch" href="https://res.cloudinary.com/">
+    <link rel="preconnect dns-prefetch" href="https://www.google-analytics.com/">
     {% else  %}
     {% endif %}
 
