@@ -1,6 +1,6 @@
 ---
 layout: course
-title:  "おいかけっこゲーム"
+title:  "おいかけっこゲームをつくろう"
 # title-kana: ""
 category: scratch
 difficulty: easy
