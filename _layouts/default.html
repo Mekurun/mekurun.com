@@ -36,8 +36,11 @@
     <title>{{ title }}</title>
 
     <link rel="preload" href="/css/main.css" as="style">
-    <link rel="preload" href="/assets/fontawesome/css/all.min.css" as="style">
-    <link rel="preload" href="/assets/js/main.js" as="script">
+    {% if jekyll.environment == "production" %}
+    <link rel="preconnect dns-prefetch" href="https://res.cloudinary.com/">
+    <link rel="preconnect dns-prefetch" href="https://www.google-analytics.com/">
+    {% else  %}
+    {% endif %}
 
     {% if page.url == "/" %}
       <meta property="og:type" content="website">
