@@ -7,7 +7,13 @@ title: title
   <div class="top-text">
     <h1 class="top-copy">{% t top.copy %}</h1>
     <p>{% t top.caption %}</p>
-    <p class="top-course-count">{% t top.all %} {% assign coursesWithLang = site.courses | where_exp:"item", "item.path contains site.lang" %}{{ coursesWithLang.size }} {% t top.courses %}<span style="opacity: 0.6;"> ・ </span>{{ site.posts.size }} {% t top.posts %}</p>
+    <p class="top-course-count">{% t top.all %}
+    {% if site.lang != "kana" %}
+      {% assign coursesWithLang = site.courses | where_exp:"item", "item.path contains site.lang" %}
+    {% else %}
+      {% assign coursesWithLang = site.courses | where_exp:"item", "item.path contains 'ja'" %}
+    {% endif %}
+    {{ coursesWithLang.size }} {% t top.courses %}<span style="opacity: 0.6;"> ・ </span>{{ site.posts.size }} {% t top.posts %}</p>
   </div>
   <img  data-src="{{ site.url }}/assets/images/mainvisual.svg" data-width="300" alt="メクルン" class="top-mainvisual">
 </div>
