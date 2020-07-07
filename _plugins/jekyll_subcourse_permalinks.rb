@@ -17,7 +17,10 @@ module Jekyll
               @parent = page.data['parent']
               @category = page.data['category']
               @thumbnail = page.data['thumbnail']
-              unless @thumbnail.nil?
+              @slides = page.data['slides']
+              if @thumbnail.nil?
+                page.data['ogp'] = "/assets/course/#{@category}/#{page.data['course-name']}#{@slides[0]}"
+              else
                 page.data['ogp'] = "/assets/course/#{@category}/#{page.data['course-name']}#{@thumbnail}"
               end
               if @parent.nil?
