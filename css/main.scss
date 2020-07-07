@@ -546,13 +546,14 @@ footer {
   -webkit-appearance: none;
   border: solid 4px $main-color;
   border-radius: 4px;
-  padding: 12px;
+  padding: 16px 12px;
   font-weight: bold;
   outline: none;
   text-decoration: none;
   color: inherit;
   text-align: center;
   cursor: pointer;
+  line-height: 1em;
   &:hover {
     opacity: 0.7;
   }
