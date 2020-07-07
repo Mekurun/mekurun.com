@@ -333,8 +333,8 @@ footer {
     height: calc(13.86vw - 25.2px); // width * (630/1200)0.525
     border-radius: 5px 5px 3px 3px;
     object-fit: cover;
-    @media screen and (min-width:1250px) {
-      height: 148.05px;
+    @media screen and (min-width:1500px) {
+      height: 182.7px; // 1200px * 0.33 - 48px * (630/1200 = 0.525)
     }
     @media screen and (max-width: 800px) {
       height: calc(((100vw - 40px) * 0.33 - 48px) * 0.525);
@@ -381,7 +381,7 @@ footer {
 }
 .main {
   margin: auto 10vw;
-  max-width: 1000px;
+  max-width: 1200px;
   h2:before {
     content: '\f02d';
     font-family: 'Font Awesome 5 Free';
@@ -389,7 +389,7 @@ footer {
     opacity: .8;
     margin-right: 8px;
   }
-  @media screen and (min-width:1250px) {
+  @media screen and (min-width:1500px) {
     margin: auto auto;
   }
   @media screen and (max-width:800px) {
