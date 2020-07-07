@@ -334,7 +334,13 @@ footer {
     border-radius: 5px 5px 3px 3px;
     object-fit: cover;
     @media screen and (min-width:1250px) {
-      height: 148.05px; 
+      height: 148.05px;
+    }
+    @media screen and (max-width: 800px) {
+      height: calc(((100vw - 40px) * 0.33 - 48px) * 0.525);
+    }
+    @media screen and (max-width: 700px) {
+      height: calc((100vw - 40px - 28px) * 0.525);
     }
   }
 }
