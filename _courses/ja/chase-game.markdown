@@ -5,7 +5,7 @@ title:  "おいかけっこゲームをつくろう"
 category: scratch
 difficulty: easy
 course-name: chase-game
-description: このコースでは、Scratch（スクラッチ）で「おいかけっこゲーム」を作る方法を紹介します。スライドで誰でも簡単に学べるビジュアルプログラミング学習サービス「メクルン」を使って、Scratch（スクラッチ）の学習をはじめよう。
+description: このコースでは、Scratch（スクラッチ）で「おいかけっこゲーム」を作る方法を解説します。スライドで誰でも簡単に学べるビジュアルプログラミング学習サービス「メクルン」を使って、Scratch（スクラッチ）の学習をはじめよう。
 thumbnail: /thumbnail.png
 slides:
 -  /0001.jpg
