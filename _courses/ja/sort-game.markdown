@@ -6,7 +6,7 @@ category: scratch
 difficulty: normal
 course-name: sort-game
 description: このコースでは、Scratch（スクラッチ）で「はこいれゲーム」を作る方法を解説します。スライドで誰でも簡単に学べるビジュアルプログラミング学習サービス「メクルン」を使って、Scratch（スクラッチ）の学習をはじめよう。
-# thumbnail: /thumbnail.png
+thumbnail: /thumbnail.png
 slides:
 -  /0001.jpg
 -  /0002.jpg
