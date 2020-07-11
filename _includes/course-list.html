@@ -1,9 +1,16 @@
+{% assign courses = site.courses | where_exp:"course","course.category == page.categoryname and course.difficulty == include.difficulty" %}
+{% assign courses = courses | where_exp:"course","course.parent == nil" %}
+{% if site.lang == "kana" %}
+  {% assign courses = courses | where_exp:"course","course.path contains 'ja'" %}
+{% else %}
+  {% assign courses = courses | where_exp:"course","course.path contains site.lang" %}
+{% endif %}
+{% if courses.size > 0 %}
+<h2 id="{{ include.difficulty }}">{% t difficulty.{{ include.difficulty }} %}</h2>
+{% endif %}
 <ul class="course-list">
-{% for course in site.courses %}
-{% assign course_lang = course.path | slice: 9, 2 %}
-{% if course.category == page.categoryname and course.difficulty == include.difficulty and course.parent == nil and (course_lang == site.lang or (course_lang == 'ja' and site.lang == 'kana')) %}
+{% for course in courses %}
 {% capture thumbnail %}{% if course.thumbnail %}{{ course.thumbnail }}{% else %}{{ course.slides[0] }}{% endif %}{% endcapture %}
 <li><a href="{{ site.baseurl }}{{ course.url }}"><img data-src="{{ site.url }}/assets/course/{{ course.category }}/{{ course.course-name }}{{ thumbnail }}" data-width="348" alt="{{ course.title }}" loading="auto"><p class="course-list-title">{% if site.lang == 'kana' and course.title-kana %}{{course.title-kana}}{% else %}{{course.title}}{% endif %}</p></a></li>
-{% endif %}
 {% endfor %}
 </ul>
