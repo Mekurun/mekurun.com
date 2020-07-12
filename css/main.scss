@@ -251,8 +251,16 @@ footer {
   justify-content: center;
   align-items: center;
   color: #fff;
+  flex-wrap: wrap;
   @media screen and (max-width:700px) {
     padding-top: $header-height * 1 + 24px;
+  }
+  h1 {
+    width: 100%;
+    text-align: center;
+  }
+  p {
+    margin-top: 0;
   }
 }
 .top-mainvisual {
@@ -288,6 +296,9 @@ footer {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  h1 {
+    text-align: left;
+  }
 }
 .category-top-img {
   padding: 30px;
