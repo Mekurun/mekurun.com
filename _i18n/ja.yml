@@ -39,6 +39,7 @@ top:
 news:
   title: お知らせ
   description: 運営からのお知らせを掲載しています。
+  copy: 運営からのお知らせを掲載しています。
 
 projects:
   title: みんなの作品
@@ -47,6 +48,7 @@ projects:
 tips:
   title: 豆知識
   description: Scratch(スクラッチ)やMakeCode(メイクコード)に関する豆知識やプログラミングやテクノロジーに関する記事を定期的に投稿しています。
+  copy: 作品を作るときに役立つ情報や、プログラミングに関する情報の紹介ページです。
 
 usage:
   title: 使い方ガイド
@@ -58,7 +60,7 @@ about:
 
 contact:
   title: お問い合わせ
-  description:
+  description: メクルンへのお問い合わせはこちらのフォームからお願いします。
   name: お名前
   email: メールアドレス
   mailTitle: 件名
