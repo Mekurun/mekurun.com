@@ -56,7 +56,14 @@ class SlideController {
 
     if (query.has("page")) {
       // page クエリが指定されていたら現在のページを更新。
-      this.currentPage = parseInt(query.get("page"));
+
+      const page = query.get("page");
+
+      if (this.isValidPageString(page)) {
+        this.currentPage = parseInt(page);
+      } else {
+        this.deletePageQuery();
+      }
     }
 
     this.slide.style.position = "absolute";
@@ -166,11 +173,18 @@ class SlideController {
    */
   resetPageIfInvalid() {
     if (!this.isValidPage(this.currentPage)) {
-      const url = new URL(location);
-      url.searchParams.delete("page");
-      history.replaceState(null, null, url.toString());
+      this.deletePageQuery();
       this.currentPage = 1;
     }
+  }
+
+  /**
+   * page クエリを URL から削除します。
+   */
+  deletePageQuery() {
+    const url = new URL(location);
+    url.searchParams.delete("page");
+    history.replaceState(null, null, url.toString());
   }
 
   /**
@@ -180,6 +194,15 @@ class SlideController {
    */
   isValidPage(page) {
     return typeof page === "number" && page >= 1 && page <= this.lastPage;
+  }
+
+  /**
+   * page が有向なページの文字列か返します。
+   *
+   * @param {string} page ページ文字列。
+   */
+  isValidPageString(page) {
+    return /^[0-9]+$/.test(page);
   }
 }
 
