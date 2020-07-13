@@ -56,7 +56,7 @@ layout: default
 </section>
 
 <script>
-window.addEventListener('load', () => bootCourseSlideController({
+window.addEventListener('load', function(){ bootCourseSlideController({
   lastPage: {{ page.slides.size }}
-}))
+})})
 </script>

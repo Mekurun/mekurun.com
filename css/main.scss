@@ -60,6 +60,7 @@ header {
 }
 .header-nav-logo {
   height: $header-height;
+  width: $header-height * 3.33;
   padding: $header-height * 0.25 $header-height * 0.5;
   @media screen and (max-width:700px) {
     padding-left: 20px;
@@ -220,6 +221,7 @@ footer {
 }
 .footer-logo {
   height: 60px;
+  width: 200px;
 }
 @media screen and (max-width:700px) {
   footer {
@@ -515,9 +517,9 @@ footer {
 }
 .slide-page {
   max-width: 800px;
-  margin: auto;
+  margin: 12px auto;
   @media screen and (max-width:800px) {
-    padding: 24px;
+    padding: 12px 24px;
   }
   h2 {
     margin-top: 2em;
@@ -532,6 +534,7 @@ footer {
 .slides-top {
   display: flex;
   margin-top: 12px;
+  align-items: center;
 }
 .slides-top-info {
   width: 100%;
@@ -639,10 +642,8 @@ footer {
 }
 .button-export {
   display: inline-block;
-  float: right;
   color: $main-color;
   width: 160px;
-  margin: auto;
 }
 .label {
   background-color: #eee;
