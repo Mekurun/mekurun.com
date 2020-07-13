@@ -231,6 +231,11 @@ footer {
 .footer-logo {
   height: 40px;
 }
+.footer-copyright {
+  color: #999;
+  font-size: 0.8em;
+  margin: 12px;
+}
 @media screen and (max-width:890px) {
   .footer-flex {
     display: block;
@@ -239,6 +244,9 @@ footer {
   .footer-logoblock, .footer-list {
     width: 100%;
     margin: 24px 0;
+  }
+  .footer-copyright {
+    text-align: center;
   }
 }
 @mixin card($color: $lightgray) {
