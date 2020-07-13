@@ -38,27 +38,29 @@ top:
 
 news:
   title: お知らせ
-  description:
+  description: 運営からのお知らせを掲載しています。
+  copy: 運営からのお知らせを掲載しています。
 
 projects:
   title: みんなの作品
-  description:
+  description: みんなのScratch(スクラッチ)やMakeCode(メイクコード)を使ったものづくりを紹介する記事を定期的に投稿しています。
 
 tips:
   title: 豆知識
-  description:
+  description: Scratch(スクラッチ)やMakeCode(メイクコード)に関する豆知識やプログラミングやテクノロジーに関する記事を定期的に投稿しています。
+  copy: 作品を作るときに役立つ情報や、プログラミングに関する情報の紹介ページです。
 
 usage:
   title: 使い方ガイド
-  description:
+  description: メクルンの使い方についてはこちらをご覧ください。
 
 about:
   title: メクルンとは
-  description:
+  description: メクルンについて知りたい方はこちらをご覧ください。
 
 contact:
   title: お問い合わせ
-  description:
+  description: メクルンへのお問い合わせはこちらのフォームからお願いします。
   name: お名前
   email: メールアドレス
   mailTitle: 件名
@@ -67,12 +69,12 @@ contact:
 
 termOfUse:
   title: ご利用について
-  description:
+  description: メクルンの教材コンテンツをご利用いただく際の規定についてはこちらをご覧ください。
 
 privacy:
   title: プライバシーポリシー
-  description:
+  description: メクルンのプライバシーポリシーについてはこちらをご覧ください。
 
 faq:
   title: よくあるご質問
-  description:
+  description: メクルンのよくあるご質問についてはこちらをご覧ください。
