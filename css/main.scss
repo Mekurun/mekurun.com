@@ -198,7 +198,6 @@ footer {
   font-weight: bold;
   background-color: $lightgray;
   padding: 36px;
-  display: flex;
   margin-top: 60px;
   a {
     color: #5a5a5a;
@@ -210,26 +209,46 @@ footer {
     }
   }
 }
+.footer-flex {
+  display: flex;
+}
 .footer-list {
   padding: 0;
   list-style: none;
   width: 20%;
   line-height: 1.8em;
+  margin: 12px;
+  h2 {
+    margin: 0 0 0.5em;
+    font-size: 1em;
+    border-bottom: solid 4px $main-color;
+    opacity: 0.6;
+  }
 }
 .footer-logoblock {
-  width: 40%;
+  width: 33%;
+  line-height: 1.4em;
 }
 .footer-logo {
-  height: 60px;
-  width: 200px;
+  height: 50px;
+  width: 167px;
 }
-@media screen and (max-width:700px) {
-  footer {
+.footer-copyright {
+  color: #999;
+  font-size: 0.8em;
+  margin: 12px;
+}
+@media screen and (max-width:890px) {
+  .footer-flex {
     display: block;
     text-align: center;
   }
   .footer-logoblock, .footer-list {
     width: 100%;
+    margin: 24px 0;
+  }
+  .footer-copyright {
+    text-align: center;
   }
 }
 @mixin card($color: $lightgray) {
