@@ -35,6 +35,18 @@
       ", ""%}
     <title>{{ title }}</title>
 
+
+    {% if jekyll.environment == "production" %}
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5XSQ69G');</script>
+    <!-- End Google Tag Manager -->
+    {% else  %}
+    {% endif %}
+
     <link rel="preload" href="/css/main.css" as="style">
     {% if jekyll.environment == "production" %}
     <link rel="preconnect dns-prefetch" href="https://res.cloudinary.com/">
@@ -69,17 +81,6 @@
     <meta name="theme-color" content="#34a2df">
 
     <link rel="manifest" href="/manifest.json">
-
-    {% if jekyll.environment == "production" %}
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5XSQ69G');</script>
-    <!-- End Google Tag Manager -->
-    {% else  %}
-    {% endif %}
 
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
