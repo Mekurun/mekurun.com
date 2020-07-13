@@ -60,6 +60,7 @@ header {
 }
 .header-nav-logo {
   height: $header-height;
+  width: $header-height * 3.33;
   padding: $header-height * 0.25 $header-height * 0.5;
   @media screen and (max-width:700px) {
     padding-left: 20px;
@@ -220,6 +221,7 @@ footer {
 }
 .footer-logo {
   height: 60px;
+  width: 200px;
 }
 @media screen and (max-width:700px) {
   footer {
