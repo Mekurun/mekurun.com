@@ -534,6 +534,7 @@ footer {
 .slides-top {
   display: flex;
   margin-top: 12px;
+  align-items: center;
 }
 .slides-top-info {
   width: 100%;
@@ -641,10 +642,8 @@ footer {
 }
 .button-export {
   display: inline-block;
-  float: right;
   color: $main-color;
   width: 160px;
-  margin: auto;
 }
 .label {
   background-color: #eee;
