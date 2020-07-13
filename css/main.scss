@@ -517,9 +517,9 @@ footer {
 }
 .slide-page {
   max-width: 800px;
-  margin: auto;
+  margin: 12px auto;
   @media screen and (max-width:800px) {
-    padding: 24px;
+    padding: 12px 24px;
   }
   h2 {
     margin-top: 2em;
