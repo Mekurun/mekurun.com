@@ -216,6 +216,13 @@ footer {
   list-style: none;
   width: 20%;
   line-height: 1.8em;
+  margin: 12px;
+  h2 {
+    margin: 0 0 0.5em;
+    font-size: 1em;
+    border-bottom: solid 4px $main-color;
+    opacity: 0.6;
+  }
 }
 .footer-logoblock {
   width: 33%;
@@ -231,6 +238,7 @@ footer {
   }
   .footer-logoblock, .footer-list {
     width: 100%;
+    margin: 24px 0;
   }
 }
 @mixin card($color: $lightgray) {
