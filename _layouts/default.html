@@ -116,6 +116,9 @@
     {{content}}
   </body>
   <!-- 遅延読み込み -->
+  {% if page.layout == "course" %}
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=URLSearchParams%2CObject.assign"></script>
+  {% endif %}
   <script type="text/javascript" src="/js/usecloudinary.js"></script>
   <script src="/assets/js/main.js" async></script>
 </html>
