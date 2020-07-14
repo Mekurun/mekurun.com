@@ -4,7 +4,7 @@ layout: default
 <section class="slide-page page-course" id="slidesCover">
 {{ content }}
 
-<a href="{{ site.baseurl }}/{{page.category}}#{{page.difficulty}}" class="label" style="margin-top:12px;">{% t category.{{page.category}}.title %} <i class="fas fa-angle-right"></i> {% t difficulty.{{page.difficulty}} %}</a>
+<a href="{{ site.baseurl }}/{{page.category}}#{{page.difficulty}}" class="label">{% t category.{{page.category}}.title %} <i class="fas fa-angle-right"></i> {% t difficulty.{{page.difficulty}} %}</a>
 <div class="slides-top">
   <div class="slides-top-info">
   {% assign parents = site.courses | where:"course-name", page.parent %}
