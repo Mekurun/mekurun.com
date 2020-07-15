@@ -4,5 +4,6 @@ title: about.title
 permalink: about
 description: about.description
 ---
-
-{% translate_file about.md %}
+<div style="max-width: 800px;margin: auto;">
+  {% translate_file about.md %}
+</div>
