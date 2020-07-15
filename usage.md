@@ -4,5 +4,6 @@ title: usage.title
 permalink: usage
 description: usage.description
 ---
-
-{% translate_file usage.md %}
+<div style="max-width: 800px;margin: auto;">
+  {% translate_file usage.md %}
+</div>
