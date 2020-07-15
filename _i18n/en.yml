@@ -77,3 +77,8 @@ privacy:
 faq:
   title: FAQ Page
   description:
+
+footer:
+  service: Services
+  forUsers: For Users
+  support: Support

@@ -15,10 +15,10 @@
         {% if page.lang == "en" and site.lang != "en" %}
           <meta name="robots" content="noindex">
         {% else %}
-          <meta name="robots" content="noindex"><!--リリース時変更-->
+          <meta name="robots" content="index"><!--リリース時変更-->
         {% endif %}
       {% else %}
-        <meta name="robots" content="noindex"><!--リリース時変更-->
+        <meta name="robots" content="index"><!--リリース時変更-->
       {% endif %}
     {% endif %}
     {% capture title %}
@@ -34,6 +34,18 @@
     {% assign title = title | replace: "
       ", ""%}
     <title>{{ title }}</title>
+
+
+    {% if jekyll.environment == "production" %}
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5XSQ69G');</script>
+    <!-- End Google Tag Manager -->
+    {% else  %}
+    {% endif %}
 
     <link rel="preload" href="/css/main.css" as="style">
     {% if jekyll.environment == "production" %}
@@ -70,17 +82,6 @@
 
     <link rel="manifest" href="/manifest.json">
 
-    {% if jekyll.environment == "production" %}
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5XSQ69G');</script>
-    <!-- End Google Tag Manager -->
-    {% else  %}
-    {% endif %}
-
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
 
@@ -116,6 +117,9 @@
     {{content}}
   </body>
   <!-- 遅延読み込み -->
+  {% if page.layout == "course" %}
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=URLSearchParams%2CObject.assign"></script>
+  {% endif %}
   <script type="text/javascript" src="/js/usecloudinary.js"></script>
   <script src="/assets/js/main.js" async></script>
 </html>

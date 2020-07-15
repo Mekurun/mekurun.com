@@ -1,25 +1,32 @@
 <footer>
-  <ul class="footer-list footer-logoblock">
+  <div class="footer-flex">
+    <ul class="footer-list footer-logoblock">
+      <li><a href="{{ site.baseurl }}/"><img src="{{ logosrc | split: ' ' }}" alt="{% t title %}" class="footer-logo"></a></li>
+      <li><a href="https://twitter.com/mekuruncom" target="_blank" rel="noopener"><i class="fab fa-twitter"></i> Twitter</a></li>
+      <li><a href="https://www.facebook.com/mekuruncom" target="_blank" rel="noopener"><i class="fab fa-facebook"></i> Facebook</a></li>
+      <li><a href="https://github.com/Mekurun" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a></li>
+    </ul>
+    <ul class="footer-list">
+      <h2>{% t footer.service %}</h2>
+      <li><a href="{{ site.baseurl }}/#allmenu">{% t top.allmenu %}</a></li>
+      <li><a href="{{ site.baseurl }}/#newcourse">{% t top.recent %}</a></li>
+      <!-- <li><a href="{{ site.baseurl }}/projects">{% t projects.title %}</a></li> -->
+      <li><a href="{{ site.baseurl }}/tips">{% t tips.title %}</a></li>
+      <li><a href="{{ site.baseurl }}/news">{% t news.title %}</a></li>
+    </ul>
+    <ul class="footer-list">
+      <h2>{% t footer.forUsers %}</h2>
+      <li><a href="{{ site.baseurl }}/about">{% t about.title %}</a></li>
+      <li><a href="{{ site.baseurl }}/usage">{% t usage.title %}</a></li>
+      <li><a href="{{ site.baseurl }}/term-of-use">{% t termOfUse.title %}</a></li>
+      <li><a href="{{ site.baseurl }}/privacy">{% t privacy.title %}</a></li>
+    </ul>
+    <ul class="footer-list">
+      <h2>{% t footer.support %}</h2>
+      <li><a href="{{ site.baseurl }}/faq">{% t faq.title %}</a></li>
+      <li><a href="{{ site.baseurl }}/contact">{% t contact.title %}</a></li>
+    </ul>
+  </div>
 
-    <li><a href="{{ site.baseurl }}/"><img src="{{ logosrc | split: ' ' }}" alt="{% t title %}" class="footer-logo"></a></li>
-    <li>&copy; 2020 {% t title %} All Rights reserved.</li>
-    <li><a href="https://github.com/Mekurun"><i class="fab fa-github"></i> Mekurun</a></li>
-  </ul>
-  <ul class="footer-list">
-    <li><a href="{{ site.baseurl }}/#allmenu">{% t top.allmenu %}</a></li>
-    <li><a href="{{ site.baseurl }}/#newcourse">{% t top.recent %}</a></li>
-    <li><a href="{{ site.baseurl }}/projects">{% t projects.title %}</a></li>
-    <li><a href="{{ site.baseurl }}/tips">{% t tips.title %}</a></li>
-    <li><a href="{{ site.baseurl }}/news">{% t news.title %}</a></li>
-  </ul>
-  <ul class="footer-list">
-    <li><a href="{{ site.baseurl }}/about">{% t about.title %}</a></li>
-    <li><a href="{{ site.baseurl }}/usage">{% t usage.title %}</a></li>
-    <li><a href="{{ site.baseurl }}/term-of-use">{% t termOfUse.title %}</a></li>
-    <li><a href="{{ site.baseurl }}/privacy">{% t privacy.title %}</a></li>
-  </ul>
-  <ul class="footer-list">
-    <li><a href="{{ site.baseurl }}/faq">{% t faq.title %}</a></li>
-    <li><a href="{{ site.baseurl }}/contact">{% t contact.title %}</a></li>
-  </ul>
+  <p class="footer-copyright">&copy; 2020 {% t title %} All Rights reserved.</p>
 </footer>
