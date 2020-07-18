@@ -450,6 +450,9 @@ footer {
     opacity: .8;
     margin-right: 8px;
   }
+  img {
+    max-width: 100%;
+  }
   @media screen and (min-width:1500px) {
     margin: auto auto;
   }
