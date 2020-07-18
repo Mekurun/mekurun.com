@@ -1,6 +1,4 @@
 title: メクルン
-copy: スライドで学べるビジュアルプログラミング学習サービス メクルン[Mekurun]
-description:
 course:
   export: PDFでみる
   subcourses: やってみよう
@@ -28,7 +26,7 @@ top:
   viewAll: コースをみる
   more: もっとみる
   copy: あなたのアイデアをえがこう
-  caption: スライドで学べるビジュアルプログラミング学習サービス
+  caption: スライドで学べるビジュアルプログラミング学習サイト
   posts: きじ
   all: ぜん
 
