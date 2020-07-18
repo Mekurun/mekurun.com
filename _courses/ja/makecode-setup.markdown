@@ -5,7 +5,7 @@ title:  "MakeCodeのセットアップをしよう"
 category: minecraft
 difficulty: introduction
 course-name: makecode-setup
-description: このコースでは、MakeCode（メイクコード）を使ってMinecraft（マインクラフト）でプログラミングを行う方法を紹介します。スライドで誰でも簡単に学べるビジュアルプログラミング学習サービス「メクルン」を使って、MakeCode（メイクコード）の学習をはじめよう。
+description: このコースでは、MakeCode（メイクコード）を使ってMinecraft（マインクラフト）でプログラミングを行う方法を紹介します。スライドで誰でも簡単に学べるビジュアルプログラミング学習サイト「メクルン」を使って、MakeCode（メイクコード）の学習をはじめよう。
 thumbnail: /thumbnail.png
 slides:
 -  /0001.jpg

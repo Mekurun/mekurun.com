@@ -27,9 +27,6 @@
       {% else %}
       {% t {{page.title}} %}
       {% endif %}
-      {% if page.course-name %}
-       - {% t category.{{page.categories}}.title %}
-      {% endif %}
        | {% t copy %}{% endcapture %}
     {% assign title = title | replace: "
       ", ""%}
