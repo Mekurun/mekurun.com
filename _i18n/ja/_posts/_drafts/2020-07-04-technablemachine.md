@@ -1,32 +1,32 @@
 ---
 layout: post
-title: "【小学生でもできる】Google Technable Machineを使ってAIを体験してみよう"
+title: "【小学生でもできる】Google Teachable Machineを使ってAIを体験してみよう"
 date: 2020-06-23 13:00:00 +0900
 category: tips
 # thumbnail: /release.png
 author: nztm
-description: "Google Technable Machineを使ってAI(人工知能)の機械学習のひとつでもある画像認識をブラウザから簡単に体験する方法をご紹介します。Google Technable Machineを使えばプログラミングをする必要はなく、どなたでも簡単にAI(人工知能)を扱うことができます。"
+description: "Google Teachable Machineを使ってAI(人工知能)の機械学習のひとつでもある画像認識をブラウザから簡単に体験する方法をご紹介します。Google Teachable Machineを使えばプログラミングをする必要はなく、どなたでも簡単にAI(人工知能)を扱うことができます。"
 ---
 
 AI(人工知能)
 
 あと10年もすれば、街中にAIを使ったサービスや仕事が溢れることになると思います。
 
-この記事では、プログラミングをせずにAIを軽く触ってみたい方向けにGoogle Technable Machineを使ってAIを体験する方法をご紹介します。
+この記事では、プログラミングをせずにAIを軽く触ってみたい方向けにGoogle Teachable Machineを使ってAIを体験する方法をご紹介します。
 
-## Google Technable Machine とは
+## Google Teachable Machine とは
 
-Google Technable Machine とは、Googleが提供しているAI(人工知能)の機械学習に使用するモデルを生成できるツールで、ブラウザからサイトへアクセスするだけで使用することができ、画像や音声、身体の姿勢(ポーズ)などを学習させてそれらを判別するモデルを簡単に作成することができます。
+Google Teachable Machine とは、Googleが提供しているAI(人工知能)の機械学習に使用するモデルを生成できるツールで、ブラウザからサイトへアクセスするだけで使用することができ、画像や音声、身体の姿勢(ポーズ)などを学習させてそれらを判別するモデルを簡単に作成することができます。
 
-Google Technable Machineのモデル生成には、機械学習の中の深層学習【Deep Learning(ディープラーニング)】という技術が使われていて、複数の画像や音声から特徴点を抽出し学習をおこないます。
+Google Teachable Machineのモデル生成には、機械学習の中の深層学習【Deep Learning(ディープラーニング)】という技術が使われていて、複数の画像や音声から特徴点を抽出し学習をおこないます。
 
 ## 画像の判別をやってみよう
 
-ディープラーニングの定番、画像認識をTechnable Machineを使って体験してみましょう。
+ディープラーニングの定番、画像認識をTeachable Machineを使って体験してみましょう。
 
-今回、Technable Machineの画像認識を使って、このようにWebカメラで撮ったものを判別するモデルを作成します。
+今回、Teachable Machineの画像認識を使って、このようにWebカメラで撮ったものを判別するモデルを作成します。
 
-![Google Technable Machine のサンプル](/assets/article/tips/technablemachine/example.gif)
+![Google Teachable Machine のサンプル](/assets/article/tips/technablemachine/example.gif)
 
 **必要になるもの**
 
@@ -34,9 +34,9 @@ Google Technable Machineのモデル生成には、機械学習の中の深層�
 - Webカメラ
 - 判別に使いたい画像・もの
 
-### Technable Machineを開いて準備しよう
+### Teachable Machineを開いて準備しよう
 
-まず、Technable Machineを以下のリンクから開きましょう。
+まず、Teachable Machineを以下のリンクから開きましょう。
 
 開けたら青色のボタン「Get Started」をクリックしてください。
 
@@ -94,6 +94,6 @@ Image Projectでプロジェクトを作成できたら、画像の学習をは�
 
 ##まとめ
 
-Technable Machineで生成したモデルはTensorflowのモデルにエクスポートすることができ、プログラミングすることで他のアプリでも利用できます。
+Teachable Machineで生成したモデルはTensorflowのモデルにエクスポートすることができ、プログラミングすることで他のアプリでも利用できます。
 
 最後までお読みいただきありがとうございました。
