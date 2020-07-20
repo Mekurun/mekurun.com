@@ -746,6 +746,42 @@ form {
   padding: 12px;
   margin: 12px 0;
   border-radius: 4px;
+  h1{
+    font-size: 1.6em;
+  }
+  @media screen and (max-width:800px) {
+    h1{
+      font-size: 1.4em;
+    }
+  }
+  h2 {
+    background: #e3f3ff;
+    border-radius: 4px;
+    padding: 12px;
+    position: relative;
+  }
+  h2::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 10px;
+    left: 20px;
+    border-radius: 0 0 5px 5px;
+    bottom: -10px;
+    background: #e3f3ff;
+  }
+  h3 {
+    border-left: solid 6px #e3f3ff;
+    padding-left: 5px;
+  }
+  code {
+    background: #f4f4f4;
+    border-radius: 4px;
+    padding: 2px 5px;
+    overflow: auto;
+    word-wrap: break-word;
+  }
 }
 .post-date {
   font-weight: 600;
