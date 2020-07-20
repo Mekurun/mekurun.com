@@ -36,7 +36,7 @@ title: title
 
   <h2 id="newcourse">{% t top.recent %}</h2>
   <ul class="top-course-list course-list">
-  {% assign courses = site.courses | limit:4 | where_exp:"c", "c.parent == nil" %}
+  {% assign courses = site.courses | limit:6 | where_exp:"c", "c.parent == nil" %}
   {% for course in courses %}
     {% assign course_lang = course.path | slice: 9, 2 %}
     {% if (course_lang == site.lang or (course_lang == 'ja' and site.lang == 'kana')) %}
