@@ -782,6 +782,9 @@ form {
     overflow: auto;
     word-wrap: break-word;
   }
+  a {
+    word-wrap: break-word;
+  }
 }
 .post-date {
   font-weight: 600;
