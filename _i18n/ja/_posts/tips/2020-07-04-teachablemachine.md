@@ -3,7 +3,7 @@ layout: post
 title: "【小学生でもできる】Google Teachable Machineを使ってAIを体験してみよう"
 date: 2020-06-23 13:00:00 +0900
 category: tips
-# thumbnail: /release.png
+thumbnail: /teachablemachine/thumbnail.png
 author: nztm
 description: "Google Teachable Machineを使ってAI(人工知能)の機械学習のひとつでもある画像認識をブラウザから簡単に体験する方法をご紹介します。Google Teachable Machineを使えばプログラミングをする必要はなく、どなたでも簡単にAI(人工知能)を扱うことができます。"
 ---
@@ -26,7 +26,7 @@ Google Teachable Machineのモデル生成には、機械学習の中の深層�
 
 今回、Teachable Machineの画像認識を使って、このようにWebカメラで撮ったものを判別するモデルを作成します。
 
-![Google Teachable Machine のサンプル](/assets/article/tips/technablemachine/example.gif)
+![Google Teachable Machine のサンプル](/assets/article/tips/teachablemachine/example.gif)
 
 **必要になるもの**
 
@@ -42,13 +42,13 @@ Google Teachable Machineのモデル生成には、機械学習の中の深層�
 
 [https://teachablemachine.withgoogle.com/](https://teachablemachine.withgoogle.com/)
 
-![](/assets/article/tips/technablemachine/0001.png)
+![](/assets/article/tips/teachablemachine/0001.png)
 
 次に、プロジェクト作成画面になるので、ここでは「Image Project」をクリックしてください。
 
 Image Projectは画像認識、Audio Projectは音声認識、Pose Projectは身体のポーズを学習できます。
 
-![](/assets/article/tips/technablemachine/0002.png)
+![](/assets/article/tips/teachablemachine/0002.png)
 
 ### 判別に使う画像を追加しよう
 
@@ -56,41 +56,41 @@ Image Projectでプロジェクトを作成できたら、画像の学習をは�
 
 「Webcam」を押してWebカメラを起動してみよう。
 
-![](/assets/article/tips/technablemachine/0003.png)
+![](/assets/article/tips/teachablemachine/0003.png)
 
 するとカメラが写りましたか？
 
 正しく学習するために、学習させるもの
 
-![](/assets/article/tips/technablemachine/0004.png)
+![](/assets/article/tips/teachablemachine/0004.png)
 
 学習したいものを決めて、「Hold to Record」を押して撮影して学習しましょう。
 
 色んな角度から50枚程度撮影すると精度が良くなるよ！
 
-![](/assets/article/tips/technablemachine/0005.png)
+![](/assets/article/tips/teachablemachine/0005.png)
 
 次にもう
 
-![](/assets/article/tips/technablemachine/0006.png)
+![](/assets/article/tips/teachablemachine/0006.png)
 
-![](/assets/article/tips/technablemachine/0007.png)
+![](/assets/article/tips/teachablemachine/0007.png)
 
 ### 学習させてみよう
 
 ここから名前を変えれるよ
 
-![](/assets/article/tips/technablemachine/0008.png)
+![](/assets/article/tips/teachablemachine/0008.png)
 
 名前を変更できたら「Train Model」をクリックして学習モデルを生成しよう！
 
-![](/assets/article/tips/technablemachine/0009.png)
+![](/assets/article/tips/teachablemachine/0009.png)
 
 モデル生成が終わったら、カメラが起動したかな？
 
 学習したものをカメラに写してみよう、判別できたかな？
 
-![](/assets/article/tips/technablemachine/00010.png)
+![](/assets/article/tips/teachablemachine/00010.png)
 
 ##まとめ
 
