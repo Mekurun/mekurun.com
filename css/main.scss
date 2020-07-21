@@ -382,7 +382,6 @@ footer {
       text-decoration: none;
       color: $text-color;
       font-weight: 500;
-      display: block;
       padding: 12px;
       height: 100%;
       display: flex;
@@ -439,6 +438,23 @@ footer {
   margin: 4px 0;
   font-weight: 600;
   color: $darkgray;
+}
+.news-list {
+  li {
+    width: 100%;
+    margin: 6px 0;
+    a {
+      display: block;
+    }
+  }
+  h4 {
+    @media screen and (min-width: 700px) {
+      margin-left: 12px;
+    }
+  }
+  .article-list-date, .article-list-title {
+    display: inline-block;
+  }
 }
 .main {
   margin: auto 10vw;

@@ -1,5 +1,9 @@
 {% assign posts = site.posts | where_exp:"p", "p.category == include.category" | limit: include.limit %}
+{% if include.category == 'news' %}
+<ul class="article-list course-list news-list">
+{% else %}
 <ul class="article-list course-list">
+{% endif %}
 {% for post in posts %}
 <li class="article-list-one"><a href="{{ post.url }}">
   {% if post.thumbnail %}
