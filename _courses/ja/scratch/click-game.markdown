@@ -1,6 +1,7 @@
 ---
 layout: course
 title:  "クリックゲームをつくろう"
+date: 2020-07-21
 # title-kana: ""
 category: scratch
 difficulty: normal

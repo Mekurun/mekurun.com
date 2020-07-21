@@ -1,5 +1,6 @@
 ---
 layout: course
+date: 2020-07-20
 title:  "おえかきボードをつくろう"
 # title-kana: ""
 category: scratch
