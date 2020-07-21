@@ -280,6 +280,7 @@ footer {
   }
   p {
     margin-top: 0;
+    text-align: center;
   }
 }
 .top-mainvisual {
@@ -333,6 +334,9 @@ footer {
 .category-right {
   max-width: 500px;
   padding: 20px;
+  p {
+    text-align: left;
+  }
 }
 @media screen and (max-width: 999px) {
   .category-top .category-title-sp {
