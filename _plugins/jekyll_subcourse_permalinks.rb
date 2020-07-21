@@ -10,7 +10,11 @@ module Jekyll
           when 'posts'
             item[i + 1].docs.each do |page|
               @category = page.data['category']
+              @thumbnail = page.data['thumbnail']
               page.data['permalink'] = "/#{@category}/:title/"
+              unless @thumbnail.nil?
+                page.data['ogp'] = "/assets/article/#{@category}#{@thumbnail}"
+              end
             end
           when 'courses'
             item[i + 1].docs.each do |page|
