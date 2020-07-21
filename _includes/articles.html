@@ -13,7 +13,7 @@
   {% if include.category == 'news' %}
     <p class="article-list-date">{{ post.date | date: "%Y/%m/%d" }}</p>
   {% endif %}
-  {% if post.tag %}<span class="article-list-tag">{{ post.tag }}</span>{% endif %}
+  {% if post.tag %}<span class="article-list-tag bg-{{ post.tag }}">{{ post.tag }}</span>{% endif %}
   <h4 class="article-list-title">{{ post.title }}</h4>
 </a></li>
 {% endfor %}
