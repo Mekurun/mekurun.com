@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Scratchのブロック定義で新しくブロックをつくる方法"
+title: "Scratchの定義ブロックでカスタムブロックをつくろう"
 date: 2020-07-22 08:00:00 +0900
 category: tips
-# thumbnail:
+thumbnail: /scratch-myblocks/thumbnail.png
 author: parfait9
 description: "この記事ではScratchの「ブロック定義」の使い方を紹介します。同じようなコードをひとつのブロックにまとめられる「ブロック定義」を活用することで、似たようなコードの繰り返しでコードが見にくくなってしまう問題を解決できます。"
 ---
