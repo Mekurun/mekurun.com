@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "DiscordのチャンネルにGitHubの通知を送る方法"
+title: "DiscordのチャンネルにGitHubの通知を送るには？【Webhook】"
 date: 2020-06-23 12:00:00 +0900
 category: tips
 thumbnail: /discord-github/thumbnail.png
