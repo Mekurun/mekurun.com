@@ -5,39 +5,33 @@ module Jekyll
 
     def generate(site)
       site.collections.each do |item|
-        item.each_with_index do |category, i|
-          case category.to_s
+        item[1].docs.each do |page|
+          case item[0].to_s
           when 'posts'
-            item[i + 1].docs.each do |page|
-              @category = page.data['category']
-              @thumbnail = page.data['thumbnail']
-              page.data['permalink'] = "/#{@category}/:title/"
-              unless @thumbnail.nil?
-                page.data['ogp'] = "/assets/article/#{@category}#{@thumbnail}"
-              end
+            @category = page.data['category']
+            @thumbnail = page.data['thumbnail']
+            page.data['permalink'] = "/#{@category}/:title/"
+            unless @thumbnail.nil?
+              page.data['ogp'] = "/assets/article/#{@category}#{@thumbnail}"
             end
           when 'courses'
-            item[i + 1].docs.each do |page|
-              @parent = page.data['parent']
-              @category = page.data['category']
-              @thumbnail = page.data['thumbnail']
-              @slides = page.data['slides']
-              if @thumbnail.nil?
-                page.data['ogp'] = "/assets/course/#{@category}/#{page.data['course-name']}#{@slides[0]}"
-              else
-                page.data['ogp'] = "/assets/course/#{@category}/#{page.data['course-name']}#{@thumbnail}"
-              end
-              if @parent.nil?
-                page.data['permalink'] = "/#{@category}/:title/"
-              else
-                page.data['permalink'] = "/#{@category}/#{@parent}/:title/"
-              end
-            end
+            @parent = page.data['parent']
+            @category = page.data['category']
+            @thumbnail = page.data['thumbnail']
+            @slides = page.data['slides']
+
+            page.data['ogp'] = @thumbnail.nil??
+              "/assets/course/#{@category}/#{page.data['course-name']}#{@slides[0]}"
+            :
+              page.data['ogp'] = "/assets/course/#{@category}/#{page.data['course-name']}#{@thumbnail}"
+
+            page.data['permalink'] = @parent.nil??
+              "/#{@category}/:title/"
+            :
+            "/#{@category}/#{@parent}/:title/"
           when 'categories'
-            item[i + 1].docs.each do |page|
-              @name = page.data['categoryname']
-              page.data['permalink'] = "/#{@name}/"
-            end
+            @name = page.data['categoryname']
+            page.data['permalink'] = "/#{@name}/"
           end
         end
       end
