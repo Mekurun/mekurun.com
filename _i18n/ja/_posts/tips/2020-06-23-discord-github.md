@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "DiscordのチャンネルにGitHubの通知を送る方法"
+title: "DiscordのチャンネルにGitHubの通知を送るには？【Webhook】"
 date: 2020-06-23 12:00:00 +0900
 category: tips
-# thumbnail: /release.png
+thumbnail: /discord-github/thumbnail.png
 author: nztm
 description: "この記事では、DiscordのWebhookを使ってGitHubリポジトリのコミットやプルリクエストの通知をDiscordチャンネルに自動で送信する方法をご紹介します。"
 ---

@@ -1,5 +1,6 @@
 ---
 layout: course
+date: 2020-06-20
 title:  "おいかけっこゲームをつくろう"
 # title-kana: ""
 category: scratch

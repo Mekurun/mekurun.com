@@ -1,6 +1,7 @@
 ---
 layout: course
 title:  "はこいれゲームをつくろう"
+date: 2020-07-09
 # title-kana: ""
 category: scratch
 difficulty: normal

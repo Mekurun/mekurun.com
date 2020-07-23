@@ -280,7 +280,11 @@ footer {
   }
   p {
     margin-top: 0;
+    text-align: center;
   }
+}
+.top-text p {
+  text-align: left;
 }
 .top-mainvisual {
   width: 300px;
@@ -299,6 +303,9 @@ footer {
   .top-text {
     text-align: center;
     margin-right: 0;
+    p {
+      text-align: center;
+    }
   }
   .top-mainvisual {
     margin: auto;
@@ -333,6 +340,9 @@ footer {
 .category-right {
   max-width: 500px;
   padding: 20px;
+  p {
+    text-align: left;
+  }
 }
 @media screen and (max-width: 999px) {
   .category-top .category-title-sp {
@@ -382,7 +392,6 @@ footer {
       text-decoration: none;
       color: $text-color;
       font-weight: 500;
-      display: block;
       padding: 12px;
       height: 100%;
       display: flex;
@@ -392,7 +401,7 @@ footer {
   img {
     width: 100%; // 80vw * 0.33 - 12*2*2px = 26.4vw - 48px
     height: calc(13.86vw - 25.2px); // width * (630/1200)0.525
-    border-radius: 5px 5px 3px 3px;
+    border-radius: 5px;
     object-fit: cover;
     @media screen and (min-width:1500px) {
       height: 182.7px; // 1200px * 0.33 - 48px * (630/1200 = 0.525)
@@ -439,6 +448,35 @@ footer {
   margin: 4px 0;
   font-weight: 600;
   color: $darkgray;
+}
+.news-list {
+  li {
+    width: 100%;
+    margin: 6px 12px;
+    @media screen and (max-width: 700px) {
+      margin: 6px 0;
+    }
+    a {
+      display: block;
+    }
+  }
+  .article-list-date, .article-list-title {
+    display: inline-block;
+  }
+}
+.article-list-tag {
+  background: $main-color;
+  color: #fff;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 1rem;
+  margin: 0 12px;
+}
+.bg-note {
+  background: #41C9B4;
+}
+.bg-Qiita {
+  background: #55c500;
 }
 .main {
   margin: auto 10vw;
@@ -729,7 +767,7 @@ form {
 
 /* 記事 */
 .post-thumbnail {
-  width: 90%;
+  width: 100%;
   margin: auto;
   display: block;
 }
@@ -739,6 +777,8 @@ form {
   padding: 12px 24px;
   img {
     max-width: 100%;
+    margin: 1rem auto;
+    display: block;
   }
 }
 .post-content {
@@ -746,6 +786,45 @@ form {
   padding: 12px;
   margin: 12px 0;
   border-radius: 4px;
+  h1{
+    font-size: 1.6em;
+  }
+  @media screen and (max-width:800px) {
+    h1{
+      font-size: 1.4em;
+    }
+  }
+  h2 {
+    background: #e3f3ff;
+    border-radius: 4px;
+    padding: 12px;
+    position: relative;
+  }
+  h2::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 10px;
+    left: 20px;
+    border-radius: 0 0 5px 5px;
+    bottom: -10px;
+    background: #e3f3ff;
+  }
+  h3 {
+    border-left: solid 6px #e3f3ff;
+    padding-left: 5px;
+  }
+  code {
+    background: #f4f4f4;
+    border-radius: 4px;
+    padding: 2px 5px;
+    overflow: auto;
+    word-wrap: break-word;
+  }
+  a {
+    word-wrap: break-word;
+  }
 }
 .post-date {
   font-weight: 600;

@@ -1,5 +1,6 @@
 ---
 layout: course
+date: 2020-06-19
 title:  "MakeCodeのセットアップをしよう"
 # title-kana: ""
 category: minecraft
