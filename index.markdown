@@ -36,15 +36,16 @@ title: title
 
   <h2 id="newcourse">{% t top.recent %}</h2>
   <ul class="top-course-list course-list">
-  {% assign courses = site.courses | limit:6 | where_exp:"c", "c.parent == nil" %}
-  {% for course in courses reversed %}
+  {% assign courses = site.courses | where_exp:"c", "c.parent == nil" %}
+  {% assign courses = courses | reverse %}
+  {% for course in courses limit:6 %}
     {% assign course_lang = course.path | slice: 9, 2 %}
     {% if (course_lang == site.lang or (course_lang == 'ja' and site.lang == 'kana')) %}
     <li>
       <a href="{{ site.baseurl }}{{course.url}}">
         <span class="top-course-list-category">{% t category.{{ course.category }}.title %}</span>
         {% capture thumbnail %}{% if course.thumbnail %}{{ course.thumbnail }}{% else %}{{ course.slides[0] }}{% endif %}{% endcapture %}
-        <img data-src="{{ site.url }}/assets/course/{{ course.category }}/{{ course.course-name }}{{ thumbnail }}" data-width="348" alt="{{ course.title }}" loading="auto">
+        <img data-src="{{ site.url }}/assets/course/{{ course.category }}/{{ course.course-name }}{{ thumbnail }}" data-width="348" alt="{{ course.title }}" loading="lazy">
         <p class="course-list-title">{% if site.lang == 'kana' and course.title-kana %}{{course.title-kana}}{% else %}{{course.title}}{% endif %}</p>
         <span class="top-course-list-difficulty {{ course.difficulty }}"> {% t difficulty.{{ course.difficulty }} %} </span>
       </a>
