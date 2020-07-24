@@ -6,6 +6,7 @@ url: "https://mekurun.com" # the base hostname & protocol for your site, e.g. ht
 markdown: MekurunCustomConverter
 plugins:
   - jekyll-feed
+  - jekyll-include-cache
   - jekyll-sitemap
   - jekyll-multiple-languages-plugin
   - jekyll-minifier
