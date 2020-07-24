@@ -7,9 +7,9 @@ markdown: MekurunCustomConverter
 plugins:
   - jekyll-feed
   - jekyll-include-cache
-  - jekyll-sitemap
   - jekyll-multiple-languages-plugin
   - jekyll-minifier
+  - jekyll-sitemap
 
 languages: ["ja", "en", "kana"]
 
