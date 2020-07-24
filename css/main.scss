@@ -962,4 +962,10 @@ form {
   .article-list-title {
     font-size: 1em;
   }
+  @media screen and (min-width: 700px) {
+    img {
+      max-height: 120px;
+      height: calc(13.86vw - 25.2px);
+    }
+  }
 }
