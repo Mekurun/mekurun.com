@@ -414,6 +414,23 @@ footer {
     }
   }
 }
+
+@media screen and (max-width: 700px) {
+  .horizontal-list {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    li {
+      width: 80%;
+      min-width: 80%;
+      &:not(:last-child) {
+        margin-right: 12px;
+      }
+    }
+    img {
+      height: calc((100vw - 40px - 28px) * 0.525 * 0.8);
+    }
+  }
+}
 .course-list-title {
   margin: 0.6em 0 0.4em 0;
 }
@@ -891,7 +908,6 @@ form {
   justify-content: center;
   flex-basis:auto;
   a {
-    padding: 12px 24px;
     margin: 12px 0;
     &:not(:last-child) {
       margin-right: 8px;
@@ -924,7 +940,6 @@ form {
   .share-buttons {
     flex-wrap: wrap;
     a {
-      padding: 12px 24px;
       margin: 4px 0;
       &:not(:last-child) {
         margin-right: 0px;
