@@ -419,9 +419,17 @@ footer {
   .horizontal-list {
     overflow-x: auto;
     flex-wrap: nowrap;
+    &::-webkit-scrollbar {
+      height: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #34a2df88;
+      border-radius: 4px;
+    }
     li {
       width: 80%;
       min-width: 80%;
+      margin-bottom: 12px;
       &:not(:last-child) {
         margin-right: 12px;
       }
