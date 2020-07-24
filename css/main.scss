@@ -885,3 +885,33 @@ form {
     }
   }
 }
+
+.share-buttons {
+  display: flex;
+  justify-content: center;
+  a {
+    padding: 12px 24px;
+    margin: 12px 6px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: .8;
+    border: none;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  i {
+    font-style: normal;
+    font-weight: 900;
+  }
+}
+.share-tw {
+  background: #1DA1F2;
+}
+.share-fb {
+  background: #3B5998;
+}
+.share-hatena {
+  background: #00A4DE;
+}
