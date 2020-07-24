@@ -889,14 +889,19 @@ form {
 .share-buttons {
   display: flex;
   justify-content: center;
+  flex-basis:auto;
   a {
     padding: 12px 24px;
-    margin: 12px 6px;
+    margin: 12px 0;
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
     color: #fff;
     text-decoration: none;
     font-weight: 600;
     opacity: .8;
     border: none;
+    width: 100%;
     &:hover {
       opacity: 1;
     }
