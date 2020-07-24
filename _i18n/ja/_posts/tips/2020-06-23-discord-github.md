@@ -21,13 +21,13 @@ Slackであれば、GitHubのアプリをインストールして連携するだ
 ## DiscordでWebhookを作成しよう
 まず投稿するチャンネルを決めたら、そのチャンネルにマウスのカーソルを当てて、歯車(チャンネルの編集)をクリックしてください。
 
-![Discord チャンネルの編集](/assets/article/tips/discord-github/0001.png)
+![Discord チャンネルの編集](0001.png)
 
 すると、このようにチャンネルの設定画面が表示されますので、左側のメニューからウェブフックを選んでください。
 
 この画面になったら、画像の赤線で囲われている「ウェブフックを作成」をクリックしてください。
 
-![Discord ウェブフックを作成](/assets/article/tips/discord-github/0002.png)
+![Discord ウェブフックを作成](0002.png)
 
 ボタンを押すとこのように「ウェブフックを編集」というモーダル画面が開きます。
 
@@ -37,7 +37,7 @@ Slackであれば、GitHubのアプリをインストールして連携するだ
 
 ウェブフックURLという部分に長いURLがありますので、これを全部コピーしましょう。
 
-![Discord ウェブフックを編集](/assets/article/tips/discord-github/0003.png)
+![Discord ウェブフックを編集](0003.png)
 
 
 ## GitHubでWebhookの設定をしよう
@@ -45,11 +45,11 @@ Slackであれば、GitHubのアプリをインストールして連携するだ
 
 通知をしたいリポジトリを開いて、Settings の 左側のメニューからWebhooksを選択してください。
 
-![GitHub Webhooks](/assets/article/tips/discord-github/0004.png)
+![GitHub Webhooks](0004.png)
 
 開いたら「Add webhook」というボタンがあるので、そこをクリックしてください。
 
-![GitHub Add webhook](/assets/article/tips/discord-github/0005.png)
+![GitHub Add webhook](0005.png)
 
 すると、Webhookの設定画面が開きますので、ここに情報を入力していきます。
 
@@ -66,13 +66,13 @@ Slackであれば、GitHubのアプリをインストールして連携するだ
 
 Push された時のみ通知する場合は Just the push event. を、全部の通知を送信する場合はSend me everything. を、通知するものをひとつひとつ任意で設定したい場合は Let me select individual events. を選択してください。
 
-![GitHub Add webhook](/assets/article/tips/discord-github/0006.png)
+![GitHub Add webhook](0006.png)
 
 最後に「Add webhook」のボタンを押したら設定は完了です。
 
 ## コミットして確認しよう
 最後にコミット&Pushを行ってDiscordへこのような通知がきたら成功です。
 
-![Discord webhook message](/assets/article/tips/discord-github/0007.png)
+![Discord webhook message](0007.png)
 
 今回の記事は以上になります、最後までお読み頂きありがとうございました。
