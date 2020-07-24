@@ -920,3 +920,15 @@ form {
 .share-hatena {
   background: #00A4DE;
 }
+@media screen and (max-width:500px) {
+  .share-buttons {
+    flex-wrap: wrap;
+    a {
+      padding: 12px 24px;
+      margin: 4px 0;
+      &:not(:last-child) {
+        margin-right: 0px;
+      }
+    }
+  }
+}
