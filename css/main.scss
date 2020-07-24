@@ -792,11 +792,6 @@ form {
   max-width: 900px;
   margin: auto;
   padding: 12px 24px;
-  img {
-    max-width: 100%;
-    margin: 1rem auto;
-    display: block;
-  }
 }
 .post-content {
   background: #fff;
@@ -841,6 +836,11 @@ form {
   }
   a {
     word-wrap: break-word;
+  }
+  img {
+    max-width: 100%;
+    margin: 1rem auto;
+    display: block;
   }
 }
 .post-date {
@@ -945,5 +945,21 @@ form {
         margin-right: 0px;
       }
     }
+  }
+}
+
+.recent-articles {
+  h2 {
+    text-align: center;
+    &:before {
+      content: '\f02d';
+      font-family: 'Font Awesome 5 Free';
+      color: $main-color;
+      opacity: .8;
+      margin-right: 8px;
+    }
+  }
+  .article-list-title {
+    font-size: 1em;
   }
 }
