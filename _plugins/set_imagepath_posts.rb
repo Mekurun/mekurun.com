@@ -1,6 +1,6 @@
 Jekyll::Hooks.register [:pages, :documents], :pre_render do |doc|
   out = doc.content
-  articles = %w(tips projects)
+  articles = %w(tips projects news)
   category = doc.data['category']
   if articles.include?(category)
     path = doc.data['slug']
