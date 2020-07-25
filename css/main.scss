@@ -419,6 +419,7 @@ footer {
   .horizontal-list {
     overflow-x: auto;
     flex-wrap: nowrap;
+    margin: 0 -20px;
     &::-webkit-scrollbar {
       height: 8px;
     }
@@ -426,16 +427,22 @@ footer {
       background: #34a2df88;
       border-radius: 4px;
     }
+    &:after {
+      content:'';
+      display: block;
+      min-width: 14px;
+      width: 14px;
+    }
     li {
       width: 80%;
       min-width: 80%;
-      margin-bottom: 12px;
-      &:not(:last-child) {
-        margin-right: 12px;
+      margin: 0 6px 12px;
+      &:first-child {
+        margin-left: 20px;
       }
     }
     img {
-      height: calc((100vw - 40px - 28px) * 0.525 * 0.79);
+      height: calc((100vw - 28px) * 0.525 * 0.79);
     }
   }
 }
