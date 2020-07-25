@@ -386,9 +386,9 @@ footer {
   padding: 0;
   li {
     list-style: none;
-    width: calc(33% - 24px);
+    width: calc(33% - 6px);
     background-color: #fff;
-    margin: 12px;
+    margin: 12px 0;
     @include card;
     @include card-hover;
     a {
@@ -403,7 +403,7 @@ footer {
   }
   img {
     width: 100%; // 80vw * 0.33 - 12*2*2px = 26.4vw - 48px
-    height: calc(13.86vw - 25.2px); // width * (630/1200)0.525
+    height: calc(13.86vw - 17.2px); // width * (630/1200)0.525
     border-radius: 5px;
     object-fit: cover;
     @media screen and (min-width:1500px) {
@@ -418,11 +418,16 @@ footer {
   }
 }
 
+@media screen and (min-width: 700px) {
+  .course-list:not(.news-list) li:not(:nth-child(3n)) {
+    margin-right: 12px;
+  }
+}
 @media screen and (max-width: 700px) {
   .horizontal-list {
     overflow-x: auto;
     flex-wrap: nowrap;
-    margin: 0 -20px;
+    margin: 10px -20px;
     &::-webkit-scrollbar {
       height: 8px;
     }
@@ -487,10 +492,7 @@ footer {
 .news-list {
   li {
     width: 100%;
-    margin: 6px 12px;
-    @media screen and (max-width: 700px) {
-      margin: 6px 0;
-    }
+    margin: 6px 0;
     a {
       display: block;
     }
@@ -548,12 +550,17 @@ footer {
   @include card-hover;
   color: $text-color;
   display: flex;
-  margin: 12px;
+  margin: 12px 0;
   padding: 12px;
   text-decoration: none;
   width: 50%;
   @media screen and (max-width:880px) {
     width: 100%;
+  }
+  @media screen and (min-width: 700px) {
+    &:not(:nth-child(2n)) {
+      margin-right: 12px;
+    }
   }
 }
 .list-category-link {
