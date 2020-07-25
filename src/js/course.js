@@ -123,7 +123,7 @@ class SlideController {
 
     const url = new URL(location);
     url.searchParams.set("page", this.currentPage);
-    history.pushState(null, null, url.toString());
+    history.replaceState(null, null, url.toString());
   }
 
   /**
