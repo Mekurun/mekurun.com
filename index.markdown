@@ -35,7 +35,7 @@ title: title
   </div>
 
   <h2 id="newcourse">{% t top.recent %}</h2>
-  <ul class="top-course-list course-list">
+  <ul class="top-course-list course-list horizontal-list">
   {% assign courses = site.courses | where_exp:"c", "c.parent == nil" %}
   {% assign courses = courses | reverse %}
   {% for course in courses limit:6 %}
@@ -72,7 +72,7 @@ title: title
 -->
 
   <h2 id="tips" class="post-list-heading">{% t tips.title %}<p class="post-list-more"><a href="/tips">{% t top.more %}</a></p></h2>
-  {% include articles.html category = 'tips' limit = 4 %}
+  {% include articles.html category = 'tips' limit = 3 %}
 
   <h2 id="news" class="post-list-heading">{% t news.title %}<p class="post-list-more"><a href="/news">{% t top.more %}</a></p></h2>
   {% include articles.html category = 'news' limit = 4 %}

@@ -7,6 +7,7 @@ $lightgray: #d9e6f0;
 $bg-gray: #f5f9fc;
 $header-height: 60px;
 $main-dark: #2d6bac;
+$red: #fe9161;
 body {
   margin: 0;
   color: $text-color;
@@ -212,11 +213,13 @@ footer {
   display: flex;
 }
 .footer-list {
-  padding: 0;
-  list-style: none;
   width: 20%;
-  line-height: 1.8em;
   margin: 12px;
+  line-height: 1.8em;
+  ul {
+    padding: 0;
+    list-style: none;
+  }
   h2 {
     margin: 0 0 0.5em;
     font-size: 1em;
@@ -383,9 +386,9 @@ footer {
   padding: 0;
   li {
     list-style: none;
-    width: calc(33% - 24px);
+    width: calc(33% - 6px);
     background-color: #fff;
-    margin: 12px;
+    margin: 12px 0;
     @include card;
     @include card-hover;
     a {
@@ -400,7 +403,7 @@ footer {
   }
   img {
     width: 100%; // 80vw * 0.33 - 12*2*2px = 26.4vw - 48px
-    height: calc(13.86vw - 25.2px); // width * (630/1200)0.525
+    height: calc(13.86vw - 17.2px); // width * (630/1200)0.525
     border-radius: 5px;
     object-fit: cover;
     @media screen and (min-width:1500px) {
@@ -411,6 +414,43 @@ footer {
     }
     @media screen and (max-width: 700px) {
       height: calc((100vw - 40px - 28px) * 0.525);
+    }
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .course-list:not(.news-list) li:not(:nth-child(3n)) {
+    margin-right: 12px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .horizontal-list {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    margin: 10px -20px;
+    &::-webkit-scrollbar {
+      height: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #34a2df88;
+      border-radius: 4px;
+    }
+    &:after {
+      content:'';
+      display: block;
+      min-width: 14px;
+      width: 14px;
+    }
+    li {
+      width: 80%;
+      min-width: 80%;
+      margin: 0 6px 12px;
+      &:first-child {
+        margin-left: 20px;
+      }
+    }
+    img {
+      height: calc((100vw - 28px) * 0.525 * 0.79);
     }
   }
 }
@@ -441,7 +481,7 @@ footer {
 }
 .article-list-title {
   margin: 8px 0;
-  font-size: 1.2em;
+  font-size: 1rem;
   font-weight: 500;
 }
 .article-list-date {
@@ -452,10 +492,7 @@ footer {
 .news-list {
   li {
     width: 100%;
-    margin: 6px 12px;
-    @media screen and (max-width: 700px) {
-      margin: 6px 0;
-    }
+    margin: 6px 0;
     a {
       display: block;
     }
@@ -477,6 +514,9 @@ footer {
 }
 .bg-Qiita {
   background: #55c500;
+}
+.bg-アップデート {
+  background: $red;
 }
 .main {
   margin: auto 10vw;
@@ -510,12 +550,17 @@ footer {
   @include card-hover;
   color: $text-color;
   display: flex;
-  margin: 12px;
+  margin: 12px 0;
   padding: 12px;
   text-decoration: none;
   width: 50%;
   @media screen and (max-width:880px) {
     width: 100%;
+  }
+  @media screen and (min-width: 700px) {
+    &:not(:nth-child(2n)) {
+      margin-right: 12px;
+    }
   }
 }
 .list-category-link {
@@ -639,6 +684,13 @@ footer {
     }
   }
 }
+.slide {
+  display: flex;
+}
+#slideRight, #slideLeft {
+  width: 50%;
+  height: 100%;
+}
 .progress-cover {
   display: flex;
 }
@@ -661,6 +713,7 @@ footer {
   text-align: right;
 }
 .button {
+  font: inherit;
   -webkit-appearance: none;
   border: solid 4px $main-color;
   border-radius: 4px;
@@ -775,11 +828,6 @@ form {
   max-width: 900px;
   margin: auto;
   padding: 12px 24px;
-  img {
-    max-width: 100%;
-    margin: 1rem auto;
-    display: block;
-  }
 }
 .post-content {
   background: #fff;
@@ -824,6 +872,11 @@ form {
   }
   a {
     word-wrap: break-word;
+  }
+  img {
+    max-width: 100%;
+    margin: 1rem auto;
+    display: block;
   }
 }
 .post-date {
@@ -882,6 +935,73 @@ form {
       &:hover {
         opacity: 0.7;
       }
+    }
+  }
+}
+
+.share-buttons {
+  display: flex;
+  justify-content: center;
+  flex-basis:auto;
+  a {
+    margin: 12px 0;
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: .8;
+    border: none;
+    width: 100%;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  i {
+    font-style: normal;
+    font-weight: 900;
+  }
+}
+.share-tw {
+  background: #1DA1F2;
+}
+.share-fb {
+  background: #3B5998;
+}
+.share-hatena {
+  background: #00A4DE;
+}
+@media screen and (max-width:500px) {
+  .share-buttons {
+    flex-wrap: wrap;
+    a {
+      margin: 4px 0;
+      &:not(:last-child) {
+        margin-right: 0px;
+      }
+    }
+  }
+}
+
+.recent-articles {
+  h2 {
+    text-align: center;
+    &:before {
+      content: '\f02d';
+      font-family: 'Font Awesome 5 Free';
+      color: $main-color;
+      opacity: .8;
+      margin-right: 8px;
+    }
+  }
+  .article-list-title {
+    font-size: 1em;
+  }
+  @media screen and (min-width: 700px) {
+    img {
+      max-height: 120px;
+      height: calc(13.86vw - 25.2px);
     }
   }
 }

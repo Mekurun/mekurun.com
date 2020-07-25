@@ -22,6 +22,16 @@ layout: default
     {% endif %}
     {{content}}
   </div>
+  <div class="share-buttons">
+    {% capture shareurl %}{{ site.url | append: page.url }}{% endcapture %}
+    <a href="http://twitter.com/share?url={{ shareurl | url_encode }}&text={{page.title}}&via=mekuruncom&related=mekuruncom&hashtags=mekurun,メクルン" target="_blank" rel="nofollow noopener noreferrer" class="share-tw button" title="記事をツイート"><i class="fab fa-twitter"></i> ツイート</a>
+    <a href="https://www.facebook.com/dialog/share?app_id=640540216785473&display=popup&href={{ shareurl | url_encode }}" target="_blank" rel="nofollow noopener noreferrer" class="share-fb button" title="Facebookで記事をシェア"><i class="fab fa-facebook-f"></i> シェア</a>
+    <a href="https://b.hatena.ne.jp/entry/panel/?url={{ shareurl | url_encode }}&btitle={{page.title}}" target="_blank" rel="nofollow noopener noreferrer" class="share-hatena button" title="このエントリーをはてなブックマークに追加"><i>B!</i> はてブ</a>
+  </div>
+  <div class="recent-articles">
+    <h2>最近投稿された記事</h2>
+    {% include articles.html category = page.category limit = 3 %}
+  </div>
   <a href="/{{page.category}}" class="button" style="display: block;color: #34a2df;">記事一覧に戻る</a>
 </div>
 {% include footer.html %}

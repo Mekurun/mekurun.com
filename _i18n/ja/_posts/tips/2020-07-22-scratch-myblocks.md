@@ -17,21 +17,21 @@ Scratchの「ブロック定義」を使えば、同じようなコードをひ�
 
 ブロック定義で作ったブロックの中身はコードで設定できます。次の画像では、定義ブロックを使って、同じコードを一つのブロックにまとめています。
 
-![画像](/assets/article/tips/scratch-myblocks/image15.png)
+![画像](image15.png)
 
 こうまとめてあると、バグの原因を探しやすくなったり、コードの役割がわかりやすくなります。
 
 ## 定義ブロックをつかってみよう
 たとえば、次の画像のように「上向き矢印か下向き矢印が押されたときに、同じ動きをさせる」というコードを作ったとします。
-![画像](/assets/article/tips/scratch-myblocks/image4.png)
+![画像](image4.png)
 
 この画像をよく見ると、あることに気が付きませんか？
 そうです、下部分のコードはどちらもおなじです…！
-![画像](/assets/article/tips/scratch-myblocks/image11.png)
+![画像](image11.png)
 
 そんなときは「定義ブロック」の出番です。
 定義ブロックを使うと、同じコードをひとつのブロックにまとめることができます。 さっきのコードを定義ブロックを使って作ってみると、こうなります。
-![画像](/assets/article/tips/scratch-myblocks/image12.png)
+![画像](image12.png)
 
 ブロック定義で、「おしゃべりする」というブロックを作って、コードをまとめてみました。コードの一部を変更したいときにも、一箇所を変えるだけで済むので効率的に作れます。
 
@@ -39,54 +39,54 @@ Scratchの「ブロック定義」を使えば、同じようなコードをひ�
 
 ## ブロック定義の使い方
 Scratchのコード画面で、「ブロック定義」カテゴリの「ブロックを作る」をクリックすると、このような画面になります。
-![画像](/assets/article/tips/scratch-myblocks/image16.png)
+![画像](image16.png)
 
 ブロック名を入力して「OK」を押すことで、新しいブロックを作成できます。
 引数は、数や文字を受け取ってコードのなかで使えるものです。後ほど詳しく解説します。
 
 ブロックを作成すると「定義[ブロック名]」という新しいブロックがコードエリアに自動的に配置されます。この定義ブロックの下にコードを接続することで、作成したブロックの中身を設定できます。
-![画像](/assets/article/tips/scratch-myblocks/image6.png)
+![画像](image6.png)
 
 定義ブロックに試しにコードをつなぐと、つぎのようになります。
-![画像](/assets/article/tips/scratch-myblocks/image3.png)
+![画像](image3.png)
 
 この定義したブロックを他のコードに含めて使うには、次の画像のようにブロックパレットの「ブロック定義」の中にならんでいるブロックから取り出して、他のブロックと同じように接続して使えます。
-![画像](/assets/article/tips/scratch-myblocks/image2.png)
+![画像](image2.png)
 
 ### 引数について
 さらに、定義ブロックでは｢引数｣というものを使えます。
 引数とは、プログラムに渡す値のことです。ちょっと難しい単語ばかりになってしまったので、実際に例を見てみましょう。
 
 これはさっき作ったプログラムですね。このプログラムを、「上矢印キーが押されたら『うえにゃ』、下矢印キーが押されたら『したにゃ』」と言うように変えてみましょう。ところが、このままだとどちらも同じ言葉しか言えません。
-![画像](/assets/article/tips/scratch-myblocks/image12.png)
+![画像](image12.png)
 
 そこで、「引数」を作ります。定義ブロックを右クリックして、「編集」をしましょう。
-![画像](/assets/article/tips/scratch-myblocks/image17.png)
+![画像](image17.png)
 
 編集画面になりますね。「引数を追加」をクリックしてみましょう。
-![画像](/assets/article/tips/scratch-myblocks/image8.png)
+![画像](image8.png)
 
 名前を設定します。ここでは「しゃべること」というなまえにしました。
-![画像](/assets/article/tips/scratch-myblocks/image7.png)
+![画像](image7.png)
 
 「OK」を押すと、ブロックに白い穴が追加されました！ここには、数や文字を入れられます。
-![画像](/assets/article/tips/scratch-myblocks/image14.png)
+![画像](image14.png)
 
 穴に数や文字をいれると、定義ブロックの中の丸いブロックからその値を使えます。
 それぞれのブロックに値を設定してみましょう(ここでは、「したにゃ」「うえにゃ」ですね)
-![画像](/assets/article/tips/scratch-myblocks/image10.png)
+![画像](image10.png)
 
 次に、作った引数を定義ブロックの中身で使いましょう。
 次の画像のように「にゃーん」だったところに「(しゃべること)」をドラッグアンドドロップしてみましょう。
-![画像](/assets/article/tips/scratch-myblocks/image13.png)
+![画像](image13.png)
 
 これで実行すると、「うえにゃ」「したにゃ」としゃべるようになりました！
-![画像](/assets/article/tips/scratch-myblocks/image1.png)
+![画像](image1.png)
 
 このように、引数を使うと一部の値を変えられるブロックも作れます。
 
 ## まとめ
 Scratchのカスタムブロックを作れる「ブロック定義」を活用すると、コードを見やすく使いやすくすることができます。皆さんのプロジェクトでもぜひ使ってみてくださいね。
-![画像](/assets/article/tips/scratch-myblocks/image5.png)
+![画像](image5.png)
 
 最後までお読みいただきありがとうございます！

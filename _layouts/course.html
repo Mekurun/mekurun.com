@@ -15,7 +15,10 @@ layout: default
   <a class="button button-export" href="{{ pdfpath }}" target="_blank" rel="noopener">{% t course.export %}</a>
 </div>
 <div id='slides'>
-  <div class="slide"></div>
+  <div class="slide">
+    <div id="slideLeft"></div>
+    <div id="slideRight"></div>
+  </div>
   {% for slide in page.slides %}
     {% assign firstword = slide | split: "/" | first %}
 
