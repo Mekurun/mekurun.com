@@ -7,6 +7,7 @@ $lightgray: #d9e6f0;
 $bg-gray: #f5f9fc;
 $header-height: 60px;
 $main-dark: #2d6bac;
+$red: #fe9161;
 body {
   margin: 0;
   color: $text-color;
@@ -511,6 +512,9 @@ footer {
 }
 .bg-Qiita {
   background: #55c500;
+}
+.bg-アップデート {
+  background: $red;
 }
 .main {
   margin: auto 10vw;
