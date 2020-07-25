@@ -706,6 +706,7 @@ footer {
   text-align: right;
 }
 .button {
+  font: inherit;
   -webkit-appearance: none;
   border: solid 4px $main-color;
   border-radius: 4px;
