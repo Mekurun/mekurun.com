@@ -673,6 +673,13 @@ footer {
     }
   }
 }
+.slide {
+  display: flex;
+}
+#slideRight, #slideLeft {
+  width: 50%;
+  height: 100%;
+}
 .progress-cover {
   display: flex;
 }

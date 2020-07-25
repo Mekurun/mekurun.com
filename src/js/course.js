@@ -5,7 +5,7 @@ class SlideController {
   /**
    * SliderController constructor.
    *
-   * @param {{ progressBarNum: HTMLDivElement, progressBar: HTMLDivElement, lastPage: number, currentPage?: number, backButton: HTMLButtonElement, nextButton: HTMLButtonElement, slide: HTMLDivElement }} options
+   * @param {{ progressBarNum: HTMLDivElement, progressBar: HTMLDivElement, lastPage: number, currentPage?: number, backButton: HTMLButtonElement, nextButton: HTMLButtonElement, slideLeft: HTMLDivElement, slideRight: HTMLDivElement, slide: HTMLDivElement }} options
    */
   constructor(options) {
     // console.log(options);
@@ -42,6 +42,16 @@ class SlideController {
     this.nextButton = options.nextButton;
 
     /**
+     * スライドの左側
+     */
+    this.slideLeft = options.slideLeft;
+
+    /**
+     * スライドの右側
+     */
+    this.slideRight = options.slideRight;
+
+    /**
      * スライド。
      */
     this.slide = options.slide;
@@ -71,6 +81,9 @@ class SlideController {
     this.resetPageIfInvalid();
     this.updateUI();
     this.showSlide(this.currentPage);
+
+    this.slideLeft.addEventListener("click", () => this.flipSlide(-1));
+    this.slideRight.addEventListener("click", () => this.flipSlide(1));
 
     this.backButton.addEventListener("click", () => this.flipSlide(-1));
     this.nextButton.addEventListener("click", () => this.flipSlide(1));
@@ -212,6 +225,8 @@ window.bootCourseSlideController = (options) => {
       {
         nextButton: document.getElementById("buttonNext"),
         backButton: document.getElementById("buttonBack"),
+        slideRight: document.getElementById("slideRight"),
+        slideLeft: document.getElementById("slideLeft"),
         progressBarNum: document.getElementById("progress-number"),
         progressBar: document.getElementById("progress-container"),
         slide: document.getElementsByClassName("slide")[0],
