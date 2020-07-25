@@ -212,11 +212,13 @@ footer {
   display: flex;
 }
 .footer-list {
-  padding: 0;
-  list-style: none;
   width: 20%;
-  line-height: 1.8em;
   margin: 12px;
+  line-height: 1.8em;
+  ul {
+    padding: 0;
+    list-style: none;
+  }
   h2 {
     margin: 0 0 0.5em;
     font-size: 1em;
