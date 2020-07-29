@@ -4,7 +4,7 @@ description: メクルン (Mekurun) はスライドで学べる無料のプロ�
 404: 404 Page Not Found
 course:
   export: PDFで見る
-  subcourses: やってみよう
+  subcourse: サブコース
   next: すすむ
   prev: もどる
 difficulty:
