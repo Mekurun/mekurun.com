@@ -3,6 +3,8 @@ layout: default
 ---
 <section class="slide-page page-course" id="slidesCover">
 {{ content }}
+{% assign subcourses = site.courses | where_exp:"c",
+"c.parent == page.course-name" %}
 
 <a href="{{ site.baseurl }}/{{page.category}}#{{page.difficulty}}" class="label">{% t category.{{page.category}}.title %} <i class="fas fa-angle-right"></i> {% t difficulty.{{page.difficulty}} %}</a>
 <div class="slides-top">
@@ -12,7 +14,10 @@ layout: default
   <h2>{{page.title}}</h2>
   </div>
   {% capture pdfpath %}{% if page.parent %}{{site.url}}/assets/course/{{ page.category }}/{{ page.parent }}{% else %}{{site.url}}/assets/course/{{ page.category }}{% endif %}/{{ page.course-name }}/slide.pdf{% endcapture %}
-  <a class="button button-export" href="{{ pdfpath }}" target="_blank" rel="noopener">{% t course.export %}</a>
+  <a class="button button-export btn-white" href="{{ pdfpath }}" target="_blank" rel="noopener" {% if subcourses.size > 0 %}style="margin-right: 6px;" {%endif%} ><i class="fas fa-file-alt"></i> {% t course.export %}</a>
+  {% if subcourses.size > 0 %}
+  <a class="button button-export btn-blue" href="#subcourse"><i class="fas fa-tools"></i> {% t course.subcourse %}</a>
+  {% endif %}
 </div>
 <div id='slides'>
   <div class="slide">
@@ -38,15 +43,13 @@ layout: default
   <span id="progress-number"></span>
 </div>
 <div class="slide-buttons">
-  <input class="button button-back" type="button" value="{% t course.prev %}" id="buttonBack" disabled/>
-  <input class="button button-next" type="button" value="{% t course.next %}" id="buttonNext"/>
+  <input class="button button-back btn-white" type="button" value="{% t course.prev %}" id="buttonBack" disabled/>
+  <input class="button button-next btn-blue" type="button" value="{% t course.next %}" id="buttonNext"/>
 </div>
 </section>
 <section class="slide-page">
-  {% assign subcourses = site.courses | where_exp:"c",
-  "c.parent == page.course-name" %}
   {% if subcourses.size > 0 %}
-  <h2>{% t course.subcourses %}</h2>
+  <a href="#subcourse" style="text-decoration:none;"><h2 id="subcourse">{% t course.subcourses %} <i class="fas fa-angle-down"></i></h2></a>
   <ul class="course-list">
   {% for course in subcourses %}
   {% assign course_lang = course.path | slice: 9, 2 %}
