@@ -5,7 +5,6 @@ description: メクルン (Mekurun) はスライドで学べる無料のプロ�
 course:
   export: PDFで見る
   subcourse: サブコース
-  subcourses: やってみよう
   next: すすむ
   prev: もどる
 difficulty:
