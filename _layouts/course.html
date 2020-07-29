@@ -51,7 +51,7 @@ layout: default
 </section>
 <section class="slide-page">
   {% if subcourses.size > 0 %}
-  <a href="#subcourse" style="text-decoration:none;"><h2 id="subcourse">{% t course.subcourses %} <i class="fas fa-angle-down"></i></h2></a>
+  <a href="#subcourse" style="text-decoration:none;"><h2 id="subcourse">{% t course.subcourse %} <i class="fas fa-angle-down"></i></h2></a>
   <ul class="course-list">
   {% for course in subcourses %}
   {% assign course_lang = course.path | slice: 9, 2 %}
