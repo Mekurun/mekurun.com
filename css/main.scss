@@ -407,14 +407,27 @@ footer {
     border-radius: 5px;
     object-fit: cover;
     @media screen and (min-width:1500px) {
-      height: 189px; // 1200px * 0.33 - 36px * (630/1200 = 0.525)
+      height: 189px; // (1200px * 0.33 - 36px) * (630/1200 = 0.525)
     }
     @media screen and (max-width: 800px) {
       height: calc(((100vw - 40px) * 0.33 - 32px) * 0.525);
     }
     @media screen and (max-width: 700px) {
-      height: calc((100vw - 40px - 28px) * 0.525);
+      height: calc((100vw - 40px - 24px - 4px) * 0.525);
     }
+  }
+}
+
+.slide-page .course-list img {
+  height: calc(13.86vw - 17.2px);
+  @media screen and (min-width:800px) {
+    height: 119.7px; // (800px * 0.33 - 36px) * (630/1200 = 0.525)
+  }
+  @media screen and (max-width: 800px) {
+    height: calc(((100vw - 48px) * 0.33 - 32px) * 0.525);
+  }
+  @media screen and (max-width: 700px) {
+    height: calc((100vw - 48px - 24px - 4px) * 0.525);
   }
 }
 
