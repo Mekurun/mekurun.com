@@ -4,7 +4,7 @@ description: Mekurun is a service for learning visual-programming. We providing 
 
 course:
   export: View PDF
-  subcourses: Next Step
+  subcourse: Next Step
   next: Next
   prev: Back
 difficulty:

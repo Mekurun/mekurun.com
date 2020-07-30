@@ -13,9 +13,9 @@ body {
   color: $text-color;
   background-color: $bg-gray;
   font: 100%/1.7 "Hiragino Kaku Gothic Pro", "Meiryo UI", Meiryo, "MS PGothic", sans-serif;
-  * {
-    box-sizing: border-box;
-  }
+}
+* {
+  box-sizing: border-box;
 }
 h2 {
   color: $text-color;
@@ -407,14 +407,27 @@ footer {
     border-radius: 5px;
     object-fit: cover;
     @media screen and (min-width:1500px) {
-      height: 189px; // 1200px * 0.33 - 36px * (630/1200 = 0.525)
+      height: 189px; // (1200px * 0.33 - 36px) * (630/1200 = 0.525)
     }
     @media screen and (max-width: 800px) {
       height: calc(((100vw - 40px) * 0.33 - 32px) * 0.525);
     }
     @media screen and (max-width: 700px) {
-      height: calc((100vw - 40px - 28px) * 0.525);
+      height: calc((100vw - 40px - 24px - 4px) * 0.525);
     }
+  }
+}
+
+.slide-page .course-list img {
+  height: calc(13.86vw - 17.2px);
+  @media screen and (min-width:800px) {
+    height: 119.7px; // (800px * 0.33 - 36px) * (630/1200 = 0.525)
+  }
+  @media screen and (max-width: 800px) {
+    height: calc(((100vw - 48px) * 0.33 - 32px) * 0.525);
+  }
+  @media screen and (max-width: 700px) {
+    height: calc((100vw - 48px - 24px - 4px) * 0.525);
   }
 }
 
@@ -743,18 +756,20 @@ footer {
   }
   .button-back {
     margin-right: 6px;
-    background-color: #fff;
-    color: $main-color;
-  }
-  .button-next {
-    background-color: $main-color;
-    color: #fff;
   }
 }
 .button-export {
   display: inline-block;
   color: $main-color;
-  width: 160px;
+  width: 200px;
+}
+.btn-white {
+  background-color: #fff;
+  color: $main-color;
+}
+.btn-blue {
+  background-color: $main-color;
+  color: #fff;
 }
 .label {
   background-color: #eee;
