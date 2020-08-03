@@ -1,7 +1,7 @@
 ---
 layout: page
 title: termOfUse.title
-permalink: term-of-use
+permalink: /term-of-use/
 description: termOfUse.description
 ---
 

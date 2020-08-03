@@ -1,7 +1,7 @@
 ---
 layout: page
 title: privacy.title
-permalink: privacy
+permalink: /privacy/
 description: privacy.description
 ---
 

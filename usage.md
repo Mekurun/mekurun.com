@@ -1,7 +1,7 @@
 ---
 layout: page
 title: usage.title
-permalink: usage
+permalink: /usage/
 description: usage.description
 ---
 <div style="max-width: 800px;margin: auto;">

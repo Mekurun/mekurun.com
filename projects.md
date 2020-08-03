@@ -1,7 +1,7 @@
 ---
 layout: page
 title: projects.title
-permalink: projects
+permalink: /projects/
 description: projects.description
 ---
 {% translate_file projects.md %}
