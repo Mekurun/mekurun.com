@@ -6,12 +6,6 @@
 {% endif %}
   <head>
     <meta charset="utf-8">
-    {% if jekyll.environment == "production" %}
-    <link rel="preconnect dns-prefetch" href="https://res.cloudinary.com/">
-    <link rel="preconnect dns-prefetch" href="https://www.google-analytics.com/">
-    <link rel="preconnect dns-prefetch" href="https://www.googletagmanager.com/">
-    {% else  %}
-    {% endif %}
 
     {% if jekyll.environment == "development" %}
       <meta name="robots" content="noindex">
@@ -39,7 +33,6 @@
       ", ""%}
     <title>{{ title }}</title>
 
-
     {% if jekyll.environment == "production" %}
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -50,8 +43,6 @@
     <!-- End Google Tag Manager -->
     {% else  %}
     {% endif %}
-
-    <!-- <link rel="preload" href="/css/main.css" as="style"> -->
 
     {% if page.url == "/" %}
       <meta property="og:type" content="website">
