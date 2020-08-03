@@ -1,7 +1,7 @@
 ---
 layout: page
 title: tips.title
-permalink: tips
+permalink: /tips/
 description: tips.description
 copy: tips.copy
 ---

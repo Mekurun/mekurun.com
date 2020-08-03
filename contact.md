@@ -1,7 +1,7 @@
 ---
 layout: page
 title: contact.title
-permalink: contact
+permalink: /contact/
 description: contact.description
 ---
 

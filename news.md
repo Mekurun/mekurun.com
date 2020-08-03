@@ -1,7 +1,7 @@
 ---
 layout: page
 title: news.title
-permalink: news
+permalink: /news/
 description: news.description
 copy: news.copy
 ---

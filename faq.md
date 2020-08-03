@@ -1,7 +1,7 @@
 ---
 layout: page
 title: faq.title
-permalink: faq
+permalink: /faq/
 description: faq.description
 ---
 
