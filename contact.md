@@ -21,6 +21,7 @@ description: contact.description
   <p>
     <label>{% t contact.mailTitle %}<i class="required">*</i></label>
     <input name="件名" type="text" data-formrun-required>
+    <div data-formrun-show-if-error="件名">件名を入力してください</div>
   </p>
 
   <p>
