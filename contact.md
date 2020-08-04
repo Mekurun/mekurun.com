@@ -5,21 +5,35 @@ permalink: /contact/
 description: contact.description
 ---
 
-<form name="contact" method="POST" data-netlify="true">
+<!-- class, action, methodを変更しないでください -->
+<form class="formrun" action="https://form.run/api/v1/r/2rz6tr2zx0b73fmm12myjr0l" method="post">
+  <!-- ↓自由に要素を追加・編集することができます -->
   <p>
-    <label>{% t contact.name %}<i class="required">*</i><input type="text" name="name" required /></label>   
+    <label>{% t contact.name %}<i class="required">*</i></label>
+    <input name="お名前" type="text" data-formrun-required>
   </p>
+
   <p>
-    <label>{% t contact.email %}<i class="required">*</i><input type="email" name="email" required /></label>
+    <label>{% t contact.email %}<i class="required">*</i></label>
+    <input name="メールアドレス" type="text" data-formrun-type="email" data-formrun-required>
   </p>
+
   <p>
-    <label>{% t contact.mailTitle %}<i class="required">*</i><input type="text" name="subject" required /></label>   
+    <label>{% t contact.mailTitle %}<i class="required">*</i></label>
+    <input name="件名" type="text" data-formrun-required>
   </p>
+
   <p>
-    <label>{% t contact.mailContent %}<i class="required">*</i><textarea name="message" required></textarea></label>
+    <label>{% t contact.mailContent %}<i class="required">*</i></label>
+    <textarea name="お問い合わせ" data-formrun-required></textarea>
   </p>
-  <div data-netlify-recaptcha="true"></div>
-  <p>
-    <button type="submit">{% t contact.send %}</button>
+
+  <!-- ボット投稿をブロックするためのタグ -->
+  <p class="_formrun_gotcha">
+    <style media="screen">._formrun_gotcha {position:absolute!important;height:1px;width:1px;overflow:hidden;}</style>
+    <label for="_formrun_gotcha">If you are a human, ignore this field</label>
+    <input type="text" name="_formrun_gotcha" id="_formrun_gotcha" tabindex="-1">
   </p>
+
+  <button type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中...">送信</button>
 </form>
