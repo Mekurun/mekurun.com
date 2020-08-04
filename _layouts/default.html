@@ -11,7 +11,6 @@
     <link rel="preconnect dns-prefetch" href="https://res.cloudinary.com/">
     <link rel="preconnect dns-prefetch" href="https://www.google-analytics.com/">
     <link rel="preconnect dns-prefetch" href="https://www.googletagmanager.com/">
-    {% else  %}
     {% endif %}
 
     {% if jekyll.environment == "development" %}
@@ -81,6 +80,9 @@
 
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+    {% if page.url == "/contact/" %}
+    <script async src="https://sdk.form.run/js/v2/formrun.js"></script>
+    {% endif %}
 
     <!-- Faviconの設定 -->
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/favicon/apple-touch-icon-57x57.png">
