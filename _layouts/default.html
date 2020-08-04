@@ -7,6 +7,13 @@
   <head>
     <meta charset="utf-8">
 
+    {% if jekyll.environment == "production" %}
+    <link rel="preconnect dns-prefetch" href="https://res.cloudinary.com/">
+    <link rel="preconnect dns-prefetch" href="https://www.google-analytics.com/">
+    <link rel="preconnect dns-prefetch" href="https://www.googletagmanager.com/">
+    {% else  %}
+    {% endif %}
+
     {% if jekyll.environment == "development" %}
       <meta name="robots" content="noindex">
     {% elsif jekyll.environment == "production" %}
