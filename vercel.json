@@ -1,7 +1,7 @@
 {
   "version": 2,
   "public": true,
-  "cleanUrls": true,
+  "cleanUrls": false,
   "trailingSlash": true,
   "github": {
     "silent": true
