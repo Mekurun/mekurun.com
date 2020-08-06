@@ -11,7 +11,7 @@ form {
   padding: 30px 60px;
   @include card;
   @media screen and (max-width:800px) {
-    margin: 24px 0;
+    margin: 24px auto;
     padding: 20px 12px;
   }
   input {
