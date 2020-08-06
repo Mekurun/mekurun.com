@@ -3,7 +3,7 @@ layout: default
 title: title
 ---
 {% include header.html %}
-<div class="top" style="height: auto;">
+<div class="top">
   <div class="top-text">
     <h1 class="top-copy">{% t top.copy %}</h1>
     <p>{% t top.caption %}</p>
@@ -35,7 +35,7 @@ title: title
   </div>
   <div>
     <h2 id="newcourse">{% t top.recent %}</h2>
-    <ul class="top-course-list course-list horizontal-list">
+    <ul class="top-course-list course-list">
     {% assign courses = site.courses | where_exp:"c", "c.parent == nil" %}
     {% assign courses = courses | reverse %}
     {% for course in courses limit:6 %}
