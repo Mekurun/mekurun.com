@@ -77,8 +77,13 @@
     <meta name="theme-color" content="#34a2df">
 
     <link rel="manifest" href="/manifest.json">
-
+    {% if page.layout == "course" %}
+    <link rel="stylesheet" type="text/css" href="/css/course.css">
+    {% elsif page.layout == "post" %}
+    <link rel="stylesheet" type="text/css" href="/css/post.css">
+    {% else %}
     <link rel="stylesheet" type="text/css" href="/css/main.css">
+    {% endif %}
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
     {% if page.url == "/contact/" %}
     <script async src="https://sdk.form.run/js/v2/formrun.js"></script>
