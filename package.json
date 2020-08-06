@@ -23,5 +23,9 @@
     "purgecss-webpack-plugin": "^2.3.0",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.3"
   }
 }
