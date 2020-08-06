@@ -3,7 +3,7 @@ layout: default
 title: title
 ---
 {% include header.html %}
-<div class="top">
+<div class="top" style="height: auto;">
   <div class="top-text">
     <h1 class="top-copy">{% t top.copy %}</h1>
     <p>{% t top.caption %}</p>
