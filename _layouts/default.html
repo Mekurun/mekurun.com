@@ -84,16 +84,13 @@
     <link rel="stylesheet" type="text/css" href="/css/post.css">
     {% elsif page.url == "/contact/" %}
     <link rel="stylesheet" type="text/css" href="/css/form.css">
+    <script src="https://sdk.form.run/js/v2/formrun.js"></script>
     {% else %}
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     {% endif %}
 
     <script src="/assets/js/main.js" async></script>
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
-
-    {% if page.url == "/contact/" %}
-    <script src="https://sdk.form.run/js/v2/formrun.js"></script>
-    {% endif %}
 
     {% if page.layout == "course" %}
     <script src="https://polyfill.io/v3/polyfill.min.js?features=URLSearchParams%2CObject.assign"></script>
