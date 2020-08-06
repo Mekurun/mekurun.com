@@ -529,7 +529,8 @@ footer {
     margin: auto auto;
   }
   @media screen and (max-width:800px) {
-    margin: auto 20px;
+    padding: 0 20px;
+    margin: auto 0;
   }
 }
 .list-category {
