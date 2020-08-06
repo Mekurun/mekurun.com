@@ -7,22 +7,22 @@ description: contact.description
 <form class="formrun" action="https://form.run/api/v1/r/2rz6tr2zx0b73fmm12myjr0l" method="post">
   <p>
     <label>{% t contact.name %}<i class="required">*</i></label>
-    <input name="お名前" type="text" data-formrun-required required>
+    <input name="お名前" type="text" data-formrun-required>
   </p>
 
   <p>
     <label>{% t contact.email %}<i class="required">*</i></label>
-    <input name="メールアドレス" type="email" data-formrun-type="email" data-formrun-required required>
+    <input name="メールアドレス" type="email" data-formrun-type="email" data-formrun-required>
   </p>
 
   <p>
     <label>{% t contact.mailTitle %}<i class="required">*</i></label>
-    <input name="件名" type="text" data-formrun-required required>
+    <input name="件名" type="text" data-formrun-required>
   </p>
 
   <p>
     <label>{% t contact.mailContent %}<i class="required">*</i></label>
-    <textarea name="お問い合わせ" type="text" data-formrun-required required></textarea>
+    <textarea name="お問い合わせ" type="text" data-formrun-required></textarea>
   </p>
 
   <!-- ボット投稿をブロックするためのタグ -->
