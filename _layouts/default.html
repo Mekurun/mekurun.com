@@ -65,8 +65,11 @@
     {% capture description %}{% if page.description %}{% if page.layout == 'category' or page.layout == 'page' %}{% t page.description %}{% else %}{{ page.description }}{% endif %}{% else %}{% t description %}{% endif %}{% endcapture %}
     <meta name="description" content="{{ description }}">
     <meta property="og:description" content="{{ description }}">
-    <meta name="twitter:title" content="">
-    <meta name="twitter:description" content="">
+
+    {% capture description_short %}{% if page.description %}{% if page.layout == 'category' or page.layout == 'page' %}{% t page.description %}{% else %}{{ page.description }}{% endif %}{% else %}{% t description_short %}{% endif %}{% endcapture %}
+    <meta content="メクルン | 子ども向けプログラミング学習サイト" name="twitter:title">
+    <meta content="{{ description_short }}" name="twitter:description">
+
     <meta name="twitter:card" content="summary_large_image">
     <meta name="note:card" content="summary_large_image">
     <meta property="fb:app_id" content="260081528424477">
