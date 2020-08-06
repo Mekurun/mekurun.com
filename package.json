@@ -15,6 +15,7 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-loader": "^4.0.2",
     "eslint-plugin-prettier": "^3.1.4",
+    "html-critical-webpack-plugin": "^2.1.0",
     "html-webpack-plugin": "^4.3.0",
     "prettier": "^2.0.5",
     "webpack": "^4.43.0",
