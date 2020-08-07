@@ -67,8 +67,8 @@
     <meta property="og:description" content="{{ description }}">
 
     {% capture description_short %}{% if page.description %}{% if page.layout == 'category' or page.layout == 'page' %}{% t page.description %}{% else %}{{ page.description }}{% endif %}{% else %}{% t description_short %}{% endif %}{% endcapture %}
-    <meta content="{% t title_short %}" name="twitter:title">
-    <meta content="{{ description_short }}" name="twitter:description">
+    <meta name="twitter:title" content="{% t title_short %}">
+    <meta name="twitter:description" content="{{ description_short }}">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="note:card" content="summary_large_image">
