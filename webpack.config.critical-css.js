@@ -30,8 +30,8 @@ module.exports = {
       src: "index.html",
       dest: "index.html",
       inline: true,
-      width: 1920,
-      height: 1080,
+      width: 375,
+      height: 667,
       penthouse: {
         blockJSRequests: false,
       },
