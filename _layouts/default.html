@@ -67,7 +67,7 @@
     <meta property="og:description" content="{{ description }}">
 
     {% capture description_short %}{% if page.description %}{% if page.layout == 'category' or page.layout == 'page' %}{% t page.description %}{% else %}{{ page.description }}{% endif %}{% else %}{% t description_short %}{% endif %}{% endcapture %}
-    <meta content="メクルン | 子ども向けプログラミング学習サイト" name="twitter:title">
+    <meta content="{% t title_short %}" name="twitter:title">
     <meta content="{{ description_short }}" name="twitter:description">
 
     <meta name="twitter:card" content="summary_large_image">
