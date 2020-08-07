@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Google Teachable MachineでAIを体験してみよう"
-date: 2020-08-06 12:00:00 +0900
+date: 2020-08-07 12:00:00 +0900
 category: tips
 thumbnail: /teachablemachine/thumbnail.png
 author: nztm
