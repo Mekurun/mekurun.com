@@ -1,8 +1,9 @@
 {
   "scripts": {
     "dev": "npx webpack --mode development & bundle exec jekyll serve",
-    "build:development": "yarn && npx webpack --mode development && bundle exec jekyll build --config _config.yml,_config_development.yml",
-    "build:production": "yarn && npx webpack --mode production && JEKYLL_ENV=production bundle exec jekyll build"
+    "css-optimize": "npx webpack --config webpack.config.critical-css.js",
+    "build:development": "yarn && npx webpack --mode development && bundle exec jekyll build --config _config.yml,_config_development.yml && npx webpack --config webpack.config.critical-css.js",
+    "build:production": "yarn && npx webpack --mode production && JEKYLL_ENV=production bundle exec jekyll build && npx webpack --config webpack.config.critical-css.js"
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",
