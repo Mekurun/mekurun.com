@@ -34,7 +34,7 @@ Google Teachable Machineのモデル生成には、機械学習の種類のひ�
 - ウェブカメラ
 - 判別に使いたい画像・もの
 
-![Google Teachable Machineのサンプル](teachablemachine.gif)
+![Google Teachable Machineのサンプル](googleteachablemachine.gif)
 
 ### Teachable Machineを開いて準備しよう
 
@@ -96,7 +96,7 @@ AIで判別してみたいものを用意したら、学習に使用するデー
 データの撮影に使用したものをカメラに映すとAIの認識結果が「出力」にパーセントで表示されます。  
 さきほど撮影したものをウェブカメラに映してみましょう、AIがちゃんと認識していたら成功です！
 
-![Google Teachable Machineのサンプル](teachablemachine.gif)
+![Google Teachable Machineのサンプル](googleteachablemachine.gif)
 
 ##まとめ
 この記事では、Google Teachable Machineを使って画像認識を行う方法を紹介しました。  
