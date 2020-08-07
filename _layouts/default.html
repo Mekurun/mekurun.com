@@ -65,6 +65,11 @@
     {% capture description %}{% if page.description %}{% if page.layout == 'category' or page.layout == 'page' %}{% t page.description %}{% else %}{{ page.description }}{% endif %}{% else %}{% t description %}{% endif %}{% endcapture %}
     <meta name="description" content="{{ description }}">
     <meta property="og:description" content="{{ description }}">
+
+    {% capture description_short %}{% if page.description %}{% if page.layout == 'category' or page.layout == 'page' %}{% t page.description %}{% else %}{{ page.description }}{% endif %}{% else %}{% t description_short %}{% endif %}{% endcapture %}
+    <meta name="twitter:title" content="{% t title_short %}">
+    <meta name="twitter:description" content="{{ description_short }}">
+
     <meta name="twitter:card" content="summary_large_image">
     <meta name="note:card" content="summary_large_image">
     <meta property="fb:app_id" content="260081528424477">
@@ -78,10 +83,22 @@
 
     <link rel="manifest" href="/manifest.json">
 
+    {% if page.layout == "course" %}
+    <link rel="stylesheet" type="text/css" href="/css/course.css">
+    {% elsif page.layout == "post" %}
+    <link rel="stylesheet" type="text/css" href="/css/post.css">
+    {% elsif page.url == "/contact/" %}
+    <link rel="stylesheet" type="text/css" href="/css/form.css">
+    <script src="https://sdk.form.run/js/v2/formrun.js"></script>
+    {% else %}
     <link rel="stylesheet" type="text/css" href="/css/main.css">
+    {% endif %}
+
+    <script src="/assets/js/main.js" async></script>
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
-    {% if page.url == "/contact/" %}
-    <script async src="https://sdk.form.run/js/v2/formrun.js"></script>
+
+    {% if page.layout == "course" %}
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=URLSearchParams%2CObject.assign"></script>
     {% endif %}
 
     <!-- Faviconの設定 -->
@@ -115,9 +132,4 @@
     {% endif %}
     {{content}}
   </body>
-  <!-- 遅延読み込み -->
-  {% if page.layout == "course" %}
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=URLSearchParams%2CObject.assign"></script>
-  {% endif %}
-  <script src="/assets/js/main.js" async></script>
 </html>

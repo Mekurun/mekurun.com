@@ -1,0 +1,133 @@
+---
+---
+@import "main.scss";
+
+.slide-page .course-list img {
+  height: calc(13.86vw - 17.2px);
+  @media screen and (min-width:800px) {
+    height: 119.7px; // (800px * 0.33 - 36px) * (630/1200 = 0.525)
+  }
+  @media screen and (max-width: 800px) {
+    height: calc(((100vw - 48px) * 0.33 - 32px) * 0.525);
+  }
+  @media screen and (max-width: 700px) {
+    height: calc((100vw - 48px - 24px - 4px) * 0.525);
+  }
+}
+
+.slide-page {
+  max-width: 800px;
+  margin: 12px auto;
+  @media screen and (max-width:800px) {
+    padding: 12px 24px;
+  }
+  h2 {
+    margin-top: 2em;
+  }
+}
+.page-course {
+  h2 {
+    display: inline-block;
+    margin-top: 1em;
+  }
+}
+.slides-top {
+  display: flex;
+  margin-top: 12px;
+  align-items: center;
+}
+.slides-top-info {
+  width: 100%;
+}
+.link-to-parent {
+  display: block;
+  color: $darkgray;
+  font-size: 1.2em;
+  margin-bottom: -0.5em;
+}
+#slidesCover {
+  position: relative;
+}
+#slides {
+  margin: auto;
+  clear: both;
+  p {
+    margin: 0;
+  }
+  .slide {
+    border: solid 4px #888;
+    box-sizing: border-box;
+    left: 0;
+    right: 0;
+    height: 450px;
+    width: 100%;
+  }
+  img, iframe {
+    height: 450px;
+    width: 100%;
+  }
+  iframe {
+    z-index: 1;
+    position: relative;
+  }
+  @media screen and (max-width:800px) {
+    .slide {
+      width: calc(100vw - 48px);
+      left: 24px;
+      height: calc((100vw - 48px) / 16 * 9);
+    }
+    img, iframe {
+      height: calc((100vw - 48px) / 16 * 9);
+    }
+  }
+}
+.slide {
+  display: flex;
+}
+#slideRight, #slideLeft {
+  width: 50%;
+  height: 100%;
+}
+.progress-cover {
+  display: flex;
+}
+.progress-bar {
+  height: 16px;
+  background-color: #ddd;
+  border-radius: 12px;
+  margin-top: 8px;
+  width: 100%;
+  display: inline-block;
+}
+#progress-container {
+  background-color: $main-color;
+  height: 100%;
+  border-radius: 8px;
+}
+#progress-number {
+  font-weight: 600;
+  color: $darkgray;
+  text-align: right;
+}
+
+.slide-buttons {
+  display: flex;
+  margin-top: 24px;
+  input {
+    width: calc(50% - 3px);
+    font-size: 1.6em;
+    display: block;
+    &:disabled {
+      opacity: 0.4;
+      cursor: default;
+    }
+  }
+  .button-back {
+    margin-right: 6px;
+  }
+}
+.button-export {
+  display: inline-block;
+  color: $main-color;
+  width: 200px;
+}

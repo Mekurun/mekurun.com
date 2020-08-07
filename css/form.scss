@@ -1,0 +1,55 @@
+---
+---
+@import "main.scss";
+
+/* contact-form */
+form {
+  max-width: 600px;
+  margin: 24px auto;
+  font-weight: 500;
+  background-color: #fff;
+  padding: 30px 60px;
+  @include card;
+  @media screen and (max-width:800px) {
+    margin: 24px auto;
+    padding: 20px 12px;
+  }
+  input {
+    font-size: 1em;
+  }
+  textarea {
+    height: 200px;
+    resize: none;
+  }
+  input, textarea {
+    width: 100%;
+    padding: 8px;
+    border: solid 2px $lightgray;
+    background-color: $bg-gray;
+    border-radius: 5px;
+    }
+  .required{
+    color: red;
+  }
+  button {
+    display: block;
+    height: 40px;
+    width: 80%;
+    margin: auto;
+    background-color: $main-color;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
+    -webkit-appearance: none;
+
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    transition: all .2s;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
