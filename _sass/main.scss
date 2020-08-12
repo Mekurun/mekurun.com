@@ -421,7 +421,7 @@ footer {
   .horizontal-list {
     overflow-x: auto;
     flex-wrap: nowrap;
-    margin: 10px -10px;
+    margin: 10px 0;
     &::-webkit-scrollbar {
       height: 8px;
     }
