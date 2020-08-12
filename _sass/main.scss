@@ -419,7 +419,7 @@ footer {
 }
 @media screen and (max-width: 700px) {
   .horizontal-list {
-    overflow-x: scroll;
+    overflow-x: hidden;
     flex-wrap: nowrap;
     margin: 10px -20px;
     &::-webkit-scrollbar {
