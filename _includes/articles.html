@@ -3,7 +3,7 @@
 <ul class="article-list course-list news-list">
 {% else %}
 {% assign posts = site.posts | where_exp:"p", "p.category == include.category" | limit: include.limit %}
-<ul class="article-list course-list{% if include.limit %} horizontal-list{% endif %}">
+<ul class="article-list course-list">
 {% endif %}
 {% for post in posts %}
 <li class="article-list-one">{% if post.tag == "note" or post.tag == "Qiita" %}<a href="{{ post.url }}" target="_blank" rel="nofollow noopener">{% else %}<a href="{{ post.url }}">{% endif %}

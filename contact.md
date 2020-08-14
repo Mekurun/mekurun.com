@@ -32,5 +32,7 @@ description: contact.description
     <input type="text" name="_formrun_gotcha" id="_formrun_gotcha" tabindex="-1">
   </p>
 
+  <p class="g-recaptcha" data-sitekey="6LcRnr4ZAAAAAG5r_Nx9sE9LJRtpd3KGED_Htzmp"></p>
+
   <button type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中...">送信</button>
 </form>

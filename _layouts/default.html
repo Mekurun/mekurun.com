@@ -66,11 +66,10 @@
     <meta name="description" content="{{ description }}">
     <meta property="og:description" content="{{ description }}">
 
-    {% capture description_short %}{% if page.description %}{% if page.layout == 'category' or page.layout == 'page' %}{% t page.description %}{% else %}{{ page.description }}{% endif %}{% else %}{% t description_short %}{% endif %}{% endcapture %}
     {% if page.url == '/' %}
     <meta name="twitter:title" content="{% t title_short %}">
+    <meta name="twitter:description" content="{% t description_short %}">
     {% endif %}
-    <meta name="twitter:description" content="{{ description_short }}">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="note:card" content="summary_large_image">
@@ -92,6 +91,7 @@
     {% elsif page.url == "/contact/" %}
     <link rel="stylesheet" type="text/css" href="/css/form.css">
     <script src="https://sdk.form.run/js/v2/formrun.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
     {% else %}
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     {% endif %}

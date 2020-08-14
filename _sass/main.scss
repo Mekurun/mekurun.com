@@ -418,6 +418,7 @@ footer {
   }
 }
 @media screen and (max-width: 700px) {
+  /*横スクロールリスト。モバイルフレンドリーの問題から、一旦使っていない。*/
   .horizontal-list {
     overflow-x: auto;
     flex-wrap: nowrap;
