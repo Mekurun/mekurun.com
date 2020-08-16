@@ -72,11 +72,11 @@ title: title
   {% include articles.html category = 'projects' limit = 4 %}
 -->
   <div>
-    <h2 id="tips" class="post-list-heading">{% t tips.title %}<p class="post-list-more"><a href="/tips/">{% t top.more %}</a></p></h2>
+    <h2 id="tips" class="post-list-heading">{% t tips.title %}<span class="post-list-more"><a href="/tips/">{% t top.more %}</a></span></h2>
     {% include articles.html category = 'tips' limit = 3 %}
   </div>
   <div>
-    <h2 id="news" class="post-list-heading">{% t news.title %}<p class="post-list-more"><a href="/news/">{% t top.more %}</a></p></h2>
+    <h2 id="news" class="post-list-heading">{% t news.title %}<span class="post-list-more"><a href="/news/">{% t top.more %}</a></span></h2>
     {% include articles.html category = 'news' limit = 4 %}
   </div>
 </div>
