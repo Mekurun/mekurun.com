@@ -128,7 +128,7 @@
 }
 .button-export {
   display: inline-block;
-  width: 200px;
+  width: 160px;
 }
 @media screen and (max-width:720px) {
   .slides-top {
@@ -136,9 +136,16 @@
     margin-bottom: 6px;
   }
   .button-export {
-    width: calc(50% - 3px);
+    width: 100%;
   }
   .page-course h2 {
     margin-top: .5em;
+  }
+}
+
+.course-buttons {
+  display: flex;
+  @media screen and (max-width:720px) {
+    width: 100%;
   }
 }
