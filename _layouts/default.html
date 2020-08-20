@@ -13,7 +13,7 @@
     <link rel="preconnect dns-prefetch" href="https://www.googletagmanager.com/">
     {% endif %}
 
-    {% if jekyll.environment == "development" %}
+    {% if jekyll.environment == "development" or page.noindex == true %}
       <meta name="robots" content="noindex">
     {% elsif jekyll.environment == "production" %}
       {% if site.lang == "kana" or site.lang == "en" %}<!--英語版リリース時変更-->
