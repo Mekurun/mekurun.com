@@ -2,7 +2,7 @@
 layout: course
 date: 2020-08-15
 title:  "クリアまでの時間をはかろう"
-# title-kana: ""
+title-kana: "クリアまでのじかんをはかろう"
 category: scratch
 difficulty: easy
 parent:	maze-game
