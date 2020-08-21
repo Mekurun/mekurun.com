@@ -51,9 +51,9 @@ layout: default
   <input class="button button-next btn-blue" type="button" value="{% t course.next %}" id="buttonNext"/>
 </div>
 </section>
-<section class="slide-page">
+<section class="slide-page" id="subcourse">
   {% if subcourses.size > 0 %}
-  <a href="#subcourse" style="text-decoration:none;"><h2 id="subcourse">{% t course.subcourse %} <i class="fas fa-angle-down"></i></h2></a>
+  <a href="#subcourse" style="text-decoration:none;"><h2>{% t course.subcourse %} <i class="fas fa-angle-down"></i></h2></a>
   <ul class="course-list">
   {% for course in subcourses %}
   {% assign course_lang = course.path | slice: 9, 2 %}
