@@ -2,7 +2,7 @@
 layout: course
 date: 2020-08-15
 title:  "クリアしたときに音をならそう"
-# title-kana: ""
+title-kana: "クリアしたときにおとをならそう"
 category: scratch
 difficulty: easy
 parent:	maze-game

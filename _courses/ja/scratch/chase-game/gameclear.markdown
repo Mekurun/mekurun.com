@@ -2,7 +2,7 @@
 layout: course
 date: 2020-08-15
 title:  "ゲームクリアの画面をつくろう"
-# title-kana: ""
+title-kana: "ゲームクリアのがめんをつくろう"
 category: scratch
 difficulty: easy
 parent:	chase-game
