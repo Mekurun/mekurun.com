@@ -1,0 +1,18 @@
+<script type="application/ld+json">
+  {% if page.layout == "post" %}
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "{% t {{page.category}}.title %}",
+      "item": "https://mekurun.com/{{page.category}}/"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{page.title}}"
+    }]
+  }
+  {% endif %}
+</script>
