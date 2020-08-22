@@ -1,0 +1,65 @@
+{% if page.url != "/" %}
+<script type="application/ld+json">
+  {% if page.layout == "post" %}
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "トップ",
+      "item": "https://mekurun.com/"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{% t {{page.category}}.title %}",
+      "item": "https://mekurun.com/{{page.category}}/"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{page.title}}"
+    }]
+  }
+  {% elsif page.layout == "course" %}
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "トップ",
+      "item": "https://mekurun.com/"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{% t category.{{page.category}}.title %}",
+      "item": "https://mekurun.com/{{page.category}}/"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{% t difficulty.{{page.difficulty}} %}",
+      "item": "https://mekurun.com/{{page.category}}/#{{page.difficulty}}"
+    },{
+      "@type": "ListItem",
+      "position": 4,
+      "name": "{{page.title}}"
+    }]
+  }
+  {% else %}
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "トップ",
+      "item": "https://mekurun.com/"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{% t page.title %}"
+    }]
+  }
+  {% endif %}
+</script>
+{% endif %}
