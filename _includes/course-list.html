@@ -5,8 +5,9 @@
 {% else %}
   {% assign courses = courses | where_exp:"course","course.path contains site.lang" %}
 {% endif %}
+<div id="{{ include.difficulty }}">
 {% if courses.size > 0 %}
-<h2 id="{{ include.difficulty }}">{% t difficulty.{{ include.difficulty }} %}</h2>
+<h2>{% t difficulty.{{ include.difficulty }} %}</h2>
 {% endif %}
 <ul class="course-list">
 {% for course in courses %}
@@ -14,3 +15,4 @@
 <li><a href="{{ site.baseurl }}{{ course.url }}"><img data-src="{{ site.url }}/assets/course/{{ course.category }}/{{ course.course-name }}{{ thumbnail }}" data-width="348" alt="{{ course.title }}" loading="lazy"><p class="course-list-title">{% if site.lang == 'kana' and course.title-kana %}{{course.title-kana}}{% else %}{{course.title}}{% endif %}</p></a></li>
 {% endfor %}
 </ul>
+</div>
