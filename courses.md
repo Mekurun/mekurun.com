@@ -22,8 +22,15 @@ description: courses.description
     <div class="course-details">
       <label for="course-check-{{course.course-name}}" class="course-details-bg"></label>
       <div class="course-details-item">
+        <label for="course-check-{{course.course-name}}">X</label>
+        <img data-src="{{ site.url }}/assets/course/{{ course.category }}/{{ course.course-name }}{{ thumbnail }}" data-width="348" alt="{{ course.title }}" loading="lazy">
+        <p class="course-list-title">{% if site.lang == 'kana' and course.title-kana %}{{course.title-kana}}{% else %}{{course.title}}{% endif %}</p>
+        <span>{% t category.{{ course.category }}.title %}</span><span class="top-course-list-difficulty {{ course.difficulty }}"> {% t difficulty.{{ course.difficulty }} %} </span>
+        <a href="{{ site.url }}/{{ course.category }}/{{ course.course-name }}/" class="download-pdf">
+        コースページを開く
+        </a>
         <a href="{{ site.baseurl }}/assets/course/scratch/{{course.course-name}}/slide.pdf" download="{{ site.baseurl }}/assets/course/scratch/{{course.course-name}}/slide.pdf" class="download-pdf">
-        ダウンロード
+        PDFをダウンロード
         </a>
       </div>
     </div>
