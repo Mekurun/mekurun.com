@@ -384,8 +384,7 @@ footer {
     background-color: #fff;
     margin: 12px 0;
     @include card;
-    @include card-hover;
-    a {
+    a:not(.download-pdf) {
       text-decoration: none;
       color: $text-color;
       font-weight: 500;
@@ -393,6 +392,7 @@ footer {
       height: 100%;
       display: flex;
       flex-direction: column;
+      @include card-hover;
     }
   }
   img {
@@ -485,7 +485,7 @@ footer {
   color: $darkgray;
 }
 .news-list {
-  li {
+  li.article-list-one {
     width: 100%;
     margin: 6px 0;
     a {
@@ -663,4 +663,48 @@ footer {
       opacity: .7;
     }
   }
+}
+
+.course-item {
+  text-decoration: none;
+  color: #333333;
+  font-weight: 500;
+  padding: 12px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.course-details {
+  display: none;
+  background: #5558;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: fixed;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+}
+.course-details-bg {
+  background: #5558;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: fixed;
+  z-index: -1;
+}
+.course-details-item {
+  background: #fff;
+  height: 280px;
+  max-width: 480px;
+  width: 90%;
+  border-radius: 10px;
+}
+.course-check {
+  display: none;
+}
+.course-check:checked + .course-details {
+  display: flex;
 }

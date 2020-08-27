@@ -14,7 +14,10 @@ difficulty:
   easy: かんたん
   normal: ふつう
   hard: むずかしい
-
+courses:
+  title: コース一覧
+  description: コース一覧です。
+  
 category:
   official: 公式サイト
   scratch:

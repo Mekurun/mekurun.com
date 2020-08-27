@@ -1,4 +1,8 @@
+{% if include.category %}
+{% assign courses = site.courses | where_exp:"course","course.category == include.category and course.difficulty == include.difficulty" %}
+{% else %}
 {% assign courses = site.courses | where_exp:"course","course.category == page.categoryname and course.difficulty == include.difficulty" %}
+{% endif %}
 {% assign courses = courses | where_exp:"course","course.parent == nil" %}
 {% if site.lang == "kana" %}
   {% assign courses = courses | where_exp:"course","course.path contains 'ja'" %}
