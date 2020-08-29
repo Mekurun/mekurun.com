@@ -43,13 +43,25 @@ description: courses.description
             {% assign course_lang = sc.path | slice: 9, 2 %}
             {% if site.lang == "kana" %}
             {% if course_lang == "ja" %}
-              <li><a href="{{ site.baseurl }}{{sc.url}}"><img data-src="{{ site.url }}/assets/course/{{ sc.category }}/{{ sc.parent }}/{{ sc.course-name }}{{ sc.thumbnail }}" data-width="212" alt="{{ sc.title }}" loading="lazy">
-                <p class="course-list-title">{% if sc.title-kana %}{{ sc.title-kana }}{% else %}{{ sc.title }}{% endif %}</p></a></li>
+              <li>
+                <img data-src="{{ site.url }}/assets/course/{{ sc.category }}/{{ sc.parent }}/{{ sc.course-name }}{{ sc.thumbnail }}" data-width="212" alt="{{ sc.title }}" loading="lazy">
+                <p class="course-list-title">{% if sc.title-kana %}{{ sc.title-kana }}{% else %}{{ sc.title }}{% endif %}</p>
+                <a href="{{ site.baseurl }}{{sc.url}}">コースページを開く</a>
+                <a href="{{ site.baseurl }}/assets/course/scratch/{{course.course-name}}/{{ sc.course-name }}/slide.pdf" download="{{ site.baseurl }}/assets/course/scratch/{{course.course-name}}/{{ sc.course-name }}/slide.pdf" class="download-pdf">
+                PDFをダウンロード
+                </a>
+              </li>
             {% endif %}
             {% else %}
             {% if course_lang == site.lang %}
-              <li><a href="{{ site.baseurl }}{{sc.url}}"><img data-src="{{ site.url }}/assets/course/{{ sc.category }}/{{ sc.parent }}/{{ sc.course-name }}{{ sc.thumbnail }}" data-width="212" alt="{{ sc.title }}" loading="lazy">
-                <p class="course-list-title">{{sc.title}}</p></a></li>
+              <li>
+                <img data-src="{{ site.url }}/assets/course/{{ sc.category }}/{{ sc.parent }}/{{ sc.course-name }}{{ sc.thumbnail }}" data-width="212" alt="{{ sc.title }}" loading="lazy">
+                <p class="course-list-title">{{sc.title}}</p>
+                <a href="{{ site.baseurl }}{{sc.url}}">コースページを開く</a>
+                <a href="{{ site.baseurl }}/assets/course/scratch/{{course.course-name}}/{{ sc.course-name }}/slide.pdf" download="{{ site.baseurl }}/assets/course/scratch/{{course.course-name}}/{{ sc.course-name }}/slide.pdf" class="download-pdf">
+                PDFをダウンロード
+                </a>
+              </li>
             {% endif %}
             {% endif %}
             {% endfor %}
