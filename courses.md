@@ -11,7 +11,7 @@ description: courses.description
 {% for course in courses %}
   {% assign course_lang = course.path | slice: 9, 2 %}
   {% if (course_lang == site.lang or (course_lang == 'ja' and site.lang == 'kana')) %}
-  <li class="course-item">
+  <li class="card-list-item">
     <label for="course-check-{{course.course-name}}">
     {% capture thumbnail %}{% if course.thumbnail %}{{ course.thumbnail }}{% else %}{{ course.slides[0] }}{% endif %}{% endcapture %}
     <img data-src="{{ site.url }}/assets/course/{{ course.category }}/{{ course.course-name }}{{ thumbnail }}" data-width="348" alt="{{ course.title }}" loading="lazy">
@@ -21,7 +21,7 @@ description: courses.description
     <input type="checkbox" class="course-check" id="course-check-{{course.course-name}}">
     <div class="course-details">
       <label for="course-check-{{course.course-name}}" class="course-details-bg"></label>
-      <div class="course-details-item">
+      <div class="course-details-item card-list-item">
         <label for="course-check-{{course.course-name}}">X</label>
         <img data-src="{{ site.url }}/assets/course/{{ course.category }}/{{ course.course-name }}{{ thumbnail }}" data-width="348" alt="{{ course.title }}" loading="lazy">
         <p class="course-list-title">{% if site.lang == 'kana' and course.title-kana %}{{course.title-kana}}{% else %}{{course.title}}{% endif %}</p>
@@ -44,7 +44,7 @@ description: courses.description
             {% capture thumbnail %}{{ site.url }}/assets/course/{{ sc.category }}/{{ sc.parent }}/{{ sc.course-name }}{{ sc.thumbnail }}{% endcapture %}
             {% capture pdf %}{{ site.baseurl }}/assets/course/scratch/{{course.course-name}}/{{ sc.course-name }}/slide.pdf{% endcapture %}
             {% if course_lang == "ja" %}
-              <li>
+              <li class="card-list-item">
                 <img data-src="{{ thumbnail }}" data-width="212" alt="{{ sc.title }}" loading="lazy">
                 <p class="course-list-title">{{sc.title}}</p>
                 <a href="{{ site.baseurl }}{{sc.url}}">コースページを開く</a>

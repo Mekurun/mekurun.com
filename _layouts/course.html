@@ -59,12 +59,12 @@ layout: default
   {% assign course_lang = course.path | slice: 9, 2 %}
   {% if site.lang == "kana" %}
   {% if course_lang == "ja" %}
-    <li><a href="{{ site.baseurl }}{{course.url}}"><img data-src="{{ site.url }}/assets/course/{{ course.category }}/{{ course.parent }}/{{ course.course-name }}{{ course.thumbnail }}" data-width="212" alt="{{ course.title }}" loading="lazy">
+    <li><a href="{{ site.baseurl }}{{course.url}}" class="card-list-item"><img data-src="{{ site.url }}/assets/course/{{ course.category }}/{{ course.parent }}/{{ course.course-name }}{{ course.thumbnail }}" data-width="212" alt="{{ course.title }}" loading="lazy">
       <p class="course-list-title">{% if course.title-kana %}{{ course.title-kana }}{% else %}{{ course.title }}{% endif %}</p></a></li>
   {% endif %}
   {% else %}
   {% if course_lang == site.lang %}
-    <li><a href="{{ site.baseurl }}{{course.url}}"><img data-src="{{ site.url }}/assets/course/{{ course.category }}/{{ course.parent }}/{{ course.course-name }}{{ course.thumbnail }}" data-width="212" alt="{{ course.title }}" loading="lazy">
+    <li><a href="{{ site.baseurl }}{{course.url}}" class="card-list-item"><img data-src="{{ site.url }}/assets/course/{{ course.category }}/{{ course.parent }}/{{ course.course-name }}{{ course.thumbnail }}" data-width="212" alt="{{ course.title }}" loading="lazy">
       <p class="course-list-title">{{course.title}}</p></a></li>
   {% endif %}
   {% endif %}
