@@ -32,6 +32,31 @@ description: courses.description
         <a href="{{ site.baseurl }}/assets/course/scratch/{{course.course-name}}/slide.pdf" download="{{ site.baseurl }}/assets/course/scratch/{{course.course-name}}/slide.pdf" class="download-pdf">
         PDFをダウンロード
         </a>
+        <div class="">
+          <section class="slide-page" id="subcourse">
+            {% assign subcourses = site.courses | where_exp:"c",
+            "c.parent == course.course-name" %}
+            {% if subcourses.size > 0 %}
+            <a href="#subcourse" style="text-decoration:none;"><h2>{% t course.subcourse %} <i class="fas fa-angle-down"></i></h2></a>
+            <ul class="course-list">
+            {% for sc in subcourses %}
+            {% assign course_lang = sc.path | slice: 9, 2 %}
+            {% if site.lang == "kana" %}
+            {% if course_lang == "ja" %}
+              <li><a href="{{ site.baseurl }}{{sc.url}}"><img data-src="{{ site.url }}/assets/course/{{ sc.category }}/{{ sc.parent }}/{{ sc.course-name }}{{ sc.thumbnail }}" data-width="212" alt="{{ sc.title }}" loading="lazy">
+                <p class="course-list-title">{% if sc.title-kana %}{{ sc.title-kana }}{% else %}{{ sc.title }}{% endif %}</p></a></li>
+            {% endif %}
+            {% else %}
+            {% if course_lang == site.lang %}
+              <li><a href="{{ site.baseurl }}{{sc.url}}"><img data-src="{{ site.url }}/assets/course/{{ sc.category }}/{{ sc.parent }}/{{ sc.course-name }}{{ sc.thumbnail }}" data-width="212" alt="{{ sc.title }}" loading="lazy">
+                <p class="course-list-title">{{sc.title}}</p></a></li>
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+            </ul>
+            {% endif %}
+          </section>
+        </div>
       </div>
     </div>
   </li>
