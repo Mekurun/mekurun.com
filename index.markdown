@@ -71,10 +71,12 @@ title: title
   <h2 id="projects" class="post-list-heading">{% t projects.title %}<p class="post-list-more"><a href="/projects">{% t top.more %}</a></p></h2>
   {% include articles.html category = 'projects' limit = 4 %}
 -->
+  {% if site.lang == "ja" %}
   <div id="tips">
     <h2 class="post-list-heading">{% t tips.title %}<span class="post-list-more"><a href="/tips/">{% t top.more %}</a></span></h2>
     {% include articles.html category = 'tips' limit = 3 %}
   </div>
+  {% endif %}
   <div id="news">
     <h2 class="post-list-heading">{% t news.title %}<span class="post-list-more"><a href="/news/">{% t top.more %}</a></span></h2>
     {% include articles.html category = 'news' limit = 4 %}
