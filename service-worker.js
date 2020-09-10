@@ -1,7 +1,7 @@
 // set names for both precache & runtime cache
 workbox.core.setCacheNameDetails({
   prefix: 'mekurun',
-  suffix: 'v1',
+  suffix: 'v2',
   precache: 'precache',
   runtime: 'runtime-cache',
 })
