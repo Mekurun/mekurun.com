@@ -17,8 +17,8 @@ title: title
   </div>
   <img  data-src="{{ site.url }}/assets/images/mainvisual.svg" data-width="300" alt="メクルン" class="top-mainvisual">
 </div>
-<div class="main">
-  <h2 id="allmenu">{% t top.allmenu %}</h2>
+<div class="main" id="allmenu">
+  <h2>{% t top.allmenu %}</h2>
   <div class="list-category">
     {% for category in site.categories %}
     <a href="{{ site.baseurl }}{{category.permalink}}" class="list-category-one">
@@ -33,9 +33,9 @@ title: title
     </a>
     {% endfor %}
   </div>
-  <div>
-    <h2 id="newcourse">{% t top.recent %}</h2>
-    <ul class="top-course-list course-list horizontal-list">
+  <div id="newcourse">
+    <h2>{% t top.recent %}</h2>
+    <ul class="top-course-list course-list">
     {% assign courses = site.courses | where_exp:"c", "c.parent == nil" %}
     {% assign courses = courses | reverse %}
     {% for course in courses limit:6 %}
@@ -71,15 +71,16 @@ title: title
   <h2 id="projects" class="post-list-heading">{% t projects.title %}<p class="post-list-more"><a href="/projects">{% t top.more %}</a></p></h2>
   {% include articles.html category = 'projects' limit = 4 %}
 -->
-  <div>
-    <h2 id="tips" class="post-list-heading">{% t tips.title %}<p class="post-list-more"><a href="/tips/">{% t top.more %}</a></p></h2>
+  {% if site.lang == "ja" %}
+  <div id="tips">
+    <h2 class="post-list-heading">{% t tips.title %}<span class="post-list-more"><a href="/tips/">{% t top.more %}</a></span></h2>
     {% include articles.html category = 'tips' limit = 3 %}
   </div>
-  <div>
-    <h2 id="news" class="post-list-heading">{% t news.title %}<p class="post-list-more"><a href="/news/">{% t top.more %}</a></p></h2>
+  {% endif %}
+  <div id="news">
+    <h2 class="post-list-heading">{% t news.title %}<span class="post-list-more"><a href="/news/">{% t top.more %}</a></span></h2>
     {% include articles.html category = 'news' limit = 4 %}
   </div>
 </div>
-
 
 {% include footer.html %}

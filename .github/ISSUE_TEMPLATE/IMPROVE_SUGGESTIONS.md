@@ -1,19 +1,27 @@
 ---
-name: '改善提案 / Improvement Suggestions'
+name: '追加機能、改善などの提案'
 about: '追加機能、改善などの提案などはこちら'
-labels: improvement
+labels: enhancement
 ---
 
-## 改善詳細 / Details of Improvement
-- xxxx(できるだけ簡潔に/as concise as possible)
+## なにを実装・改善したいのか
+<!-- なにを実装・改善したいのかを詳細に書く -->
 
-## スクリーンショット / Screenshot
-<!-- バグであればdeveloper toolからコンソールも合わせて添付 -->
-<!-- If it's a bug, attach a screenshot of the developer tool console -->
+## なぜ実装・改善したいのか
+<!-- なぜ実装・解決すべきなのかを書く -->
 
-## 期待する見せ方・挙動 / Expected behavior
-- xxxx(できるだけ簡潔に/as concise as possible)
+## どのように実装・改善したいのか (任意)
+<!-- 実装・改善の方法がわかる場合は書く -->
 
-## 動作環境・ブラウザ / Environment
-- macOS / Windows / Linux / iOS / Android
-- Chrome / Safari / Firefox / Edge / Internet Explorer
+## いつまでに行うべきか (任意)
+<!-- 完了までの期限がある場合は書く -->
+
+## Issueのクローズに必要なこと
+<!-- このIssueをクローズするために必要なことを書く -->
+<!-- 解決するためにいくつか解決すべき点がある場合は、それぞれ分けて書く -->
+- [ ] xx
+- [ ] xx
+- [ ] xx
+
+## 関連Issue
+<!-- 関連するIssueがある場合はリンクする -->

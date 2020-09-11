@@ -3,9 +3,10 @@
 <ul class="article-list course-list news-list">
 {% else %}
 {% assign posts = site.posts | where_exp:"p", "p.category == include.category" | limit: include.limit %}
-<ul class="article-list course-list{% if include.limit %} horizontal-list{% endif %}">
+<ul class="article-list course-list">
 {% endif %}
 {% for post in posts %}
+{% if page.url != post.url %}
 <li class="article-list-one">{% if post.tag == "note" or post.tag == "Qiita" %}<a href="{{ post.url }}" target="_blank" rel="nofollow noopener">{% else %}<a href="{{ post.url }}">{% endif %}
   {% if post.thumbnail %}
   <img data-src="{{ site.url }}/assets/article/{{ post.category }}{{ post.thumbnail }}" data-width="300" alt="{{ post.title }}" loading="lazy">
@@ -16,5 +17,6 @@
   {% if post.tag %}<span class="article-list-tag bg-{{ post.tag }}">{{ post.tag }}</span>{% endif %}
   <h3 class="article-list-title">{{ post.title }}</h3>
 </a></li>
+{% endif %}
 {% endfor %}
 </ul>

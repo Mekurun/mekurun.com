@@ -11,8 +11,9 @@ layout: default
   <div class="slides-top-info">
   {% assign parents = site.courses | where:"course-name", page.parent %}
   <a class="link-to-parent" href="{{ site.baseurl }}/{{page.category}}/{{page.parent}}/">{{ parents[0].title }}</a>
-  <h2>{{page.title}}</h2>
+  <h2>{% if page.title-kana and site.lang == "kana" %}{{ page.title-kana }}{% else %}{{ page.title }}{% endif %}</h2>
   </div>
+  <div class="course-buttons">
   {% if page.nopdf != true %}
   {% capture pdfpath %}{% if page.parent %}{{site.url}}/assets/course/{{ page.category }}/{{ page.parent }}{% else %}{{site.url}}/assets/course/{{ page.category }}{% endif %}/{{ page.course-name }}/slide.pdf{% endcapture %}
   <a class="button button-export btn-white" href="{{ pdfpath }}" target="_blank" rel="noopener" {% if subcourses.size > 0 %}style="margin-right: 6px;" {%endif%} ><i class="fas fa-file-alt"></i> {% t course.export %}</a>
@@ -20,6 +21,7 @@ layout: default
   {% if subcourses.size > 0 %}
   <a class="button button-export btn-blue" href="#subcourse"><i class="fas fa-tools"></i> {% t course.subcourse %}</a>
   {% endif %}
+  </div>
 </div>
 <div id='slides'>
   <div class="slide">
@@ -49,14 +51,22 @@ layout: default
   <input class="button button-next btn-blue" type="button" value="{% t course.next %}" id="buttonNext"/>
 </div>
 </section>
-<section class="slide-page">
+<section class="slide-page" id="subcourse">
   {% if subcourses.size > 0 %}
-  <a href="#subcourse" style="text-decoration:none;"><h2 id="subcourse">{% t course.subcourse %} <i class="fas fa-angle-down"></i></h2></a>
+  <a href="#subcourse" style="text-decoration:none;"><h2>{% t course.subcourse %} <i class="fas fa-angle-down"></i></h2></a>
   <ul class="course-list">
   {% for course in subcourses %}
   {% assign course_lang = course.path | slice: 9, 2 %}
+  {% if site.lang == "kana" %}
+  {% if course_lang == "ja" %}
+    <li><a href="{{ site.baseurl }}{{course.url}}"><img data-src="{{ site.url }}/assets/course/{{ course.category }}/{{ course.parent }}/{{ course.course-name }}{{ course.thumbnail }}" data-width="212" alt="{{ course.title }}" loading="lazy">
+      <p class="course-list-title">{% if course.title-kana %}{{ course.title-kana }}{% else %}{{ course.title }}{% endif %}</p></a></li>
+  {% endif %}
+  {% else %}
   {% if course_lang == site.lang %}
-    <li><a href="{{ site.baseurl }}{{course.url}}"><img data-src="{{ site.url }}/assets/course/{{ course.category }}/{{ course.parent }}/{{ course.course-name }}{{ course.thumbnail }}" data-width="212" alt="{{ course.title }}" loading="lazy">{{course.title}}</a></li>
+    <li><a href="{{ site.baseurl }}{{course.url}}"><img data-src="{{ site.url }}/assets/course/{{ course.category }}/{{ course.parent }}/{{ course.course-name }}{{ course.thumbnail }}" data-width="212" alt="{{ course.title }}" loading="lazy">
+      <p class="course-list-title">{{course.title}}</p></a></li>
+  {% endif %}
   {% endif %}
   {% endfor %}
   {% endif %}

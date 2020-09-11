@@ -1,25 +1,27 @@
 ---
-name: 'バグ報告 / Bug Report'
+name: 'バグ / 不具合の報告'
 about: '不具合がある場合・挙動がおかしいなどの報告はこちら'
 labels: bug
 ---
 
-## 起こっている問題 / The Problem
-- xxxx(できるだけ簡潔に/as concise as possible)
+## 起こっている問題
+<!-- 起こっている問題を詳細に書く -->
 
-## スクリーンショット / Screenshot
-<!-- バグであればdeveloper toolからコンソールも合わせて添付 -->
-<!-- If it's a bug, attach a screenshot of the developer tool console -->
+## なぜ解決したいのか
+<!-- なぜ解決すべきなのかを書く -->
 
-## 期待する見せ方・挙動 / Expected Behavior
-- xxxx(できるだけ簡潔に/as concise as possible)
+## どのように解決したいのか (任意)
+<!-- 解決するための方法がわかる場合は書く -->
 
+## いつまでに解決すべきか (任意)
+<!-- 完了までの期限がある場合は書く -->
 
-## 起こっている問題の再現手段 / Steps to Reproduce
-1. xxx
-2. xxx
-3. xxx
+## Issueのクローズに必要なこと
+<!-- このIssueをクローズするために必要なことを書く -->
+<!-- 解決するためにいくつか解決すべき点がある場合は、それぞれ分けて書く -->
+- [ ] xx
+- [ ] xx
+- [ ] xx
 
-## 動作環境・ブラウザ / Environment
-- macOS / Windows / Linux / iOS / Android
-- Chrome / Safari / Firefox / Edge / Internet Explorer
+## 関連Issue
+<!-- 関連するIssueがある場合はリンクする -->
