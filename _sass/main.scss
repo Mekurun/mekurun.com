@@ -669,9 +669,14 @@ footer {
   text-align: center;
   background: $main-color;
   padding: 50px 12px;
-  background-image: repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(184, 242, 255, 0.1) 10px,  rgba(184, 242, 255, 0.1) 20px);
-  margin-bottom: -60px;
+  //background-image: repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(184, 242, 255, 0.1) 10px,  rgba(184, 242, 255, 0.1) 20px);
+  background-image: url('/assets/images/bg.svg');
   margin-top: 60px;
+  margin-bottom: -60px;
+  background-size: 35% auto;
+  @media screen and (max-width: 700px) {
+    background-size: 90% auto;
+  }
 }
 .support-heading {
   color: #fff;
