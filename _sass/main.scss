@@ -23,6 +23,20 @@ h2 {
 h3 {
   margin-top: 1.75em;
 }
+.pc-ignore {
+  display: none;
+}
+.ph-ignore {
+  display: block;
+}
+@media screen and (max-width:700px) {
+  .pc-ignore {
+    display: block;
+  }
+  .ph-ignore {
+    display: none;
+  }
+}
 /*ヘッダー*/
 header {
   background-color: #fff;
@@ -662,5 +676,49 @@ footer {
     &:hover {
       opacity: .7;
     }
+  }
+}
+
+#support {
+  text-align: center;
+  background: $main-color;
+  padding: 50px 12px;
+  //background-image: repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(184, 242, 255, 0.1) 10px,  rgba(184, 242, 255, 0.1) 20px);
+  background-image: url('/assets/images/bg.svg');
+  margin-top: 60px;
+  margin-bottom: -60px;
+  background-size: 35% auto;
+  @media screen and (max-width: 700px) {
+    background-size: 90% auto;
+  }
+}
+.support-heading {
+  color: #fff;
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.support-button {
+  background: #fff;
+  padding: 12px;
+  text-decoration: none;
+  border-radius: 36px;
+  color: $main-color;
+  display: inline-block;
+  width: 360px;
+  font-weight: bold;
+  margin-top: 18px;
+  position: relative;
+  transition: all .2s;
+  max-width: 100%;
+  font-size: 1.1rem;
+  &::after {
+    content: '\f35d';
+    font-family: 'Font Awesome 5 Free';
+    position: absolute;
+    right: 24px;
+  }
+  &:hover {
+    opacity: .85;
   }
 }

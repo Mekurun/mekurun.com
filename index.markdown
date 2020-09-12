@@ -83,4 +83,5 @@ title: title
   </div>
 </div>
 
+{% include support.html %}
 {% include footer.html %}
