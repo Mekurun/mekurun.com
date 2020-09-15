@@ -722,3 +722,37 @@ footer {
     opacity: .85;
   }
 }
+.main .supporter-h::before {
+  content: '\f7e4';
+}
+.supporter-list {
+  margin-top: 24px;
+  span{
+    display: inline-block;
+    &:not(:last-child)::after {
+      content: ', ';
+    }
+  }
+}
+.supporter-imgs {
+  display: flex;
+  flex-wrap: wrap;
+}
+.supporter-w-img {
+  width: 20%;
+  padding: 24px;
+  @media screen and (max-width: 700px) {
+    width: 33%;
+    padding: 8px;
+  }
+}
+.supporter-img {
+  border-radius: 50%;
+}
+.supporter-w-img-name {
+  margin: .2rem 0 1rem;
+  text-align: center;
+  @media screen and (max-width: 700px) {
+    margin: .2rem 0;
+  }
+}

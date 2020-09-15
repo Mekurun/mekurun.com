@@ -1,0 +1,11 @@
+nameonly: #500~2000円プラン
+  # - name: test
+  # - name: test2
+
+withicon: #3000円プラン
+  # - name: test2
+  #  img: noimg.png (/assets/images/supporter/に配置)
+
+withlogo: #8000円プラン
+  # - name: test3
+  #  img: noimg.png
