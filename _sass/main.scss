@@ -1,10 +1,10 @@
 $main-color: #34a2df;
+$main-dark: #006eac;
 $text-color: #333333;
 $darkgray: #707070;
 $lightgray: #d9e6f0;
 $bg-gray: #f5f9fc;
 $header-height: 60px;
-$main-dark: #2d6bac;
 $red: #fe9161;
 body {
   margin: 0;
@@ -22,6 +22,9 @@ h2 {
 }
 h3 {
   margin-top: 1.75em;
+}
+a {
+  color: $main-dark;
 }
 .pc-ignore {
   display: none;
