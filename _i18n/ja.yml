@@ -81,6 +81,12 @@ faq:
   title: よくあるご質問
   description: メクルンのよくあるご質問についてはこちらをご覧ください。
 
+supporter:
+  title: ご支援について
+  description: メクルンの活動は皆様のご支援で成り立っています。継続的な運営を応援いただければ幸いです。
+
+support: 支援者になる
+
 footer:
   service: サービス
   forUsers: ご利用の方へ
