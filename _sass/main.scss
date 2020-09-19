@@ -769,3 +769,20 @@ footer {
     margin: .2rem 0;
   }
 }
+.top-white {
+  color: $text-color;
+  background: #fff;
+}
+
+/*ここからLP*/
+.lp-top {
+  text-align: center;
+  height: 500px;
+  h1 {
+    font-size: 2.5rem;
+  }
+  p {
+    color: $darkgray;
+  }
+}
+
