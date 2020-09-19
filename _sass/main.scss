@@ -764,6 +764,7 @@ footer {
 .supporter-w-img-name {
   margin: .2rem 0 1rem;
   text-align: center;
+  word-break: break-all;
   @media screen and (max-width: 700px) {
     margin: .2rem 0;
   }
