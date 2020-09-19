@@ -786,3 +786,33 @@ footer {
   }
 }
 
+.lp-main {
+  h2 {
+    text-align: center;
+    &::before {
+      display: none;
+    }
+  }
+}
+.three-blocks {
+  display: flex;
+  flex-wrap: wrap;
+}
+.three-blocks-item {
+  width: 33%;
+  padding: 20px;
+  @media screen and (max-width: 700px) {
+    width: 100%;
+  }
+  h3 {
+    text-align: center;
+  }
+  img {
+    @media screen and (min-width: 701px) {
+      height: 200px;
+    }
+    margin: auto;
+    display: block;
+    padding: 0 20px;
+  }
+}

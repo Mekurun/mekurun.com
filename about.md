@@ -11,7 +11,7 @@ description: about.description
     <p>メクルンはスライドで学べるビジュアルプログラミング学習サイトです。<br class="ph-ignore">ブロックを組み立ててコードをつくる「ビジュアルプログラミング言語」で、作品を作りながら学べます。</p>
   </div>
 </div>
-<div class="main">
+<div class="main lp-main">
 {% translate_file about.md %}
 </div>
 {% include footer.html %}
