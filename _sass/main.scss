@@ -789,9 +789,14 @@ footer {
 .lp-main {
   h2 {
     text-align: center;
+    font-size: 1.8rem;
     &::before {
       display: none;
     }
+  }
+  h3 {
+    text-align: center;
+    font-size: 1.3rem;
   }
 }
 .three-blocks {
@@ -815,4 +820,58 @@ footer {
     display: block;
     padding: 0 20px;
   }
+}
+.owners {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2%;
+  @media screen and (max-width: 700px) {
+    grid-template-columns: 1fr;
+    row-gap: 2%;
+  }
+}
+.owner {
+  padding: 24px;
+  h3 {
+    text-align: center;
+    margin-bottom: .5rem;
+  }
+  img {
+    max-width: 160px;
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+  }
+}
+.writor-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 2%;
+  list-style: none;
+  padding: 0;
+  margin: 2rem auto 0;
+  max-width: 600px;
+  @media screen and (max-width: 700px) {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2%;
+  }
+}
+.writor {
+  img {
+    max-width: 120px;
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+  }
+}
+.writor-name {
+  text-align: center;
+  margin-top: .3rem;
+}
+
+.h2-sub {
+  text-align: center;
+  font-weight: bold;
+  color: $darkgray;
 }
