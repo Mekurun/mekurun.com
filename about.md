@@ -1,8 +1,8 @@
 ---
 layout: default
-title: about.title
+title: メクルンとは
 permalink: /about/
-description: about.description
+description: メクルンについて知りたい方はこちらをご覧ください。
 ---
 {% include header.html %}
 <div class="top top-white lp-top">
