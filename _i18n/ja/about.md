@@ -20,7 +20,7 @@
 <section class="feature">
  <h2>メクルンの特徴</h2>
   <div class="feature-one">
-    <img data-src="/assets/images/courses.svg" alt="選んでつくれる">
+    <img data-src="/assets/images/courses.png" alt="選んでつくれる">
     <div class="feature-text">
       <h3>選んでつくれる豊富なコース</h3>
       <p>
