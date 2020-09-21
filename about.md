@@ -14,4 +14,5 @@ description: about.description
 <div class="main lp-main">
 {% translate_file about.md %}
 </div>
+{% include support.html %}
 {% include footer.html %}
