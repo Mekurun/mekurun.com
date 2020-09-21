@@ -69,13 +69,14 @@
     </p>
   </div>
 </div>
-
+{% if site.data.writor.size > 0 %}
 ### コンテンツ制作チーム
 <ul class="writor-list">
   {% for writor in site.data.writor %}
   <li class="writor"><img data-src="/assets/images/supporter/noimg.png" alt="{{writor.name}}のアイコン画像"><p class="writor-name">{{writor.name}}</p></li>
   {% endfor %}
 </ul>
+{% endif %}
 
 <style media="screen">
   section {
