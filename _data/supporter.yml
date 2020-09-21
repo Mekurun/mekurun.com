@@ -1,7 +1,9 @@
 nameonly: #500~2000円プラン
+  - name: marcha
+
   - name: qramo
   - name: 西尾泰和
-  
+
   - name: 安川 要平
   - name: 大橋直記
   - name: にー兄さん
@@ -18,6 +20,10 @@ nameonly: #500~2000円プラン
 withicon: #3000円プラン
   # - name: test2
   #  img: noimg.png (/assets/images/supporter/に配置)
+  - name: 大庭慎一郎
+    img: ooba.png
+  - name: hiroshi & yuko
+    img: handy.jpeg
 
 withlogo: #8000円プラン
   # - name: test3
