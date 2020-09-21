@@ -7,7 +7,7 @@ description: メクルンについて知りたい方はこちらをご覧くだ�
 {% include header.html %}
 <div class="top top-white lp-top">
   <div class="">
-    <h1>楽しんでつくり、創造的に学ぶ</h1>
+    <h1>楽しんでつくり<span class="ph-ignore">、</span>創造的に学ぶ</h1>
     <p>メクルンはスライドで学べるビジュアルプログラミング学習サイトです。<br class="ph-ignore">ブロックを組み立ててコードをつくる「ビジュアルプログラミング言語」で、作品を作りながら学べます。</p>
   </div>
 </div>

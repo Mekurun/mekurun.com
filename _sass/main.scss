@@ -30,11 +30,11 @@ a {
   display: none;
 }
 .ph-ignore {
-  display: block;
+  display: inline-block;
 }
 @media screen and (max-width:700px) {
   .pc-ignore {
-    display: block;
+    display: inline-block;
   }
   .ph-ignore {
     display: none;
