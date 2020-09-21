@@ -875,3 +875,43 @@ footer {
   font-weight: bold;
   color: $darkgray;
 }
+
+.feature-one {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  @media screen and (max-width: 700px) {
+    margin-top: 2rem;
+    flex-direction: column-reverse;
+  }
+  @media screen and (min-width: 701px) {
+    &:not(:nth-child(2n)) {
+      flex-direction: row-reverse;
+      img {
+        padding: 0 0 0 24px;
+      }
+    }
+  }
+  h3 {
+    text-align: left;
+    margin: 0;
+    @media screen and (max-width: 700px) {
+      text-align: center;
+    }
+  }
+  img {
+    display: block;
+    margin: auto;
+    padding-right: 24px;
+    width: 50%;
+    @media screen and (max-width: 700px) {
+      width: 100%;
+    }
+  }
+}
+.feature-text {
+  width: 50%;
+  @media screen and (max-width: 700px) {
+    width: 100%;
+  }
+}
