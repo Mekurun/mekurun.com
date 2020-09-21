@@ -881,7 +881,7 @@ footer {
   flex-wrap: wrap;
   margin-top: 5rem;
   @media screen and (max-width: 700px) {
-    margin-top: 2rem;
+    margin-top: 3rem;
     flex-direction: column-reverse;
   }
   @media screen and (min-width: 701px) {
@@ -906,6 +906,7 @@ footer {
     width: 50%;
     @media screen and (max-width: 700px) {
       width: 100%;
+      padding-right: 0;
     }
   }
 }
