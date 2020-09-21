@@ -55,14 +55,14 @@
 
 <div class="owners">
   <div class="owner">
-    <img data-src="/assets/images/supporter/noimg.png" alt="のざきともひろのアイコン画像">
+    <img data-src="/assets/images/contributor/nztm.jpg" alt="のざきともひろのアイコン画像">
     <h3>野崎 智弘</h3>
     <p>
       CoderDojoやその他団体で、子どもたちのプログラミング教育に携わっています。サービスデザインや企画を行い、プロジェクトリーダーとして複数のサービスを開発してきました。
     </p>
   </div>
   <div class="owner">
-    <img data-src="/assets/images/supporter/noimg.png" alt="みはしゆうきのアイコン画像">
+    <img data-src="/assets/images/contributor/yuki384.jpg" alt="みはしゆうきのアイコン画像">
     <h3>三橋 優希</h3>
     <p>
       普段はWebデザイナー・プログラミング教室講師として活動しています。小学生向けのプログラミング書籍を執筆・出版しました。
