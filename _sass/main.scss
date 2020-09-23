@@ -828,10 +828,6 @@ footer {
   column-gap: 2%;
   max-width: 500px;
   margin: auto;
-  @media screen and (max-width: 700px) {
-    grid-template-columns: 1fr;
-    row-gap: 2%;
-  }
 }
 .owner {
   padding: 24px;
@@ -843,6 +839,9 @@ footer {
   }
   img {
     max-width: 160px;
+    @media screen and (max-width: 700px) {
+      max-width: 100px;
+    }
     display: block;
     margin: auto;
     border-radius: 50%;
@@ -857,14 +856,13 @@ footer {
   padding: 0;
   margin: 2rem auto 0;
   max-width: 600px;
-  @media screen and (max-width: 700px) {
-    grid-template-columns: 1fr 1fr;
-    row-gap: 2%;
-  }
 }
 .writor {
   img {
     max-width: 120px;
+    @media screen and (max-width: 700px) {
+      max-width: 80px;
+    }
     display: block;
     margin: auto;
     border-radius: 50%;
