@@ -826,6 +826,8 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 2%;
+  max-width: 500px;
+  margin: auto;
   @media screen and (max-width: 700px) {
     grid-template-columns: 1fr;
     row-gap: 2%;
@@ -836,6 +838,7 @@ footer {
   h3 {
     text-align: center;
     margin-bottom: .5rem;
+    margin-top: .5rem;
   }
   img {
     max-width: 160px;
