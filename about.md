@@ -1,6 +1,6 @@
 ---
 layout: default
-title: メクルンとは
+title: about.title
 permalink: /about/
 description: メクルンについて知りたい方はこちらをご覧ください。
 ---
