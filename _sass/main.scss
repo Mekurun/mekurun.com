@@ -889,7 +889,7 @@ footer {
     flex-direction: column-reverse;
   }
   @media screen and (min-width: 701px) {
-    &:not(:nth-child(2n)) {
+    &:not(:nth-of-type(2n+1)) {
       flex-direction: row-reverse;
       img {
         padding: 0 0 0 24px;

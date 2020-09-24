@@ -1,5 +1,4 @@
 <section class="feature">
- <h2>メクルンの特徴</h2>
   <div class="feature-one">
     <img data-src="/assets/images/courses.png" alt="選んでつくれる">
     <div class="feature-text">
