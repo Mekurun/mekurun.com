@@ -30,11 +30,11 @@ a {
   display: none;
 }
 .ph-ignore {
-  display: block;
+  display: inline-block;
 }
 @media screen and (max-width:700px) {
   .pc-ignore {
-    display: block;
+    display: inline-block;
   }
   .ph-ignore {
     display: none;
@@ -767,5 +767,157 @@ footer {
   word-break: break-all;
   @media screen and (max-width: 700px) {
     margin: .2rem 0;
+  }
+}
+/*
+.top-white {
+  color: $text-color;
+  background: #fff;
+}
+*/
+
+/*ここからLP*/
+.lp-top {
+  text-align: center;
+  min-height: 420px;
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+.lp-main {
+  h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    &::before {
+      display: none;
+    }
+  }
+  h3 {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+}
+/*
+.three-blocks {
+  display: flex;
+  flex-wrap: wrap;
+}
+.three-blocks-item {
+  width: 33%;
+  padding: 20px;
+  @media screen and (max-width: 700px) {
+    width: 100%;
+  }
+  h3 {
+    text-align: center;
+  }
+  img {
+    @media screen and (min-width: 701px) {
+      height: 200px;
+    }
+    margin: auto;
+    display: block;
+    padding: 0 20px;
+  }
+}
+*/
+.owners {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2%;
+  max-width: 500px;
+  margin: auto;
+}
+.owner {
+  padding: 24px;
+  p {
+    text-align: center;
+    margin-bottom: .5rem;
+    margin-top: .5rem;
+    text-align: center;
+  }
+  img {
+    max-width: 160px;
+    @media screen and (max-width: 700px) {
+      max-width: 100px;
+    }
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px #fff;
+  }
+}
+.writor-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 2%;
+  list-style: none;
+  padding: 0;
+  margin: 2rem auto 0;
+  max-width: 600px;
+}
+.writor {
+  img {
+    max-width: 120px;
+    @media screen and (max-width: 700px) {
+      max-width: 80px;
+    }
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px #fff;
+  }
+}
+.writor-name {
+  text-align: center;
+  margin-top: .3rem;
+}
+
+.h2-sub {
+  text-align: center;
+  font-weight: bold;
+  color: $darkgray;
+}
+
+.feature-one {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  @media screen and (max-width: 700px) {
+    margin-top: 3rem;
+    flex-direction: column-reverse;
+  }
+  @media screen and (min-width: 701px) {
+    &:not(:nth-of-type(2n+1)) {
+      flex-direction: row-reverse;
+      img {
+        padding: 0 0 0 24px;
+      }
+    }
+  }
+  h3 {
+    text-align: left;
+    margin: 0;
+    @media screen and (max-width: 700px) {
+      text-align: center;
+    }
+  }
+  img {
+    display: block;
+    margin: auto;
+    padding-right: 24px;
+    width: 50%;
+    @media screen and (max-width: 700px) {
+      width: 100%;
+      padding-right: 0;
+    }
+  }
+}
+.feature-text {
+  width: 50%;
+  @media screen and (max-width: 700px) {
+    width: 100%;
   }
 }
