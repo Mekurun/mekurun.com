@@ -1,6 +1,6 @@
 <section class="feature">
   <div class="feature-one">
-    <img data-src="/assets/images/courses.png" alt="選んでつくれる">
+    <img data-src="{{site.url}}/assets/images/courses.png" alt="選んでつくれる">
     <div class="feature-text">
       <h3>選んでつくれる豊富なコース</h3>
       <p>
@@ -9,7 +9,7 @@
     </div>
   </div>
   <div class="feature-one">
-    <img data-src="/assets/images/course-page.svg" alt="自分にあったペースで学べる">
+    <img data-src="{{site.url}}/assets/images/course-page.svg" alt="自分にあったペースで学べる">
     <div class="feature-text">
       <h3>自分に合ったペースで学べる</h3>
       <p>
@@ -18,7 +18,7 @@
     </div>
   </div>
   <div class="feature-one">
-    <img data-src="/assets/images/articles.svg" alt="知識を広げる">
+    <img data-src="{{site.url}}/assets/images/articles.svg" alt="知識を広げる">
     <div class="feature-text">
       <h3>アイデアを広げる</h3>
       <p>
@@ -46,7 +46,7 @@
 {% if site.data.writor.size > 0 %}
 <ul class="writor-list">
   {% for writor in site.data.writor %}
-  <li class="writor"><img data-src="/assets/images/contributor/{{writor.img}}" alt="{{writor.name}}のアイコン画像"><p class="writor-name">{{writor.name}}</p></li>
+  <li class="writor"><img data-src="{{site.url}}/assets/images/contributor/{{writor.img}}" alt="{{writor.name}}のアイコン画像"><p class="writor-name">{{writor.name}}</p></li>
   {% endfor %}
 </ul>
 {% endif %}
