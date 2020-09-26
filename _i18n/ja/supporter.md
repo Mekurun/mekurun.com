@@ -10,7 +10,7 @@
 <div class="supporter-imgs">
 {% for supporter in site.data.supporter.withicon %}
 <div class="supporter-w-img">
-<img data-src="/assets/images/supporter/{{supporter.img}}" alt="{{supporter.name}}" class="supporter-img">
+<img data-src="{{site.url}}/assets/images/supporter/{{supporter.img}}" alt="{{supporter.name}}" class="supporter-img">
 <p class="supporter-w-img-name">{{supporter.name}}</p>
 </div>
 {% endfor %}
