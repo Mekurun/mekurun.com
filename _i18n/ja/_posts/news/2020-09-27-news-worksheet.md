@@ -8,9 +8,7 @@ ogp: /assets/article/news/news-worksheet/ogp.png
 ---
 いつもメクルンをご利用いただきありがとうございます。
 
-このたび、ワークショップ等でご利用いただけるワークシートを制作・公開しました。
-
-「真似して作る」から一歩進んだ「自分で考えて作る」という段階の子どもたちも、このワークシートを通して支援できれば幸いです。
+このたび、作品づくりやワークショップ等でご活用いただけるワークシートを制作・公開しました。
 
 ## ワークシートの配布
 現在全4種となっております。[ご利用規定](/term-of-use/)に定められた範囲内で、場面に応じてご活用ください。
@@ -27,7 +25,7 @@ ogp: /assets/article/news/news-worksheet/ogp.png
 [![アイデアシート](/idea.png)](/assets/images/worksheets/idea.jpg)
 
 ### チームシート
-チーム内での役割やできることなどをまとめるシートです。ペアプログラミングやハッカソンなど、複数人で一つのプロジェクトに取り組むときに役立ちます。
+チームでの目標やそれぞれの役割などを決めてまとめられるシートです。ペアプログラミングやハッカソンなど、複数人で一つのプロジェクトに取り組むときに役立ちます。
 [![チームシート](/team.png)](/assets/images/worksheets/team.jpg)
 
 ### フィードバックシート
@@ -39,6 +37,7 @@ ogp: /assets/article/news/news-worksheet/ogp.png
 <a href="/assets/images/worksheets/worksheets_v1.zip" class="button btn-blue btn-article" target="_blank" rel="noopener nofollow noreferrer" download="/assets/images/worksheets/worksheets_v1.zip">一括ダウンロード（ZIP形式） <i class="fas fa-download"></i></a>
 
 
+自分で考えて作品づくりができるようになった子どもたちも、このワークシートを通して支援できれば幸いです。
 今後も教材だけでなく、ワークシートの整備や追加も進めていきます！
 
 引き続きメクルンをよろしくお願いします。
