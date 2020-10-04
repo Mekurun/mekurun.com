@@ -1,12 +1,19 @@
 {% if include.category == 'news' %}
-{% assign posts = site.data.news | limit: include.limit %}
+{% assign posts = site.data.news %}
 <ul class="article-list course-list news-list">
 {% else %}
 {% assign posts = site.posts | where_exp:"p", "p.category == include.category" | limit: include.limit %}
 <ul class="article-list course-list">
 {% endif %}
+
+{% if include.limit %}
+{% assign limit = include.limit %}
+{% else %}
+{% assign limit = posts.size %}
+{% endif %}
+
 {% for post in posts %}
-{% if page.url != post.url %}
+{% if page.url != post.url and forloop.index <= limit %}
 <li class="article-list-one">{% if post.tag == "note" or post.tag == "Qiita" %}<a href="{{ post.url }}" target="_blank" rel="nofollow noopener">{% else %}<a href="{{ post.url }}" class="card-list-item">{% endif %}
   {% if post.thumbnail %}
   <img data-src="{{ site.url }}/assets/article/{{ post.category }}{{ post.thumbnail }}" data-width="300" alt="{{ post.title }}" loading="lazy">

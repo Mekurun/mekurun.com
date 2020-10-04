@@ -11,4 +11,7 @@ layout: default
 <div class="main">
   {{content}}
 </div>
+{% if page.url == "/news/" or page.url == "/tips/" %}
+{% include support.html %}
+{% endif %}
 {% include footer.html %}

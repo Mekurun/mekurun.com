@@ -3,7 +3,7 @@ class Kramdown::Converter::Html
     "<img data-src='#{Jekyll.sites.first.config["url"]}#{el.attr["src"]}' alt='#{el.attr["alt"]}' loading='lazy' />"
   end
   def convert_a(el, indent)
-    "<a href='#{el.attr["href"]}' target='_blank' rel='nofollow'>#{inner(el, indent)}</a>"
+    "<a href='#{el.attr["href"]}' target='_blank' rel='nofollow noopener'>#{inner(el, indent)}</a>"
   end
 end
 
