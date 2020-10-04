@@ -27,12 +27,14 @@ description: courses.description
           <img data-src="{{ site.url }}/assets/course/{{ course.category }}/{{ course.course-name }}{{ thumbnail }}" data-width="348" alt="{{ course.title }}" loading="lazy">
           <p class="course-list-title">{% if site.lang == 'kana' and course.title-kana %}{{course.title-kana}}{% else %}{{course.title}}{% endif %}</p>
           <span>{% t category.{{ course.category }}.title %}</span><span class="top-course-list-difficulty {{ course.difficulty }}"> {% t difficulty.{{ course.difficulty }} %} </span>
-          <a href="{{ site.url }}/{{ course.category }}/{{ course.course-name }}/" class="download-pdf">
+          <div class="main-buttons">
+          <a href="{{ site.url }}/{{ course.category }}/{{ course.course-name }}/" class="button btn-blue">
           コースページを開く
           </a>
-          <a href="{{ site.baseurl }}/assets/course/scratch/{{course.course-name}}/slide.pdf" download="{{ site.baseurl }}/assets/course/scratch/{{course.course-name}}/slide.pdf" class="download-pdf">
+          <a href="{{ site.baseurl }}/assets/course/scratch/{{course.course-name}}/slide.pdf" download="{{ site.baseurl }}/assets/course/scratch/{{course.course-name}}/slide.pdf" class="button btn-white">
           PDFをダウンロード
           </a>
+          </div>
           <div class="">
             <section class="slide-page" id="subcourse">
               {% assign subcourses = site.courses | where_exp:"c",
@@ -48,10 +50,12 @@ description: courses.description
                 <li class="card-list-item">
                   <img data-src="{{ thumbnail }}" data-width="212" alt="{{ sc.title }}" loading="lazy">
                   <p class="course-list-title">{{sc.title}}</p>
-                  <a href="{{ site.baseurl }}{{sc.url}}">コースページを開く</a>
-                  <a href="{{ pdf }}" download="{{ pdf }}" class="download-pdf">
-                  PDFをダウンロード
-                  </a>
+                  <div class="sub-buttons">
+                    <a href="{{ site.baseurl }}{{sc.url}}" class="button btn-blue">コースページを開く</a>
+                    <a href="{{ pdf }}" download="{{ pdf }}" class="button btn-white">
+                    PDFをダウンロード
+                    </a>
+                  </div>
                 </li>
               {% endif %}
               {% endfor %}
