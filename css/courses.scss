@@ -1,7 +1,11 @@
 ---
 ---
 @import "main.scss";
-
+@media screen and (max-width: 700px) {
+  img.list-thumbnail {
+    height: auto;
+  }
+}
 .course-details {
   display: none;
   background: #5558;
@@ -32,6 +36,28 @@
 .course-details-item-content {
   padding: 12px;
 }
+@media screen and (max-width: 700px) {
+  .course-details-item {
+    width: 100%;
+    height: calc(100vh + 10px);
+    position: relative;
+  }
+  .course-details {
+    top: 1.2rem;
+    bottom: auto;
+  }
+  .course-details-item-content {
+    position: absolute;
+    bottom: 20px;
+    top: 0;
+    overflow: auto;
+  }
+  .course-details-item-close {
+    z-index: 1;
+    position: relative;
+    opacity: .8;
+  }
+}
 .course-check {
   display: none;
 }
@@ -54,18 +80,26 @@
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-areas:
-        "thumbnail title      "
-        "thumbnail category   "
-        "thumbnail diff       "
-        "thumbnail buttons    ";
+    "thumbnail title   "
+    "thumbnail category"
+    "thumbnail diff    "
+    "thumbnail buttons ";
 
-  .course-list-title {
-    grid-area: title;
+  @media screen and (max-width: 700px) {
+    grid-template-areas:
+      "thumbnail thumbnail"
+      "title title        "
+      "category diff      "
+      "buttons buttons    ";
   }
   .thumbnail {
     grid-area: thumbnail;
     width: auto;
     margin-right: 1rem;
+    @media screen and (max-width: 700px) {
+      margin-right: 0;
+      height: auto;
+    }
   }
   .top-course-list-difficulty {
     grid-area: diff;
@@ -74,17 +108,27 @@
 .course-details-category-name {
   grid-area: category;
 }
-
+.course-list-title {
+  grid-area: title;
+}
 #subcourse {
   .thumbnail {
     height: auto;
   }
+  .card-list-item {
+    @media screen and (max-width: 700px) {
+      margin-right: 0;
+      width: 100%;
+    }
+  }
 }
-
 .button {
   padding: 8px 12px;
   width: 100%;
   display: inline-block;
+  @media screen and (max-width: 700px) {
+    padding: 10px 6px;
+  }
 }
 .main-buttons {
   display: flex;
