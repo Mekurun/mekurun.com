@@ -42,7 +42,7 @@ description: courses.description
               {% assign subcourses = site.courses | where_exp:"c",
               "c.parent == course.course-name" %}
               {% if subcourses.size > 0 %}
-              <a href="#subcourse" style="text-decoration:none;"><h2>{% t course.subcourse %} <i class="fas fa-angle-down"></i></h2></a>
+              <h2>{% t course.subcourse %}</h2>
               <ul class="course-list">
               {% for sc in subcourses %}
               {% assign course_lang = sc.path | slice: 9, 2 %}

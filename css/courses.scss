@@ -104,21 +104,38 @@
   .top-course-list-difficulty {
     grid-area: diff;
   }
+  .course-list-title {
+    font-size: 1.125em;
+    @media screen and (min-width: 701px) {
+      margin-top: 0;
+    }
+  }
 }
 .course-details-category-name {
   grid-area: category;
 }
 .course-list-title {
   grid-area: title;
+  font-weight: bold;
 }
 #subcourse {
   .thumbnail {
     height: auto;
   }
-  .card-list-item {
-    @media screen and (max-width: 700px) {
+  h2 {
+    font-size: 1.25rem;
+    margin: 1rem 0 0;
+  }
+  @media screen and (max-width: 700px) {
+    .card-list-item {
       margin-right: 0;
       width: 100%;
+    }
+    .course-list-title {
+      font-size: 1.125em;
+    }
+    h2 {
+      margin: 2rem 0 1rem;
     }
   }
 }
