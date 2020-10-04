@@ -50,13 +50,45 @@
   margin-left: auto;
   cursor: pointer;
 }
+.main-course {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+        "thumbnail title      "
+        "thumbnail category   "
+        "thumbnail diff       "
+        "thumbnail buttons    ";
+
+  .course-list-title {
+    grid-area: title;
+  }
+  .thumbnail {
+    grid-area: thumbnail;
+    width: auto;
+    margin-right: 1rem;
+  }
+  .top-course-list-difficulty {
+    grid-area: diff;
+  }
+}
+.course-details-category-name {
+  grid-area: category;
+}
+
+#subcourse {
+  .thumbnail {
+    height: auto;
+  }
+}
+
 .button {
-  padding: 10px 12px;
+  padding: 8px 12px;
   width: 100%;
   display: inline-block;
 }
 .main-buttons {
   display: flex;
+  grid-area: buttons;
   .button:not(:last-of-type) {
     margin-right: 8px;
   }
@@ -64,9 +96,14 @@
 .sub-buttons {
   flex-direction: column;
   margin-top: auto;
+  text-align: center;
   .button {
     &:not(:last-of-type) {
       margin-bottom: 5px;
     }
+  }
+  a {
+    text-decoration: none;
+    font-weight: bold;
   }
 }
