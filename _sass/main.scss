@@ -667,6 +667,7 @@ footer {
   }
 }
 
+/* ここから下 /courses/ ページ */
 .course-details {
   display: none;
   background: #5558;
@@ -693,6 +694,8 @@ footer {
   max-width: 800px;
   width: 90%;
   border-radius: 10px;
+}
+.course-details-item-content {
   padding: 12px;
 }
 .course-check {
@@ -700,4 +703,16 @@ footer {
 }
 .course-check:checked + .course-details {
   display: flex;
+}
+.course-details-item-close { //閉じるボタン
+  padding: 6px;
+  background: $main-color;
+  color: #fff;
+  text-align: right;
+  width: 2rem;
+  text-align: center;
+  display: block;
+  border-radius: 0 10px 0px 10px;
+  margin-left: auto;
+  cursor: pointer;
 }
