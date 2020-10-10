@@ -3,10 +3,14 @@ layout: page
 title: courses.title
 permalink: /courses/
 description: courses.description
+categories:
+  - scratch
+  - minecraft
 ---
-
+{% for category in page.categories %}
+<h2>{% t category.{{category}}.title %}</h2>
 <ul class="top-course-list course-list">
-{% assign courses = site.courses | where_exp:"c", "c.parent == nil" %}
+{% assign courses = site.courses | where_exp:"c", "c.parent == nil and c.category == category" %}
 {% assign courses = courses | reverse %}
 {% for course in courses %}
   {% assign course_lang = course.path | slice: 9, 2 %}
@@ -72,7 +76,7 @@ description: courses.description
   {% endif %}
 {% endfor %}
 </ul>
-
+{% endfor %}
 <style media="screen">
   .normal::before {
     color: #ffb801;
