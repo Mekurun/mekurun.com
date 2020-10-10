@@ -34,6 +34,8 @@
   border-radius: 10px;
 }
 .course-details-item-content {
+  max-height: 80vh;
+  overflow: auto;
   padding: 12px;
 }
 @media screen and (max-width: 700px) {
@@ -51,6 +53,7 @@
     bottom: 20px;
     top: 0;
     overflow: auto;
+    max-height: none;
   }
   .course-details-item-close {
     z-index: 1;
