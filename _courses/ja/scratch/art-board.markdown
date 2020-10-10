@@ -8,6 +8,8 @@ difficulty: normal
 course-name: art-board
 description: このコースでは、Scratch（スクラッチ）で「おえかきボード」を作る方法を解説します。スライドで誰でも簡単に学べるビジュアルプログラミング学習サイト「メクルン」を使って、Scratch（スクラッチ）の学習をはじめよう。
 thumbnail: /thumbnail.png
+permalink: /courses/scratch/art-board/
+redirect_from: /scratch/art-board/
 slides:
 -  /0001.jpg
 -  /0002.jpg
