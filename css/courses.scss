@@ -75,6 +75,9 @@
   border-radius: 0 10px 0px 10px;
   margin-left: auto;
   cursor: pointer;
+  &:hover {
+    opacity: .8;
+  }
 }
 .main-course {
   display: grid;
@@ -118,7 +121,6 @@
 }
 .course-list-title {
   grid-area: title;
-  font-weight: bold;
 }
 #subcourse {
   .thumbnail {
