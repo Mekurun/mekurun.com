@@ -29,7 +29,7 @@ description: courses.description
             <p class="course-list-title">{% if site.lang == 'kana' and course.title-kana %}{{course.title-kana}}{% else %}{{course.title}}{% endif %}</p>
             <span class="course-details-category-name">{% t category.{{ course.category }}.title %}</span><span class="top-course-list-difficulty {{ course.difficulty }}"> {% t difficulty.{{ course.difficulty }} %} </span>
             <div class="main-buttons">
-              <a href="{{ site.url }}/{{ course.category }}/{{ course.course-name }}/" class="button btn-blue">
+              <a href="{{ site.url }}/courses/{{ course.category }}/{{ course.course-name }}/" class="button btn-blue">
               コースページを開く
               </a>
               <a href="{{ site.baseurl }}/assets/course/scratch/{{course.course-name}}/slide.pdf" download="{{ site.baseurl }}/assets/course/scratch/{{course.course-name}}/slide.pdf" class="button btn-white">
