@@ -85,20 +85,22 @@
 .main-course {
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-auto-rows: 1fr auto;
+  grid-auto-rows: auto 1fr auto;
   grid-template-areas:
-    "thumbnail title   "
-    "thumbnail category"
-    "thumbnail diff    "
-    "thumbnail buttons ";
+    "thumbnail title  "
+    "thumbnail diff   "
+    "thumbnail buttons";
 
   @media screen and (max-width: 700px) {
     grid-auto-rows: auto;
     grid-template-areas:
-      "thumbnail thumbnail"
-      "title title        "
-      "category diff      "
-      "buttons buttons    ";
+      "thumbnail"
+      "title    "
+      "diff     "
+      "buttons  ";
+  }
+  .top-course-list-difficulty {
+    margin-top: 0;
   }
   .thumbnail {
     grid-area: thumbnail;
@@ -118,9 +120,6 @@
       margin-top: 0;
     }
   }
-}
-.course-details-category-name {
-  grid-area: category;
 }
 .course-list-title {
   grid-area: title;

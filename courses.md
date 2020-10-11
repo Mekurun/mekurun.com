@@ -31,7 +31,7 @@ categories:
           <div class="main-course">
             <img data-src="{{ site.url }}/assets/course/{{ course.category }}/{{ course.course-name }}{{ thumbnail }}" data-width="348" alt="{{ course.title }}" loading="lazy" class="thumbnail">
             <p class="course-list-title">{% if site.lang == 'kana' and course.title-kana %}{{course.title-kana}}{% else %}{{course.title}}{% endif %}</p>
-            <span class="course-details-category-name">{% t category.{{ course.category }}.title %}</span><span class="top-course-list-difficulty {{ course.difficulty }}"> {% t difficulty.{{ course.difficulty }} %} </span>
+            <span class="top-course-list-difficulty {{ course.difficulty }}"> {% t difficulty.{{ course.difficulty }} %} </span>
             <div class="main-buttons">
               <a href="{{ site.url }}/courses/{{ course.category }}/{{ course.course-name }}/" class="button btn-blue">
               コースページを開く
