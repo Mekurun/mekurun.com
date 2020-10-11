@@ -27,18 +27,18 @@
     "itemListElement": [{
       "@type": "ListItem",
       "position": 1,
-      "name": "トップ",
-      "item": "https://mekurun.com/"
+      "name": "{% t courses.title %}",
+      "item": "https://mekurun.com/courses/"
     },{
       "@type": "ListItem",
       "position": 2,
       "name": "{% t category.{{page.category}}.title %}",
-      "item": "https://mekurun.com/{{page.category}}/"
+      "item": "https://mekurun.com/courses/{{page.category}}/"
     },{
       "@type": "ListItem",
       "position": 3,
       "name": "{% t difficulty.{{page.difficulty}} %}",
-      "item": "https://mekurun.com/{{page.category}}/#{{page.difficulty}}"
+      "item": "https://mekurun.com/courses/{{page.category}}/#{{page.difficulty}}"
     },{
       "@type": "ListItem",
       "position": 4,

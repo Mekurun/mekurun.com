@@ -401,16 +401,18 @@ footer {
     background-color: #fff;
     margin: 12px 0;
     @include card;
+  }
+  a.card-list-item {
     @include card-hover;
-    a {
-      text-decoration: none;
-      color: $text-color;
-      font-weight: 500;
-      padding: 12px;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-    }
+    height: 100%;
+  }
+  .card-list-item {
+    text-decoration: none;
+    color: $text-color;
+    font-weight: 500;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
   }
   img {
     width: 100%; // 80vw * 0.33 - 12*2*2px = 26.4vw - 48px
@@ -502,7 +504,7 @@ footer {
   color: $darkgray;
 }
 .news-list {
-  li {
+  li.article-list-one {
     width: 100%;
     margin: 6px 0;
     a {

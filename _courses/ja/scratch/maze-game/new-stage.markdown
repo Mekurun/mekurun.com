@@ -9,6 +9,8 @@ parent:	maze-game
 course-name: new-stage
 description: このサブコースでは、「めいろゲーム」に新しいステージを追加する方法を解説します。スライドで誰でも簡単に学べるビジュアルプログラミング学習サイト「メクルン」を使って、Scratch（スクラッチ）の学習をはじめよう。
 thumbnail: /thumbnail.png
+permalink: /courses/scratch/maze-game/new-stage/
+redirect_from: /scratch/maze-game/new-stage/
 slides:
 -  /0001.jpg
 -  /0002.jpg

@@ -8,6 +8,8 @@ difficulty: easy
 course-name: music-studio
 description: このコースでは、Scratch（スクラッチ）で「ミュージックスタジオ」を作る方法を解説します。スライドで誰でも簡単に学べるビジュアルプログラミング学習サイト「メクルン」を使って、Scratch（スクラッチ）の学習をはじめよう。
 thumbnail: /thumbnail.png
+permalink: /courses/scratch/music-studio/
+redirect_from: /scratch/music-studio/
 slides:
 -  /0001.jpg
 -  /0002.jpg

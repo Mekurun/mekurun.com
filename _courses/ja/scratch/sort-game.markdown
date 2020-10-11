@@ -8,6 +8,8 @@ difficulty: normal
 course-name: sort-game
 description: このコースでは、Scratch（スクラッチ）で「はこいれゲーム」を作る方法を解説します。スライドで誰でも簡単に学べるビジュアルプログラミング学習サイト「メクルン」を使って、Scratch（スクラッチ）の学習をはじめよう。
 thumbnail: /thumbnail.png
+permalink: /courses/scratch/sort-game/
+redirect_from: /scratch/sort-game/
 slides:
 -  /0001.jpg
 -  /0002.jpg

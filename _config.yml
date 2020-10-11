@@ -10,6 +10,7 @@ plugins:
   - jekyll-multiple-languages-plugin
   - jekyll-minifier
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 languages: ["ja", "en", "kana"]
 
