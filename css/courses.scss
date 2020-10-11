@@ -6,6 +6,9 @@
     height: auto;
   }
 }
+.list-thumbnail {
+  display: block;
+}
 .course-details {
   display: none;
   background: #5558;
@@ -38,30 +41,6 @@
   overflow: auto;
   padding: 12px;
 }
-/*
-@media screen and (max-width: 700px) {
-  .course-details-item {
-    width: 100%;
-    height: calc(100vh + 10px);
-    position: relative;
-  }
-  .course-details {
-    top: 1.2rem;
-    bottom: auto;
-  }
-  .course-details-item-content {
-    position: absolute;
-    bottom: 20px;
-    top: 0;
-    overflow: auto;
-    max-height: none;
-  }
-  .course-details-item-close {
-    z-index: 1;
-    position: relative;
-    opacity: .8;
-  }
-}*/
 .course-check {
   display: none;
 }
