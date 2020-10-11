@@ -130,7 +130,7 @@
   }
   h2 {
     font-size: 1.25rem;
-    margin: 1rem 0 0;
+    margin: 2rem 0 0;
   }
   @media screen and (max-width: 700px) {
     .card-list-item {
@@ -173,4 +173,7 @@
     text-decoration: none;
     font-weight: bold;
   }
+}
+.link-pdf-download:hover {
+  opacity: .8;
 }

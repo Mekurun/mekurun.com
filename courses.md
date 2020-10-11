@@ -58,9 +58,7 @@ categories:
                   <p class="course-list-title">{{sc.title}}</p>
                   <div class="sub-buttons">
                     <a href="{{ site.baseurl }}{{sc.url}}" class="button btn-blue">コースページを開く</a>
-                    <a href="{{ pdf }}" download="{{ pdf }}">
-                    PDFをダウンロード
-                    </a>
+                    <a href="{{ pdf }}" download="{{ pdf }}" class="link-pdf-download">PDFをダウンロード</a>
                   </div>
                 </li>
               {% endif %}
