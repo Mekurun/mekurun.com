@@ -38,6 +38,7 @@
   overflow: auto;
   padding: 12px;
 }
+/*
 @media screen and (max-width: 700px) {
   .course-details-item {
     width: 100%;
@@ -60,7 +61,7 @@
     position: relative;
     opacity: .8;
   }
-}
+}*/
 .course-check {
   display: none;
 }
@@ -73,8 +74,11 @@
   color: #fff;
   text-align: right;
   width: 2rem;
+  height: 2rem;
   text-align: center;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 0 10px 0px 10px;
   margin-left: auto;
   cursor: pointer;
@@ -176,4 +180,20 @@
 }
 .link-pdf-download:hover {
   opacity: .8;
+}
+
+@media screen and (max-width: 700px) {
+  .main-buttons {
+    flex-wrap: wrap;
+    .button {
+      width: 100%;
+      margin: 4px 0;
+      &:not(:last-of-type) {
+        margin-right: 0;
+      }
+    }
+  }
+  .top-course-list-difficulty {
+    margin-bottom: .6rem;
+  }
 }

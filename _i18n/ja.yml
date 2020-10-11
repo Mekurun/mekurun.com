@@ -15,9 +15,9 @@ difficulty:
   normal: ふつう
   hard: むずかしい
 courses:
-  title: コース一覧
-  description: コース一覧です。
-  
+  title: 全てのコース
+  description: メクルンのコース一覧です。
+
 category:
   official: 公式サイト
   scratch:
