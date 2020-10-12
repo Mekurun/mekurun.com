@@ -26,12 +26,12 @@ module Jekyll
               page.data['ogp'] = "/assets/course/#{@category}/#{page.data['course-name']}#{@thumbnail}"
 
             page.data['permalink'] = @parent.nil??
-              "/#{@category}/:title/"
+              "/courses/#{@category}/:title/"
             :
-            "/#{@category}/#{@parent}/:title/"
+            "/courses/#{@category}/#{@parent}/:title/"
           when 'categories'
             @name = page.data['categoryname']
-            page.data['permalink'] = "/#{@name}/"
+            page.data['permalink'] = "/courses/#{@name}/"
           end
         end
       end

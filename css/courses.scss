@@ -1,0 +1,178 @@
+---
+---
+@import "main.scss";
+@media screen and (max-width: 700px) {
+  img.list-thumbnail {
+    height: auto;
+  }
+}
+.list-thumbnail {
+  display: block;
+}
+.course-details {
+  display: none;
+  background: #5558;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: fixed;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+}
+.course-details-bg {
+  background: #5558;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: fixed;
+  z-index: -1;
+}
+.course-details-item {
+  background: #fff;
+  max-width: 800px;
+  width: 90%;
+  border-radius: 10px;
+}
+.course-details-item-content {
+  max-height: 80vh;
+  overflow: auto;
+  padding: 12px;
+}
+.course-check {
+  display: none;
+}
+.course-check:checked + .course-details {
+  display: flex;
+}
+.course-details-item-close { //閉じるボタン
+  padding: 6px;
+  background: $main-color;
+  color: #fff;
+  text-align: right;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 10px 0px 10px;
+  margin-left: auto;
+  cursor: pointer;
+  &:hover {
+    opacity: .8;
+  }
+}
+.main-course {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-auto-rows: auto 1fr auto;
+  grid-template-areas:
+    "thumbnail title  "
+    "thumbnail diff   "
+    "thumbnail buttons";
+
+  @media screen and (max-width: 700px) {
+    grid-auto-rows: auto;
+    grid-template-areas:
+      "thumbnail"
+      "title    "
+      "diff     "
+      "buttons  ";
+  }
+  .top-course-list-difficulty {
+    margin-top: 0;
+  }
+  .thumbnail {
+    grid-area: thumbnail;
+    width: auto;
+    margin-right: 1rem;
+    @media screen and (max-width: 700px) {
+      margin-right: 0;
+      height: auto;
+    }
+  }
+  .top-course-list-difficulty {
+    grid-area: diff;
+  }
+  .course-list-title {
+    font-size: 1.125em;
+    @media screen and (min-width: 701px) {
+      margin-top: 0;
+    }
+  }
+}
+.course-list-title {
+  grid-area: title;
+}
+#subcourse {
+  .thumbnail {
+    height: auto;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 2rem 0 0;
+  }
+  @media screen and (max-width: 700px) {
+    .card-list-item {
+      margin-right: 0;
+      width: 100%;
+    }
+    .course-list-title {
+      font-size: 1.125em;
+    }
+    h2 {
+      margin: 2rem 0 1rem;
+    }
+  }
+}
+.button {
+  padding: 8px 12px;
+  width: 100%;
+  display: inline-block;
+  @media screen and (max-width: 700px) {
+    padding: 10px 6px;
+  }
+}
+.main-buttons {
+  display: flex;
+  grid-area: buttons;
+  .button:not(:last-of-type) {
+    margin-right: 8px;
+  }
+}
+.sub-buttons {
+  flex-direction: column;
+  margin-top: auto;
+  text-align: center;
+  .button {
+    &:not(:last-of-type) {
+      margin-bottom: 5px;
+    }
+  }
+  a {
+    text-decoration: none;
+    font-weight: bold;
+  }
+}
+.link-pdf-download:hover {
+  opacity: .8;
+}
+
+@media screen and (max-width: 700px) {
+  .main-buttons {
+    flex-wrap: wrap;
+    .button {
+      width: 100%;
+      margin: 4px 0;
+      &:not(:last-of-type) {
+        margin-right: 0;
+      }
+    }
+  }
+  .top-course-list-difficulty {
+    margin-bottom: .6rem;
+  }
+}
