@@ -9,8 +9,6 @@ parent:	chase-game
 course-name: gameover
 description: このサブコースでは、「おいかけっこゲーム」にゲームオーバーの画面をつくる方法を解説します。スライドで誰でも簡単に学べるビジュアルプログラミング学習サイト「メクルン」を使って、Scratch（スクラッチ）の学習をはじめよう。
 thumbnail: /thumbnail.png
-permalink: /courses/scratch/chase-game/gameover/
-redirect_from: /scratch/chase-game/gameover/
 slides:
 -  /0001.jpg
 -  /0002.jpg

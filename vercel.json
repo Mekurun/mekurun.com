@@ -5,5 +5,9 @@
   "trailingSlash": true,
   "github": {
     "silent": true
-  }
+  },
+  "redirects": [
+    { "source": "/scratch/(.*)", "destination": "/courses/scratch/$1" },
+    { "source": "/minecraft/(.*)", "destination": "/courses/minecraft/$1" }
+  ]
 }

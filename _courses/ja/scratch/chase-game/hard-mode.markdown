@@ -9,8 +9,6 @@ parent:	chase-game
 course-name: hard-mode
 description: このサブコースでは、「おいかけっこゲーム」の難易度をあげていく方法を解説します。スライドで誰でも簡単に学べるビジュアルプログラミング学習サイト「メクルン」を使って、Scratch（スクラッチ）の学習をはじめよう。
 thumbnail: /thumbnail.png
-permalink: /courses/scratch/chase-game/hard-mode/
-redirect_from: /scratch/chase-game/hard-mode/
 slides:
 -  /0001.jpg
 -  /0002.jpg
