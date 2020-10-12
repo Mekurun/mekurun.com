@@ -29,6 +29,9 @@ module Jekyll
               "/courses/#{@category}/:title/"
             :
             "/courses/#{@category}/#{@parent}/:title/"
+          when 'categories'
+            @name = page.data['categoryname']
+            page.data['permalink'] = "/courses/#{@name}/"
           end
         end
       end
