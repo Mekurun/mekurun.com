@@ -53,21 +53,37 @@ header {
   font-weight: 500;
 }
 .header-nav-ul {
+  height: $header-height;
   list-style: none;
-  line-height: $header-height;
   margin: 0;
   padding: 0;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   position: absolute;
-  right: 160px;
+  right: 8px;
+  top: 0;
   li {
-    margin-right: 4px;
+    margin-right: 5px;
     display: inline-block;
   }
   a {
     font-weight: inherit;
     text-decoration: none;
     color: inherit;
+    display: inline-block;
+    &.kana-switch {
+      color: #fff;
+      font-weight: bold;
+      display: inline;
+    }
+    &:not(.kana-switch){
+      border-radius: 10px;
+      padding: .5rem;
+      transition: all .2s;
+      &:hover {
+        background: rgba($lightgray, 0.7);
+      }
+    }
   }
 }
 .header-nav-content {
@@ -81,82 +97,41 @@ header {
     padding-left: 20px;
   }
 }
-
-/*ひらがなスイッチ*/
+/* ひらがなスイッチ */
 .kana-switch-cover {
-  position: absolute;
-  right: 40px;
-  top: 5px;
-  bottom: 5px;
-  font-size: .8em;
-}
-$switchHeight: 28px;
-.nav-cover {
-  display: inline;
+  margin-left: 10px;
 }
 .kana-switch {
-  border-radius: $switchHeight / 2 + 8px;
-  border: solid 2px #fff;
-  display: block;
-  height: $switchHeight + 4px;
-  padding: 5px;
-  margin: auto;
-  width: $switchHeight * 1.9;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  &::before {
-    position: absolute;
-    content: '';
-    background-color: #fff;
-    border-radius: ($switchHeight - 10px) / 2;
-    display: block;
-    width: $switchHeight - 10px;
-    height: $switchHeight - 10px;
+  padding: 10px 12px;
+  border-radius: 2rem;
+  background: #ffb801;
+  &:hover {
+    opacity: .8;
   }
 }
-.kana-switch-off {
-  background-color: #c2c2c2;
-  &::before {
-    left: 5px;
-    animation: turnoff .2s ease;
-  }
-}
-.kana-switch-on {
-  background-color: $main-color;
-  &::before {
-    right: 5px;
-    animation: turnon .2s ease;
-  }
-}
-@keyframes turnon {
-  0% {right: $switchHeight * 0.52;}
-  100% {right: 5px;}
-}
-@keyframes turnoff {
-  0% {left: $switchHeight * 0.52;}
-  100% {left: 5px;}
+.nav-cover {
+  display: inline;
 }
 #nav-checkbox, .nav-switch {
   display: none;
 }
 @media screen and (max-width:700px) {
   header {
-    width: 100%;
-    margin: 0;
     position: fixed;
-    border-radius: 0;
     z-index: 1;
+    margin: 18px 20px;
+    width: calc(100% - 40px);
   }
   .header-nav-content {
     z-index: 1;
-    position: fixed;
-    padding: 10px 20px;
-    width: 60%;
-    height: calc(100% - #{$header-height});
-    top: $header-height;
-    right: 0;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    top: 0;
+    right: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: center;
   }
   .nav-cover {
     display: none;
@@ -164,13 +139,15 @@ $switchHeight: 28px;
   .header-nav-bg {
     background-color: #3338;
     position: absolute;
-    top: $header-height;
+    top: -18px;
     width: 100vw;
     height: 100vh;
+    left: -20px;
   }
   .header-nav-ul {
     position: static;
     display: block;
+    height: auto;
     li {
       display: list-item;
       line-height: 2em;
@@ -181,13 +158,12 @@ $switchHeight: 28px;
     }
   }
   .kana-switch-cover {
-    position: static;
-    font-size: 1em;
-    margin-top: 1em;
+    margin-left: 0;
+    margin-top: 1rem;
   }
   .kana-switch {
-    margin: 0;
-    position: relative;
+    text-align: center;
+    line-height: 1rem;
   }
   .nav-switch {
     display: inline-block;
@@ -199,7 +175,7 @@ $switchHeight: 28px;
     }
   }
   #nav-checkbox:checked ~ .nav-cover {
-    display: block;
+    display: flex;
   }
   #nav-checkbox:checked ~ .nav-switch .fa-bars {
     display: none;
