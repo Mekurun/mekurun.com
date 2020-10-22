@@ -59,7 +59,7 @@ header {
   padding: 0;
   display: inline-block;
   position: absolute;
-  right: 160px;
+  right: 10px;
   li {
     margin-right: 4px;
     display: inline-block;
@@ -68,6 +68,10 @@ header {
     font-weight: inherit;
     text-decoration: none;
     color: inherit;
+    &.kana-switch {
+      color: #fff;
+      font-weight: bold;
+    }
   }
 }
 .header-nav-content {
@@ -81,62 +85,20 @@ header {
     padding-left: 20px;
   }
 }
-
-/*ひらがなスイッチ*/
+/* ひらがなスイッチ */
 .kana-switch-cover {
-  position: absolute;
-  right: 40px;
-  top: 5px;
-  bottom: 5px;
-  font-size: .8em;
-}
-$switchHeight: 28px;
-.nav-cover {
-  display: inline;
+  margin-left: 10px;
 }
 .kana-switch {
-  border-radius: $switchHeight / 2 + 8px;
-  border: solid 2px #fff;
-  display: block;
-  height: $switchHeight + 4px;
-  padding: 5px;
-  margin: auto;
-  width: $switchHeight * 1.9;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  &::before {
-    position: absolute;
-    content: '';
-    background-color: #fff;
-    border-radius: ($switchHeight - 10px) / 2;
-    display: block;
-    width: $switchHeight - 10px;
-    height: $switchHeight - 10px;
+  padding: 10px 12px;
+  border-radius: 2rem;
+  background: $main-color;
+  &:hover {
+    opacity: .8;
   }
 }
-.kana-switch-off {
-  background-color: #c2c2c2;
-  &::before {
-    left: 5px;
-    animation: turnoff .2s ease;
-  }
-}
-.kana-switch-on {
-  background-color: $main-color;
-  &::before {
-    right: 5px;
-    animation: turnon .2s ease;
-  }
-}
-@keyframes turnon {
-  0% {right: $switchHeight * 0.52;}
-  100% {right: 5px;}
-}
-@keyframes turnoff {
-  0% {left: $switchHeight * 0.52;}
-  100% {left: 5px;}
+.nav-cover {
+  display: inline;
 }
 #nav-checkbox, .nav-switch {
   display: none;
@@ -181,13 +143,12 @@ $switchHeight: 28px;
     }
   }
   .kana-switch-cover {
-    position: static;
-    font-size: 1em;
-    margin-top: 1em;
+    margin-left: 0;
+    margin-top: 1rem;
   }
   .kana-switch {
-    margin: 0;
-    position: relative;
+    text-align: center;
+    line-height: 1rem;
   }
   .nav-switch {
     display: inline-block;
