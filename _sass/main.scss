@@ -117,20 +117,21 @@ header {
 }
 @media screen and (max-width:700px) {
   header {
-    width: 100%;
-    margin: 0;
     position: fixed;
-    border-radius: 0;
     z-index: 1;
+    margin: 18px 20px;
+    width: calc(100% - 40px);
   }
   .header-nav-content {
     z-index: 1;
-    position: fixed;
-    padding: 10px 20px;
-    width: 60%;
-    height: calc(100% - #{$header-height});
-    top: $header-height;
-    right: 0;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    top: 0;
+    right: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: center;
   }
   .nav-cover {
     display: none;
@@ -138,13 +139,15 @@ header {
   .header-nav-bg {
     background-color: #3338;
     position: absolute;
-    top: $header-height;
+    top: -18px;
     width: 100vw;
     height: 100vh;
+    left: -20px;
   }
   .header-nav-ul {
     position: static;
     display: block;
+    height: auto;
     li {
       display: list-item;
       line-height: 2em;
@@ -172,7 +175,7 @@ header {
     }
   }
   #nav-checkbox:checked ~ .nav-cover {
-    display: block;
+    display: flex;
   }
   #nav-checkbox:checked ~ .nav-switch .fa-bars {
     display: none;
