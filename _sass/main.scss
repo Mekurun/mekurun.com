@@ -1,5 +1,6 @@
 $main-color: #34a2df;
 $main-dark: #006eac;
+$sub-color: #fe9161;
 $text-color: #333333;
 $darkgray: #707070;
 $lightgray: #d9e6f0;
@@ -104,7 +105,7 @@ header {
 .kana-switch {
   padding: 10px 12px;
   border-radius: 2rem;
-  background: #ffb801;
+  background: $sub-color;
   &:hover {
     opacity: .8;
   }
