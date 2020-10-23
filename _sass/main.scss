@@ -33,7 +33,7 @@ a {
 .ph-ignore {
   display: inline-block;
 }
-@media screen and (max-width:700px) {
+@media screen and (max-width:730px) {
   .pc-ignore {
     display: inline-block;
   }
@@ -75,7 +75,7 @@ header {
     &.kana-switch {
       color: #fff;
       font-weight: bold;
-      display: inline;
+      text-align: center;
     }
     &:not(.kana-switch){
       border-radius: 10px;
@@ -94,7 +94,7 @@ header {
 .header-nav-logo {
   height: $header-height;
   padding: $header-height * 0.25 $header-height * 0.5;
-  @media screen and (max-width:700px) {
+  @media screen and (max-width:730px) {
     padding-left: 20px;
   }
 }
@@ -106,6 +106,8 @@ header {
   padding: 10px 12px;
   border-radius: 2rem;
   background: $sub-color;
+  width: calc(7rem + 32px);
+  line-height: 1em;
   &:hover {
     opacity: .8;
   }
@@ -116,7 +118,7 @@ header {
 #nav-checkbox, .nav-switch {
   display: none;
 }
-@media screen and (max-width:700px) {
+@media screen and (max-width:730px) {
   header {
     position: fixed;
     z-index: 1;
@@ -248,7 +250,7 @@ footer {
   border-radius: 10px;
   border: solid 2px $color;
   box-shadow: 0 4px 0 $color;
-  @media screen and (max-width:700px) {
+  @media screen and (max-width:730px) {
     width: 100%;
     margin: 0 0 16px 0;
   }
@@ -266,7 +268,7 @@ footer {
   align-items: center;
   color: #fff;
   flex-wrap: wrap;
-  @media screen and (max-width:700px) {
+  @media screen and (max-width:730px) {
     padding-top: $header-height * 1 + 24px;
   }
   h1 {
@@ -402,18 +404,18 @@ footer {
     @media screen and (max-width: 800px) {
       height: calc(((100vw - 40px) * 0.33 - 32px) * 0.525);
     }
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 730px) {
       height: calc((100vw - 40px - 24px - 4px) * 0.525);
     }
   }
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 730px) {
   .course-list:not(.news-list) li:not(:nth-child(3n)) {
     margin-right: 12px;
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 730px) {
   /*横スクロールリスト。モバイルフレンドリーの問題から、一旦使っていない。*/
   .horizontal-list {
     overflow-x: auto;
@@ -548,7 +550,7 @@ footer {
   @media screen and (max-width:880px) {
     width: 100%;
   }
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 730px) {
     &:not(:nth-child(2n)) {
       margin-right: 12px;
     }
@@ -679,7 +681,7 @@ footer {
   margin-top: 60px;
   margin-bottom: -60px;
   background-size: 35% auto;
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 730px) {
     background-size: 90% auto;
   }
 }
@@ -732,7 +734,7 @@ footer {
 .supporter-w-img {
   width: 20%;
   padding: 24px;
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 730px) {
     width: 33%;
     padding: 8px;
   }
@@ -744,7 +746,7 @@ footer {
   margin: .2rem 0 1rem;
   text-align: center;
   word-break: break-all;
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 730px) {
     margin: .2rem 0;
   }
 }
@@ -785,14 +787,14 @@ footer {
 .three-blocks-item {
   width: 33%;
   padding: 20px;
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 730px) {
     width: 100%;
   }
   h3 {
     text-align: center;
   }
   img {
-    @media screen and (min-width: 701px) {
+    @media screen and (min-width: 731px) {
       height: 200px;
     }
     margin: auto;
@@ -819,7 +821,7 @@ footer {
   }
   img {
     max-width: 160px;
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 730px) {
       max-width: 100px;
     }
     display: block;
@@ -840,7 +842,7 @@ footer {
 .writor {
   img {
     max-width: 120px;
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 730px) {
       max-width: 80px;
     }
     display: block;
@@ -864,11 +866,11 @@ footer {
   display: flex;
   flex-wrap: wrap;
   margin-top: 5rem;
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 730px) {
     margin-top: 3rem;
     flex-direction: column-reverse;
   }
-  @media screen and (min-width: 701px) {
+  @media screen and (min-width: 731px) {
     &:not(:nth-of-type(2n+1)) {
       flex-direction: row-reverse;
       img {
@@ -879,7 +881,7 @@ footer {
   h3 {
     text-align: left;
     margin: 0;
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 730px) {
       text-align: center;
     }
   }
@@ -888,7 +890,7 @@ footer {
     margin: auto;
     padding-right: 24px;
     width: 50%;
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 730px) {
       width: 100%;
       padding-right: 0;
     }
@@ -896,7 +898,7 @@ footer {
 }
 .feature-text {
   width: 50%;
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 730px) {
     width: 100%;
   }
 }
