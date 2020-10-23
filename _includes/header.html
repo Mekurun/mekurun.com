@@ -22,10 +22,10 @@ https://res.cloudinary.com/nztm/image/fetch/c_fit,q_auto,f_auto,w_400/{{ site.ur
       <li class="kana-switch-cover">
         {% if site.lang == "ja" %}
           {% capture link1 %}{{ site.baseurl_root }}/kana{{ page.url}}{% endcapture %}
-          <a href="{{ link1 }}" class="kana-switch kana-switch-off">ひらがなモード</a>
+          <a href="{{ link1 }}" class="kana-switch kana-switch-off">ひらがなにする</a>
         {% elsif site.lang == "kana" %}
           {% capture link2 %}{{ site.baseurl_root }}{{ page.url  }}{% endcapture %}
-          <a href="{{ link2 }}" class="kana-switch kana-switch-on">漢字モード</a>
+          <a href="{{ link2 }}" class="kana-switch kana-switch-on">漢字にする</a>
         {% endif %}
       </li>
       {% endif %}
