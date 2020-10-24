@@ -106,7 +106,8 @@ header {
   padding: 10px 12px;
   border-radius: 2rem;
   background: $sub-color;
-  width: calc(7rem + 32px);
+  width: 8rem;
+  box-sizing: content-box;
   line-height: 1em;
   &:hover {
     opacity: .8;
@@ -167,6 +168,7 @@ header {
   .kana-switch {
     text-align: center;
     line-height: 1rem;
+    box-sizing: border-box;
   }
   .nav-switch {
     display: inline-block;
