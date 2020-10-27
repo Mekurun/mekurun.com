@@ -26,7 +26,7 @@ difficulty:
       {% capture thumbnail %}{% if course.thumbnail %}{{ course.thumbnail }}{% else %}{{ course.slides[0] }}{% endif %}{% endcapture %}
       <img data-src="{{ site.url }}/assets/course/{{ course.category }}/{{ course.course-name }}{{ thumbnail }}" data-width="348" alt="{{ course.title }}" loading="lazy" class="list-thumbnail">
       <p class="course-list-title">{% if site.lang == 'kana' and course.title-kana %}{{course.title-kana}}{% else %}{{course.title}}{% endif %}</p>
-      <span class="top-course-list-difficulty {{ course.difficulty }}"> {% t difficulty.{{ course.difficulty }} %} </span>
+      <span class="top-course-list-difficulty {{ course.difficulty }}" style="margin-left: 0;"> {% t difficulty.{{ course.difficulty }} %} </span>
       </label>
       <input type="checkbox" class="course-check" id="course-check-{{course.course-name}}">
       <div class="course-details">
@@ -37,7 +37,10 @@ difficulty:
             <div class="main-course">
               <img data-src="{{ site.url }}/assets/course/{{ course.category }}/{{ course.course-name }}{{ thumbnail }}" data-width="348" alt="{{ course.title }}" loading="lazy" class="thumbnail">
               <p class="course-list-title">{% if site.lang == 'kana' and course.title-kana %}{{course.title-kana}}{% else %}{{course.title}}{% endif %}</p>
+              <div class="courses-diff-category">
+              <span class="top-course-list-category {{course.category}}">{% t category.{{ course.category }}.title %}</span>
               <span class="top-course-list-difficulty {{ course.difficulty }}"> {% t difficulty.{{ course.difficulty }} %} </span>
+              </div>
               <div class="main-buttons">
                 <a href="{{ site.url }}/courses/{{ course.category }}/{{ course.course-name }}/" class="button btn-blue">
                 コースページを開く
@@ -84,13 +87,12 @@ difficulty:
 </ul>
 {% endfor %}
 <style media="screen">
-  .normal::before {
-    color: #ffb801;
-  }
-  .easy::before {
-    color: #8bca31;
-  }
-  .hard::before {
-    color: #ff81ae;
-  }
+  .scratch { background: #ffb801 }
+  .minecraft { background: #8bca31 }
+  .normal { border-color: #ffb801 }
+  .normal::before { color: #ffb801 }
+  .easy{ border-color: #8bca31 }
+  .easy::before { color: #8bca31 }
+  .hard { border-color: #ff81ae }
+  .hard::before { color: #ff81ae }
 </style>
