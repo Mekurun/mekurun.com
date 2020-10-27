@@ -94,6 +94,10 @@
 
   .courses-diff-category {
     grid-area: diff;
+    font-size: 0;
+      span {
+        font-size: initial;
+      }
   }
   .top-course-list-difficulty {
     margin-top: 0;
