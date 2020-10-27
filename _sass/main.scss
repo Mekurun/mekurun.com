@@ -11,7 +11,7 @@ body {
   margin: 0;
   color: $text-color;
   background-color: $bg-gray;
-  font: 100%/1.7 "Hiragino Kaku Gothic Pro", "Meiryo UI", Meiryo, "MS PGothic", sans-serif;
+  font: 100%/1.7 'Noto Sans JP', sans-serif;
 }
 * {
   box-sizing: border-box;
@@ -450,28 +450,37 @@ footer {
   }
 }
 .course-list-title {
-  margin: 0.6em 0 0.4em 0;
+  margin: 0.8em 0 0.6em 0;
 }
 .top-course-list-category {
-  background-color: $lightgray;
-  display: block;
-  width: 100%;
+  color: $darkgray;
+  display: inline-block;
   text-align: center;
   border-radius: 5px;
   margin-bottom: 5px;
-  padding: 4px 0;
   font-weight: 500;
+
+  background: $main-color;
+  border-radius: 2rem;
+  padding: 2px 14px;
+  color: #fff;
 }
 .top-course-list-difficulty {
-  display: block;
-  width: 100%;
+  border-radius: 2rem;
+  padding: 0 10px;
+  border: solid 2px $main-color;
+
+  color: $darkgray;
+  display: inline-block;
+  margin-left: .5rem;
   margin-top: auto;
   &:before {
     content: "\f005";
     font-weight: 900;
     font-family: 'Font Awesome 5 Free';
-    color: $main-color;
     opacity: .8;
+    margin-right: .3rem;
+    color: #fff;
   }
 }
 .article-list-title {
@@ -500,7 +509,7 @@ footer {
   background: $main-color;
   color: #fff;
   font-weight: bold;
-  padding: 6px 12px;
+  padding: 3px 12px;
   border-radius: 1rem;
   margin: 0 12px;
 }
