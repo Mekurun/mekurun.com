@@ -11,7 +11,7 @@ body {
   margin: 0;
   color: $text-color;
   background-color: $bg-gray;
-  font: 100%/1.7 "Hiragino Kaku Gothic Pro", "Meiryo UI", Meiryo, "MS PGothic", sans-serif;
+  font: 100%/1.7 'Noto Sans JP', sans-serif;
 }
 * {
   box-sizing: border-box;
@@ -500,7 +500,7 @@ footer {
   background: $main-color;
   color: #fff;
   font-weight: bold;
-  padding: 6px 12px;
+  padding: 3px 12px;
   border-radius: 1rem;
   margin: 0 12px;
 }
