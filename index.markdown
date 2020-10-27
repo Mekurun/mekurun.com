@@ -46,7 +46,7 @@ title: title
           {% capture thumbnail %}{% if course.thumbnail %}{{ course.thumbnail }}{% else %}{{ course.slides[0] }}{% endif %}{% endcapture %}
           <img data-src="{{ site.url }}/assets/course/{{ course.category }}/{{ course.course-name }}{{ thumbnail }}" data-width="348" alt="{{ course.title }}" loading="lazy">
           <p class="course-list-title">{% if site.lang == 'kana' and course.title-kana %}{{course.title-kana}}{% else %}{{course.title}}{% endif %}</p>
-          <div><span class="top-course-list-category">{% t category.{{ course.category }}.title %}</span><span class="top-course-list-difficulty {{ course.difficulty }}">{% t difficulty.{{ course.difficulty }} %}</span></div>
+          <div><span class="top-course-list-category {{course.category}}">{% t category.{{ course.category }}.title %}</span><span class="top-course-list-difficulty {{ course.difficulty }}">{% t difficulty.{{ course.difficulty }} %}</span></div>
         </a>
       </li>
       {% endif %}
@@ -55,15 +55,14 @@ title: title
   </div>
 
   <style media="screen">
-    .normal::before {
-      color: #ffb801;
-    }
-    .easy::before {
-      color: #8bca31;
-    }
-    .hard::before {
-      color: #ff81ae;
-    }
+    .scratch { background: #ffb801 }
+    .minecraft { background: #8bca31 }
+    .normal { border-color: #ffb801 }
+    .normal::before { color: #ffb801 }
+    .easy{ border-color: #8bca31 }
+    .easy::before { color: #8bca31 }
+    .hard { border-color: #ff81ae }
+    .hard::before { color: #ff81ae }
   </style>
 
 <!--
