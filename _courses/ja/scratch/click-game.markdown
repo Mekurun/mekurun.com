@@ -1,12 +1,12 @@
 ---
 layout: course
-title:  "クリックゲームをつくろう"
-date: 2020-07-21
+title:  "シューティングゲームをつくろう"
+date: 2020-10-28
 # title-kana: ""
 category: scratch
-difficulty: normal
-course-name: click-game
-description: このコースでは、Scratch（スクラッチ）で「クリックゲーム」を作る方法を解説します。スライドで誰でも簡単に学べるビジュアルプログラミング学習サイト「メクルン」を使って、Scratch（スクラッチ）の学習をはじめよう。
+difficulty: hard
+course-name: shooting-game
+description: このコースでは、Scratch（スクラッチ）で「シューティングゲーム」を作る方法を解説します。スライドで誰でも簡単に学べるビジュアルプログラミング学習サイト「メクルン」を使って、Scratch（スクラッチ）の学習をはじめよう。
 thumbnail: /thumbnail.png
 slides:
 -  /0001.jpg
@@ -33,4 +33,15 @@ slides:
 -  /0022.jpg
 -  /0023.jpg
 -  /0024.jpg
+-  /0025.jpg
+-  /0026.jpg
+-  /0027.jpg
+-  /0028.jpg
+-  /0029.jpg
+-  /0030.jpg
+-  /0031.jpg
+-  /0032.jpg
+-  /0033.jpg
+-  /0034.jpg
+-  /0035.jpg
 ---
