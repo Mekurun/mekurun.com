@@ -464,6 +464,7 @@ footer {
   border-radius: 2rem;
   padding: 2px 14px;
   color: #fff;
+  margin-right: .5rem;
 }
 .top-course-list-difficulty {
   border-radius: 2rem;
@@ -472,7 +473,6 @@ footer {
 
   color: $darkgray;
   display: inline-block;
-  margin-left: .5rem;
   margin-top: auto;
   &:before {
     content: "\f005";
