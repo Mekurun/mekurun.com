@@ -1,7 +1,7 @@
 ---
 ---
 @import "main.scss";
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 730px) {
   img.list-thumbnail {
     height: auto;
   }
@@ -74,7 +74,7 @@
     "thumbnail diff   "
     "thumbnail buttons";
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 730px) {
     grid-auto-rows: auto;
     grid-template-areas:
       "thumbnail"
@@ -86,7 +86,7 @@
     grid-area: thumbnail;
     width: auto;
     margin-right: 1rem;
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 730px) {
       margin-right: 0;
       height: auto;
     }
@@ -101,6 +101,9 @@
   }
   .top-course-list-difficulty {
     margin-top: 0;
+  }
+  .top-course-list-category {
+    margin-bottom: 1em;
   }
   .course-list-title {
     font-size: 1.125em;
@@ -120,7 +123,7 @@
     font-size: 1.25rem;
     margin: 2rem 0 0;
   }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 730px) {
     .card-list-item {
       margin-right: 0;
       width: 100%;
@@ -137,7 +140,7 @@
   padding: 8px 12px;
   width: 100%;
   display: inline-block;
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 730px) {
     padding: 10px 6px;
   }
 }
@@ -166,7 +169,7 @@
   opacity: .8;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 730px) {
   .main-buttons {
     flex-wrap: wrap;
     .button {
