@@ -171,3 +171,12 @@
     margin-bottom: 6px;
   }
 }
+
+.scratch { background: #ffb801 }
+.minecraft { background: #8bca31 }
+.normal { border-color: #ffb801 }
+.normal::before { color: #ffb801 }
+.easy{ border-color: #8bca31 }
+.easy::before { color: #8bca31 }
+.hard { border-color: #ff81ae }
+.hard::before { color: #ff81ae }
