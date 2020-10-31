@@ -160,9 +160,6 @@ class SlideController {
     }%`;
 
     this.progressBarNum.innerHTML = this.currentPage + " / " + this.lastPage;
-    this.progressBarNum.style.width = `calc(${
-      this.lastPage.toString().length * 2 + 1
-    }em + 4px)`;
   }
 
   /**

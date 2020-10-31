@@ -21,15 +21,6 @@
   @media screen and (max-width:800px) {
     padding: 12px 24px;
   }
-  h2 {
-    margin-top: 2em;
-  }
-}
-.page-course {
-  h2 {
-    display: inline-block;
-    margin-top: 1em;
-  }
 }
 .slides-top {
   display: flex;
@@ -112,18 +103,50 @@
 
 .slide-buttons {
   display: flex;
-  margin-top: 24px;
-  input {
-    width: calc(50% - 3px);
-    font-size: 1.6em;
-    display: block;
-    &:disabled {
-      opacity: 0.4;
-      cursor: default;
-    }
+}
+.slide-navbar {
+  background: #fff;
+  border-radius: 2em;
+  padding: .5em 2em;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  a {
+    text-decoration: none;
+    font-weight: 500;
   }
-  .button-back {
-    margin-right: 6px;
+}
+.link-pdf {
+  display: inline-block;
+  margin-top: .2em;
+}
+.course-title {
+  margin: 0 1em;
+  font-size: 1.2rem;
+  display: inline-block;
+  color: $darkgray;
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 2px;
+    border-radius: 1px;
+    background: $lightgray;
+    height: 1em;
+    margin-right: 1em;
+    vertical-align: middle;
+  }
+}
+.page-button {
+  font: inherit;
+  -webkit-appearance: none;
+  border: none;
+  background: none;
+  color: $main-color;
+  cursor: pointer;
+  font-size: 1.8rem;
+  &:disabled {
+    opacity: 0.4;
+    cursor: default;
   }
 }
 .button-export {
@@ -137,9 +160,6 @@
   }
   .button-export {
     width: 100%;
-  }
-  .page-course h2 {
-    margin-top: .5em;
   }
 }
 

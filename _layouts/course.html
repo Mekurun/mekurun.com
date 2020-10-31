@@ -11,13 +11,8 @@ layout: default
   <div class="slides-top-info">
   {% assign parents = site.courses | where:"course-name", page.parent %}
   <a class="link-to-parent" href="{{ site.baseurl }}/courses/{{page.category}}/{{page.parent}}/">{{ parents[0].title }}</a>
-  <h2>{% if page.title-kana and site.lang == "kana" %}{{ page.title-kana }}{% else %}{{ page.title }}{% endif %}</h2>
   </div>
   <div class="course-buttons">
-  {% if page.nopdf != true %}
-  {% capture pdfpath %}{% if page.parent %}{{site.url}}/assets/course/{{ page.category }}/{{ page.parent }}{% else %}{{site.url}}/assets/course/{{ page.category }}{% endif %}/{{ page.course-name }}/slide.pdf{% endcapture %}
-  <a class="button button-export btn-white" href="{{ pdfpath }}" target="_blank" rel="noopener" {% if subcourses.size > 0 %}style="margin-right: 6px;" {%endif%} ><i class="fas fa-file-alt"></i> {% t course.export %}</a>
-  {% endif %}
   {% if subcourses.size > 0 %}
   <a class="button button-export btn-blue" href="#subcourse"><i class="fas fa-tools"></i> {% t course.subcourse %}</a>
   {% endif %}
@@ -44,11 +39,18 @@ layout: default
     <div id="progress-container">
     </div>
   </div>
-  <span id="progress-number"></span>
 </div>
-<div class="slide-buttons">
-  <input class="button button-back btn-white" type="button" value="{% t course.prev %}" id="buttonBack" disabled/>
-  <input class="button button-next btn-blue" type="button" value="{% t course.next %}" id="buttonNext"/>
+<div class="slide-navbar">
+  {% if page.nopdf != true %}
+  {% capture pdfpath %}{% if page.parent %}{{site.url}}/assets/course/{{ page.category }}/{{ page.parent }}{% else %}{{site.url}}/assets/course/{{ page.category }}{% endif %}/{{ page.course-name }}/slide.pdf{% endcapture %}
+  <a class="link-pdf" href="{{ pdfpath }}" target="_blank" rel="noopener" {% if subcourses.size > 0 %}style="margin-right: 6px;" {%endif%} ><i class="fas fa-file-alt"></i> {% t course.export %}</a>
+  {% endif %}
+  <h2 class="course-title">{% if page.title-kana and site.lang == "kana" %}{{ page.title-kana }}{% else %}{{ page.title }}{% endif %}</h2>
+  <div class="slide-buttons">
+    <input class="page-button fas" type="button" value="&#xf104;" id="buttonBack" disabled/>
+    <span id="progress-number"></span>
+    <input class="page-button fas" type="button" value="&#xf105;" id="buttonNext"/>
+  </div>
 </div>
 </section>
 <section class="slide-page" id="subcourse">
