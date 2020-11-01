@@ -45,9 +45,9 @@ layout: default
   {% capture pdfpath %}{% if page.parent %}{{site.url}}/assets/course/{{ page.category }}/{{ page.parent }}{% else %}{{site.url}}/assets/course/{{ page.category }}{% endif %}/{{ page.course-name }}/slide.pdf{% endcapture %}
   <a class="link-pdf" href="{{ pdfpath }}" target="_blank" rel="noopener" {% if subcourses.size > 0 %}style="margin-right: 6px;" {%endif%} ><i class="fas fa-file-alt"></i> {% t course.export %}</a>
   {% endif %}
-  <div class="">
-    <h2 class="course-title">{% if page.title-kana and site.lang == "kana" %}{{ page.title-kana }}{% else %}{{ page.title }}{% endif %}</h2>
+  <div class="course-titles">
     <a href="{{ site.baseurl }}/courses/{{page.category}}/#{{page.difficulty}}" class="top-course-list-difficulty {{page.difficulty}}">{% t difficulty.{{page.difficulty}} %}</a>
+    <h2 class="course-title">{% if page.title-kana and site.lang == "kana" %}{{ page.title-kana }}{% else %}{{ page.title }}{% endif %}</h2>
   </div>
   <div class="slide-buttons">
     <input class="page-button fas" type="button" value="&#xf104;" id="buttonBack" disabled/>

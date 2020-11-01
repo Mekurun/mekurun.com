@@ -121,20 +121,20 @@
   margin-top: .2em;
 }
 .course-title {
-  margin: 0 1em;
+  margin: 0 .5em;
   font-size: 1.2rem;
   display: inline-block;
   color: $darkgray;
-  &::before {
-    content: '';
-    display: inline-block;
-    width: 2px;
-    border-radius: 1px;
-    background: $lightgray;
-    height: 1em;
-    margin-right: 1em;
-    vertical-align: middle;
-  }
+}
+.course-titles::before {
+  content: '';
+  display: inline-block;
+  width: 2px;
+  border-radius: 1px;
+  background: $lightgray;
+  height: 1.2em;
+  margin: 0 1em;
+  vertical-align: middle;
 }
 .page-button {
   font: inherit;
