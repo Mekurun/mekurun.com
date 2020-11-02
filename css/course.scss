@@ -54,6 +54,7 @@
     width: 100%;
     border-radius: 10px;
     box-shadow: $shadow;
+    cursor: pointer;
   }
   img, iframe {
     height: 450px;
@@ -123,6 +124,12 @@
 .link-pdf {
   display: inline-block;
   margin-top: .2em;
+  transition: all .2s;
+  padding: 2px 10px 0;
+  border-radius: 5px;
+  &:hover {
+    background: rgba($lightgray, 0.7);
+  }
 }
 .course-title {
   margin: 0 .5em;
@@ -157,17 +164,10 @@
     cursor: default;
   }
 }
-.button-export {
-  display: inline-block;
-  width: 160px;
-}
 @media screen and (max-width:720px) {
   .slides-top {
     flex-wrap: wrap;
     margin-bottom: 6px;
-  }
-  .button-export {
-    width: 100%;
   }
 }
 
