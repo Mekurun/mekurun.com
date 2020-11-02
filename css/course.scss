@@ -182,3 +182,11 @@
 .easy::before { color: #8bca31 }
 .hard { border-color: #ff81ae }
 .hard::before { color: #ff81ae }
+
+/* header */
+header {
+  position: static;
+  margin: 0 0 $header-height / 2 0;
+  border-radius: 0;
+  width: 100%;
+}

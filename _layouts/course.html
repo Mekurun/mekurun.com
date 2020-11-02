@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+{% include header.html %}
+
 <section class="slide-page page-course" id="slidesCover">
 {{ content }}
 {% assign subcourses = site.courses | where_exp:"c",
