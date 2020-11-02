@@ -19,7 +19,7 @@
   max-width: 800px;
   margin: 12px auto;
   @media screen and (max-width:800px) {
-    padding: 12px 24px;
+    padding: 0 24px;
   }
 }
 .slides-top {
@@ -67,7 +67,6 @@
   @media screen and (max-width:800px) {
     .slide {
       width: calc(100vw - 48px);
-      left: 24px;
       height: calc((100vw - 48px) / 16 * 9);
     }
     img, iframe {
@@ -117,6 +116,9 @@
     text-decoration: none;
     font-weight: 500;
   }
+  @media screen and (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
 }
 .link-pdf {
   display: inline-block;
@@ -137,6 +139,10 @@
   height: 1.2em;
   margin: 0 1em;
   vertical-align: middle;
+
+  @media screen and (max-width: 800px) {
+    content: none;
+  }
 }
 .page-button {
   font: inherit;
@@ -189,4 +195,12 @@ header {
   margin: 0 0 $header-height / 2 0;
   border-radius: 0;
   width: 100%;
+}
+.header-nav-bg {
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+.header-nav-content {
+  margin: 20px;
 }
