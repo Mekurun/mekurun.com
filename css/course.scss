@@ -16,11 +16,7 @@
 }
 
 .slide-page {
-  max-width: 800px;
-  margin: 12px auto;
-  @media screen and (max-width:800px) {
-    padding: 0 24px;
-  }
+  margin: 0 auto;
 }
 .slides-top {
   display: flex;
@@ -50,29 +46,20 @@
     box-sizing: border-box;
     left: 0;
     right: 0;
-    height: 450px;
+    height: 100%;
     width: 100%;
     border-radius: 10px;
     box-shadow: $shadow;
     cursor: pointer;
   }
   img, iframe {
-    height: 450px;
+    height: 100%;
     width: 100%;
     border-radius: 10px;
   }
   iframe {
     z-index: 1;
     position: relative;
-  }
-  @media screen and (max-width:800px) {
-    .slide {
-      width: calc(100vw - 48px);
-      height: calc((100vw - 48px) / 16 * 9);
-    }
-    img, iframe {
-      height: calc((100vw - 48px) / 16 * 9);
-    }
   }
 }
 .slide {
@@ -109,7 +96,7 @@
   background: #fff;
   border-radius: 2em;
   padding: .5em 2em;
-  margin-top: 1rem;
+  margin: 15px 20px;
   display: grid;
   grid-template-columns: auto 1fr auto;
   box-shadow: $shadow;

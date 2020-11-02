@@ -40,7 +40,7 @@ layout: default
     {% endif %}
   {% endfor %}
 </div>
-<div class="slide-navbar">
+<div class="slide-navbar" id="navbar">
   {% if page.nopdf != true %}
   {% capture pdfpath %}{% if page.parent %}{{site.url}}/assets/course/{{ page.category }}/{{ page.parent }}{% else %}{{site.url}}/assets/course/{{ page.category }}{% endif %}/{{ page.course-name }}/slide.pdf{% endcapture %}
   <a class="link-pdf" href="{{ pdfpath }}" target="_blank" rel="noopener" {% if subcourses.size > 0 %}style="margin-right: 6px;" {%endif%} ><i class="fas fa-file-alt"></i> {% t course.export %}</a>
@@ -81,5 +81,11 @@ layout: default
 <script>
 window.addEventListener('load', function(){ bootCourseSlideController({
   lastPage: {{ page.slides.size }}
-})})
+})});
+(window.onload = function(){
+	updateSlideSize();
+})();
+window.addEventListener('resize', function(){
+  updateSlideSize()
+});
 </script>
