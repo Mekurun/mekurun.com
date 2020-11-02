@@ -7,6 +7,7 @@ $lightgray: #d9e6f0;
 $bg-gray: #f5f9fc;
 $header-height: 60px;
 $red: #fe9161;
+$shadow: 0 0 10px #2221;
 body {
   margin: 0;
   color: $text-color;
@@ -48,7 +49,7 @@ header {
   margin: $header-height * 0.3 10vw;
   position: absolute;
   border-radius: $header-height / 2;
-  box-shadow: 0 0 6px #2223;
+  box-shadow: $shadow;
   width: 80vw;
   color: $darkgray;
   font-weight: 500;

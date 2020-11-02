@@ -46,16 +46,18 @@
     margin: 0;
   }
   .slide {
-    border: solid 4px #888;
     box-sizing: border-box;
     left: 0;
     right: 0;
     height: 450px;
     width: 100%;
+    border-radius: 10px;
+    box-shadow: $shadow;
   }
   img, iframe {
     height: 450px;
     width: 100%;
+    border-radius: 10px;
   }
   iframe {
     z-index: 1;
@@ -111,6 +113,7 @@
   margin-top: 1rem;
   display: grid;
   grid-template-columns: auto 1fr auto;
+  box-shadow: $shadow;
   a {
     text-decoration: none;
     font-weight: 500;
