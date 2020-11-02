@@ -42,6 +42,7 @@
 #slides {
   margin: auto;
   clear: both;
+  position: relative;
   p {
     margin: 0;
   }
@@ -81,21 +82,19 @@
   width: 50%;
   height: 100%;
 }
-.progress-cover {
-  display: flex;
-}
 .progress-bar {
-  height: 16px;
+  position: absolute;
+  bottom: 0;
+  height: 10px;
   background-color: #ddd;
-  border-radius: 12px;
-  margin-top: 8px;
+  border-radius: 0 0 10px 10px;
   width: 100%;
-  display: inline-block;
+  overflow: hidden;
 }
 #progress-container {
   background-color: $main-color;
   height: 100%;
-  border-radius: 8px;
+  border-radius: 0 0 0 12px;
 }
 #progress-number {
   font-weight: 600;

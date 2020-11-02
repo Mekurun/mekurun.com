@@ -23,6 +23,10 @@ layout: default
     <div id="slideLeft"></div>
     <div id="slideRight"></div>
   </div>
+  <div class="progress-bar">
+    <div id="progress-container">
+    </div>
+  </div>
   {% for slide in page.slides %}
     {% assign firstword = slide | split: "/" | first %}
 
@@ -33,12 +37,6 @@ layout: default
     <iframe width="560" height="315" loading="lazy" src="https://www.youtube.com/embed/{{slide | split: '/' | last}}?rel=0&fs=0&modestbranding=1&enablejsapi=1&disablekb=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:none;" id="page-{{forloop.index}}"></iframe>
     {% endif %}
   {% endfor %}
-</div>
-<div class="progress-cover">
-  <div class="progress-bar">
-    <div id="progress-container">
-    </div>
-  </div>
 </div>
 <div class="slide-navbar">
   {% if page.nopdf != true %}
