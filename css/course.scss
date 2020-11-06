@@ -2,18 +2,6 @@
 ---
 @import "main.scss";
 
-.slide-page .course-list img {
-  height: calc(13.86vw - 17.2px);
-  @media screen and (min-width:800px) {
-    height: 119.7px; // (800px * 0.33 - 36px) * (630/1200 = 0.525)
-  }
-  @media screen and (max-width: 800px) {
-    height: calc(((100vw - 48px) * 0.33 - 32px) * 0.525);
-  }
-  @media screen and (max-width: 700px) {
-    height: calc((100vw - 48px - 24px - 4px) * 0.525);
-  }
-}
 
 .slide-page {
   margin: 0 auto;
@@ -50,14 +38,31 @@
     box-shadow: $shadow;
     cursor: pointer;
   }
-  img, iframe {
-    height: 100%;
-    width: 100%;
-    border-radius: 10px;
-  }
   iframe {
     z-index: 1;
     position: relative;
+  }
+}
+#slides .course-list-title {
+  margin-top: .2em;
+}
+.course-list {
+  margin-top: 0;
+}
+.card-list-item img {
+  height: auto;
+}
+.slide-page {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+.subcourses {
+  background: #fff;
+  padding: 24px;
+  position: absolute;
+  h2 {
+    margin: 0;
   }
 }
 .slide {
@@ -75,6 +80,7 @@
   border-radius: 0 0 10px 10px;
   width: 100%;
   overflow: hidden;
+  z-index: 1;
 }
 #progress-container {
   background-color: $main-color;

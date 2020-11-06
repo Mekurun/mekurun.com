@@ -8,18 +8,6 @@ layout: default
 {% assign subcourses = site.courses | where_exp:"c",
 "c.parent == page.course-name" %}
 
-
-<div class="slides-top">
-  <div class="slides-top-info">
-  {% assign parents = site.courses | where:"course-name", page.parent %}
-  <a class="link-to-parent" href="{{ site.baseurl }}/courses/{{page.category}}/{{page.parent}}/">{{ parents[0].title }}</a>
-  </div>
-  <div class="course-buttons">
-  {% if subcourses.size > 0 %}
-  <a class="button button-export btn-blue" href="#subcourse"><i class="fas fa-tools"></i> {% t course.subcourse %}</a>
-  {% endif %}
-  </div>
-</div>
 <div id='slides'>
   <div class="slide">
     <div id="slideLeft"></div>
@@ -34,11 +22,32 @@ layout: default
 
     {% if firstword == '' %}
     {% capture src %}{% if page.parent %}{{site.url}}/assets/course/{{ page.category }}/{{ page.parent }}/{{ page.course-name }}{{ slide }}{% else %}{{site.url}}/assets/course/{{ page.category }}/{{ page.course-name }}{{ slide }}{% endif %}{% endcapture %}
-    <img data-src="{{ src }}" src="{{ src }}" data-width="800" loading="lazy" alt="" id="page-{{forloop.index}}" style="display:none;">
+    <img data-src="{{ src }}" src="{{ src }}" data-width="800" loading="lazy" alt="" id="page-{{forloop.index}}" style="display:none;" class="slide-page">
     {% elsif firstword == 'https:' %}
-    <iframe width="560" height="315" loading="lazy" src="https://www.youtube.com/embed/{{slide | split: '/' | last}}?rel=0&fs=0&modestbranding=1&enablejsapi=1&disablekb=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:none;" id="page-{{forloop.index}}"></iframe>
+    <iframe width="560" height="315" loading="lazy" src="https://www.youtube.com/embed/{{slide | split: '/' | last}}?rel=0&fs=0&modestbranding=1&enablejsapi=1&disablekb=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:none;" id="page-{{forloop.index}}" class="slide-page"></iframe>
     {% endif %}
   {% endfor %}
+  {% if subcourses.size > 0 %}
+  <div id="page-{{page.slides.size | plus: 1 }}" class="subcourses slide-page" style="display:none;">
+    <h2>{% t course.subcourse %}</h2>
+    <ul class="course-list">
+    {% for course in subcourses %}
+    {% assign course_lang = course.path | slice: 9, 2 %}
+    {% if site.lang == "kana" %}
+    {% if course_lang == "ja" %}
+      <li><a href="{{ site.baseurl }}{{course.url}}" class="card-list-item"><img data-src="{{ site.url }}/assets/course/{{ course.category }}/{{ course.parent }}/{{ course.course-name }}{{ course.thumbnail }}" data-width="212" alt="{{ course.title }}" loading="lazy">
+        <p class="course-list-title">{% if course.title-kana %}{{ course.title-kana }}{% else %}{{ course.title }}{% endif %}</p></a></li>
+    {% endif %}
+    {% else %}
+    {% if course_lang == site.lang %}
+      <li><a href="{{ site.baseurl }}{{course.url}}" class="card-list-item"><img data-src="{{ site.url }}/assets/course/{{ course.category }}/{{ course.parent }}/{{ course.course-name }}{{ course.thumbnail }}" data-width="212" alt="{{ course.title }}" loading="lazy">
+        <p class="course-list-title">{{course.title}}</p></a></li>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
 </div>
 <div class="slide-navbar" id="navbar">
   {% if page.nopdf != true %}
@@ -60,31 +69,9 @@ layout: default
   </div>
 </div>
 </section>
-<section class="slide-page" id="subcourse">
-  {% if subcourses.size > 0 %}
-  <a href="#subcourse" style="text-decoration:none;"><h2>{% t course.subcourse %} <i class="fas fa-angle-down"></i></h2></a>
-  <ul class="course-list">
-  {% for course in subcourses %}
-  {% assign course_lang = course.path | slice: 9, 2 %}
-  {% if site.lang == "kana" %}
-  {% if course_lang == "ja" %}
-    <li><a href="{{ site.baseurl }}{{course.url}}" class="card-list-item"><img data-src="{{ site.url }}/assets/course/{{ course.category }}/{{ course.parent }}/{{ course.course-name }}{{ course.thumbnail }}" data-width="212" alt="{{ course.title }}" loading="lazy">
-      <p class="course-list-title">{% if course.title-kana %}{{ course.title-kana }}{% else %}{{ course.title }}{% endif %}</p></a></li>
-  {% endif %}
-  {% else %}
-  {% if course_lang == site.lang %}
-    <li><a href="{{ site.baseurl }}{{course.url}}" class="card-list-item"><img data-src="{{ site.url }}/assets/course/{{ course.category }}/{{ course.parent }}/{{ course.course-name }}{{ course.thumbnail }}" data-width="212" alt="{{ course.title }}" loading="lazy">
-      <p class="course-list-title">{{course.title}}</p></a></li>
-  {% endif %}
-  {% endif %}
-  {% endfor %}
-  {% endif %}
-  </ul>
-</section>
-
 <script>
 window.addEventListener('load', function(){ bootCourseSlideController({
-  lastPage: {{ page.slides.size }}
+  lastPage: {% if subcourses.size > 0 %}{{ page.slides.size }} + 1{% else %}{{ page.slides.size }}{% endif %}
 })});
 (window.onload = function(){
 	updateSlideSize();
