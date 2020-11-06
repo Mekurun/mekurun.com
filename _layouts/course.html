@@ -47,6 +47,10 @@ layout: default
   {% endif %}
   <div class="course-titles">
     <a href="{{ site.baseurl }}/courses/{{page.category}}/#{{page.difficulty}}" class="top-course-list-difficulty {{page.difficulty}}">{% t difficulty.{{page.difficulty}} %}</a>
+    {% assign parents = site.courses | where:"course-name", page.parent %}
+    {% if parents.size > 0 %}
+    <a class="link-to-parent" href="{{ site.baseurl }}/courses/{{page.category}}/{{page.parent}}/">{{ parents[0].title }}</a>
+    {% endif %}
     <h2 class="course-title">{% if page.title-kana and site.lang == "kana" %}{{ page.title-kana }}{% else %}{{ page.title }}{% endif %}</h2>
   </div>
   <div class="slide-buttons">

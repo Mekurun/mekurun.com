@@ -18,19 +18,17 @@
 .slide-page {
   margin: 0 auto;
 }
-.slides-top {
-  display: flex;
-  margin-top: 12px;
-  align-items: flex-end;
-}
-.slides-top-info {
-  width: 100%;
-}
 .link-to-parent {
-  display: block;
+  display: inline-block;
   color: $darkgray;
   font-size: 1.2em;
   margin-bottom: -0.5em;
+  font-weight: 500;
+  margin-left: .5em;
+  &::after {
+    content: '-';
+    margin-left: .5em;
+  }
 }
 #slidesCover {
   position: relative;
