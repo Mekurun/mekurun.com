@@ -7,7 +7,8 @@ $lightgray: #d9e6f0;
 $bg-gray: #f5f9fc;
 $header-height: 60px;
 $red: #fe9161;
-$shadow: 0 0 10px #2221;
+$shadow-color: rgba($main-dark, 0.2);
+$shadow: 0 0 4px $shadow-color;
 body {
   margin: 0;
   color: $text-color;
@@ -251,8 +252,8 @@ footer {
 }
 @mixin card($color: $lightgray) {
   border-radius: 10px;
-  border: solid 2px $color;
-  box-shadow: 0 4px 0 $color;
+  box-shadow: $shadow;
+  transition: .2s;
   @media screen and (max-width:730px) {
     width: 100%;
     margin: 0 0 16px 0;
@@ -260,7 +261,9 @@ footer {
 }
 @mixin card-hover($color: $lightgray) {
   &:hover {
-    opacity: .7;
+    box-shadow: 0 0 12px $shadow-color;
+    opacity: .8;
+    transform: translateY(-4px);
   }
 }
 .top {
@@ -383,9 +386,9 @@ footer {
     background-color: #fff;
     margin: 12px 0;
     @include card;
+    @include card-hover;
   }
   a.card-list-item {
-    @include card-hover;
     height: 100%;
   }
   .card-list-item {
@@ -627,8 +630,9 @@ footer {
 .button {
   font: inherit;
   -webkit-appearance: none;
-  border: solid 4px $main-color;
+  box-shadow: $shadow;
   border-radius: 4px;
+  background: #fff;
   padding: 16px 12px;
   font-weight: bold;
   outline: none;
