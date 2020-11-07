@@ -198,3 +198,8 @@
     height: 100%;
   }
 }
+.all-courses-list-ul.course-list {
+  .card-list-item {
+    @include card-hover-cancel;
+  }
+}
