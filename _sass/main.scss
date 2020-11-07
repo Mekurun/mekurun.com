@@ -383,10 +383,14 @@ footer {
   li {
     list-style: none;
     width: calc(33% - 6px);
-    background-color: #fff;
     margin: 12px 0;
-    @include card;
-    @include card-hover;
+  }
+  &:not(.all-courses-list-ul) {
+    li {
+      background-color: #fff;
+      @include card;
+      @include card-hover;
+    }
   }
   a.card-list-item {
     height: 100%;
