@@ -391,6 +391,10 @@ footer {
     list-style: none;
     width: calc(33% - 6px);
     margin: 12px 0;
+    @media screen and (max-width: 730px) {
+      width: 100%;
+      margin: 0 0 16px 0;
+    }
   }
   &:not(.all-courses-list-ul) {
     li {
