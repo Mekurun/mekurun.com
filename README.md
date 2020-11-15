@@ -1,3 +1,4 @@
+![OGP](/assets/images/ogp/README.png)
 # メクルン 〜子ども向けプログラミング学習サイト〜
 
 メクルン (Mekurun) はスライドで学べるビジュアルプログラミング学習サイトです。  
@@ -5,7 +6,6 @@ ScratchやMakeCodeといったブロックでプログラミングができる�
 
 Webサイト▶ https://mekurun.com/
 
-![OGP](/assets/images/ogp/main.png)
 
 ## メンバー
 - [Tomohiro Nozaki](https://github.com/nztm)
