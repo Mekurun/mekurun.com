@@ -1,9 +1,18 @@
-# メクルン Mekurun
+# メクルン Mekurun ~子ども向けプログラミング学習サイト~
 
 メクルン (Mekurun) はスライドで学べるビジュアルプログラミング学習サイトです。  
 ScratchやMakeCodeといったブロックでプログラミングができるビジュアルプログラミング言語を中心に子ども向けのプログラミング入門コンテンツを提供しています。
 
 ![OGP](/assets/images/ogp/main.png)
+
+## メンバー
+- [Tomohiro Nozaki](https://github.com/nztm)
+- [Yuki Mihashi](https://github.com/yuki384)
+- [parfait9](peachparfait)
+- [ほた](https://github.com/hota1024)
+- [tuntun19](https://github.com/tuntun19)
+
+---
 
 ## ドキュメント
 
