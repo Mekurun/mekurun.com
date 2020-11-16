@@ -1,4 +1,4 @@
-![OGP](/assets/images/ogp/README.png)
+[![OGP](/assets/images/ogp/README.png)](https://mekurun.com/)
 # メクルン 〜子ども向けプログラミング学習サイト〜
 
 メクルン (Mekurun) はスライドで学べるビジュアルプログラミング学習サイトです。  
@@ -13,6 +13,9 @@ Webサイト▶ https://mekurun.com/
 - [parfait9](peachparfait)
 - [ほた](https://github.com/hota1024)
 - [tuntun19](https://github.com/tuntun19)
+
+[![CAMPFIREで支援する](/assets/images/README_campfire.png)](https://community.camp-fire.jp/projects/view/322690)  
+  
 
 ---
 
