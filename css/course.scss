@@ -151,6 +151,7 @@
     grid-template-columns: 1fr;
   }
   @media screen and (max-width: 730px) {
+    width: 100%;
     position: sticky;
     bottom: 0;
     border-radius: 0;
