@@ -64,10 +64,10 @@ class SlideController {
     // クエリ。
     const query = new URLSearchParams(location.search);
 
-    if (query.has("page")) {
-      // page クエリが指定されていたら現在のページを更新。
+    if (query.has("p")) {
+      // p クエリが指定されていたら現在のページを更新。
 
-      const page = query.get("page");
+      const page = query.get("p");
 
       if (this.isValidPageString(page)) {
         this.currentPage = parseInt(page);
@@ -122,7 +122,7 @@ class SlideController {
     this.showSlide(nextPage);
 
     const url = new URL(location);
-    url.searchParams.set("page", this.currentPage);
+    url.searchParams.set("p", this.currentPage);
     history.replaceState(null, null, url.toString());
   }
 
@@ -193,7 +193,7 @@ class SlideController {
    */
   deletePageQuery() {
     const url = new URL(location);
-    url.searchParams.delete("page");
+    url.searchParams.delete("p");
     history.replaceState(null, null, url.toString());
   }
 
