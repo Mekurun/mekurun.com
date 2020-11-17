@@ -47,7 +47,7 @@
   margin-top: .2em;
 }
 .course-list {
-  margin-top: 0;
+  margin-top: 8%;
 }
 .card-list-item img {
   height: auto;
@@ -63,22 +63,35 @@
     box-shadow: $shadow;
   }
 }
+.subcourses-heading {
+  display: none;
+  @media screen and (max-width: 730px) {
+    font-size: 1.2em;
+    margin: .5em 0;
+    display: block;
+  }
+}
 .subcourses {
-  background: #fff;
   padding: 24px;
   position: absolute;
-  h2 {
-    margin: 0;
-  }
+  overflow: hidden;
   @media screen and (max-width: 730px) {
     position: static;
     background: inherit;
     padding: 5px 0;
     box-shadow: none;
-    h2 {
-      font-size: 1.2em;
-      margin: .5em 0;
-    }
+  }
+}
+.subcourses-bg {
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  @media screen and (max-width: 730px) {
+    display: none;
   }
 }
 .slide {
