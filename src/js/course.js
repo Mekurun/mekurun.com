@@ -175,7 +175,7 @@ class SlideController {
    */
   hideSlide(page) {
     const slide = this.getSlide(page);
-    slide.style.display = "none";
+    slide.style.display = "";
   }
 
   /**
@@ -241,11 +241,16 @@ window.updateSlideSize = () => {
   let navbar = document.getElementById("navbar");
   let slideHeight = windowH - (60 + 30 + 30 + navbar.clientHeight);
   let slideWidth = slideHeight * (16 / 9);
+  slides.removeAttribute("style");
   if (slideWidth < windowW - 40) {
-    slides.style.height = slideHeight + "px";
+    if (windowW > 730) {
+      slides.style.height = slideHeight + "px";
+    }
     slides.style.width = slideWidth + "px";
   } else {
-    slides.style.height = (windowW - 40) * (9 / 16) + "px";
+    if (windowW > 730) {
+      slides.style.height = (windowW - 40) * (9 / 16) + "px";
+    }
     slides.style.width = windowW - 40 + "px";
   }
 };

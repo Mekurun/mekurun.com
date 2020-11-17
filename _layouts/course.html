@@ -3,7 +3,7 @@ layout: default
 ---
 {% include header.html %}
 
-<section class="slide-page page-course" id="slidesCover">
+<section class="page-course" id="slidesCover">
 {{ content }}
 {% assign subcourses = site.courses | where_exp:"c",
 "c.parent == page.course-name" %}
@@ -22,13 +22,13 @@ layout: default
 
     {% if firstword == '' %}
     {% capture src %}{% if page.parent %}{{site.url}}/assets/course/{{ page.category }}/{{ page.parent }}/{{ page.course-name }}{{ slide }}{% else %}{{site.url}}/assets/course/{{ page.category }}/{{ page.course-name }}{{ slide }}{% endif %}{% endcapture %}
-    <img data-src="{{ src }}" src="{{ src }}" data-width="800" loading="lazy" alt="" id="page-{{forloop.index}}" style="display:none;" class="slide-page">
+    <img data-src="{{ src }}" src="{{ src }}" data-width="800" loading="lazy" alt="" id="page-{{forloop.index}}" class="slide-page">
     {% elsif firstword == 'https:' %}
-    <iframe width="560" height="315" loading="lazy" src="https://www.youtube.com/embed/{{slide | split: '/' | last}}?rel=0&fs=0&modestbranding=1&enablejsapi=1&disablekb=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:none;" id="page-{{forloop.index}}" class="slide-page"></iframe>
+    <iframe width="560" height="315" loading="lazy" src="https://www.youtube.com/embed/{{slide | split: '/' | last}}?rel=0&fs=0&modestbranding=1&enablejsapi=1&disablekb=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="page-{{forloop.index}}" class="slide-page"></iframe>
     {% endif %}
   {% endfor %}
   {% if subcourses.size > 0 %}
-  <div id="page-{{page.slides.size | plus: 1 }}" class="subcourses slide-page" style="display:none;">
+  <div id="page-{{page.slides.size | plus: 1 }}" class="subcourses slide-page">
     <h2>{% t course.subcourse %}</h2>
     <ul class="course-list">
     {% for course in subcourses %}

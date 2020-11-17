@@ -3,7 +3,7 @@
 @import "main.scss";
 
 
-.slide-page {
+.page-course {
   margin: 0 auto;
 }
 .link-to-parent {
@@ -56,6 +56,12 @@
   height: 100%;
   width: 100%;
   border-radius: 10px;
+  display: none;
+  @media screen and (max-width: 730px) {
+    display: block;
+    margin: 15px 0;
+    box-shadow: $shadow;
+  }
 }
 .subcourses {
   background: #fff;
@@ -64,9 +70,22 @@
   h2 {
     margin: 0;
   }
+  @media screen and (max-width: 730px) {
+    position: static;
+    background: inherit;
+    padding: 5px 0;
+    box-shadow: none;
+    h2 {
+      font-size: 1.2em;
+      margin: .5em 0;
+    }
+  }
 }
 .slide {
   display: flex;
+  @media screen and (max-width: 730px) {
+    display: none;
+  }
 }
 #slideRight, #slideLeft {
   width: 50%;
@@ -81,6 +100,9 @@
   width: 100%;
   overflow: hidden;
   z-index: 1;
+  @media screen and (max-width: 730px) {
+    display: none;
+  }
 }
 #progress-container {
   background-color: $main-color;
@@ -95,6 +117,9 @@
 
 .slide-buttons {
   display: flex;
+  @media screen and (max-width: 730px) {
+    display: none;
+  }
 }
 .slide-navbar {
   background: #fff;
@@ -111,6 +136,12 @@
   @media screen and (max-width: 800px) {
     grid-template-columns: 1fr;
   }
+  @media screen and (max-width: 730px) {
+    position: sticky;
+    bottom: 0;
+    border-radius: 0;
+    margin: 0;
+  }
 }
 .link-pdf {
   display: inline-block;
@@ -121,12 +152,20 @@
   &:hover {
     background: rgba($lightgray, 0.7);
   }
+  @media screen and (max-width: 730px) {
+    grid-row: 2;
+    padding: 0;
+  }
 }
 .course-title {
   margin: 0 .5em;
   font-size: 1.2rem;
   display: inline-block;
   color: $darkgray;
+  @media screen and (max-width: 730px) {
+    margin: 0 0;
+    display: block;
+  }
 }
 .course-titles::before {
   content: '';
