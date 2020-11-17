@@ -136,9 +136,10 @@
 }
 .slide-navbar {
   background: #fff;
-  border-radius: 2em;
+  border-radius: 10px;
   padding: .5em 2em;
-  margin: 15px 20px;
+  width: calc(100vw - 40px);
+  margin: 15px auto;
   display: grid;
   grid-template-columns: auto 1fr auto;
   box-shadow: $shadow;
