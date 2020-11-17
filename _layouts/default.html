@@ -16,7 +16,7 @@
     {% if jekyll.environment == "development" or page.noindex == true %}
       <meta name="robots" content="noindex">
     {% elsif jekyll.environment == "production" %}
-      {% if site.lang == "kana" or site.lang == "en" %}<!--英語版リリース時変更-->
+      {% if site.lang == "en" %}<!--英語版リリース時変更-->
         <meta name="robots" content="noindex">
       {% elsif page.lang %}
         {% if page.lang == "en" and site.lang != "en" %}
@@ -128,9 +128,9 @@
     <meta name="msapplication-TileColor" content="#34a2df">
     <meta name="msapplication-config" content="/assets/images/favicon/browserconfig.xml">
     <!-- Faviconの設定終わり -->
-
+    {% if page.url != '/404.html' %}
     <link rel="canonical" href="{{site.url}}{{page.url}}">
-
+    {% endif %}
     {% include structured_data.html  %}
   </head>
   <body>
