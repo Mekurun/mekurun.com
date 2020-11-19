@@ -249,12 +249,14 @@ window.updateSlideSize = () => {
     slides.style.width = slideWidth + "px";
     if (slideWidth > 800) {
       navbar.style.width = slideWidth + "px";
-      navbar.style.margin = "15px auto";
+    } else {
+      navbar.style.width = "";
     }
   } else {
     if (windowW > 730) {
       slides.style.height = (windowW - 40) * (9 / 16) + "px";
     }
     slides.style.width = windowW - 40 + "px";
+    navbar.style.width = "";
   }
 };
