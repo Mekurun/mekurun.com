@@ -126,10 +126,13 @@
   font-weight: 600;
   color: $darkgray;
   text-align: right;
+  display: block;
+  margin-bottom: .2em;
 }
 
 .slide-buttons {
   display: flex;
+  align-items: center;
   @media screen and (max-width: 730px) {
     display: none;
   }
@@ -160,7 +163,6 @@
 }
 .link-pdf {
   display: inline-block;
-  margin-top: .2em;
   transition: all .2s;
   padding: 2px 10px 0;
   border-radius: 5px;
