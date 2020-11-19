@@ -5,7 +5,7 @@ class SlideController {
   /**
    * SliderController constructor.
    *
-   * @param {{ progressBarNum: HTMLDivElement, progressBar: HTMLDivElement, lastPage: number, currentPage?: number, backButton: HTMLButtonElement, nextButton: HTMLButtonElement, slideLeft: HTMLDivElement, slideRight: HTMLDivElement, slide: HTMLDivElement }} options
+   * @param {{ progressBarNum: HTMLDivElement, progressBar: HTMLDivElement, progressBarCover: HTMLDivElement, lastPage: number, currentPage?: number, backButton: HTMLButtonElement, nextButton: HTMLButtonElement, slideLeft: HTMLDivElement, slideRight: HTMLDivElement, slide: HTMLDivElement }} options
    */
   constructor(options) {
     // console.log(options);
@@ -20,6 +20,11 @@ class SlideController {
      * スライドの最後のページ。
      */
     this.lastPage = options.lastPage;
+
+    /**
+     * スライドの進捗バー全体
+     */
+    this.progressBarCover = options.progressBarCover;
 
     /**
      * スライドの進行状況。
@@ -87,6 +92,10 @@ class SlideController {
 
     this.backButton.addEventListener("click", () => this.flipSlide(-1));
     this.nextButton.addEventListener("click", () => this.flipSlide(1));
+
+    this.progressBarCover.addEventListener("click", (event) =>
+      this.changeSlideByBar(event)
+    );
 
     document.addEventListener("keydown", (event) => {
       if (event.key === "ArrowRight" || event.key === " ") {
@@ -179,6 +188,17 @@ class SlideController {
   }
 
   /**
+   * クリックされた場所分スライドをすすめます
+   */
+  changeSlideByBar(mouse) {
+    const barwidth = this.progressBarCover.clientWidth;
+    const barX = this.progressBarCover.left + window.pageXOffset;
+    const mouseX = mouse.offsetX;
+    const page = Math.round((mouseX / barwidth) * this.lastPage);
+    this.flipSlide(page - this.currentPage);
+  }
+
+  /**
    * 無効な page クエリならそのクエリを削除して現在のページを1にリセット。
    */
   resetPageIfInvalid() {
@@ -225,6 +245,7 @@ window.bootCourseSlideController = (options) => {
         slideRight: document.getElementById("slideRight"),
         slideLeft: document.getElementById("slideLeft"),
         progressBarNum: document.getElementById("progress-number"),
+        progressBarCover: document.getElementById("progress-bar"),
         progressBar: document.getElementById("progress-container"),
         slide: document.getElementsByClassName("slide")[0],
       },
