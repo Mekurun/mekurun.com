@@ -114,8 +114,12 @@
   overflow: hidden;
   z-index: 1;
   cursor: pointer;
+  transition: all .1s;
   @media screen and (max-width: 730px) {
     display: none;
+  }
+  &:hover {
+    height: 12px;
   }
 }
 #progress-container {
