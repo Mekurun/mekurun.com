@@ -192,7 +192,6 @@ class SlideController {
    */
   changeSlideByBar(mouse) {
     const barwidth = this.progressBarCover.clientWidth;
-    const barX = this.progressBarCover.left + window.pageXOffset;
     const mouseX = mouse.offsetX;
     const page = Math.round((mouseX / barwidth) * this.lastPage);
     this.flipSlide(page - this.currentPage);
