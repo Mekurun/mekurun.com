@@ -173,7 +173,7 @@
   color: $main-color;
   display: inline-block;
   transition: all .2s;
-  padding: 3px 10px 0;
+  padding: 2px 10px 0;
   border-radius: 5px;
   &:hover {
     background: rgba($lightgray, 0.7);
@@ -188,23 +188,38 @@
   font-size: 1.2rem;
   display: inline-block;
   color: $darkgray;
+  line-height: 100%;
   @media screen and (max-width: 730px) {
-    margin: 0 0;
+    margin: .5em 0;
     display: block;
   }
 }
-.course-titles::before {
-  content: '';
-  display: inline-block;
-  width: 2px;
-  border-radius: 1px;
-  background: $lightgray;
-  height: 1.2em;
-  margin: 0 1em;
-  vertical-align: middle;
-
+.course-titles {
+  display: flex;
+  align-items: center;
   @media screen and (max-width: 800px) {
-    content: none;
+    display: block;
+  }
+  .top-course-list-difficulty {
+    margin-top: 0;
+    display: flex;
+    @media screen and (max-width: 800px) {
+      display: inline-block;
+    }
+  }
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 2px;
+    border-radius: 1px;
+    background: $lightgray;
+    height: 60%;
+    margin: 0 1em;
+    vertical-align: middle;
+
+    @media screen and (max-width: 800px) {
+      content: none;
+    }
   }
 }
 .page-button {
