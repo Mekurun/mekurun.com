@@ -120,6 +120,9 @@
   }
   &:hover {
     height: 12px;
+    #progress-container {
+      opacity: .5;
+    }
   }
 }
 #progress-container {

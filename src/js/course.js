@@ -96,6 +96,12 @@ class SlideController {
     this.progressBarCover.addEventListener("click", (event) =>
       this.changeSlideByBar(event)
     );
+    this.progressBarCover.addEventListener("mousemove", (event) =>
+      this.previewProgressBar(event)
+    );
+    this.progressBarCover.addEventListener("mouseleave", (event) =>
+      this.updateProgressBar()
+    );
 
     document.addEventListener("keydown", (event) => {
       if (event.key === "ArrowRight" || event.key === " ") {
@@ -195,6 +201,16 @@ class SlideController {
     const mouseX = mouse.offsetX;
     const page = Math.round((mouseX / barwidth) * this.lastPage);
     this.flipSlide(page - this.currentPage);
+  }
+
+  /**
+   * プログレスバーにマウスオーバーしたらプレビュー表示
+   */
+  previewProgressBar(mouse) {
+    const barwidth = this.progressBarCover.clientWidth;
+    const mouseX = mouse.offsetX;
+    const page = Math.round((mouseX / barwidth) * this.lastPage);
+    this.progressBar.style.width = page * (barwidth / this.lastPage) + "px";
   }
 
   /**
