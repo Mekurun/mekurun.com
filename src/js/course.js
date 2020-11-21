@@ -99,7 +99,7 @@ class SlideController {
     this.progressBarCover.addEventListener("mousemove", (event) =>
       this.previewProgressBar(event)
     );
-    this.progressBarCover.addEventListener("mouseleave", (event) =>
+    this.progressBarCover.addEventListener("mouseleave", () =>
       this.updateProgressBar()
     );
 
