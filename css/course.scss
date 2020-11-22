@@ -167,12 +167,17 @@
   &:hover {
     background: rgba($lightgray, 0.7);
   }
-  @media screen and (max-width: 730px) {
-    grid-row: 2;
+  @media screen and (max-width: 800px) {
     padding: 0;
   }
   i {
     margin-right: .3em;
+  }
+}
+.course-pdf-buttons {
+  display: flex;
+  @media screen and (max-width: 800px) {
+    grid-row: 2;
   }
 }
 .course-title {
@@ -199,8 +204,7 @@
 .course-title-with-parent {
   margin-left: .5em;
   @media screen and (max-width: 800px) {
-    margin-left: 0;
-    margin-top: .5em;
+    margin: .5em 0 1em;
   }
 }
 .course-titles {
@@ -213,7 +217,7 @@
     margin-top: 0;
     display: flex;
     @media screen and (max-width: 800px) {
-      display: inline-block;
+      display: none;
     }
   }
   &::before {
@@ -229,6 +233,13 @@
     @media screen and (max-width: 800px) {
       content: none;
     }
+  }
+}
+.course-diff-mobile {
+  display: none;
+  margin-right: 8px;
+  @media screen and (max-width: 800px) {
+    display: block;
   }
 }
 .page-button {

@@ -51,10 +51,13 @@ layout: default
   {% endif %}
 </div>
 <div class="slide-navbar" id="navbar">
-  {% if page.nopdf != true %}
-  {% capture pdfpath %}{% if page.parent %}{{site.url}}/assets/course/{{ page.category }}/{{ page.parent }}{% else %}{{site.url}}/assets/course/{{ page.category }}{% endif %}/{{ page.course-name }}/slide.pdf{% endcapture %}
-  <a class="link-pdf" href="{{ pdfpath }}" target="_blank" rel="noopener" {% if subcourses.size > 0 %}style="margin-right: 6px;" {%endif%} ><i class="fas fa-file-alt"></i> {% t course.export %}</a>
-  {% endif %}
+  <div class="course-pdf-buttons">
+    <a href="{{ site.baseurl }}/courses/{{page.category}}/#{{page.difficulty}}" class="top-course-list-difficulty course-diff-mobile {{page.difficulty}}">{% t difficulty.{{page.difficulty}} %}</a>
+    {% if page.nopdf != true %}
+    {% capture pdfpath %}{% if page.parent %}{{site.url}}/assets/course/{{ page.category }}/{{ page.parent }}{% else %}{{site.url}}/assets/course/{{ page.category }}{% endif %}/{{ page.course-name }}/slide.pdf{% endcapture %}
+    <a class="link-pdf" href="{{ pdfpath }}" target="_blank" rel="noopener" {% if subcourses.size > 0 %}style="margin-right: 6px;" {%endif%} ><i class="fas fa-file-alt"></i> {% t course.export %}</a>
+    {% endif %}
+  </div>
   <div class="course-titles">
     <a href="{{ site.baseurl }}/courses/{{page.category}}/#{{page.difficulty}}" class="top-course-list-difficulty {{page.difficulty}}">{% t difficulty.{{page.difficulty}} %}</a>
     <div class="course-title-with-parent">
