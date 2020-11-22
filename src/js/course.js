@@ -199,7 +199,7 @@ class SlideController {
   changeSlideByBar(mouse) {
     const barwidth = this.progressBarCover.clientWidth;
     const mouseX = mouse.offsetX;
-    const page = Math.round((mouseX / barwidth) * this.lastPage);
+    const page = Math.ceil((mouseX / barwidth) * this.lastPage);
     this.flipSlide(page - this.currentPage);
   }
 
@@ -209,7 +209,7 @@ class SlideController {
   previewProgressBar(mouse) {
     const barwidth = this.progressBarCover.clientWidth;
     const mouseX = mouse.offsetX;
-    const page = Math.round((mouseX / barwidth) * this.lastPage);
+    const page = Math.ceil((mouseX / barwidth) * this.lastPage);
     this.progressBar.style.width = page * (barwidth / this.lastPage) + "px";
   }
 
