@@ -350,7 +350,7 @@ window.updateSlideSize = () => {
   let slideCover = document.getElementById("slidesCover");
   slides.removeAttribute("style");
   if (slideCover.classList.contains("slideFull")) {
-    if (slideWidth < windowW) {
+    if (windowH * (16 / 9) < windowW) {
       if (windowW > 730) {
         slides.style.height = windowH + "px";
       }
