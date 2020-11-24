@@ -49,6 +49,8 @@
 }
 .course-list {
   margin-top: 8%;
+  z-index: 1;
+  position: relative;
 }
 .card-list-item img {
   height: auto;
@@ -90,7 +92,6 @@
   right: 0;
   left: 0;
   position: absolute;
-  z-index: -1;
   @media screen and (max-width: 730px) {
     display: none;
   }
