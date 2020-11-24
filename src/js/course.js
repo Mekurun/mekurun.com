@@ -5,7 +5,7 @@ class SlideController {
   /**
    * SliderController constructor.
    *
-   * @param {{ progressBarNum: HTMLDivElement, progressBar: HTMLDivElement, progressBarCover: HTMLDivElement, lastPage: number, currentPage?: number, backButton: HTMLButtonElement, nextButton: HTMLButtonElement, slideLeft: HTMLDivElement, slideRight: HTMLDivElement, slide: HTMLDivElement, slideCover: HTMLDivElement, fullScreenButton: HTMLDivElement}} options
+   * @param {{ progressBarNum: HTMLDivElement, progressBar: HTMLDivElement, progressBarCover: HTMLDivElement, lastPage: number, currentPage?: number, backButton: HTMLButtonElement, nextButton: HTMLButtonElement, slideLeft: HTMLDivElement, slideRight: HTMLDivElement, slide: HTMLDivElement, slideCover: HTMLDivElement, fullScreenButton: HTMLDivElement, exitFullScreenButton: HTMLDivElement}} options
    */
   constructor(options) {
     // console.log(options);
@@ -70,6 +70,11 @@ class SlideController {
      * 全画面ボタン
      */
     this.fullScreenButton = options.fullScreenButton;
+
+    /**
+     * 全画面解除ボタン
+     */
+    this.exitFullScreenButton = options.exitFullScreenButton;
   }
 
   /**
@@ -114,6 +119,9 @@ class SlideController {
     );
 
     this.fullScreenButton.addEventListener("click", () =>
+      this.fullScreenSwitch()
+    );
+    this.exitFullScreenButton.addEventListener("click", () =>
       this.fullScreenSwitch()
     );
 
@@ -291,7 +299,9 @@ class SlideController {
 
   fullScreenSwitch() {
     this.slideCover.classList.toggle("slideFull");
-    if (!this.isFullScreen()) {
+    if (this.isFullScreen()) {
+      document.exitFullscreen();
+    } else {
       this.slideCover.requestFullscreen();
     }
     window.updateSlideSize();
@@ -322,6 +332,7 @@ window.bootCourseSlideController = (options) => {
         slide: document.getElementsByClassName("slide")[0],
         slideCover: document.getElementById("slidesCover"),
         fullScreenButton: document.getElementById("buttonFullScreen"),
+        exitFullScreenButton: document.getElementById("buttonExitFullScreen"),
       },
       options
     )

@@ -16,6 +16,9 @@
   #slides .slide, .slide-page, #progress-bar, #progress-container {
     border-radius: 0 0 0 0;
   }
+  .fullscreen-button {
+    display: block;
+  }
 }
 #slides {
   margin: auto;
@@ -278,6 +281,13 @@
   &:hover {
     background: rgba($lightgray, 0.7);
   }
+}
+.fullscreen-button {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  right: 5px;
+  bottom: 15px;
 }
 @media screen and (max-width:720px) {
   .slides-top {
