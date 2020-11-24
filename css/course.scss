@@ -285,10 +285,23 @@
 .fullscreen-button {
   display: none;
   position: absolute;
+  text-align: right;
   z-index: 2;
-  right: 5px;
-  bottom: 15px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  &:hover {
+    #buttonExitFullScreen {
+      opacity: 1;
+    }
+  }
 }
+#buttonExitFullScreen {
+  opacity: 0;
+  margin:0 5px 15px 0;
+  transition: all .4s;
+}
+
 @media screen and (max-width:720px) {
   .slides-top {
     flex-wrap: wrap;
