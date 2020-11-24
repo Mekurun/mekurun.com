@@ -50,6 +50,8 @@ layout: default
   </div>
   {% endif %}
 </div>
+</section>
+
 <div class="slide-navbar" id="navbar">
   <div class="course-pdf-buttons">
     <a href="{{ site.baseurl }}/courses/{{page.category}}/#{{page.difficulty}}" class="top-course-list-difficulty course-diff-mobile {{page.difficulty}}">{% t difficulty.{{page.difficulty}} %}</a>
@@ -72,9 +74,9 @@ layout: default
     <input class="page-button fas" type="button" value="&#xf104;" id="buttonBack" disabled/>
     <span id="progress-number"></span>
     <input class="page-button fas" type="button" value="&#xf105;" id="buttonNext"/>
+    <input class="page-button fas" type="button" value="&#xf065;" id="buttonFullScreen"/>
   </div>
 </div>
-</section>
 <script>
 window.addEventListener('load', function(){ bootCourseSlideController({
   lastPage: {% if subcourses.size > 0 %}{{ page.slides.size }} + 1{% else %}{{ page.slides.size }}{% endif %}

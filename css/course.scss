@@ -9,6 +9,14 @@
 #slidesCover {
   position: relative;
 }
+.slideFull {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  #slides .slide, .slide-page, #progress-bar, #progress-container {
+    border-radius: 0 0 0 0;
+  }
+}
 #slides {
   margin: auto;
   clear: both;

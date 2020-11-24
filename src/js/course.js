@@ -5,7 +5,7 @@ class SlideController {
   /**
    * SliderController constructor.
    *
-   * @param {{ progressBarNum: HTMLDivElement, progressBar: HTMLDivElement, progressBarCover: HTMLDivElement, lastPage: number, currentPage?: number, backButton: HTMLButtonElement, nextButton: HTMLButtonElement, slideLeft: HTMLDivElement, slideRight: HTMLDivElement, slide: HTMLDivElement }} options
+   * @param {{ progressBarNum: HTMLDivElement, progressBar: HTMLDivElement, progressBarCover: HTMLDivElement, lastPage: number, currentPage?: number, backButton: HTMLButtonElement, nextButton: HTMLButtonElement, slideLeft: HTMLDivElement, slideRight: HTMLDivElement, slide: HTMLDivElement, slideCover: HTMLDivElement, fullScreenButton: HTMLDivElement}} options
    */
   constructor(options) {
     // console.log(options);
@@ -60,6 +60,16 @@ class SlideController {
      * スライド。
      */
     this.slide = options.slide;
+
+    /**
+     * スライドカバー
+     */
+    this.slideCover = options.slideCover;
+
+    /**
+     * 全画面ボタン
+     */
+    this.fullScreenButton = options.fullScreenButton;
   }
 
   /**
@@ -102,6 +112,20 @@ class SlideController {
     this.progressBarCover.addEventListener("mouseleave", () =>
       this.updateProgressBar()
     );
+
+    this.fullScreenButton.addEventListener("click", () =>
+      this.fullScreenSwitch()
+    );
+
+    document.addEventListener("fullscreenchange", () => this.exitHandler());
+
+    document.addEventListener("webkitfullscreenchange", () =>
+      this.exitHandler()
+    );
+
+    document.addEventListener("mozfullscreenchange", () => this.exitHandler());
+
+    document.addEventListener("MSFullscreenChange", () => this.exitHandler());
 
     document.addEventListener("keydown", (event) => {
       if (event.key === "ArrowRight" || event.key === " ") {
@@ -249,6 +273,39 @@ class SlideController {
   isValidPageString(page) {
     return /^[0-9]+$/.test(page);
   }
+
+  isFullScreen() {
+    if (
+      (document.FullscreenElement !== undefined &&
+        document.FullscreenElement !== null) ||
+      (document.webkitFullscreenElement !== undefined &&
+        document.webkitFullscreenElement !== null) ||
+      (document.msFullscreenElement !== undefined &&
+        document.msFullscreenElement !== null)
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  fullScreenSwitch() {
+    this.slideCover.classList.toggle("slideFull");
+    if (!this.isFullScreen()) {
+      this.slideCover.requestFullscreen();
+    }
+    window.updateSlideSize();
+  }
+
+  /**
+   * フルスクリーン解除時の処理
+   */
+  exitHandler() {
+    if (!this.isFullScreen()) {
+      this.slideCover.classList.remove("slideFull");
+      window.updateSlideSize();
+    }
+  }
 }
 
 window.bootCourseSlideController = (options) => {
@@ -263,6 +320,8 @@ window.bootCourseSlideController = (options) => {
         progressBarCover: document.getElementById("progress-bar"),
         progressBar: document.getElementById("progress-container"),
         slide: document.getElementsByClassName("slide")[0],
+        slideCover: document.getElementById("slidesCover"),
+        fullScreenButton: document.getElementById("buttonFullScreen"),
       },
       options
     )
@@ -277,22 +336,37 @@ window.updateSlideSize = () => {
   let navbar = document.getElementById("navbar");
   let slideHeight = windowH - (60 + 30 + 30 + navbar.clientHeight);
   let slideWidth = slideHeight * (16 / 9);
+  let slideCover = document.getElementById("slidesCover");
   slides.removeAttribute("style");
-  if (slideWidth < windowW - 40) {
-    if (windowW > 730) {
-      slides.style.height = slideHeight + "px";
-    }
-    slides.style.width = slideWidth + "px";
-    if (slideWidth > 800) {
-      navbar.style.width = slideWidth + "px";
+  if (slideCover.classList.contains("slideFull")) {
+    if (slideWidth < windowW) {
+      if (windowW > 730) {
+        slides.style.height = windowH + "px";
+      }
+      slides.style.width = windowH * (16 / 9) + "px";
     } else {
-      navbar.style.width = "";
+      if (windowW > 730) {
+        slides.style.height = windowW * (9 / 16) + "px";
+      }
+      slides.style.width = windowW + "px";
     }
   } else {
-    if (windowW > 730) {
-      slides.style.height = (windowW - 40) * (9 / 16) + "px";
+    if (slideWidth < windowW - 40) {
+      if (windowW > 730) {
+        slides.style.height = slideHeight + "px";
+      }
+      slides.style.width = slideWidth + "px";
+      if (slideWidth > 800) {
+        navbar.style.width = slideWidth + "px";
+      } else {
+        navbar.style.width = "";
+      }
+    } else {
+      if (windowW > 730) {
+        slides.style.height = (windowW - 40) * (9 / 16) + "px";
+      }
+      slides.style.width = windowW - 40 + "px";
+      navbar.style.width = "";
     }
-    slides.style.width = windowW - 40 + "px";
-    navbar.style.width = "";
   }
 };
