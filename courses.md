@@ -14,19 +14,21 @@ difficulty:
 ---
 {% for category in page.categories %}
 <h2>{% t category.{{category}}.title %}</h2>
-<ul class="top-course-list course-list">
+<ul class="all-courses-list-ul course-list">
 {% assign courses = site.courses | where_exp:"c", "c.parent == nil and c.category == category" %}
 {% for diff in page.difficulty %}
   {% assign diffcourses = courses | where_exp:"c", "c.difficulty == diff" %}
   {% for course in diffcourses %}
     {% assign course_lang = course.path | slice: 9, 2 %}
     {% if (course_lang == site.lang or (course_lang == 'ja' and site.lang == 'kana')) %}
-    <li class="card-list-item">
-      <label for="course-check-{{course.course-name}}">
+    <li>
+      <label class="course-simple" for="course-check-{{course.course-name}}">
       {% capture thumbnail %}{% if course.thumbnail %}{{ course.thumbnail }}{% else %}{{ course.slides[0] }}{% endif %}{% endcapture %}
       <img data-src="{{ site.url }}/assets/course/{{ course.category }}/{{ course.course-name }}{{ thumbnail }}" data-width="348" alt="{{ course.title }}" loading="lazy" class="list-thumbnail">
       <p class="course-list-title">{% if site.lang == 'kana' and course.title-kana %}{{course.title-kana}}{% else %}{{course.title}}{% endif %}</p>
-      <span class="top-course-list-difficulty {{ course.difficulty }}" style="margin-left: 0;"> {% t difficulty.{{ course.difficulty }} %} </span>
+      <div style="margin-top: auto;">
+        <span class="top-course-list-difficulty {{ course.difficulty }}" style="margin-left: 0;"> {% t difficulty.{{ course.difficulty }} %} </span>
+      </div>
       </label>
       <input type="checkbox" class="course-check" id="course-check-{{course.course-name}}">
       <div class="course-details">
