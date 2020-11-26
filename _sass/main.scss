@@ -1,5 +1,6 @@
 $main-color: #34a2df;
 $main-dark: #006eac;
+$main-light: #7dc4ec;
 $sub-color: #fe9161;
 $text-color: #333333;
 $darkgray: #707070;
@@ -80,11 +81,10 @@ header {
       text-align: center;
     }
     &:not(.kana-switch){
-      border-radius: 10px;
       padding: .5rem;
-      transition: all .2s;
+      transition: all .1s;
       &:hover {
-        background: rgba($lightgray, 0.7);
+        color: $main-color;
       }
     }
   }
