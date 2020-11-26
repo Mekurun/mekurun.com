@@ -135,9 +135,10 @@
 #progress-number {
   font-weight: 600;
   color: $darkgray;
-  text-align: right;
+  text-align: center;
   display: block;
   margin-bottom: .2em;
+  width: 4rem;
 }
 
 .slide-buttons {
