@@ -24,7 +24,9 @@
   margin: auto;
   clear: both;
   position: relative;
-  background: #fff;
+  @media screen and (min-width: 731px) {
+    background: #fff;
+  }
 
   p {
     margin: 0;
