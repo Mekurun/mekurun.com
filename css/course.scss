@@ -273,8 +273,8 @@
   font-size: 1.8rem;
   transition: all .1s;
   padding: 5px;
-  &:not(:last-of-type) {
-    margin: 0 5px;
+  &:last-of-type {
+    margin-left: 5px;
   }
   &:disabled {
     opacity: 0.4;
