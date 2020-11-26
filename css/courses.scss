@@ -184,3 +184,22 @@
     margin-bottom: .6rem;
   }
 }
+.course-list {
+  .course-simple {
+    background-color: #fff;
+    text-decoration: none;
+    color: $text-color;
+    font-weight: 500;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    @include card;
+    @include card-hover;
+    height: 100%;
+  }
+}
+.all-courses-list-ul.course-list {
+  .card-list-item {
+    @include card-hover-cancel;
+  }
+}

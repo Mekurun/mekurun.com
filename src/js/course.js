@@ -5,7 +5,7 @@ class SlideController {
   /**
    * SliderController constructor.
    *
-   * @param {{ progressBarNum: HTMLDivElement, progressBar: HTMLDivElement, lastPage: number, currentPage?: number, backButton: HTMLButtonElement, nextButton: HTMLButtonElement, slideLeft: HTMLDivElement, slideRight: HTMLDivElement, slide: HTMLDivElement }} options
+   * @param {{ progressBarNum: HTMLDivElement, progressBar: HTMLDivElement, progressBarCover: HTMLDivElement, lastPage: number, currentPage?: number, backButton: HTMLButtonElement, nextButton: HTMLButtonElement, slideLeft: HTMLDivElement, slideRight: HTMLDivElement, slide: HTMLDivElement, slideCover: HTMLDivElement, fullScreenButton: HTMLDivElement, exitFullScreenButton: HTMLDivElement}} options
    */
   constructor(options) {
     // console.log(options);
@@ -20,6 +20,11 @@ class SlideController {
      * スライドの最後のページ。
      */
     this.lastPage = options.lastPage;
+
+    /**
+     * スライドの進捗バー全体
+     */
+    this.progressBarCover = options.progressBarCover;
 
     /**
      * スライドの進行状況。
@@ -55,6 +60,21 @@ class SlideController {
      * スライド。
      */
     this.slide = options.slide;
+
+    /**
+     * スライドカバー
+     */
+    this.slideCover = options.slideCover;
+
+    /**
+     * 全画面ボタン
+     */
+    this.fullScreenButton = options.fullScreenButton;
+
+    /**
+     * 全画面解除ボタン
+     */
+    this.exitFullScreenButton = options.exitFullScreenButton;
   }
 
   /**
@@ -64,10 +84,10 @@ class SlideController {
     // クエリ。
     const query = new URLSearchParams(location.search);
 
-    if (query.has("page")) {
-      // page クエリが指定されていたら現在のページを更新。
+    if (query.has("p")) {
+      // p クエリが指定されていたら現在のページを更新。
 
-      const page = query.get("page");
+      const page = query.get("p");
 
       if (this.isValidPageString(page)) {
         this.currentPage = parseInt(page);
@@ -87,6 +107,33 @@ class SlideController {
 
     this.backButton.addEventListener("click", () => this.flipSlide(-1));
     this.nextButton.addEventListener("click", () => this.flipSlide(1));
+
+    this.progressBarCover.addEventListener("click", (event) =>
+      this.changeSlideByBar(event)
+    );
+    this.progressBarCover.addEventListener("mousemove", (event) =>
+      this.previewProgressBar(event)
+    );
+    this.progressBarCover.addEventListener("mouseleave", () =>
+      this.updateProgressBar()
+    );
+
+    this.fullScreenButton.addEventListener("click", () =>
+      this.fullScreenSwitch()
+    );
+    this.exitFullScreenButton.addEventListener("click", () =>
+      this.fullScreenSwitch()
+    );
+
+    document.addEventListener("fullscreenchange", () => this.exitHandler());
+
+    document.addEventListener("webkitfullscreenchange", () =>
+      this.exitHandler()
+    );
+
+    document.addEventListener("mozfullscreenchange", () => this.exitHandler());
+
+    document.addEventListener("MSFullscreenChange", () => this.exitHandler());
 
     document.addEventListener("keydown", (event) => {
       if (event.key === "ArrowRight" || event.key === " ") {
@@ -122,7 +169,7 @@ class SlideController {
     this.showSlide(nextPage);
 
     const url = new URL(location);
-    url.searchParams.set("page", this.currentPage);
+    url.searchParams.set("p", this.currentPage);
     history.replaceState(null, null, url.toString());
   }
 
@@ -160,9 +207,6 @@ class SlideController {
     }%`;
 
     this.progressBarNum.innerHTML = this.currentPage + " / " + this.lastPage;
-    this.progressBarNum.style.width = `calc(${
-      this.lastPage.toString().length * 2 + 1
-    }em + 4px)`;
   }
 
   /**
@@ -178,7 +222,27 @@ class SlideController {
    */
   hideSlide(page) {
     const slide = this.getSlide(page);
-    slide.style.display = "none";
+    slide.style.display = "";
+  }
+
+  /**
+   * クリックされた場所分スライドをすすめます
+   */
+  changeSlideByBar(mouse) {
+    const barwidth = this.progressBarCover.clientWidth;
+    const mouseX = mouse.offsetX;
+    const page = Math.ceil((mouseX / barwidth) * this.lastPage);
+    this.flipSlide(page - this.currentPage);
+  }
+
+  /**
+   * プログレスバーにマウスオーバーしたらプレビュー表示
+   */
+  previewProgressBar(mouse) {
+    const barwidth = this.progressBarCover.clientWidth;
+    const mouseX = mouse.offsetX;
+    const page = Math.ceil((mouseX / barwidth) * this.lastPage);
+    this.progressBar.style.width = page * (barwidth / this.lastPage) + "px";
   }
 
   /**
@@ -196,7 +260,7 @@ class SlideController {
    */
   deletePageQuery() {
     const url = new URL(location);
-    url.searchParams.delete("page");
+    url.searchParams.delete("p");
     history.replaceState(null, null, url.toString());
   }
 
@@ -217,6 +281,41 @@ class SlideController {
   isValidPageString(page) {
     return /^[0-9]+$/.test(page);
   }
+
+  isFullScreen() {
+    if (
+      (document.FullscreenElement !== undefined &&
+        document.FullscreenElement !== null) ||
+      (document.webkitFullscreenElement !== undefined &&
+        document.webkitFullscreenElement !== null) ||
+      (document.msFullscreenElement !== undefined &&
+        document.msFullscreenElement !== null)
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  fullScreenSwitch() {
+    this.slideCover.classList.toggle("slideFull");
+    if (this.isFullScreen()) {
+      document.exitFullscreen();
+    } else {
+      this.slideCover.requestFullscreen();
+    }
+    window.updateSlideSize();
+  }
+
+  /**
+   * フルスクリーン解除時の処理
+   */
+  exitHandler() {
+    if (!this.isFullScreen()) {
+      this.slideCover.classList.remove("slideFull");
+      window.updateSlideSize();
+    }
+  }
 }
 
 window.bootCourseSlideController = (options) => {
@@ -228,11 +327,57 @@ window.bootCourseSlideController = (options) => {
         slideRight: document.getElementById("slideRight"),
         slideLeft: document.getElementById("slideLeft"),
         progressBarNum: document.getElementById("progress-number"),
+        progressBarCover: document.getElementById("progress-bar"),
         progressBar: document.getElementById("progress-container"),
         slide: document.getElementsByClassName("slide")[0],
+        slideCover: document.getElementById("slidesCover"),
+        fullScreenButton: document.getElementById("buttonFullScreen"),
+        exitFullScreenButton: document.getElementById("buttonExitFullScreen"),
       },
       options
     )
   );
   controller.boot();
+};
+
+window.updateSlideSize = () => {
+  let windowH = window.innerHeight;
+  let windowW = window.innerWidth;
+  let slides = document.getElementById("slides");
+  let navbar = document.getElementById("navbar");
+  let slideHeight = windowH - (60 + 30 + 30 + navbar.clientHeight);
+  let slideWidth = slideHeight * (16 / 9);
+  let slideCover = document.getElementById("slidesCover");
+  slides.removeAttribute("style");
+  if (slideCover.classList.contains("slideFull")) {
+    if (windowH * (16 / 9) < windowW) {
+      if (windowW > 730) {
+        slides.style.height = windowH + "px";
+      }
+      slides.style.width = windowH * (16 / 9) + "px";
+    } else {
+      if (windowW > 730) {
+        slides.style.height = windowW * (9 / 16) + "px";
+      }
+      slides.style.width = windowW + "px";
+    }
+  } else {
+    if (slideWidth < windowW - 40) {
+      if (windowW > 730) {
+        slides.style.height = slideHeight + "px";
+      }
+      slides.style.width = slideWidth + "px";
+      if (slideWidth > 800) {
+        navbar.style.width = slideWidth + "px";
+      } else {
+        navbar.style.width = "";
+      }
+    } else {
+      if (windowW > 730) {
+        slides.style.height = (windowW - 40) * (9 / 16) + "px";
+      }
+      slides.style.width = windowW - 40 + "px";
+      navbar.style.width = "";
+    }
+  }
 };

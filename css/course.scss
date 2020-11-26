@@ -2,144 +2,315 @@
 ---
 @import "main.scss";
 
-.slide-page .course-list img {
-  height: calc(13.86vw - 17.2px);
-  @media screen and (min-width:800px) {
-    height: 119.7px; // (800px * 0.33 - 36px) * (630/1200 = 0.525)
-  }
-  @media screen and (max-width: 800px) {
-    height: calc(((100vw - 48px) * 0.33 - 32px) * 0.525);
-  }
-  @media screen and (max-width: 700px) {
-    height: calc((100vw - 48px - 24px - 4px) * 0.525);
-  }
-}
 
-.slide-page {
-  max-width: 800px;
-  margin: 12px auto;
-  @media screen and (max-width:800px) {
-    padding: 12px 24px;
-  }
-  h2 {
-    margin-top: 2em;
-  }
-}
 .page-course {
-  h2 {
-    display: inline-block;
-    margin-top: 1em;
-  }
-}
-.slides-top {
-  display: flex;
-  margin-top: 12px;
-  align-items: flex-end;
-}
-.slides-top-info {
-  width: 100%;
-}
-.link-to-parent {
-  display: block;
-  color: $darkgray;
-  font-size: 1.2em;
-  margin-bottom: -0.5em;
+  margin: 0 auto;
 }
 #slidesCover {
   position: relative;
 }
+.slideFull {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  #slides .slide, .slide-page, #progress-bar, #progress-container {
+    border-radius: 0 0 0 0;
+  }
+  .fullscreen-button {
+    display: block;
+  }
+}
 #slides {
   margin: auto;
   clear: both;
+  position: relative;
+  @media screen and (min-width: 731px) {
+    background: #fff;
+  }
+
   p {
     margin: 0;
   }
   .slide {
-    border: solid 4px #888;
     box-sizing: border-box;
     left: 0;
     right: 0;
-    height: 450px;
+    height: 100%;
     width: 100%;
-  }
-  img, iframe {
-    height: 450px;
-    width: 100%;
+    border-radius: 10px;
+    box-shadow: $shadow;
+    cursor: pointer;
   }
   iframe {
     z-index: 1;
     position: relative;
   }
-  @media screen and (max-width:800px) {
-    .slide {
-      width: calc(100vw - 48px);
-      left: 24px;
-      height: calc((100vw - 48px) / 16 * 9);
-    }
-    img, iframe {
-      height: calc((100vw - 48px) / 16 * 9);
-    }
+}
+#slides .course-list-title {
+  margin-top: .2em;
+}
+.course-list {
+  margin-top: 8%;
+  z-index: 1;
+  position: relative;
+}
+.card-list-item img {
+  height: auto;
+}
+.slide-page {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  display: none;
+  @media screen and (max-width: 730px) {
+    display: block;
+    margin: 15px 0;
+    box-shadow: $shadow;
+  }
+}
+.subcourses-heading {
+  display: none;
+  @media screen and (max-width: 730px) {
+    font-size: 1.2em;
+    margin: .5em 0;
+    display: block;
+  }
+}
+.subcourses {
+  padding: 24px;
+  position: absolute;
+  overflow: hidden;
+  @media screen and (max-width: 730px) {
+    position: static;
+    background: inherit;
+    padding: 5px 0;
+    box-shadow: none;
+  }
+}
+.subcourses-bg {
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+  @media screen and (max-width: 730px) {
+    display: none;
   }
 }
 .slide {
   display: flex;
+  @media screen and (max-width: 730px) {
+    display: none;
+  }
 }
 #slideRight, #slideLeft {
   width: 50%;
   height: 100%;
 }
-.progress-cover {
-  display: flex;
-}
-.progress-bar {
-  height: 16px;
+#progress-bar {
+  position: absolute;
+  bottom: 0;
+  height: 10px;
   background-color: #ddd;
-  border-radius: 12px;
-  margin-top: 8px;
+  border-radius: 0 0 10px 10px;
   width: 100%;
-  display: inline-block;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+  transition: all .1s;
+  @media screen and (max-width: 730px) {
+    display: none;
+  }
+  &:hover {
+    height: 12px;
+    #progress-container {
+      opacity: .5;
+    }
+  }
 }
 #progress-container {
   background-color: $main-color;
   height: 100%;
-  border-radius: 8px;
+  border-radius: 0 0 0 12px;
 }
 #progress-number {
   font-weight: 600;
   color: $darkgray;
-  text-align: right;
+  text-align: center;
+  display: block;
+  margin-bottom: .2em;
+  width: 4rem;
 }
 
 .slide-buttons {
   display: flex;
-  margin-top: 24px;
-  input {
-    width: calc(50% - 3px);
-    font-size: 1.6em;
+  align-items: center;
+  @media screen and (max-width: 800px) {
+    grid-row: 2;
+  }
+  @media screen and (max-width: 730px) {
+    display: none;
+  }
+}
+.slide-navbar {
+  background: #fff;
+  border-radius: 10px;
+  padding: .5em;
+  width: calc(100vw - 40px);
+  margin: 15px auto;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  box-shadow: $shadow;
+  a {
+    text-decoration: none;
+    font-weight: 500;
+  }
+  @media screen and (max-width: 800px) {
+    padding: .5em 1em;
+    grid-template-columns: 1fr;
+  }
+  @media screen and (max-width: 730px) {
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+    border-radius: 0;
+    margin: 0;
+  }
+}
+.link-pdf {
+  color: $main-color;
+  display: flex;
+  transition: all .1s;
+  padding: 0 1em;
+  align-items: center;
+  &:hover {
+    color: $main-light;
+  }
+  @media screen and (max-width: 800px) {
+    padding: 0;
+  }
+  i {
+    margin-right: .3em;
+  }
+}
+.course-pdf-buttons {
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 800px) {
+    grid-row: 2;
+  }
+}
+.course-title {
+  margin: 0;
+  font-size: 1.2rem;
+  display: inline-block;
+  color: $darkgray;
+  line-height: 100%;
+  @media screen and (max-width: 800px) {
+    margin: .5em 0;
     display: block;
-    &:disabled {
-      opacity: 0.4;
-      cursor: default;
+  }
+}
+.link-to-parent {
+  display: block;
+  color: $main-color;
+  font-size: 1em;
+  line-height: 1em;
+  font-weight: 500;
+}
+.link-to-parent + .course-title {
+  margin-top: .4em;
+}
+.course-title-with-parent {
+  margin-left: .5em;
+  @media screen and (max-width: 800px) {
+    margin: .5em 0 1em;
+  }
+}
+.course-titles {
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 800px) {
+    display: block;
+  }
+  .top-course-list-difficulty {
+    margin-top: 0;
+    display: flex;
+    @media screen and (max-width: 800px) {
+      display: none;
     }
   }
-  .button-back {
-    margin-right: 6px;
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 2px;
+    border-radius: 1px;
+    background: $lightgray;
+    height: 60%;
+    margin-right: 1em;
+    vertical-align: middle;
+
+    @media screen and (max-width: 800px) {
+      content: none;
+    }
   }
 }
-.button-export {
-  display: inline-block;
-  width: 160px;
+.course-diff-mobile {
+  display: none;
+  margin: 0 1em 0 0;
+  @media screen and (max-width: 800px) {
+    display: block;
+  }
 }
+.page-button {
+  font: inherit;
+  -webkit-appearance: none;
+  border: none;
+  background: none;
+  color: $main-color;
+  cursor: pointer;
+  font-size: 1.8rem;
+  transition: all .1s;
+  padding: 5px;
+  &:last-of-type {
+    margin-left: 5px;
+  }
+  &:disabled {
+    opacity: 0.4;
+    cursor: default;
+    &:hover {
+      color: $main-color;
+    }
+  }
+  &:hover {
+    color: $main-light;
+  }
+}
+.fullscreen-button {
+  display: none;
+  position: absolute;
+  text-align: right;
+  z-index: 2;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  &:hover {
+    #buttonExitFullScreen {
+      opacity: 1;
+    }
+  }
+}
+#buttonExitFullScreen {
+  opacity: 0;
+  margin:0 5px 15px 0;
+  transition: all .4s;
+}
+
 @media screen and (max-width:720px) {
   .slides-top {
     flex-wrap: wrap;
     margin-bottom: 6px;
-  }
-  .button-export {
-    width: 100%;
-  }
-  .page-course h2 {
-    margin-top: .5em;
   }
 }
 
@@ -150,4 +321,29 @@
     width: 100%;
     margin-bottom: 6px;
   }
+}
+
+.scratch { background: #ffb801 }
+.minecraft { background: #8bca31 }
+.normal { border-color: #ffb801 }
+.normal::before { color: #ffb801 }
+.easy{ border-color: #8bca31 }
+.easy::before { color: #8bca31 }
+.hard { border-color: #ff81ae }
+.hard::before { color: #ff81ae }
+
+/* header */
+header {
+  position: static;
+  margin: 0 0 $header-height / 2 0;
+  border-radius: 0;
+  width: 100%;
+}
+.header-nav-bg {
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+.header-nav-content {
+  margin: 20px;
 }
