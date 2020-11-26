@@ -84,9 +84,9 @@ layout: default
 window.addEventListener('load', function(){ bootCourseSlideController({
   lastPage: {% if subcourses.size > 0 %}{{ page.slides.size }} + 1{% else %}{{ page.slides.size }}{% endif %}
 })});
-(window.onload = function(){
+window.addEventListener('load', function(){
 	updateSlideSize();
-})();
+});
 window.addEventListener('resize', function(){
   updateSlideSize()
 });
