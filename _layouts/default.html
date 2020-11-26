@@ -16,7 +16,7 @@
     {% if jekyll.environment == "development" or page.noindex == true %}
       <meta name="robots" content="noindex">
     {% elsif jekyll.environment == "production" %}
-      {% if site.lang == "kana" or site.lang == "en" %}<!--英語版リリース時変更-->
+      {% if site.lang == "en" %}<!--英語版リリース時変更-->
         <meta name="robots" content="noindex">
       {% elsif page.lang %}
         {% if page.lang == "en" and site.lang != "en" %}
@@ -84,8 +84,12 @@
 
     <link rel="manifest" href="/manifest.json">
 
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-    
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/assets/fontawesome/css/all.min.css" as="style" onload='this.onload=null;this.rel="stylesheet"'>
+
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css"></noscript>
+
     {% if page.layout == "course" %}
     <link rel="stylesheet" type="text/css" href="/css/course.css">
     {% elsif page.layout == "post" %}
@@ -101,7 +105,6 @@
     {% endif %}
 
     <script src="/assets/js/main.js" async></script>
-    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
 
     {% if page.layout == "course" %}
     <script src="https://polyfill.io/v3/polyfill.min.js?features=URLSearchParams%2CObject.assign"></script>
@@ -128,6 +131,9 @@
     <meta name="msapplication-TileColor" content="#34a2df">
     <meta name="msapplication-config" content="/assets/images/favicon/browserconfig.xml">
     <!-- Faviconの設定終わり -->
+    {% if page.url != '/404.html' %}
+    <link rel="canonical" href="{{site.url}}{{page.url}}">
+    {% endif %}
     {% include structured_data.html  %}
   </head>
   <body>
