@@ -733,9 +733,10 @@ footer {
   font-weight: bold;
   margin-top: 18px;
   position: relative;
-  transition: all .2s;
+  transition: all .3s;
   max-width: 100%;
   font-size: 1.1rem;
+  animation: 1.8s ease-in-out infinite fuwafuwa;
   &::after {
     content: '\f35d';
     font-family: 'Font Awesome 5 Free';
@@ -745,6 +746,11 @@ footer {
   &:hover {
     opacity: .85;
   }
+}
+@keyframes fuwafuwa {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+  100% { transform: scale(1); }
 }
 .main .supporter-h::before {
   content: '\f7e4';
