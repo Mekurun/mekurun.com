@@ -736,7 +736,7 @@ footer {
   transition: all .3s;
   max-width: 100%;
   font-size: 1.1rem;
-  animation: 1.8s ease-in-out infinite fuwafuwa;
+  animation: 2.5s ease-in-out infinite fuwafuwa;
   &::after {
     content: '\f35d';
     font-family: 'Font Awesome 5 Free';
@@ -749,7 +749,7 @@ footer {
 }
 @keyframes fuwafuwa {
   0% { transform: scale(1); }
-  50% { transform: scale(1.04); }
+  50% { transform: scale(1.03); }
   100% { transform: scale(1); }
 }
 .main .supporter-h::before {
