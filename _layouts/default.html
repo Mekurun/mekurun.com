@@ -12,6 +12,12 @@
     <link rel="preconnect dns-prefetch" href="https://www.google-analytics.com/">
     <link rel="preconnect dns-prefetch" href="https://www.googletagmanager.com/">
     {% endif %}
+    <link rel="preload" as="font" href="/assets/fonts/Noto_Sans_JP/NotoSansJp-Bold.otf" crossorigin>
+    <link rel="preload" as="font" href="/assets/fonts/Noto_Sans_JP/NotoSansJp-Medium.otf" crossorigin>
+    <link rel="preload" as="font" href="/assets/fonts/Noto_Sans_JP/NotoSansJp-Regular.otf" crossorigin>
+
+    <link rel="preload" as="font" href="/assets/fontawesome/webfonts/fa-brands-400.woff2" crossorigin>
+    <link rel="preload" as="font" href="/assets/fontawesome/webfonts/fa-solid-900.woff2" crossorigin>
 
     {% if jekyll.environment == "development" or page.noindex == true %}
       <meta name="robots" content="noindex">
@@ -83,8 +89,6 @@
     <meta name="theme-color" content="#34a2df">
 
     <link rel="manifest" href="/manifest.json">
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap">
 
     {% if page.layout == "course" %}
     <link rel="stylesheet" type="text/css" href="/css/course.css">
