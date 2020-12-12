@@ -10,6 +10,23 @@ $header-height: 60px;
 $red: #fe9161;
 $shadow-color: rgba($main-dark, 0.2);
 $shadow: 0 0 4px $shadow-color;
+
+@font-face {
+  font-family: 'Noto Sans JP';
+  src: url('../assets/fonts/Noto_Sans_JP/NotoSansJp-Bold.otf') format('opentype'); //後で絶対パスに変更
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Noto Sans JP';
+  src: url('../assets/fonts/Noto_Sans_JP/NotoSansJp-Medium.otf') format('opentype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Noto Sans JP';
+  src: url('../assets/fonts/Noto_Sans_JP/NotoSansJp-Regular.otf') format('opentype');
+  font-weight: 400;
+}
+
 html {
   scroll-behavior: smooth; //スムーススクロール
 }
