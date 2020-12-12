@@ -11,20 +11,32 @@ $red: #fe9161;
 $shadow-color: rgba($main-dark, 0.2);
 $shadow: 0 0 4px $shadow-color;
 
+/* noto-sans-jp-regular - latin_japanese */
 @font-face {
   font-family: 'Noto Sans JP';
-  src: url('https://mekurun.com/assets/fonts/Noto_Sans_JP/NotoSansJP-Bold.otf') format('opentype');
-  font-weight: 700;
-}
-@font-face {
-  font-family: 'Noto Sans JP';
-  src: url('https://mekurun.com/assets/fonts/Noto_Sans_JP/NotoSansJP-Medium.otf') format('opentype');
-  font-weight: 500;
-}
-@font-face {
-  font-family: 'Noto Sans JP';
-  src: url('https://mekurun.com/assets/fonts/Noto_Sans_JP/NotoSansJP-Regular.otf') format('opentype');
+  font-style: normal;
   font-weight: 400;
+  font-display: swap;
+  src: local(''),
+       url('../assets/fonts/Noto_Sans_JP/noto-sans-jp-v28-latin_japanese-regular.woff2') format('woff2'); /* Legacy iOS */
+}
+/* noto-sans-jp-500 - latin_japanese */
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local(''),
+       url('../assets/fonts/Noto_Sans_JP/noto-sans-jp-v28-latin_japanese-500.woff2') format('woff2');
+}
+/* noto-sans-jp-700 - latin_japanese */
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local(''),
+       url('../assets/fonts/Noto_Sans_JP/noto-sans-jp-v28-latin_japanese-700.woff2') format('woff2');
 }
 
 html {
@@ -34,7 +46,7 @@ body {
   margin: 0;
   color: $text-color;
   background-color: $bg-gray;
-  font: 100%/1.7 'Noto Sans JP', sans-serif;
+  font: 100%/1.7 'Noto Sans JP', 'Meiryo', 'メイリオ', sans-serif;
 }
 * {
   box-sizing: border-box;
