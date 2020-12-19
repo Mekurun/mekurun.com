@@ -752,6 +752,13 @@ footer {
   font-size: 1.6rem;
   font-weight: bold;
 }
+.support-button-header {
+  border-radius: 2rem;
+}
+.support-top {
+  background: #fff;
+  color: #333;
+}
 .support-button {
   background: #fff;
   padding: 12px;
@@ -785,6 +792,9 @@ footer {
 .main .supporter-h::before {
   content: '\f7e4';
 }
+.supporter-h {
+  margin-bottom: 0;
+}
 .supporter-list {
   margin-top: 24px;
   span{
@@ -797,6 +807,7 @@ footer {
 .supporter-imgs {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .supporter-w-img {
   width: 20%;
@@ -968,4 +979,11 @@ footer {
   @media screen and (max-width: 730px) {
     width: 100%;
   }
+}
+
+.heading-sub {
+  color: $darkgray;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 0 1em;
 }
