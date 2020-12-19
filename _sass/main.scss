@@ -321,7 +321,6 @@ footer {
   h1 {
     width: 100%;
     text-align: center;
-    font-feature-settings: "palt";
     letter-spacing: .1em;
   }
   p {
@@ -758,6 +757,7 @@ footer {
 }
 .support-button-header {
   border-radius: 2rem;
+  max-width: 240px;
 }
 .support-top {
   background: #fff;
@@ -800,7 +800,9 @@ footer {
   margin-bottom: 0;
 }
 .supporter-list {
-  margin-top: 24px;
+  margin: 24px auto 0;
+  max-width: 800px;
+   text-align: center;
   span{
     display: inline-block;
     &:not(:last-child)::after {
