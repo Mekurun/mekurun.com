@@ -101,7 +101,6 @@ header {
   right: 8px;
   top: 0;
   li {
-    margin-right: 5px;
     display: inline-block;
   }
   a {
@@ -110,7 +109,7 @@ header {
     color: inherit;
     display: inline-block;
     &:not(.kana-switch){
-      padding: .5rem;
+      padding: .4rem;
       transition: all .1s;
       &:hover {
         color: $main-color;
@@ -160,12 +159,16 @@ a {
 #nav-checkbox, .nav-switch {
   display: none;
 }
+@media screen and (max-width: 800px) {
+  header {
+    margin: 18px 20px;
+    width: calc(100% - 40px);
+  }
+}
 @media screen and (max-width:730px) {
   header {
     position: fixed;
     z-index: 1;
-    margin: 18px 20px;
-    width: calc(100% - 40px);
   }
   .header-nav-content {
     z-index: 1;
