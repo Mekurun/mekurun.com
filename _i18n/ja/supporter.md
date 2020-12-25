@@ -3,8 +3,8 @@
 <div class="support-plans">
 {% for plan in site.data.support_plan %}
 <div class="support-plan">
-  <img data-src="{{site.url}}/assets/images/supporter/return/{{plan.price}}.png" alt="{{plan.price}}円プラン">
-  <h3 class="support-plan-price">{{plan.price}}円 / 月</h3>
+  <img data-src="{{site.url}}/assets/images/supporter/return/{{plan.price}}.png" alt="{{plan.price}}円プラン" style="border-radius: 5px;">
+  <h3 class="support-plan-price">{{plan.price}}<span class="support-plan-unit">円 / 月</span></h3>
   <ul class="support-plan-ul">
     {% for desc in plan.description %}
       <li>{{ desc }}</li>

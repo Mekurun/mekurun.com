@@ -764,10 +764,6 @@ footer {
   border-radius: 2rem;
   max-width: 240px;
 }
-.support-top {
-  background: #fff;
-  color: $text-color;
-}
 .support-button {
   background: #fff;
   padding: 12px;
@@ -851,21 +847,29 @@ footer {
   }
 }
 .support-plan {
+  @include card;
   background: #fff;
-  border-radius: 5px;
   padding: 1rem;
   display: flex;
   flex-direction: column;
 }
-.support-plan-price {
-  margin: .5em 0;
+.lp-main .support-plan-price {
+  text-align: left;
+  margin: .5em 0 0;
 }
 .support-plan-ul {
+  margin-top: .5em;
   font-size: .8em;
   padding-left: 2em;
 }
 .support-plan-button {
   margin-top: auto;
+}
+.support-plan-unit {
+  font-size: .8em;
+  &::before {
+    content: ' ';
+  }
 }
 /*
 .top-white {
