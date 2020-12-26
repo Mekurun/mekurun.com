@@ -56,6 +56,10 @@ termOfUse:
 faq:
   title: よくあるごしつもん
 
+support:
+  title: しえんする
+  button: しえんしゃになる
+
 footer:
   service: サービス
   forUsers: つかうひとへ
