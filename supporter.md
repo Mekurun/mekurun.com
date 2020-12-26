@@ -10,8 +10,8 @@ description: supporter.description
   <div>
     <h1>ご支援について</h1>
     <p class="">
-      メクルンの活動は皆様のご支援で成り立っています。継続的な運営を応援いただければ幸いです。<br class="ph-ignore">
-      ご支援いただいた資金は、メクルンを通して「つくる楽しさ」をより多くの子ども達に届ける活動に使わせていただきます。
+      メクルンでは、継続的な活動を行うために支援を受け付けています。<br class="ph-ignore">
+      支援を通して、「つくる楽しさ」をより多くの子ども達に届けませんか？
     </p>
     <a href="https://community.camp-fire.jp/projects/view/322690" class="support-button-header button btn-white btn-article" target="_blank" rel="nofollow noreferrer noopener">支援者になる</a>
   </div>
