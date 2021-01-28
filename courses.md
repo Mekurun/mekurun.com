@@ -45,7 +45,7 @@ difficulty:
               </div>
               <div class="main-buttons">
                 <a href="{{ site.url }}/courses/{{ course.category }}/{{ course.course-name }}/" class="button btn-blue">
-                コースページを開く
+                コースをはじめる
                 </a>
                 <a href="{{ site.baseurl }}/assets/course/scratch/{{course.course-name}}/slide.pdf" download="{{ site.baseurl }}/assets/course/scratch/{{course.course-name}}/slide.pdf" class="button btn-white">
                 PDFをダウンロード
@@ -68,7 +68,7 @@ difficulty:
                     <img data-src="{{ thumbnail }}" data-width="212" alt="{{ sc.title }}" loading="lazy" class="thumbnail">
                     <p class="course-list-title">{{sc.title}}</p>
                     <div class="sub-buttons">
-                      <a href="{{ site.baseurl }}{{sc.url}}" class="button btn-blue">コースページを開く</a>
+                      <a href="{{ site.baseurl }}{{sc.url}}" class="button btn-blue">コースをはじめる</a>
                       <a href="{{ pdf }}" download="{{ pdf }}" class="link-pdf-download">PDFをダウンロード</a>
                     </div>
                   </li>
