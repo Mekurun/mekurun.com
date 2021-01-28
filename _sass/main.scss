@@ -891,6 +891,9 @@ footer {
 .top-copy {
   margin-top: 0;
   margin-bottom: 12px;
+  @media screen and (max-width: 730px) {
+    margin-top: 0.7em;
+  }
 }
 .lp-top {
   text-align: center;
