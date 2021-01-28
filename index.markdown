@@ -6,7 +6,7 @@ title: title
 <div class="top" style="height: auto;">
   <div class="top-text">
     <h1 class="top-copy">{% t top.copy %}</h1>
-    <p>{% t top.caption %}</p>
+    <p style="margin-bottom:6px;">{% t top.caption %}</p>
     <p class="top-course-count">{% t top.all %}
     {% if site.lang != "kana" %}
       {% assign coursesWithLang = site.courses | where_exp:"item", "item.path contains site.lang" %}
@@ -14,25 +14,11 @@ title: title
       {% assign coursesWithLang = site.courses | where_exp:"item", "item.path contains 'ja'" %}
     {% endif %}
     {{ coursesWithLang.size }} {% t top.courses %}<span style="opacity: 0.6;"> ・ </span>{{ site.posts.size }} {% t top.posts %}</p>
+    <a href="{{ site.baseurl }}/courses/" class="button-round" style="margin-top: 8px;display: inline-block;">コースをさがす</a>
   </div>
   <img  data-src="{{ site.url }}/assets/images/mainvisual.svg" data-width="300" alt="メクルン" class="top-mainvisual">
 </div>
 <div class="main" id="allmenu">
-  <h2>{% t top.allmenu %}</h2>
-  <div class="list-category">
-    {% for category in site.categories %}
-    <a href="{{ site.baseurl }}{{category.permalink}}" class="list-category-one">
-      <div class="list-category-img" style="background: #{{ category.color }};">
-        <img data-src="{{ site.url }}/assets/images/{{category.categoryname}}.svg" alt="{% t category.title %}">
-      </div>
-      <div class="list-category-text">
-        <h3 class="list-category-heading">{% t category.title %}</h3>
-        <p style="margin-top:6px;">{% t category.{{category.categoryname}}.caption %}</p>
-        <p class="list-category-link">{% t top.viewAll %}</p>
-      </div>
-    </a>
-    {% endfor %}
-  </div>
   <div id="newcourse">
     <h2>{% t top.recent %}</h2>
     <ul class="top-course-list course-list">
