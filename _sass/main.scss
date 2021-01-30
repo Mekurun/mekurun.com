@@ -276,6 +276,33 @@ footer {
 .footer-logo {
   height: 40px;
 }
+footer .footer-sns {
+  align-items: center;
+  border-radius: 5px;
+  color: #fff;
+  display: flex;
+  font-size: 20px;
+  font-weight: bold;
+  height: 38px;
+  justify-content: center;
+  margin-right: 4px;
+  padding: 4px 8px;
+  text-align: center;
+  width: 38px;
+  &[clr='tw'] {
+    background: #1DA1F2;
+  }
+  &[clr='fb'] {
+    background: #3B5998;
+  }
+  &[clr='gh'] {
+    background: #24292e;
+  }
+}
+.footer-sns-buttons {
+  display: flex;
+  margin-top: 12px;
+}
 .footer-copyright {
   color: #999;
   font-size: 0.8em;
