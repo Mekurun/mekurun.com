@@ -299,7 +299,7 @@ footer .footer-sns {
     background: #24292e;
   }
 }
-.footer-sns-buttons {
+.footer-list .footer-sns-buttons {
   display: flex;
   margin-top: 12px;
 }
@@ -312,6 +312,9 @@ footer .footer-sns {
   .footer-flex {
     display: block;
     text-align: center;
+  }
+  .footer-sns-buttons {
+    justify-content: center;
   }
   .footer-logoblock, .footer-list {
     width: 100%;
