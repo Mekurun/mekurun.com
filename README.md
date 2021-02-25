@@ -6,6 +6,8 @@ ScratchやMakeCodeといったブロックでプログラミングができる�
 
 Webサイト▶ https://mekurun.com/
 
+[![Powered by Vercel](/assets/images/powered-by-vercel.svg)](https://vercel.com/?utm_source=nucumo&utm_campaign=oss)  
+
 
 ## メンバー
 - [Tomohiro Nozaki](https://github.com/nztm)
@@ -15,7 +17,7 @@ Webサイト▶ https://mekurun.com/
 - [tuntun19](https://github.com/tuntun19)
 
 [![CAMPFIREで支援する](/assets/images/README_campfire.png)](https://community.camp-fire.jp/projects/view/322690)  
-  
+
 
 ---
 
