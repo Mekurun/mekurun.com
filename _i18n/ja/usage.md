@@ -17,6 +17,7 @@
 
 コースページでは、スライドをめくって学習できます。
 
-「すすむ」: つぎのページにすすむことができます。  
-「もどる」: 前のページに進むことができます。  
+<i class="fas fa-angle-right" style="color: #34a2df"></i> : つぎのページにすすむことができます。  
+<i class="fas fa-angle-left" style="color: #34a2df"></i> : 前のページに進むことができます。
+<i class="fas fa-expand" style="color: #34a2df"></i> : 全画面表示をすることができます。
 「PDFで見る」: コースのスライドをPDFでダウンロードできます。  
