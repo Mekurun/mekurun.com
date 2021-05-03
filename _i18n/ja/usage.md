@@ -1,5 +1,5 @@
-## コレクションページ
-![コレクションページ](/assets/article/usage-category.png)
+## すべてのコースページ
+![すべてのコースページ](/assets/article/usage-category.png)
 {: style="text-align:center;"}
 
 コースは難易度が4段階に分かれています。
@@ -9,7 +9,7 @@
 <i class="fas fa-star" style="color: #ffb801"></i> ふつう: かんたんよりすこし発展的なコース  
 <i class="fas fa-star" style="color: #ff81ae"></i> むずかしい : ちょっとステップアップしたい方向けのコース  
 
-学習したいコースを選んでクリックすると、コースページを表示できます。
+学習したいコースを選んで、「コースをはじめる」をクリックすると、すべてのコースページが表示されます。
 
 ## コースページ
 ![コースページ](/assets/article/usage-course.png)
