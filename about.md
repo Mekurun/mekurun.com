@@ -3,6 +3,7 @@ layout: default
 title: about.title
 permalink: /about/
 description: メクルンについて知りたい方はこちらをご覧ください。
+noindex: true
 ---
 {% include header.html %}
 <div class="top lp-top">
