@@ -3,6 +3,7 @@ layout: page
 title: contact.title
 permalink: /contact/
 description: contact.description
+noindex: true
 ---
 <form class="formrun" action="https://form.run/api/v1/r/2rz6tr2zx0b73fmm12myjr0l" method="post">
   <p>
